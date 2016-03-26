@@ -392,6 +392,21 @@
 <v>thingTouch\thingTouch\PSoC 4 Architecture TRM</v>
 <v>thingTouch\thingTouch\PSoC 4200 Family Datasheet</v>
 <v>thingTouch\thingTouch\System Reference Guides</v>
+<v>thingTouch\thingTouch\System Reference Guides\cy_boot_v5_30</v>
+<v>thingTouch\thingTouch\System Reference Guides\cy_lfclk_v1_0</v>
+<v>thingTouch\thingTouch\CapSense_CSD_P4_v2_40.pdf</v>
+<v>thingTouch\thingTouch\cy_clock_v2_20.pdf</v>
+<v>thingTouch\thingTouch\cy_pins_v2_20</v>
+<v>thingTouch\thingTouch\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
+<v>thingTouch\thingTouch\LED_v1_0</v>
+<v>thingTouch\thingTouch\LED_v1_0\LED_v1_0.pdf</v>
+<v>thingTouch\thingTouch\Power_v1_0</v>
+<v>thingTouch\thingTouch\Power_v1_0\Power_v1_0.pdf</v>
+<v>thingTouch\thingTouch\Resistor_v1_0</v>
+<v>thingTouch\thingTouch\Resistor_v1_0\Resistor_v1_0.pdf</v>
+<v>thingTouch\thingTouch\SCB_P4_v3_10</v>
+<v>thingTouch\thingTouch\SCB_P4_v3_10\SCB_P4_v3_10.pdf</v>
+<v>thingTouch\thingTouch\TCPWM_P4_v2_10.pdf</v>
 </ExpandedNodeIds>
 <VisibleNodeIds>
 <v>thingTouch</v>
@@ -399,6 +414,21 @@
 <v>thingTouch\thingTouch\PSoC 4 Architecture TRM</v>
 <v>thingTouch\thingTouch\PSoC 4200 Family Datasheet</v>
 <v>thingTouch\thingTouch\System Reference Guides</v>
+<v>thingTouch\thingTouch\System Reference Guides\cy_boot_v5_30</v>
+<v>thingTouch\thingTouch\System Reference Guides\cy_lfclk_v1_0</v>
+<v>thingTouch\thingTouch\CapSense_CSD_P4_v2_40.pdf</v>
+<v>thingTouch\thingTouch\cy_clock_v2_20.pdf</v>
+<v>thingTouch\thingTouch\cy_pins_v2_20</v>
+<v>thingTouch\thingTouch\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
+<v>thingTouch\thingTouch\LED_v1_0</v>
+<v>thingTouch\thingTouch\LED_v1_0\LED_v1_0.pdf</v>
+<v>thingTouch\thingTouch\Power_v1_0</v>
+<v>thingTouch\thingTouch\Power_v1_0\Power_v1_0.pdf</v>
+<v>thingTouch\thingTouch\Resistor_v1_0</v>
+<v>thingTouch\thingTouch\Resistor_v1_0\Resistor_v1_0.pdf</v>
+<v>thingTouch\thingTouch\SCB_P4_v3_10</v>
+<v>thingTouch\thingTouch\SCB_P4_v3_10\SCB_P4_v3_10.pdf</v>
+<v>thingTouch\thingTouch\TCPWM_P4_v2_10.pdf</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStatesV2>
