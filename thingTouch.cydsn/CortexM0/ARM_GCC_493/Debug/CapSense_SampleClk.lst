@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Amit\AppData\Local\Temp\ccSMBioc.s 			page 1
+ARM GAS  C:\Users\lovelesh\AppData\Local\Temp\ccrsByum.s 			page 1
 
 
    1              		.cpu cortex-m0
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Amit\AppData\Local\Temp\ccSMBioc.s 			page 1
   30:.\Generated_Source\PSoC4/CapSense_SampleClk.c **** *
   31:.\Generated_Source\PSoC4/CapSense_SampleClk.c **** * Parameters:
   32:.\Generated_Source\PSoC4/CapSense_SampleClk.c **** *  alignClkDiv:  The divider to which phase alignment is performed when the
-ARM GAS  C:\Users\Amit\AppData\Local\Temp\ccSMBioc.s 			page 2
+ARM GAS  C:\Users\lovelesh\AppData\Local\Temp\ccrsByum.s 			page 2
 
 
   33:.\Generated_Source\PSoC4/CapSense_SampleClk.c **** *    clock is started.
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Amit\AppData\Local\Temp\ccSMBioc.s 			page 1
   39 000c 0906     		lsl	r1, r1, #24
   40 000e 0A43     		orr	r2, r1
   41 0010 1A60     		str	r2, [r3]
-ARM GAS  C:\Users\Amit\AppData\Local\Temp\ccSMBioc.s 			page 3
+ARM GAS  C:\Users\lovelesh\AppData\Local\Temp\ccrsByum.s 			page 3
 
 
   74:.\Generated_Source\PSoC4/CapSense_SampleClk.c **** }
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Amit\AppData\Local\Temp\ccSMBioc.s 			page 1
  101:.\Generated_Source\PSoC4/CapSense_SampleClk.c ****     {
  102:.\Generated_Source\PSoC4/CapSense_SampleClk.c ****     }
  103:.\Generated_Source\PSoC4/CapSense_SampleClk.c ****     
-ARM GAS  C:\Users\Amit\AppData\Local\Temp\ccSMBioc.s 			page 4
+ARM GAS  C:\Users\lovelesh\AppData\Local\Temp\ccrsByum.s 			page 4
 
 
  104:.\Generated_Source\PSoC4/CapSense_SampleClk.c ****     /* Specify the target divider and it's alignment divider, and disable. */
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Amit\AppData\Local\Temp\ccSMBioc.s 			page 1
  132:.\Generated_Source\PSoC4/CapSense_SampleClk.c **** *
  133:.\Generated_Source\PSoC4/CapSense_SampleClk.c **** *******************************************************************************/
  134:.\Generated_Source\PSoC4/CapSense_SampleClk.c **** void CapSense_SampleClk_SetFractionalDividerRegister(uint16 clkDivider, uint8 clkFractional)
-ARM GAS  C:\Users\Amit\AppData\Local\Temp\ccSMBioc.s 			page 5
+ARM GAS  C:\Users\lovelesh\AppData\Local\Temp\ccrsByum.s 			page 5
 
 
  135:.\Generated_Source\PSoC4/CapSense_SampleClk.c **** {
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Amit\AppData\Local\Temp\ccSMBioc.s 			page 1
  126 002a 1A60     		str	r2, [r3]
  158:.\Generated_Source\PSoC4/CapSense_SampleClk.c **** }
  127              		.loc 1 158 0
-ARM GAS  C:\Users\Amit\AppData\Local\Temp\ccSMBioc.s 			page 6
+ARM GAS  C:\Users\lovelesh\AppData\Local\Temp\ccrsByum.s 			page 6
 
 
  128 002c BD46     		mov	sp, r7
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Amit\AppData\Local\Temp\ccSMBioc.s 			page 1
  160 000a 181C     		mov	r0, r3
  161 000c BD46     		mov	sp, r7
  162              		@ sp needed
-ARM GAS  C:\Users\Amit\AppData\Local\Temp\ccSMBioc.s 			page 7
+ARM GAS  C:\Users\lovelesh\AppData\Local\Temp\ccrsByum.s 			page 7
 
 
  163 000e 80BD     		pop	{r7, pc}
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\Amit\AppData\Local\Temp\ccSMBioc.s 			page 1
  190 0006 181C     		mov	r0, r3
  191 0008 BD46     		mov	sp, r7
  192              		@ sp needed
-ARM GAS  C:\Users\Amit\AppData\Local\Temp\ccSMBioc.s 			page 8
+ARM GAS  C:\Users\lovelesh\AppData\Local\Temp\ccrsByum.s 			page 8
 
 
  193 000a 80BD     		pop	{r7, pc}
@@ -435,68 +435,68 @@ ARM GAS  C:\Users\Amit\AppData\Local\Temp\ccSMBioc.s 			page 1
  204 0006 00000000 		.4byte	.Ldebug_abbrev0
  205 000a 04       		.byte	0x4
  206 000b 01       		.uleb128 0x1
- 207 000c F3000000 		.4byte	.LASF24
+ 207 000c CF000000 		.4byte	.LASF24
  208 0010 01       		.byte	0x1
- 209 0011 88010000 		.4byte	.LASF25
- 210 0015 75000000 		.4byte	.LASF26
+ 209 0011 64010000 		.4byte	.LASF25
+ 210 0015 F6010000 		.4byte	.LASF26
  211 0019 00000000 		.4byte	.Ldebug_ranges0+0
  212 001d 00000000 		.4byte	0
  213 0021 00000000 		.4byte	.Ldebug_line0
  214 0025 02       		.uleb128 0x2
  215 0026 01       		.byte	0x1
  216 0027 06       		.byte	0x6
- 217 0028 33020000 		.4byte	.LASF0
+ 217 0028 42020000 		.4byte	.LASF0
  218 002c 02       		.uleb128 0x2
  219 002d 01       		.byte	0x1
  220 002e 08       		.byte	0x8
- 221 002f 99000000 		.4byte	.LASF1
+ 221 002f 75000000 		.4byte	.LASF1
  222 0033 02       		.uleb128 0x2
  223 0034 02       		.byte	0x2
  224 0035 05       		.byte	0x5
- 225 0036 1A020000 		.4byte	.LASF2
+ 225 0036 29020000 		.4byte	.LASF2
  226 003a 02       		.uleb128 0x2
  227 003b 02       		.byte	0x2
  228 003c 07       		.byte	0x7
- 229 003d B9000000 		.4byte	.LASF3
+ 229 003d 95000000 		.4byte	.LASF3
  230 0041 02       		.uleb128 0x2
  231 0042 04       		.byte	0x4
  232 0043 05       		.byte	0x5
- 233 0044 2A020000 		.4byte	.LASF4
+ 233 0044 39020000 		.4byte	.LASF4
  234 0048 02       		.uleb128 0x2
  235 0049 04       		.byte	0x4
  236 004a 07       		.byte	0x7
- 237 004b A7000000 		.4byte	.LASF5
+ 237 004b 83000000 		.4byte	.LASF5
  238 004f 02       		.uleb128 0x2
  239 0050 08       		.byte	0x8
  240 0051 05       		.byte	0x5
- 241 0052 07020000 		.4byte	.LASF6
+ 241 0052 E3010000 		.4byte	.LASF6
  242 0056 02       		.uleb128 0x2
  243 0057 08       		.byte	0x8
  244 0058 07       		.byte	0x7
- 245 0059 CA010000 		.4byte	.LASF7
+ 245 0059 A6010000 		.4byte	.LASF7
  246 005d 03       		.uleb128 0x3
  247 005e 04       		.byte	0x4
  248 005f 05       		.byte	0x5
  249 0060 696E7400 		.ascii	"int\000"
-ARM GAS  C:\Users\Amit\AppData\Local\Temp\ccSMBioc.s 			page 9
+ARM GAS  C:\Users\lovelesh\AppData\Local\Temp\ccrsByum.s 			page 9
 
 
  250 0064 02       		.uleb128 0x2
  251 0065 04       		.byte	0x4
  252 0066 07       		.byte	0x7
- 253 0067 BD010000 		.4byte	.LASF8
+ 253 0067 99010000 		.4byte	.LASF8
  254 006b 04       		.uleb128 0x4
- 255 006c 24020000 		.4byte	.LASF9
+ 255 006c 33020000 		.4byte	.LASF9
  256 0070 02       		.byte	0x2
  257 0071 3801     		.2byte	0x138
  258 0073 2C000000 		.4byte	0x2c
  259 0077 04       		.uleb128 0x4
- 260 0078 81010000 		.4byte	.LASF10
+ 260 0078 5D010000 		.4byte	.LASF10
  261 007c 02       		.byte	0x2
  262 007d 3901     		.2byte	0x139
  263 007f 3A000000 		.4byte	0x3a
  264 0083 04       		.uleb128 0x4
- 265 0084 B6010000 		.4byte	.LASF11
+ 265 0084 92010000 		.4byte	.LASF11
  266 0088 02       		.byte	0x2
  267 0089 3A01     		.2byte	0x13a
  268 008b 48000000 		.4byte	0x48
@@ -507,11 +507,11 @@ ARM GAS  C:\Users\Amit\AppData\Local\Temp\ccSMBioc.s 			page 1
  273 0096 02       		.uleb128 0x2
  274 0097 08       		.byte	0x8
  275 0098 04       		.byte	0x4
- 276 0099 D7000000 		.4byte	.LASF13
+ 276 0099 B3000000 		.4byte	.LASF13
  277 009d 02       		.uleb128 0x2
  278 009e 01       		.byte	0x1
  279 009f 08       		.byte	0x8
- 280 00a0 15020000 		.4byte	.LASF14
+ 280 00a0 F1010000 		.4byte	.LASF14
  281 00a4 04       		.uleb128 0x4
  282 00a5 00000000 		.4byte	.LASF15
  283 00a9 02       		.byte	0x2
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\Amit\AppData\Local\Temp\ccSMBioc.s 			page 1
  304 00d7 07       		.uleb128 0x7
  305 00d8 45000000 		.4byte	.LASF27
  306 00dc 01       		.byte	0x1
-ARM GAS  C:\Users\Amit\AppData\Local\Temp\ccSMBioc.s 			page 10
+ARM GAS  C:\Users\lovelesh\AppData\Local\Temp\ccrsByum.s 			page 10
 
 
  307 00dd 86       		.byte	0x86
@@ -548,7 +548,7 @@ ARM GAS  C:\Users\Amit\AppData\Local\Temp\ccSMBioc.s 			page 1
  311 00e7 9C       		.byte	0x9c
  312 00e8 25010000 		.4byte	0x125
  313 00ec 08       		.uleb128 0x8
- 314 00ed CC000000 		.4byte	.LASF18
+ 314 00ed A8000000 		.4byte	.LASF18
  315 00f1 01       		.byte	0x1
  316 00f2 86       		.byte	0x86
  317 00f3 77000000 		.4byte	0x77
@@ -556,7 +556,7 @@ ARM GAS  C:\Users\Amit\AppData\Local\Temp\ccSMBioc.s 			page 1
  319 00f8 91       		.byte	0x91
  320 00f9 6E       		.sleb128 -18
  321 00fa 08       		.uleb128 0x8
- 322 00fb E5000000 		.4byte	.LASF19
+ 322 00fb C1000000 		.4byte	.LASF19
  323 00ff 01       		.byte	0x1
  324 0100 86       		.byte	0x86
  325 0101 6B000000 		.4byte	0x6b
@@ -572,7 +572,7 @@ ARM GAS  C:\Users\Amit\AppData\Local\Temp\ccSMBioc.s 			page 1
  335 0114 91       		.byte	0x91
  336 0115 74       		.sleb128 -12
  337 0116 09       		.uleb128 0x9
- 338 0117 DE000000 		.4byte	.LASF21
+ 338 0117 BA000000 		.4byte	.LASF21
  339 011b 01       		.byte	0x1
  340 011c 89       		.byte	0x89
  341 011d 83000000 		.4byte	0x83
@@ -581,7 +581,7 @@ ARM GAS  C:\Users\Amit\AppData\Local\Temp\ccSMBioc.s 			page 1
  344 0123 70       		.sleb128 -16
  345 0124 00       		.byte	0
  346 0125 0A       		.uleb128 0xa
- 347 0126 E1010000 		.4byte	.LASF22
+ 347 0126 BD010000 		.4byte	.LASF22
  348 012a 01       		.byte	0x1
  349 012b B0       		.byte	0xb0
  350 012c 77000000 		.4byte	0x77
@@ -590,7 +590,7 @@ ARM GAS  C:\Users\Amit\AppData\Local\Temp\ccSMBioc.s 			page 1
  353 0138 01       		.uleb128 0x1
  354 0139 9C       		.byte	0x9c
  355 013a 0A       		.uleb128 0xa
- 356 013b 3F020000 		.4byte	.LASF23
+ 356 013b 4E020000 		.4byte	.LASF23
  357 013f 01       		.byte	0x1
  358 0140 C6       		.byte	0xc6
  359 0141 6B000000 		.4byte	0x6b
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\Amit\AppData\Local\Temp\ccSMBioc.s 			page 1
  361 0149 0C000000 		.4byte	.LFE4-.LFB4
  362 014d 01       		.uleb128 0x1
  363 014e 9C       		.byte	0x9c
-ARM GAS  C:\Users\Amit\AppData\Local\Temp\ccSMBioc.s 			page 11
+ARM GAS  C:\Users\lovelesh\AppData\Local\Temp\ccrsByum.s 			page 11
 
 
  364 014f 00       		.byte	0
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\Amit\AppData\Local\Temp\ccSMBioc.s 			page 1
  418 0033 13       		.uleb128 0x13
  419 0034 00       		.byte	0
  420 0035 00       		.byte	0
-ARM GAS  C:\Users\Amit\AppData\Local\Temp\ccSMBioc.s 			page 12
+ARM GAS  C:\Users\lovelesh\AppData\Local\Temp\ccrsByum.s 			page 12
 
 
  421 0036 05       		.uleb128 0x5
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\Amit\AppData\Local\Temp\ccSMBioc.s 			page 1
  475 006e 00       		.byte	0
  476 006f 08       		.uleb128 0x8
  477 0070 05       		.uleb128 0x5
-ARM GAS  C:\Users\Amit\AppData\Local\Temp\ccSMBioc.s 			page 13
+ARM GAS  C:\Users\lovelesh\AppData\Local\Temp\ccrsByum.s 			page 13
 
 
  478 0071 00       		.byte	0
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\Amit\AppData\Local\Temp\ccSMBioc.s 			page 1
  532              		.section	.debug_aranges,"",%progbits
  533 0000 3C000000 		.4byte	0x3c
  534 0004 0200     		.2byte	0x2
-ARM GAS  C:\Users\Amit\AppData\Local\Temp\ccSMBioc.s 			page 14
+ARM GAS  C:\Users\lovelesh\AppData\Local\Temp\ccrsByum.s 			page 14
 
 
  535 0006 00000000 		.4byte	.Ldebug_info0
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\Amit\AppData\Local\Temp\ccSMBioc.s 			page 1
  576      706C6543 
  576      6C6B5F53 
  577              	.LASF12:
-ARM GAS  C:\Users\Amit\AppData\Local\Temp\ccSMBioc.s 			page 15
+ARM GAS  C:\Users\lovelesh\AppData\Local\Temp\ccrsByum.s 			page 15
 
 
  578 003f 666C6F61 		.ascii	"float\000"
@@ -849,122 +849,123 @@ ARM GAS  C:\Users\Amit\AppData\Local\Temp\ccSMBioc.s 			page 1
  580      5F53616D 
  580      706C6543 
  580      6C6B5F53 
- 581              	.LASF26:
- 582 0075 463A5C50 		.ascii	"F:\\PSoC\\thingTouch\\thingTouch.cydsn\000"
- 582      536F435C 
- 582      7468696E 
- 582      67546F75 
- 582      63685C74 
- 583              	.LASF1:
- 584 0099 756E7369 		.ascii	"unsigned char\000"
- 584      676E6564 
- 584      20636861 
- 584      7200
- 585              	.LASF5:
- 586 00a7 6C6F6E67 		.ascii	"long unsigned int\000"
- 586      20756E73 
- 586      69676E65 
- 586      6420696E 
- 586      7400
- 587              	.LASF3:
- 588 00b9 73686F72 		.ascii	"short unsigned int\000"
- 588      7420756E 
- 588      7369676E 
- 588      65642069 
- 588      6E7400
- 589              	.LASF18:
- 590 00cc 636C6B44 		.ascii	"clkDivider\000"
- 590      69766964 
- 590      657200
- 591              	.LASF13:
- 592 00d7 646F7562 		.ascii	"double\000"
- 592      6C6500
- 593              	.LASF21:
- 594 00de 72656756 		.ascii	"regVal\000"
- 594      616C00
- 595              	.LASF19:
- 596 00e5 636C6B46 		.ascii	"clkFractional\000"
- 596      72616374 
- 596      696F6E61 
- 596      6C00
- 597              	.LASF24:
- 598 00f3 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
- 598      4320342E 
- 598      392E3320 
- 598      32303135 
- 598      30333033 
- 599 0126 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m0 -mthumb -g -O"
- 599      20726576 
- 599      6973696F 
- 599      6E203232 
- 599      31323230 
-ARM GAS  C:\Users\Amit\AppData\Local\Temp\ccSMBioc.s 			page 16
+ 581              	.LASF1:
+ 582 0075 756E7369 		.ascii	"unsigned char\000"
+ 582      676E6564 
+ 582      20636861 
+ 582      7200
+ 583              	.LASF5:
+ 584 0083 6C6F6E67 		.ascii	"long unsigned int\000"
+ 584      20756E73 
+ 584      69676E65 
+ 584      6420696E 
+ 584      7400
+ 585              	.LASF3:
+ 586 0095 73686F72 		.ascii	"short unsigned int\000"
+ 586      7420756E 
+ 586      7369676E 
+ 586      65642069 
+ 586      6E7400
+ 587              	.LASF18:
+ 588 00a8 636C6B44 		.ascii	"clkDivider\000"
+ 588      69766964 
+ 588      657200
+ 589              	.LASF13:
+ 590 00b3 646F7562 		.ascii	"double\000"
+ 590      6C6500
+ 591              	.LASF21:
+ 592 00ba 72656756 		.ascii	"regVal\000"
+ 592      616C00
+ 593              	.LASF19:
+ 594 00c1 636C6B46 		.ascii	"clkFractional\000"
+ 594      72616374 
+ 594      696F6E61 
+ 594      6C00
+ 595              	.LASF24:
+ 596 00cf 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 596      4320342E 
+ 596      392E3320 
+ 596      32303135 
+ 596      30333033 
+ 597 0102 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m0 -mthumb -g -O"
+ 597      20726576 
+ 597      6973696F 
+ 597      6E203232 
+ 597      31323230 
+ 598 0135 30202D66 		.ascii	"0 -ffunction-sections -ffat-lto-objects\000"
+ 598      66756E63 
+ 598      74696F6E 
+ 598      2D736563 
+ 598      74696F6E 
+ 599              	.LASF10:
+ARM GAS  C:\Users\lovelesh\AppData\Local\Temp\ccrsByum.s 			page 16
 
 
- 600 0159 30202D66 		.ascii	"0 -ffunction-sections -ffat-lto-objects\000"
- 600      66756E63 
- 600      74696F6E 
- 600      2D736563 
- 600      74696F6E 
- 601              	.LASF10:
- 602 0181 75696E74 		.ascii	"uint16\000"
- 602      313600
- 603              	.LASF25:
- 604 0188 2E5C4765 		.ascii	".\\Generated_Source\\PSoC4\\CapSense_SampleClk.c\000"
- 604      6E657261 
- 604      7465645F 
- 604      536F7572 
- 604      63655C50 
- 605              	.LASF11:
- 606 01b6 75696E74 		.ascii	"uint32\000"
- 606      333200
- 607              	.LASF8:
- 608 01bd 756E7369 		.ascii	"unsigned int\000"
- 608      676E6564 
- 608      20696E74 
- 608      00
- 609              	.LASF7:
- 610 01ca 6C6F6E67 		.ascii	"long long unsigned int\000"
- 610      206C6F6E 
- 610      6720756E 
- 610      7369676E 
- 610      65642069 
- 611              	.LASF22:
- 612 01e1 43617053 		.ascii	"CapSense_SampleClk_GetDividerRegister\000"
- 612      656E7365 
- 612      5F53616D 
- 612      706C6543 
- 612      6C6B5F47 
- 613              	.LASF6:
- 614 0207 6C6F6E67 		.ascii	"long long int\000"
- 614      206C6F6E 
- 614      6720696E 
- 614      7400
- 615              	.LASF14:
- 616 0215 63686172 		.ascii	"char\000"
- 616      00
- 617              	.LASF2:
- 618 021a 73686F72 		.ascii	"short int\000"
- 618      7420696E 
- 618      7400
- 619              	.LASF9:
- 620 0224 75696E74 		.ascii	"uint8\000"
- 620      3800
- 621              	.LASF4:
- 622 022a 6C6F6E67 		.ascii	"long int\000"
- 622      20696E74 
- 622      00
- 623              	.LASF0:
- 624 0233 7369676E 		.ascii	"signed char\000"
- 624      65642063 
- 624      68617200 
-ARM GAS  C:\Users\Amit\AppData\Local\Temp\ccSMBioc.s 			page 17
+ 600 015d 75696E74 		.ascii	"uint16\000"
+ 600      313600
+ 601              	.LASF25:
+ 602 0164 2E5C4765 		.ascii	".\\Generated_Source\\PSoC4\\CapSense_SampleClk.c\000"
+ 602      6E657261 
+ 602      7465645F 
+ 602      536F7572 
+ 602      63655C50 
+ 603              	.LASF11:
+ 604 0192 75696E74 		.ascii	"uint32\000"
+ 604      333200
+ 605              	.LASF8:
+ 606 0199 756E7369 		.ascii	"unsigned int\000"
+ 606      676E6564 
+ 606      20696E74 
+ 606      00
+ 607              	.LASF7:
+ 608 01a6 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 608      206C6F6E 
+ 608      6720756E 
+ 608      7369676E 
+ 608      65642069 
+ 609              	.LASF22:
+ 610 01bd 43617053 		.ascii	"CapSense_SampleClk_GetDividerRegister\000"
+ 610      656E7365 
+ 610      5F53616D 
+ 610      706C6543 
+ 610      6C6B5F47 
+ 611              	.LASF6:
+ 612 01e3 6C6F6E67 		.ascii	"long long int\000"
+ 612      206C6F6E 
+ 612      6720696E 
+ 612      7400
+ 613              	.LASF14:
+ 614 01f1 63686172 		.ascii	"char\000"
+ 614      00
+ 615              	.LASF26:
+ 616 01f6 503A5C50 		.ascii	"P:\\PSoC\\PSoC Workspace\\thingTouch\\thingTouch.cy"
+ 616      536F435C 
+ 616      50536F43 
+ 616      20576F72 
+ 616      6B737061 
+ 617 0225 64736E00 		.ascii	"dsn\000"
+ 618              	.LASF2:
+ 619 0229 73686F72 		.ascii	"short int\000"
+ 619      7420696E 
+ 619      7400
+ 620              	.LASF9:
+ 621 0233 75696E74 		.ascii	"uint8\000"
+ 621      3800
+ 622              	.LASF4:
+ 623 0239 6C6F6E67 		.ascii	"long int\000"
+ 623      20696E74 
+ 623      00
+ 624              	.LASF0:
+ 625 0242 7369676E 		.ascii	"signed char\000"
+ 625      65642063 
+ARM GAS  C:\Users\lovelesh\AppData\Local\Temp\ccrsByum.s 			page 17
 
 
- 625              	.LASF23:
- 626 023f 43617053 		.ascii	"CapSense_SampleClk_GetFractionalDividerRegister\000"
- 626      656E7365 
- 626      5F53616D 
- 626      706C6543 
- 626      6C6B5F47 
- 627              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br
+ 625      68617200 
+ 626              	.LASF23:
+ 627 024e 43617053 		.ascii	"CapSense_SampleClk_GetFractionalDividerRegister\000"
+ 627      656E7365 
+ 627      5F53616D 
+ 627      706C6543 
+ 627      6C6B5F47 
+ 628              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br

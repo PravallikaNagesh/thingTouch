@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Amit\AppData\Local\Temp\ccBBHNKS.s 			page 1
+ARM GAS  C:\Users\lovelesh\AppData\Local\Temp\ccPdJB6j.s 			page 1
 
 
    1              		.cpu cortex-m0
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Amit\AppData\Local\Temp\ccBBHNKS.s 			page 1
   23:.\Generated_Source\PSoC4/I2C_Slave_PM.c **** #endif /* (I2C_Slave_SCB_MODE_I2C_INC) */
   24:.\Generated_Source\PSoC4/I2C_Slave_PM.c **** 
   25:.\Generated_Source\PSoC4/I2C_Slave_PM.c **** #if(I2C_Slave_SCB_MODE_EZI2C_INC)
-ARM GAS  C:\Users\Amit\AppData\Local\Temp\ccBBHNKS.s 			page 2
+ARM GAS  C:\Users\lovelesh\AppData\Local\Temp\ccPdJB6j.s 			page 2
 
 
   26:.\Generated_Source\PSoC4/I2C_Slave_PM.c ****     #include "I2C_Slave_EZI2C_PVT.h"
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Amit\AppData\Local\Temp\ccBBHNKS.s 			page 1
   72:.\Generated_Source\PSoC4/I2C_Slave_PM.c ****     {
   73:.\Generated_Source\PSoC4/I2C_Slave_PM.c ****         if(I2C_Slave_SCB_MODE_I2C_RUNTM_CFG)
   74:.\Generated_Source\PSoC4/I2C_Slave_PM.c ****         {
-ARM GAS  C:\Users\Amit\AppData\Local\Temp\ccBBHNKS.s 			page 3
+ARM GAS  C:\Users\lovelesh\AppData\Local\Temp\ccPdJB6j.s 			page 3
 
 
   75:.\Generated_Source\PSoC4/I2C_Slave_PM.c ****             I2C_Slave_I2CSaveConfig();
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Amit\AppData\Local\Temp\ccBBHNKS.s 			page 1
   47 000e 064B     		ldr	r3, .L3+4
   48 0010 1A70     		strb	r2, [r3]
  123:.\Generated_Source\PSoC4/I2C_Slave_PM.c **** 
-ARM GAS  C:\Users\Amit\AppData\Local\Temp\ccBBHNKS.s 			page 4
+ARM GAS  C:\Users\lovelesh\AppData\Local\Temp\ccPdJB6j.s 			page 4
 
 
  124:.\Generated_Source\PSoC4/I2C_Slave_PM.c ****         if(0u != I2C_Slave_backup.enableState)
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Amit\AppData\Local\Temp\ccBBHNKS.s 			page 1
  150:.\Generated_Source\PSoC4/I2C_Slave_PM.c **** *
  151:.\Generated_Source\PSoC4/I2C_Slave_PM.c **** *******************************************************************************/
  152:.\Generated_Source\PSoC4/I2C_Slave_PM.c **** void I2C_Slave_Wakeup(void)
-ARM GAS  C:\Users\Amit\AppData\Local\Temp\ccBBHNKS.s 			page 5
+ARM GAS  C:\Users\lovelesh\AppData\Local\Temp\ccPdJB6j.s 			page 5
 
 
  153:.\Generated_Source\PSoC4/I2C_Slave_PM.c **** {
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Amit\AppData\Local\Temp\ccBBHNKS.s 			page 1
  199:.\Generated_Source\PSoC4/I2C_Slave_PM.c **** 
  200:.\Generated_Source\PSoC4/I2C_Slave_PM.c ****     #elif (I2C_Slave_SCB_MODE_UART_CONST_CFG && I2C_Slave_UART_WAKE_ENABLE_CONST)
  201:.\Generated_Source\PSoC4/I2C_Slave_PM.c ****         I2C_Slave_UartRestoreConfig();
-ARM GAS  C:\Users\Amit\AppData\Local\Temp\ccBBHNKS.s 			page 6
+ARM GAS  C:\Users\lovelesh\AppData\Local\Temp\ccPdJB6j.s 			page 6
 
 
  202:.\Generated_Source\PSoC4/I2C_Slave_PM.c **** 
@@ -343,40 +343,40 @@ ARM GAS  C:\Users\Amit\AppData\Local\Temp\ccBBHNKS.s 			page 1
  112 0006 00000000 		.4byte	.Ldebug_abbrev0
  113 000a 04       		.byte	0x4
  114 000b 01       		.uleb128 0x1
- 115 000c DB000000 		.4byte	.LASF19
+ 115 000c EA000000 		.4byte	.LASF19
  116 0010 01       		.byte	0x1
  117 0011 2E000000 		.4byte	.LASF20
- 118 0015 56000000 		.4byte	.LASF21
+ 118 0015 67000000 		.4byte	.LASF21
  119 0019 00000000 		.4byte	.Ldebug_ranges0+0
  120 001d 00000000 		.4byte	0
  121 0021 00000000 		.4byte	.Ldebug_line0
  122 0025 02       		.uleb128 0x2
  123 0026 01       		.byte	0x1
  124 0027 06       		.byte	0x6
- 125 0028 A5010000 		.4byte	.LASF0
+ 125 0028 B4010000 		.4byte	.LASF0
  126 002c 02       		.uleb128 0x2
  127 002d 01       		.byte	0x1
  128 002e 08       		.byte	0x8
- 129 002f 69010000 		.4byte	.LASF1
-ARM GAS  C:\Users\Amit\AppData\Local\Temp\ccBBHNKS.s 			page 7
+ 129 002f 78010000 		.4byte	.LASF1
+ARM GAS  C:\Users\lovelesh\AppData\Local\Temp\ccPdJB6j.s 			page 7
 
 
  130 0033 02       		.uleb128 0x2
  131 0034 02       		.byte	0x2
  132 0035 05       		.byte	0x5
- 133 0036 CF010000 		.4byte	.LASF2
+ 133 0036 DE010000 		.4byte	.LASF2
  134 003a 02       		.uleb128 0x2
  135 003b 02       		.byte	0x2
  136 003c 07       		.byte	0x7
- 137 003d 92010000 		.4byte	.LASF3
+ 137 003d A1010000 		.4byte	.LASF3
  138 0041 02       		.uleb128 0x2
  139 0042 04       		.byte	0x4
  140 0043 05       		.byte	0x5
- 141 0044 7C010000 		.4byte	.LASF4
+ 141 0044 8B010000 		.4byte	.LASF4
  142 0048 02       		.uleb128 0x2
  143 0049 04       		.byte	0x4
  144 004a 07       		.byte	0x7
- 145 004b 91000000 		.4byte	.LASF5
+ 145 004b A0000000 		.4byte	.LASF5
  146 004f 02       		.uleb128 0x2
  147 0050 08       		.byte	0x8
  148 0051 05       		.byte	0x5
@@ -384,7 +384,7 @@ ARM GAS  C:\Users\Amit\AppData\Local\Temp\ccBBHNKS.s 			page 1
  150 0056 02       		.uleb128 0x2
  151 0057 08       		.byte	0x8
  152 0058 07       		.byte	0x7
- 153 0059 A3000000 		.4byte	.LASF7
+ 153 0059 B2000000 		.4byte	.LASF7
  154 005d 03       		.uleb128 0x3
  155 005e 04       		.byte	0x4
  156 005f 05       		.byte	0x5
@@ -394,7 +394,7 @@ ARM GAS  C:\Users\Amit\AppData\Local\Temp\ccBBHNKS.s 			page 1
  160 0066 07       		.byte	0x7
  161 0067 21000000 		.4byte	.LASF8
  162 006b 04       		.uleb128 0x4
- 163 006c 8B000000 		.4byte	.LASF9
+ 163 006c 9A000000 		.4byte	.LASF9
  164 0070 02       		.byte	0x2
  165 0071 3801     		.2byte	0x138
  166 0073 2C000000 		.4byte	0x2c
@@ -406,19 +406,19 @@ ARM GAS  C:\Users\Amit\AppData\Local\Temp\ccBBHNKS.s 			page 1
  172 0083 02       		.uleb128 0x2
  173 0084 04       		.byte	0x4
  174 0085 04       		.byte	0x4
- 175 0086 C9010000 		.4byte	.LASF11
+ 175 0086 D8010000 		.4byte	.LASF11
  176 008a 02       		.uleb128 0x2
  177 008b 08       		.byte	0x8
  178 008c 04       		.byte	0x4
- 179 008d 85010000 		.4byte	.LASF12
+ 179 008d 94010000 		.4byte	.LASF12
  180 0091 02       		.uleb128 0x2
  181 0092 01       		.byte	0x1
  182 0093 08       		.byte	0x8
- 183 0094 77010000 		.4byte	.LASF13
+ 183 0094 86010000 		.4byte	.LASF13
  184 0098 04       		.uleb128 0x4
- 185 0099 8C010000 		.4byte	.LASF14
+ 185 0099 9B010000 		.4byte	.LASF14
  186 009d 02       		.byte	0x2
-ARM GAS  C:\Users\Amit\AppData\Local\Temp\ccBBHNKS.s 			page 8
+ARM GAS  C:\Users\lovelesh\AppData\Local\Temp\ccPdJB6j.s 			page 8
 
 
  187 009e E401     		.2byte	0x1e4
@@ -428,7 +428,7 @@ ARM GAS  C:\Users\Amit\AppData\Local\Temp\ccBBHNKS.s 			page 1
  191 00a9 02       		.uleb128 0x2
  192 00aa 04       		.byte	0x4
  193 00ab 07       		.byte	0x7
- 194 00ac D9010000 		.4byte	.LASF15
+ 194 00ac E8010000 		.4byte	.LASF15
  195 00b0 06       		.uleb128 0x6
  196 00b1 01       		.byte	0x1
  197 00b2 03       		.byte	0x3
@@ -442,12 +442,12 @@ ARM GAS  C:\Users\Amit\AppData\Local\Temp\ccBBHNKS.s 			page 1
  205 00c3 00       		.byte	0
  206 00c4 00       		.byte	0
  207 00c5 08       		.uleb128 0x8
- 208 00c6 B1010000 		.4byte	.LASF16
+ 208 00c6 C0010000 		.4byte	.LASF16
  209 00ca 03       		.byte	0x3
  210 00cb 5E       		.byte	0x5e
  211 00cc B0000000 		.4byte	0xb0
  212 00d0 09       		.uleb128 0x9
- 213 00d1 CB000000 		.4byte	.LASF17
+ 213 00d1 DA000000 		.4byte	.LASF17
  214 00d5 01       		.byte	0x1
  215 00d6 43       		.byte	0x43
  216 00d7 00000000 		.4byte	.LFB0
@@ -455,7 +455,7 @@ ARM GAS  C:\Users\Amit\AppData\Local\Temp\ccBBHNKS.s 			page 1
  218 00df 01       		.uleb128 0x1
  219 00e0 9C       		.byte	0x9c
  220 00e1 09       		.uleb128 0x9
- 221 00e2 BA000000 		.4byte	.LASF18
+ 221 00e2 C9000000 		.4byte	.LASF18
  222 00e6 01       		.byte	0x1
  223 00e7 98       		.byte	0x98
  224 00e8 00000000 		.4byte	.LFB1
@@ -463,7 +463,7 @@ ARM GAS  C:\Users\Amit\AppData\Local\Temp\ccBBHNKS.s 			page 1
  226 00f0 01       		.uleb128 0x1
  227 00f1 9C       		.byte	0x9c
  228 00f2 0A       		.uleb128 0xa
- 229 00f3 7A000000 		.4byte	.LASF23
+ 229 00f3 56000000 		.4byte	.LASF23
  230 00f7 01       		.byte	0x1
  231 00f8 2C       		.byte	0x2c
  232 00f9 C5000000 		.4byte	0xc5
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\Amit\AppData\Local\Temp\ccBBHNKS.s 			page 1
  241 0002 01       		.byte	0x1
  242 0003 25       		.uleb128 0x25
  243 0004 0E       		.uleb128 0xe
-ARM GAS  C:\Users\Amit\AppData\Local\Temp\ccBBHNKS.s 			page 9
+ARM GAS  C:\Users\lovelesh\AppData\Local\Temp\ccPdJB6j.s 			page 9
 
 
  244 0005 13       		.uleb128 0x13
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\Amit\AppData\Local\Temp\ccBBHNKS.s 			page 1
  298 003b 00       		.byte	0
  299 003c 00       		.byte	0
  300 003d 06       		.uleb128 0x6
-ARM GAS  C:\Users\Amit\AppData\Local\Temp\ccBBHNKS.s 			page 10
+ARM GAS  C:\Users\lovelesh\AppData\Local\Temp\ccPdJB6j.s 			page 10
 
 
  301 003e 13       		.uleb128 0x13
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\Amit\AppData\Local\Temp\ccBBHNKS.s 			page 1
  355 0074 01       		.uleb128 0x1
  356 0075 12       		.uleb128 0x12
  357 0076 06       		.uleb128 0x6
-ARM GAS  C:\Users\Amit\AppData\Local\Temp\ccBBHNKS.s 			page 11
+ARM GAS  C:\Users\lovelesh\AppData\Local\Temp\ccPdJB6j.s 			page 11
 
 
  358 0077 40       		.uleb128 0x40
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\Amit\AppData\Local\Temp\ccBBHNKS.s 			page 1
  408 0000 6C6F6E67 		.ascii	"long long int\000"
  408      206C6F6E 
  408      6720696E 
-ARM GAS  C:\Users\Amit\AppData\Local\Temp\ccBBHNKS.s 			page 12
+ARM GAS  C:\Users\lovelesh\AppData\Local\Temp\ccPdJB6j.s 			page 12
 
 
  408      7400
@@ -680,109 +680,110 @@ ARM GAS  C:\Users\Amit\AppData\Local\Temp\ccBBHNKS.s 			page 1
  416      7465645F 
  416      536F7572 
  416      63655C50 
- 417              	.LASF21:
- 418 0056 463A5C50 		.ascii	"F:\\PSoC\\thingTouch\\thingTouch.cydsn\000"
- 418      536F435C 
- 418      7468696E 
- 418      67546F75 
- 418      63685C74 
- 419              	.LASF23:
- 420 007a 4932435F 		.ascii	"I2C_Slave_backup\000"
- 420      536C6176 
- 420      655F6261 
- 420      636B7570 
- 420      00
- 421              	.LASF9:
- 422 008b 75696E74 		.ascii	"uint8\000"
- 422      3800
- 423              	.LASF5:
- 424 0091 6C6F6E67 		.ascii	"long unsigned int\000"
- 424      20756E73 
- 424      69676E65 
- 424      6420696E 
- 424      7400
- 425              	.LASF7:
- 426 00a3 6C6F6E67 		.ascii	"long long unsigned int\000"
- 426      206C6F6E 
- 426      6720756E 
- 426      7369676E 
- 426      65642069 
- 427              	.LASF18:
- 428 00ba 4932435F 		.ascii	"I2C_Slave_Wakeup\000"
- 428      536C6176 
- 428      655F5761 
- 428      6B657570 
- 428      00
- 429              	.LASF17:
- 430 00cb 4932435F 		.ascii	"I2C_Slave_Sleep\000"
- 430      536C6176 
- 430      655F536C 
- 430      65657000 
-ARM GAS  C:\Users\Amit\AppData\Local\Temp\ccBBHNKS.s 			page 13
+ 417              	.LASF23:
+ 418 0056 4932435F 		.ascii	"I2C_Slave_backup\000"
+ 418      536C6176 
+ 418      655F6261 
+ 418      636B7570 
+ 418      00
+ 419              	.LASF21:
+ 420 0067 503A5C50 		.ascii	"P:\\PSoC\\PSoC Workspace\\thingTouch\\thingTouch.cy"
+ 420      536F435C 
+ 420      50536F43 
+ 420      20576F72 
+ 420      6B737061 
+ 421 0096 64736E00 		.ascii	"dsn\000"
+ 422              	.LASF9:
+ 423 009a 75696E74 		.ascii	"uint8\000"
+ 423      3800
+ 424              	.LASF5:
+ 425 00a0 6C6F6E67 		.ascii	"long unsigned int\000"
+ 425      20756E73 
+ 425      69676E65 
+ 425      6420696E 
+ 425      7400
+ 426              	.LASF7:
+ 427 00b2 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 427      206C6F6E 
+ 427      6720756E 
+ 427      7369676E 
+ 427      65642069 
+ 428              	.LASF18:
+ 429 00c9 4932435F 		.ascii	"I2C_Slave_Wakeup\000"
+ 429      536C6176 
+ 429      655F5761 
+ 429      6B657570 
+ 429      00
+ 430              	.LASF17:
+ 431 00da 4932435F 		.ascii	"I2C_Slave_Sleep\000"
+ 431      536C6176 
+ 431      655F536C 
+ARM GAS  C:\Users\lovelesh\AppData\Local\Temp\ccPdJB6j.s 			page 13
 
 
- 431              	.LASF19:
- 432 00db 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
- 432      4320342E 
- 432      392E3320 
- 432      32303135 
- 432      30333033 
- 433 010e 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m0 -mthumb -g -O"
- 433      20726576 
- 433      6973696F 
- 433      6E203232 
- 433      31323230 
- 434 0141 30202D66 		.ascii	"0 -ffunction-sections -ffat-lto-objects\000"
- 434      66756E63 
- 434      74696F6E 
- 434      2D736563 
- 434      74696F6E 
- 435              	.LASF1:
- 436 0169 756E7369 		.ascii	"unsigned char\000"
- 436      676E6564 
- 436      20636861 
- 436      7200
- 437              	.LASF13:
- 438 0177 63686172 		.ascii	"char\000"
- 438      00
- 439              	.LASF4:
- 440 017c 6C6F6E67 		.ascii	"long int\000"
- 440      20696E74 
- 440      00
- 441              	.LASF12:
- 442 0185 646F7562 		.ascii	"double\000"
- 442      6C6500
- 443              	.LASF14:
- 444 018c 72656733 		.ascii	"reg32\000"
- 444      3200
- 445              	.LASF3:
- 446 0192 73686F72 		.ascii	"short unsigned int\000"
- 446      7420756E 
- 446      7369676E 
- 446      65642069 
- 446      6E7400
- 447              	.LASF0:
- 448 01a5 7369676E 		.ascii	"signed char\000"
- 448      65642063 
- 448      68617200 
- 449              	.LASF16:
- 450 01b1 4932435F 		.ascii	"I2C_Slave_BACKUP_STRUCT\000"
- 450      536C6176 
- 450      655F4241 
- 450      434B5550 
- 450      5F535452 
- 451              	.LASF11:
- 452 01c9 666C6F61 		.ascii	"float\000"
- 452      7400
- 453              	.LASF2:
- 454 01cf 73686F72 		.ascii	"short int\000"
- 454      7420696E 
- 454      7400
-ARM GAS  C:\Users\Amit\AppData\Local\Temp\ccBBHNKS.s 			page 14
+ 431      65657000 
+ 432              	.LASF19:
+ 433 00ea 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 433      4320342E 
+ 433      392E3320 
+ 433      32303135 
+ 433      30333033 
+ 434 011d 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m0 -mthumb -g -O"
+ 434      20726576 
+ 434      6973696F 
+ 434      6E203232 
+ 434      31323230 
+ 435 0150 30202D66 		.ascii	"0 -ffunction-sections -ffat-lto-objects\000"
+ 435      66756E63 
+ 435      74696F6E 
+ 435      2D736563 
+ 435      74696F6E 
+ 436              	.LASF1:
+ 437 0178 756E7369 		.ascii	"unsigned char\000"
+ 437      676E6564 
+ 437      20636861 
+ 437      7200
+ 438              	.LASF13:
+ 439 0186 63686172 		.ascii	"char\000"
+ 439      00
+ 440              	.LASF4:
+ 441 018b 6C6F6E67 		.ascii	"long int\000"
+ 441      20696E74 
+ 441      00
+ 442              	.LASF12:
+ 443 0194 646F7562 		.ascii	"double\000"
+ 443      6C6500
+ 444              	.LASF14:
+ 445 019b 72656733 		.ascii	"reg32\000"
+ 445      3200
+ 446              	.LASF3:
+ 447 01a1 73686F72 		.ascii	"short unsigned int\000"
+ 447      7420756E 
+ 447      7369676E 
+ 447      65642069 
+ 447      6E7400
+ 448              	.LASF0:
+ 449 01b4 7369676E 		.ascii	"signed char\000"
+ 449      65642063 
+ 449      68617200 
+ 450              	.LASF16:
+ 451 01c0 4932435F 		.ascii	"I2C_Slave_BACKUP_STRUCT\000"
+ 451      536C6176 
+ 451      655F4241 
+ 451      434B5550 
+ 451      5F535452 
+ 452              	.LASF11:
+ 453 01d8 666C6F61 		.ascii	"float\000"
+ 453      7400
+ 454              	.LASF2:
+ 455 01de 73686F72 		.ascii	"short int\000"
+ 455      7420696E 
+ARM GAS  C:\Users\lovelesh\AppData\Local\Temp\ccPdJB6j.s 			page 14
 
 
- 455              	.LASF15:
- 456 01d9 73697A65 		.ascii	"sizetype\000"
- 456      74797065 
- 456      00
- 457              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br
+ 455      7400
+ 456              	.LASF15:
+ 457 01e8 73697A65 		.ascii	"sizetype\000"
+ 457      74797065 
+ 457      00
+ 458              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br

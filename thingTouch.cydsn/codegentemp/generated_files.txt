@@ -1,153 +1,153 @@
 <?xml version="1.0" encoding="us-ascii"?>
 
-<fileSet version="1" anchorPath="F:\PSoC\thingTouch\thingTouch.cydsn\codegentemp" xsi:schemaLocation="http://cypress.com/xsd/cypathdictionary cypathdictionary.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://cypress.com/xsd/cypathdictionary">
-  <file name="F:\PSoC\thingTouch\thingTouch.cydsn\codegentemp\cyfitter_cfg.h" value="NONE;" />
-  <file name="F:\PSoC\thingTouch\thingTouch.cydsn\codegentemp\cyfitter_cfg.c" value="ARM_C_FILE;" />
-  <file name="F:\PSoC\thingTouch\thingTouch.cydsn\codegentemp\protect.hex" value="NONE;" />
-  <file name="F:\PSoC\thingTouch\thingTouch.cydsn\codegentemp\cymetadata.c" value="ARM_C_FILE;" />
-  <file name="F:\PSoC\thingTouch\thingTouch.cydsn\codegentemp\cydevice_trm.h" value="NONE;" />
-  <file name="F:\PSoC\thingTouch\thingTouch.cydsn\codegentemp\cydevicegnu_trm.inc" value="NONE;" />
-  <file name="F:\PSoC\thingTouch\thingTouch.cydsn\codegentemp\cydevicerv_trm.inc" value="NONE;" />
-  <file name="F:\PSoC\thingTouch\thingTouch.cydsn\codegentemp\cydeviceiar_trm.inc" value="NONE;" />
-  <file name="F:\PSoC\thingTouch\thingTouch.cydsn\codegentemp\cyfittergnu.inc" value="NONE;" />
-  <file name="F:\PSoC\thingTouch\thingTouch.cydsn\codegentemp\cyfitterrv.inc" value="NONE;" />
-  <file name="F:\PSoC\thingTouch\thingTouch.cydsn\codegentemp\cyfitteriar.inc" value="NONE;" />
-  <file name="F:\PSoC\thingTouch\thingTouch.cydsn\codegentemp\cyfitter.h" value="NONE;" />
-  <file name="F:\PSoC\thingTouch\thingTouch.cydsn\codegentemp\cydisabledsheets.h" value="NONE;" />
-  <file name="F:\PSoC\thingTouch\thingTouch.cydsn\codegentemp\LED_1.c" value="ARM_C_FILE;LED_1" />
-  <file name="F:\PSoC\thingTouch\thingTouch.cydsn\codegentemp\LED_1.h" value="NONE;LED_1" />
-  <file name="F:\PSoC\thingTouch\thingTouch.cydsn\codegentemp\LED_1_aliases.h" value="NONE;LED_1" />
-  <file name="F:\PSoC\thingTouch\thingTouch.cydsn\codegentemp\LED_1_PM.c" value="ARM_C_FILE;LED_1" />
-  <file name="F:\PSoC\thingTouch\thingTouch.cydsn\codegentemp\CapSense.c" value="ARM_C_FILE;CapSense" />
-  <file name="F:\PSoC\thingTouch\thingTouch.cydsn\codegentemp\CapSense.h" value="NONE;CapSense" />
-  <file name="F:\PSoC\thingTouch\thingTouch.cydsn\codegentemp\CapSense_PM.c" value="ARM_C_FILE;CapSense" />
-  <file name="F:\PSoC\thingTouch\thingTouch.cydsn\codegentemp\CapSense_CSHL.c" value="ARM_C_FILE;CapSense" />
-  <file name="F:\PSoC\thingTouch\thingTouch.cydsn\codegentemp\CapSense_CSHL.h" value="NONE;CapSense" />
-  <file name="F:\PSoC\thingTouch\thingTouch.cydsn\codegentemp\CapSense_INT.c" value="ARM_C_FILE;CapSense" />
-  <file name="F:\PSoC\thingTouch\thingTouch.cydsn\codegentemp\CapSense_TunerHelper.c" value="ARM_C_FILE;CapSense" />
-  <file name="F:\PSoC\thingTouch\thingTouch.cydsn\codegentemp\CapSense_TunerHelper.h" value="NONE;CapSense" />
-  <file name="F:\PSoC\thingTouch\thingTouch.cydsn\codegentemp\CapSense_SMS.c" value="ARM_C_FILE;CapSense" />
-  <file name="F:\PSoC\thingTouch\thingTouch.cydsn\codegentemp\CapSense_SMS.h" value="NONE;CapSense" />
-  <file name="F:\PSoC\thingTouch\thingTouch.cydsn\codegentemp\CapSense_PVT.h" value="NONE;CapSense" />
-  <file name="F:\PSoC\thingTouch\thingTouch.cydsn\codegentemp\CapSense_IP.h" value="NONE;CapSense" />
-  <file name="F:\PSoC\thingTouch\thingTouch.cydsn\codegentemp\LED_2.c" value="ARM_C_FILE;LED_2" />
-  <file name="F:\PSoC\thingTouch\thingTouch.cydsn\codegentemp\LED_2.h" value="NONE;LED_2" />
-  <file name="F:\PSoC\thingTouch\thingTouch.cydsn\codegentemp\LED_2_aliases.h" value="NONE;LED_2" />
-  <file name="F:\PSoC\thingTouch\thingTouch.cydsn\codegentemp\LED_2_PM.c" value="ARM_C_FILE;LED_2" />
-  <file name="F:\PSoC\thingTouch\thingTouch.cydsn\codegentemp\Clock_PWM.c" value="ARM_C_FILE;Clock_PWM" />
-  <file name="F:\PSoC\thingTouch\thingTouch.cydsn\codegentemp\Clock_PWM.h" value="NONE;Clock_PWM" />
-  <file name="F:\PSoC\thingTouch\thingTouch.cydsn\codegentemp\LED_CONTROL.c" value="ARM_C_FILE;LED_CONTROL" />
-  <file name="F:\PSoC\thingTouch\thingTouch.cydsn\codegentemp\LED_CONTROL.h" value="NONE;LED_CONTROL" />
-  <file name="F:\PSoC\thingTouch\thingTouch.cydsn\codegentemp\LED_CONTROL_PM.c" value="ARM_C_FILE;LED_CONTROL" />
-  <file name="F:\PSoC\thingTouch\thingTouch.cydsn\codegentemp\I2C_Slave.c" value="ARM_C_FILE;I2C_Slave" />
-  <file name="F:\PSoC\thingTouch\thingTouch.cydsn\codegentemp\I2C_Slave.h" value="NONE;I2C_Slave" />
-  <file name="F:\PSoC\thingTouch\thingTouch.cydsn\codegentemp\I2C_Slave_I2C.h" value="NONE;I2C_Slave" />
-  <file name="F:\PSoC\thingTouch\thingTouch.cydsn\codegentemp\I2C_Slave_I2C_INT.c" value="ARM_C_FILE;I2C_Slave" />
-  <file name="F:\PSoC\thingTouch\thingTouch.cydsn\codegentemp\I2C_Slave_I2C.c" value="ARM_C_FILE;I2C_Slave" />
-  <file name="F:\PSoC\thingTouch\thingTouch.cydsn\codegentemp\I2C_Slave_I2C_BOOT.c" value="ARM_C_FILE;I2C_Slave" />
-  <file name="F:\PSoC\thingTouch\thingTouch.cydsn\codegentemp\I2C_Slave_I2C_SLAVE.c" value="ARM_C_FILE;I2C_Slave" />
-  <file name="F:\PSoC\thingTouch\thingTouch.cydsn\codegentemp\I2C_Slave_PM.c" value="ARM_C_FILE;I2C_Slave" />
-  <file name="F:\PSoC\thingTouch\thingTouch.cydsn\codegentemp\I2C_Slave_BOOT.c" value="ARM_C_FILE;I2C_Slave" />
-  <file name="F:\PSoC\thingTouch\thingTouch.cydsn\codegentemp\I2C_Slave_PINS.h" value="NONE;I2C_Slave" />
-  <file name="F:\PSoC\thingTouch\thingTouch.cydsn\codegentemp\I2C_Slave_I2C_PVT.h" value="NONE;I2C_Slave" />
-  <file name="F:\PSoC\thingTouch\thingTouch.cydsn\codegentemp\I2C_Slave_PVT.h" value="NONE;I2C_Slave" />
-  <file name="F:\PSoC\thingTouch\thingTouch.cydsn\codegentemp\I2C_Slave_BOOT.h" value="NONE;I2C_Slave" />
-  <file name="F:\PSoC\thingTouch\thingTouch.cydsn\codegentemp\LED1.c" value="ARM_C_FILE;LED1" />
-  <file name="F:\PSoC\thingTouch\thingTouch.cydsn\codegentemp\LED1.h" value="NONE;LED1" />
-  <file name="F:\PSoC\thingTouch\thingTouch.cydsn\codegentemp\LED1_aliases.h" value="NONE;LED1" />
-  <file name="F:\PSoC\thingTouch\thingTouch.cydsn\codegentemp\LED1_PM.c" value="ARM_C_FILE;LED1" />
-  <file name="F:\PSoC\thingTouch\thingTouch.cydsn\codegentemp\LED2.c" value="ARM_C_FILE;LED2" />
-  <file name="F:\PSoC\thingTouch\thingTouch.cydsn\codegentemp\LED2.h" value="NONE;LED2" />
-  <file name="F:\PSoC\thingTouch\thingTouch.cydsn\codegentemp\LED2_aliases.h" value="NONE;LED2" />
-  <file name="F:\PSoC\thingTouch\thingTouch.cydsn\codegentemp\LED2_PM.c" value="ARM_C_FILE;LED2" />
-  <file name="F:\PSoC\thingTouch\thingTouch.cydsn\codegentemp\LED3.c" value="ARM_C_FILE;LED3" />
-  <file name="F:\PSoC\thingTouch\thingTouch.cydsn\codegentemp\LED3.h" value="NONE;LED3" />
-  <file name="F:\PSoC\thingTouch\thingTouch.cydsn\codegentemp\LED3_aliases.h" value="NONE;LED3" />
-  <file name="F:\PSoC\thingTouch\thingTouch.cydsn\codegentemp\LED3_PM.c" value="ARM_C_FILE;LED3" />
-  <file name="F:\PSoC\thingTouch\thingTouch.cydsn\codegentemp\LED4.c" value="ARM_C_FILE;LED4" />
-  <file name="F:\PSoC\thingTouch\thingTouch.cydsn\codegentemp\LED4.h" value="NONE;LED4" />
-  <file name="F:\PSoC\thingTouch\thingTouch.cydsn\codegentemp\LED4_aliases.h" value="NONE;LED4" />
-  <file name="F:\PSoC\thingTouch\thingTouch.cydsn\codegentemp\LED4_PM.c" value="ARM_C_FILE;LED4" />
-  <file name="F:\PSoC\thingTouch\thingTouch.cydsn\codegentemp\LED5.c" value="ARM_C_FILE;LED5" />
-  <file name="F:\PSoC\thingTouch\thingTouch.cydsn\codegentemp\LED5.h" value="NONE;LED5" />
-  <file name="F:\PSoC\thingTouch\thingTouch.cydsn\codegentemp\LED5_aliases.h" value="NONE;LED5" />
-  <file name="F:\PSoC\thingTouch\thingTouch.cydsn\codegentemp\LED5_PM.c" value="ARM_C_FILE;LED5" />
-  <file name="F:\PSoC\thingTouch\thingTouch.cydsn\codegentemp\InterPin.c" value="ARM_C_FILE;InterPin" />
-  <file name="F:\PSoC\thingTouch\thingTouch.cydsn\codegentemp\InterPin.h" value="NONE;InterPin" />
-  <file name="F:\PSoC\thingTouch\thingTouch.cydsn\codegentemp\InterPin_aliases.h" value="NONE;InterPin" />
-  <file name="F:\PSoC\thingTouch\thingTouch.cydsn\codegentemp\InterPin_PM.c" value="ARM_C_FILE;InterPin" />
-  <file name="F:\PSoC\thingTouch\thingTouch.cydsn\codegentemp\UART.c" value="ARM_C_FILE;UART" />
-  <file name="F:\PSoC\thingTouch\thingTouch.cydsn\codegentemp\UART.h" value="NONE;UART" />
-  <file name="F:\PSoC\thingTouch\thingTouch.cydsn\codegentemp\UART_SPI_UART.h" value="NONE;UART" />
-  <file name="F:\PSoC\thingTouch\thingTouch.cydsn\codegentemp\UART_SPI_UART.c" value="ARM_C_FILE;UART" />
-  <file name="F:\PSoC\thingTouch\thingTouch.cydsn\codegentemp\UART_SPI_UART_INT.c" value="ARM_C_FILE;UART" />
-  <file name="F:\PSoC\thingTouch\thingTouch.cydsn\codegentemp\UART_PM.c" value="ARM_C_FILE;UART" />
-  <file name="F:\PSoC\thingTouch\thingTouch.cydsn\codegentemp\UART_UART.c" value="ARM_C_FILE;UART" />
-  <file name="F:\PSoC\thingTouch\thingTouch.cydsn\codegentemp\UART_BOOT.c" value="ARM_C_FILE;UART" />
-  <file name="F:\PSoC\thingTouch\thingTouch.cydsn\codegentemp\UART_UART_BOOT.c" value="ARM_C_FILE;UART" />
-  <file name="F:\PSoC\thingTouch\thingTouch.cydsn\codegentemp\UART_PINS.h" value="NONE;UART" />
-  <file name="F:\PSoC\thingTouch\thingTouch.cydsn\codegentemp\UART_SPI_UART_PVT.h" value="NONE;UART" />
-  <file name="F:\PSoC\thingTouch\thingTouch.cydsn\codegentemp\UART_PVT.h" value="NONE;UART" />
-  <file name="F:\PSoC\thingTouch\thingTouch.cydsn\codegentemp\UART_BOOT.h" value="NONE;UART" />
-  <file name="F:\PSoC\thingTouch\thingTouch.cydsn\codegentemp\LED6.c" value="ARM_C_FILE;LED6" />
-  <file name="F:\PSoC\thingTouch\thingTouch.cydsn\codegentemp\LED6.h" value="NONE;LED6" />
-  <file name="F:\PSoC\thingTouch\thingTouch.cydsn\codegentemp\LED6_aliases.h" value="NONE;LED6" />
-  <file name="F:\PSoC\thingTouch\thingTouch.cydsn\codegentemp\LED6_PM.c" value="ARM_C_FILE;LED6" />
-  <file name="F:\PSoC\thingTouch\thingTouch.cydsn\codegentemp\LED7.c" value="ARM_C_FILE;LED7" />
-  <file name="F:\PSoC\thingTouch\thingTouch.cydsn\codegentemp\LED7.h" value="NONE;LED7" />
-  <file name="F:\PSoC\thingTouch\thingTouch.cydsn\codegentemp\LED7_aliases.h" value="NONE;LED7" />
-  <file name="F:\PSoC\thingTouch\thingTouch.cydsn\codegentemp\LED7_PM.c" value="ARM_C_FILE;LED7" />
-  <file name="F:\PSoC\thingTouch\thingTouch.cydsn\codegentemp\CapSense_SampleClk.c" value="ARM_C_FILE;CapSense_SampleClk" />
-  <file name="F:\PSoC\thingTouch\thingTouch.cydsn\codegentemp\CapSense_SampleClk.h" value="NONE;CapSense_SampleClk" />
-  <file name="F:\PSoC\thingTouch\thingTouch.cydsn\codegentemp\CapSense_Sns_aliases.h" value="NONE;CapSense_Sns" />
-  <file name="F:\PSoC\thingTouch\thingTouch.cydsn\codegentemp\CapSense_SenseClk.c" value="ARM_C_FILE;CapSense_SenseClk" />
-  <file name="F:\PSoC\thingTouch\thingTouch.cydsn\codegentemp\CapSense_SenseClk.h" value="NONE;CapSense_SenseClk" />
-  <file name="F:\PSoC\thingTouch\thingTouch.cydsn\codegentemp\I2C_Slave_SCBCLK.c" value="ARM_C_FILE;I2C_Slave_SCBCLK" />
-  <file name="F:\PSoC\thingTouch\thingTouch.cydsn\codegentemp\I2C_Slave_SCBCLK.h" value="NONE;I2C_Slave_SCBCLK" />
-  <file name="F:\PSoC\thingTouch\thingTouch.cydsn\codegentemp\I2C_Slave_sda.c" value="ARM_C_FILE;I2C_Slave_sda" />
-  <file name="F:\PSoC\thingTouch\thingTouch.cydsn\codegentemp\I2C_Slave_sda.h" value="NONE;I2C_Slave_sda" />
-  <file name="F:\PSoC\thingTouch\thingTouch.cydsn\codegentemp\I2C_Slave_sda_aliases.h" value="NONE;I2C_Slave_sda" />
-  <file name="F:\PSoC\thingTouch\thingTouch.cydsn\codegentemp\I2C_Slave_sda_PM.c" value="ARM_C_FILE;I2C_Slave_sda" />
-  <file name="F:\PSoC\thingTouch\thingTouch.cydsn\codegentemp\I2C_Slave_scl.c" value="ARM_C_FILE;I2C_Slave_scl" />
-  <file name="F:\PSoC\thingTouch\thingTouch.cydsn\codegentemp\I2C_Slave_scl.h" value="NONE;I2C_Slave_scl" />
-  <file name="F:\PSoC\thingTouch\thingTouch.cydsn\codegentemp\I2C_Slave_scl_aliases.h" value="NONE;I2C_Slave_scl" />
-  <file name="F:\PSoC\thingTouch\thingTouch.cydsn\codegentemp\I2C_Slave_scl_PM.c" value="ARM_C_FILE;I2C_Slave_scl" />
-  <file name="F:\PSoC\thingTouch\thingTouch.cydsn\codegentemp\I2C_Slave_SCB_IRQ.c" value="ARM_C_FILE;I2C_Slave_SCB_IRQ" />
-  <file name="F:\PSoC\thingTouch\thingTouch.cydsn\codegentemp\I2C_Slave_SCB_IRQ.h" value="NONE;I2C_Slave_SCB_IRQ" />
-  <file name="F:\PSoC\thingTouch\thingTouch.cydsn\codegentemp\UART_SCBCLK.c" value="ARM_C_FILE;UART_SCBCLK" />
-  <file name="F:\PSoC\thingTouch\thingTouch.cydsn\codegentemp\UART_SCBCLK.h" value="NONE;UART_SCBCLK" />
-  <file name="F:\PSoC\thingTouch\thingTouch.cydsn\codegentemp\UART_tx.c" value="ARM_C_FILE;UART_tx" />
-  <file name="F:\PSoC\thingTouch\thingTouch.cydsn\codegentemp\UART_tx.h" value="NONE;UART_tx" />
-  <file name="F:\PSoC\thingTouch\thingTouch.cydsn\codegentemp\UART_tx_aliases.h" value="NONE;UART_tx" />
-  <file name="F:\PSoC\thingTouch\thingTouch.cydsn\codegentemp\UART_tx_PM.c" value="ARM_C_FILE;UART_tx" />
-  <file name="F:\PSoC\thingTouch\thingTouch.cydsn\codegentemp\UART_rx.c" value="ARM_C_FILE;UART_rx" />
-  <file name="F:\PSoC\thingTouch\thingTouch.cydsn\codegentemp\UART_rx.h" value="NONE;UART_rx" />
-  <file name="F:\PSoC\thingTouch\thingTouch.cydsn\codegentemp\UART_rx_aliases.h" value="NONE;UART_rx" />
-  <file name="F:\PSoC\thingTouch\thingTouch.cydsn\codegentemp\UART_rx_PM.c" value="ARM_C_FILE;UART_rx" />
-  <file name="F:\PSoC\thingTouch\thingTouch.cydsn\codegentemp\cycodeshareimport.ld" value="NONE;" />
-  <file name="F:\PSoC\thingTouch\thingTouch.cydsn\codegentemp\cycodeshareexport.ld" value="NONE;" />
-  <file name="F:\PSoC\thingTouch\thingTouch.cydsn\codegentemp\cycodeshareimport.scat" value="NONE;" />
-  <file name="F:\PSoC\thingTouch\thingTouch.cydsn\codegentemp\cm0gcc.ld" value="NONE;cy_boot" />
-  <file name="F:\PSoC\thingTouch\thingTouch.cydsn\codegentemp\Cm0RealView.scat" value="NONE;cy_boot" />
-  <file name="F:\PSoC\thingTouch\thingTouch.cydsn\codegentemp\Cm0Start.c" value="ARM_C_FILE;cy_boot" />
-  <file name="F:\PSoC\thingTouch\thingTouch.cydsn\codegentemp\core_cm0_psoc4.h" value="NONE;cy_boot" />
-  <file name="F:\PSoC\thingTouch\thingTouch.cydsn\codegentemp\core_cm0.h" value="NONE;cy_boot" />
-  <file name="F:\PSoC\thingTouch\thingTouch.cydsn\codegentemp\CyBootAsmGnu.s" value="GNU_ARM_ASM_FILE;cy_boot" />
-  <file name="F:\PSoC\thingTouch\thingTouch.cydsn\codegentemp\CyBootAsmRv.s" value="REALVIEW_ARM_ASM_FILE;cy_boot" />
-  <file name="F:\PSoC\thingTouch\thingTouch.cydsn\codegentemp\CyFlash.c" value="ARM_C_FILE;cy_boot" />
-  <file name="F:\PSoC\thingTouch\thingTouch.cydsn\codegentemp\CyFlash.h" value="NONE;cy_boot" />
-  <file name="F:\PSoC\thingTouch\thingTouch.cydsn\codegentemp\CyLib.c" value="ARM_C_FILE;cy_boot" />
-  <file name="F:\PSoC\thingTouch\thingTouch.cydsn\codegentemp\CyLib.h" value="NONE;cy_boot" />
-  <file name="F:\PSoC\thingTouch\thingTouch.cydsn\codegentemp\cyPm.c" value="ARM_C_FILE;cy_boot" />
-  <file name="F:\PSoC\thingTouch\thingTouch.cydsn\codegentemp\cyPm.h" value="NONE;cy_boot" />
-  <file name="F:\PSoC\thingTouch\thingTouch.cydsn\codegentemp\cytypes.h" value="NONE;cy_boot" />
-  <file name="F:\PSoC\thingTouch\thingTouch.cydsn\codegentemp\cyutils.c" value="ARM_C_FILE;cy_boot" />
-  <file name="F:\PSoC\thingTouch\thingTouch.cydsn\codegentemp\cypins.h" value="NONE;cy_boot" />
-  <file name="F:\PSoC\thingTouch\thingTouch.cydsn\codegentemp\core_cmFunc.h" value="NONE;cy_boot" />
-  <file name="F:\PSoC\thingTouch\thingTouch.cydsn\codegentemp\core_cmInstr.h" value="NONE;cy_boot" />
-  <file name="F:\PSoC\thingTouch\thingTouch.cydsn\codegentemp\Cm0Iar.icf" value="NONE;cy_boot" />
-  <file name="F:\PSoC\thingTouch\thingTouch.cydsn\codegentemp\CyBootAsmIar.s" value="IAR_ASM_FILE;cy_boot" />
-  <file name="F:\PSoC\thingTouch\thingTouch.cydsn\codegentemp\CyLFClk.c" value="ARM_C_FILE;cy_lfclk" />
-  <file name="F:\PSoC\thingTouch\thingTouch.cydsn\codegentemp\CyLFClk.h" value="NONE;cy_lfclk" />
-  <file name="F:\PSoC\thingTouch\thingTouch.cydsn\codegentemp\project.h" value="NONE;" />
+<fileSet version="1" anchorPath="P:\PSoC\PSoC Workspace\thingTouch\thingTouch.cydsn\codegentemp" xsi:schemaLocation="http://cypress.com/xsd/cypathdictionary cypathdictionary.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://cypress.com/xsd/cypathdictionary">
+  <file name="P:\PSoC\PSoC Workspace\thingTouch\thingTouch.cydsn\codegentemp\cyfitter_cfg.h" value="NONE;" />
+  <file name="P:\PSoC\PSoC Workspace\thingTouch\thingTouch.cydsn\codegentemp\cyfitter_cfg.c" value="ARM_C_FILE;" />
+  <file name="P:\PSoC\PSoC Workspace\thingTouch\thingTouch.cydsn\codegentemp\protect.hex" value="NONE;" />
+  <file name="P:\PSoC\PSoC Workspace\thingTouch\thingTouch.cydsn\codegentemp\cymetadata.c" value="ARM_C_FILE;" />
+  <file name="P:\PSoC\PSoC Workspace\thingTouch\thingTouch.cydsn\codegentemp\cydevice_trm.h" value="NONE;" />
+  <file name="P:\PSoC\PSoC Workspace\thingTouch\thingTouch.cydsn\codegentemp\cydevicegnu_trm.inc" value="NONE;" />
+  <file name="P:\PSoC\PSoC Workspace\thingTouch\thingTouch.cydsn\codegentemp\cydevicerv_trm.inc" value="NONE;" />
+  <file name="P:\PSoC\PSoC Workspace\thingTouch\thingTouch.cydsn\codegentemp\cydeviceiar_trm.inc" value="NONE;" />
+  <file name="P:\PSoC\PSoC Workspace\thingTouch\thingTouch.cydsn\codegentemp\cyfittergnu.inc" value="NONE;" />
+  <file name="P:\PSoC\PSoC Workspace\thingTouch\thingTouch.cydsn\codegentemp\cyfitterrv.inc" value="NONE;" />
+  <file name="P:\PSoC\PSoC Workspace\thingTouch\thingTouch.cydsn\codegentemp\cyfitteriar.inc" value="NONE;" />
+  <file name="P:\PSoC\PSoC Workspace\thingTouch\thingTouch.cydsn\codegentemp\cyfitter.h" value="NONE;" />
+  <file name="P:\PSoC\PSoC Workspace\thingTouch\thingTouch.cydsn\codegentemp\cydisabledsheets.h" value="NONE;" />
+  <file name="P:\PSoC\PSoC Workspace\thingTouch\thingTouch.cydsn\codegentemp\LED_1.c" value="ARM_C_FILE;LED_1" />
+  <file name="P:\PSoC\PSoC Workspace\thingTouch\thingTouch.cydsn\codegentemp\LED_1.h" value="NONE;LED_1" />
+  <file name="P:\PSoC\PSoC Workspace\thingTouch\thingTouch.cydsn\codegentemp\LED_1_aliases.h" value="NONE;LED_1" />
+  <file name="P:\PSoC\PSoC Workspace\thingTouch\thingTouch.cydsn\codegentemp\LED_1_PM.c" value="ARM_C_FILE;LED_1" />
+  <file name="P:\PSoC\PSoC Workspace\thingTouch\thingTouch.cydsn\codegentemp\CapSense.c" value="ARM_C_FILE;CapSense" />
+  <file name="P:\PSoC\PSoC Workspace\thingTouch\thingTouch.cydsn\codegentemp\CapSense.h" value="NONE;CapSense" />
+  <file name="P:\PSoC\PSoC Workspace\thingTouch\thingTouch.cydsn\codegentemp\CapSense_PM.c" value="ARM_C_FILE;CapSense" />
+  <file name="P:\PSoC\PSoC Workspace\thingTouch\thingTouch.cydsn\codegentemp\CapSense_CSHL.c" value="ARM_C_FILE;CapSense" />
+  <file name="P:\PSoC\PSoC Workspace\thingTouch\thingTouch.cydsn\codegentemp\CapSense_CSHL.h" value="NONE;CapSense" />
+  <file name="P:\PSoC\PSoC Workspace\thingTouch\thingTouch.cydsn\codegentemp\CapSense_INT.c" value="ARM_C_FILE;CapSense" />
+  <file name="P:\PSoC\PSoC Workspace\thingTouch\thingTouch.cydsn\codegentemp\CapSense_TunerHelper.c" value="ARM_C_FILE;CapSense" />
+  <file name="P:\PSoC\PSoC Workspace\thingTouch\thingTouch.cydsn\codegentemp\CapSense_TunerHelper.h" value="NONE;CapSense" />
+  <file name="P:\PSoC\PSoC Workspace\thingTouch\thingTouch.cydsn\codegentemp\CapSense_SMS.c" value="ARM_C_FILE;CapSense" />
+  <file name="P:\PSoC\PSoC Workspace\thingTouch\thingTouch.cydsn\codegentemp\CapSense_SMS.h" value="NONE;CapSense" />
+  <file name="P:\PSoC\PSoC Workspace\thingTouch\thingTouch.cydsn\codegentemp\CapSense_PVT.h" value="NONE;CapSense" />
+  <file name="P:\PSoC\PSoC Workspace\thingTouch\thingTouch.cydsn\codegentemp\CapSense_IP.h" value="NONE;CapSense" />
+  <file name="P:\PSoC\PSoC Workspace\thingTouch\thingTouch.cydsn\codegentemp\LED_2.c" value="ARM_C_FILE;LED_2" />
+  <file name="P:\PSoC\PSoC Workspace\thingTouch\thingTouch.cydsn\codegentemp\LED_2.h" value="NONE;LED_2" />
+  <file name="P:\PSoC\PSoC Workspace\thingTouch\thingTouch.cydsn\codegentemp\LED_2_aliases.h" value="NONE;LED_2" />
+  <file name="P:\PSoC\PSoC Workspace\thingTouch\thingTouch.cydsn\codegentemp\LED_2_PM.c" value="ARM_C_FILE;LED_2" />
+  <file name="P:\PSoC\PSoC Workspace\thingTouch\thingTouch.cydsn\codegentemp\Clock_PWM.c" value="ARM_C_FILE;Clock_PWM" />
+  <file name="P:\PSoC\PSoC Workspace\thingTouch\thingTouch.cydsn\codegentemp\Clock_PWM.h" value="NONE;Clock_PWM" />
+  <file name="P:\PSoC\PSoC Workspace\thingTouch\thingTouch.cydsn\codegentemp\LED_CONTROL.c" value="ARM_C_FILE;LED_CONTROL" />
+  <file name="P:\PSoC\PSoC Workspace\thingTouch\thingTouch.cydsn\codegentemp\LED_CONTROL.h" value="NONE;LED_CONTROL" />
+  <file name="P:\PSoC\PSoC Workspace\thingTouch\thingTouch.cydsn\codegentemp\LED_CONTROL_PM.c" value="ARM_C_FILE;LED_CONTROL" />
+  <file name="P:\PSoC\PSoC Workspace\thingTouch\thingTouch.cydsn\codegentemp\I2C_Slave.c" value="ARM_C_FILE;I2C_Slave" />
+  <file name="P:\PSoC\PSoC Workspace\thingTouch\thingTouch.cydsn\codegentemp\I2C_Slave.h" value="NONE;I2C_Slave" />
+  <file name="P:\PSoC\PSoC Workspace\thingTouch\thingTouch.cydsn\codegentemp\I2C_Slave_I2C.h" value="NONE;I2C_Slave" />
+  <file name="P:\PSoC\PSoC Workspace\thingTouch\thingTouch.cydsn\codegentemp\I2C_Slave_I2C_INT.c" value="ARM_C_FILE;I2C_Slave" />
+  <file name="P:\PSoC\PSoC Workspace\thingTouch\thingTouch.cydsn\codegentemp\I2C_Slave_I2C.c" value="ARM_C_FILE;I2C_Slave" />
+  <file name="P:\PSoC\PSoC Workspace\thingTouch\thingTouch.cydsn\codegentemp\I2C_Slave_I2C_BOOT.c" value="ARM_C_FILE;I2C_Slave" />
+  <file name="P:\PSoC\PSoC Workspace\thingTouch\thingTouch.cydsn\codegentemp\I2C_Slave_I2C_SLAVE.c" value="ARM_C_FILE;I2C_Slave" />
+  <file name="P:\PSoC\PSoC Workspace\thingTouch\thingTouch.cydsn\codegentemp\I2C_Slave_PM.c" value="ARM_C_FILE;I2C_Slave" />
+  <file name="P:\PSoC\PSoC Workspace\thingTouch\thingTouch.cydsn\codegentemp\I2C_Slave_BOOT.c" value="ARM_C_FILE;I2C_Slave" />
+  <file name="P:\PSoC\PSoC Workspace\thingTouch\thingTouch.cydsn\codegentemp\I2C_Slave_PINS.h" value="NONE;I2C_Slave" />
+  <file name="P:\PSoC\PSoC Workspace\thingTouch\thingTouch.cydsn\codegentemp\I2C_Slave_I2C_PVT.h" value="NONE;I2C_Slave" />
+  <file name="P:\PSoC\PSoC Workspace\thingTouch\thingTouch.cydsn\codegentemp\I2C_Slave_PVT.h" value="NONE;I2C_Slave" />
+  <file name="P:\PSoC\PSoC Workspace\thingTouch\thingTouch.cydsn\codegentemp\I2C_Slave_BOOT.h" value="NONE;I2C_Slave" />
+  <file name="P:\PSoC\PSoC Workspace\thingTouch\thingTouch.cydsn\codegentemp\LED1.c" value="ARM_C_FILE;LED1" />
+  <file name="P:\PSoC\PSoC Workspace\thingTouch\thingTouch.cydsn\codegentemp\LED1.h" value="NONE;LED1" />
+  <file name="P:\PSoC\PSoC Workspace\thingTouch\thingTouch.cydsn\codegentemp\LED1_aliases.h" value="NONE;LED1" />
+  <file name="P:\PSoC\PSoC Workspace\thingTouch\thingTouch.cydsn\codegentemp\LED1_PM.c" value="ARM_C_FILE;LED1" />
+  <file name="P:\PSoC\PSoC Workspace\thingTouch\thingTouch.cydsn\codegentemp\LED2.c" value="ARM_C_FILE;LED2" />
+  <file name="P:\PSoC\PSoC Workspace\thingTouch\thingTouch.cydsn\codegentemp\LED2.h" value="NONE;LED2" />
+  <file name="P:\PSoC\PSoC Workspace\thingTouch\thingTouch.cydsn\codegentemp\LED2_aliases.h" value="NONE;LED2" />
+  <file name="P:\PSoC\PSoC Workspace\thingTouch\thingTouch.cydsn\codegentemp\LED2_PM.c" value="ARM_C_FILE;LED2" />
+  <file name="P:\PSoC\PSoC Workspace\thingTouch\thingTouch.cydsn\codegentemp\LED3.c" value="ARM_C_FILE;LED3" />
+  <file name="P:\PSoC\PSoC Workspace\thingTouch\thingTouch.cydsn\codegentemp\LED3.h" value="NONE;LED3" />
+  <file name="P:\PSoC\PSoC Workspace\thingTouch\thingTouch.cydsn\codegentemp\LED3_aliases.h" value="NONE;LED3" />
+  <file name="P:\PSoC\PSoC Workspace\thingTouch\thingTouch.cydsn\codegentemp\LED3_PM.c" value="ARM_C_FILE;LED3" />
+  <file name="P:\PSoC\PSoC Workspace\thingTouch\thingTouch.cydsn\codegentemp\LED4.c" value="ARM_C_FILE;LED4" />
+  <file name="P:\PSoC\PSoC Workspace\thingTouch\thingTouch.cydsn\codegentemp\LED4.h" value="NONE;LED4" />
+  <file name="P:\PSoC\PSoC Workspace\thingTouch\thingTouch.cydsn\codegentemp\LED4_aliases.h" value="NONE;LED4" />
+  <file name="P:\PSoC\PSoC Workspace\thingTouch\thingTouch.cydsn\codegentemp\LED4_PM.c" value="ARM_C_FILE;LED4" />
+  <file name="P:\PSoC\PSoC Workspace\thingTouch\thingTouch.cydsn\codegentemp\LED5.c" value="ARM_C_FILE;LED5" />
+  <file name="P:\PSoC\PSoC Workspace\thingTouch\thingTouch.cydsn\codegentemp\LED5.h" value="NONE;LED5" />
+  <file name="P:\PSoC\PSoC Workspace\thingTouch\thingTouch.cydsn\codegentemp\LED5_aliases.h" value="NONE;LED5" />
+  <file name="P:\PSoC\PSoC Workspace\thingTouch\thingTouch.cydsn\codegentemp\LED5_PM.c" value="ARM_C_FILE;LED5" />
+  <file name="P:\PSoC\PSoC Workspace\thingTouch\thingTouch.cydsn\codegentemp\InterPin.c" value="ARM_C_FILE;InterPin" />
+  <file name="P:\PSoC\PSoC Workspace\thingTouch\thingTouch.cydsn\codegentemp\InterPin.h" value="NONE;InterPin" />
+  <file name="P:\PSoC\PSoC Workspace\thingTouch\thingTouch.cydsn\codegentemp\InterPin_aliases.h" value="NONE;InterPin" />
+  <file name="P:\PSoC\PSoC Workspace\thingTouch\thingTouch.cydsn\codegentemp\InterPin_PM.c" value="ARM_C_FILE;InterPin" />
+  <file name="P:\PSoC\PSoC Workspace\thingTouch\thingTouch.cydsn\codegentemp\UART.c" value="ARM_C_FILE;UART" />
+  <file name="P:\PSoC\PSoC Workspace\thingTouch\thingTouch.cydsn\codegentemp\UART.h" value="NONE;UART" />
+  <file name="P:\PSoC\PSoC Workspace\thingTouch\thingTouch.cydsn\codegentemp\UART_SPI_UART.h" value="NONE;UART" />
+  <file name="P:\PSoC\PSoC Workspace\thingTouch\thingTouch.cydsn\codegentemp\UART_SPI_UART.c" value="ARM_C_FILE;UART" />
+  <file name="P:\PSoC\PSoC Workspace\thingTouch\thingTouch.cydsn\codegentemp\UART_SPI_UART_INT.c" value="ARM_C_FILE;UART" />
+  <file name="P:\PSoC\PSoC Workspace\thingTouch\thingTouch.cydsn\codegentemp\UART_PM.c" value="ARM_C_FILE;UART" />
+  <file name="P:\PSoC\PSoC Workspace\thingTouch\thingTouch.cydsn\codegentemp\UART_UART.c" value="ARM_C_FILE;UART" />
+  <file name="P:\PSoC\PSoC Workspace\thingTouch\thingTouch.cydsn\codegentemp\UART_BOOT.c" value="ARM_C_FILE;UART" />
+  <file name="P:\PSoC\PSoC Workspace\thingTouch\thingTouch.cydsn\codegentemp\UART_UART_BOOT.c" value="ARM_C_FILE;UART" />
+  <file name="P:\PSoC\PSoC Workspace\thingTouch\thingTouch.cydsn\codegentemp\UART_PINS.h" value="NONE;UART" />
+  <file name="P:\PSoC\PSoC Workspace\thingTouch\thingTouch.cydsn\codegentemp\UART_SPI_UART_PVT.h" value="NONE;UART" />
+  <file name="P:\PSoC\PSoC Workspace\thingTouch\thingTouch.cydsn\codegentemp\UART_PVT.h" value="NONE;UART" />
+  <file name="P:\PSoC\PSoC Workspace\thingTouch\thingTouch.cydsn\codegentemp\UART_BOOT.h" value="NONE;UART" />
+  <file name="P:\PSoC\PSoC Workspace\thingTouch\thingTouch.cydsn\codegentemp\LED6.c" value="ARM_C_FILE;LED6" />
+  <file name="P:\PSoC\PSoC Workspace\thingTouch\thingTouch.cydsn\codegentemp\LED6.h" value="NONE;LED6" />
+  <file name="P:\PSoC\PSoC Workspace\thingTouch\thingTouch.cydsn\codegentemp\LED6_aliases.h" value="NONE;LED6" />
+  <file name="P:\PSoC\PSoC Workspace\thingTouch\thingTouch.cydsn\codegentemp\LED6_PM.c" value="ARM_C_FILE;LED6" />
+  <file name="P:\PSoC\PSoC Workspace\thingTouch\thingTouch.cydsn\codegentemp\LED7.c" value="ARM_C_FILE;LED7" />
+  <file name="P:\PSoC\PSoC Workspace\thingTouch\thingTouch.cydsn\codegentemp\LED7.h" value="NONE;LED7" />
+  <file name="P:\PSoC\PSoC Workspace\thingTouch\thingTouch.cydsn\codegentemp\LED7_aliases.h" value="NONE;LED7" />
+  <file name="P:\PSoC\PSoC Workspace\thingTouch\thingTouch.cydsn\codegentemp\LED7_PM.c" value="ARM_C_FILE;LED7" />
+  <file name="P:\PSoC\PSoC Workspace\thingTouch\thingTouch.cydsn\codegentemp\CapSense_SampleClk.c" value="ARM_C_FILE;CapSense_SampleClk" />
+  <file name="P:\PSoC\PSoC Workspace\thingTouch\thingTouch.cydsn\codegentemp\CapSense_SampleClk.h" value="NONE;CapSense_SampleClk" />
+  <file name="P:\PSoC\PSoC Workspace\thingTouch\thingTouch.cydsn\codegentemp\CapSense_Sns_aliases.h" value="NONE;CapSense_Sns" />
+  <file name="P:\PSoC\PSoC Workspace\thingTouch\thingTouch.cydsn\codegentemp\CapSense_SenseClk.c" value="ARM_C_FILE;CapSense_SenseClk" />
+  <file name="P:\PSoC\PSoC Workspace\thingTouch\thingTouch.cydsn\codegentemp\CapSense_SenseClk.h" value="NONE;CapSense_SenseClk" />
+  <file name="P:\PSoC\PSoC Workspace\thingTouch\thingTouch.cydsn\codegentemp\I2C_Slave_SCBCLK.c" value="ARM_C_FILE;I2C_Slave_SCBCLK" />
+  <file name="P:\PSoC\PSoC Workspace\thingTouch\thingTouch.cydsn\codegentemp\I2C_Slave_SCBCLK.h" value="NONE;I2C_Slave_SCBCLK" />
+  <file name="P:\PSoC\PSoC Workspace\thingTouch\thingTouch.cydsn\codegentemp\I2C_Slave_sda.c" value="ARM_C_FILE;I2C_Slave_sda" />
+  <file name="P:\PSoC\PSoC Workspace\thingTouch\thingTouch.cydsn\codegentemp\I2C_Slave_sda.h" value="NONE;I2C_Slave_sda" />
+  <file name="P:\PSoC\PSoC Workspace\thingTouch\thingTouch.cydsn\codegentemp\I2C_Slave_sda_aliases.h" value="NONE;I2C_Slave_sda" />
+  <file name="P:\PSoC\PSoC Workspace\thingTouch\thingTouch.cydsn\codegentemp\I2C_Slave_sda_PM.c" value="ARM_C_FILE;I2C_Slave_sda" />
+  <file name="P:\PSoC\PSoC Workspace\thingTouch\thingTouch.cydsn\codegentemp\I2C_Slave_scl.c" value="ARM_C_FILE;I2C_Slave_scl" />
+  <file name="P:\PSoC\PSoC Workspace\thingTouch\thingTouch.cydsn\codegentemp\I2C_Slave_scl.h" value="NONE;I2C_Slave_scl" />
+  <file name="P:\PSoC\PSoC Workspace\thingTouch\thingTouch.cydsn\codegentemp\I2C_Slave_scl_aliases.h" value="NONE;I2C_Slave_scl" />
+  <file name="P:\PSoC\PSoC Workspace\thingTouch\thingTouch.cydsn\codegentemp\I2C_Slave_scl_PM.c" value="ARM_C_FILE;I2C_Slave_scl" />
+  <file name="P:\PSoC\PSoC Workspace\thingTouch\thingTouch.cydsn\codegentemp\I2C_Slave_SCB_IRQ.c" value="ARM_C_FILE;I2C_Slave_SCB_IRQ" />
+  <file name="P:\PSoC\PSoC Workspace\thingTouch\thingTouch.cydsn\codegentemp\I2C_Slave_SCB_IRQ.h" value="NONE;I2C_Slave_SCB_IRQ" />
+  <file name="P:\PSoC\PSoC Workspace\thingTouch\thingTouch.cydsn\codegentemp\UART_SCBCLK.c" value="ARM_C_FILE;UART_SCBCLK" />
+  <file name="P:\PSoC\PSoC Workspace\thingTouch\thingTouch.cydsn\codegentemp\UART_SCBCLK.h" value="NONE;UART_SCBCLK" />
+  <file name="P:\PSoC\PSoC Workspace\thingTouch\thingTouch.cydsn\codegentemp\UART_tx.c" value="ARM_C_FILE;UART_tx" />
+  <file name="P:\PSoC\PSoC Workspace\thingTouch\thingTouch.cydsn\codegentemp\UART_tx.h" value="NONE;UART_tx" />
+  <file name="P:\PSoC\PSoC Workspace\thingTouch\thingTouch.cydsn\codegentemp\UART_tx_aliases.h" value="NONE;UART_tx" />
+  <file name="P:\PSoC\PSoC Workspace\thingTouch\thingTouch.cydsn\codegentemp\UART_tx_PM.c" value="ARM_C_FILE;UART_tx" />
+  <file name="P:\PSoC\PSoC Workspace\thingTouch\thingTouch.cydsn\codegentemp\UART_rx.c" value="ARM_C_FILE;UART_rx" />
+  <file name="P:\PSoC\PSoC Workspace\thingTouch\thingTouch.cydsn\codegentemp\UART_rx.h" value="NONE;UART_rx" />
+  <file name="P:\PSoC\PSoC Workspace\thingTouch\thingTouch.cydsn\codegentemp\UART_rx_aliases.h" value="NONE;UART_rx" />
+  <file name="P:\PSoC\PSoC Workspace\thingTouch\thingTouch.cydsn\codegentemp\UART_rx_PM.c" value="ARM_C_FILE;UART_rx" />
+  <file name="P:\PSoC\PSoC Workspace\thingTouch\thingTouch.cydsn\codegentemp\cycodeshareimport.ld" value="NONE;" />
+  <file name="P:\PSoC\PSoC Workspace\thingTouch\thingTouch.cydsn\codegentemp\cycodeshareexport.ld" value="NONE;" />
+  <file name="P:\PSoC\PSoC Workspace\thingTouch\thingTouch.cydsn\codegentemp\cycodeshareimport.scat" value="NONE;" />
+  <file name="P:\PSoC\PSoC Workspace\thingTouch\thingTouch.cydsn\codegentemp\cm0gcc.ld" value="NONE;cy_boot" />
+  <file name="P:\PSoC\PSoC Workspace\thingTouch\thingTouch.cydsn\codegentemp\Cm0RealView.scat" value="NONE;cy_boot" />
+  <file name="P:\PSoC\PSoC Workspace\thingTouch\thingTouch.cydsn\codegentemp\Cm0Start.c" value="ARM_C_FILE;cy_boot" />
+  <file name="P:\PSoC\PSoC Workspace\thingTouch\thingTouch.cydsn\codegentemp\core_cm0_psoc4.h" value="NONE;cy_boot" />
+  <file name="P:\PSoC\PSoC Workspace\thingTouch\thingTouch.cydsn\codegentemp\core_cm0.h" value="NONE;cy_boot" />
+  <file name="P:\PSoC\PSoC Workspace\thingTouch\thingTouch.cydsn\codegentemp\CyBootAsmGnu.s" value="GNU_ARM_ASM_FILE;cy_boot" />
+  <file name="P:\PSoC\PSoC Workspace\thingTouch\thingTouch.cydsn\codegentemp\CyBootAsmRv.s" value="REALVIEW_ARM_ASM_FILE;cy_boot" />
+  <file name="P:\PSoC\PSoC Workspace\thingTouch\thingTouch.cydsn\codegentemp\CyFlash.c" value="ARM_C_FILE;cy_boot" />
+  <file name="P:\PSoC\PSoC Workspace\thingTouch\thingTouch.cydsn\codegentemp\CyFlash.h" value="NONE;cy_boot" />
+  <file name="P:\PSoC\PSoC Workspace\thingTouch\thingTouch.cydsn\codegentemp\CyLib.c" value="ARM_C_FILE;cy_boot" />
+  <file name="P:\PSoC\PSoC Workspace\thingTouch\thingTouch.cydsn\codegentemp\CyLib.h" value="NONE;cy_boot" />
+  <file name="P:\PSoC\PSoC Workspace\thingTouch\thingTouch.cydsn\codegentemp\cyPm.c" value="ARM_C_FILE;cy_boot" />
+  <file name="P:\PSoC\PSoC Workspace\thingTouch\thingTouch.cydsn\codegentemp\cyPm.h" value="NONE;cy_boot" />
+  <file name="P:\PSoC\PSoC Workspace\thingTouch\thingTouch.cydsn\codegentemp\cytypes.h" value="NONE;cy_boot" />
+  <file name="P:\PSoC\PSoC Workspace\thingTouch\thingTouch.cydsn\codegentemp\cyutils.c" value="ARM_C_FILE;cy_boot" />
+  <file name="P:\PSoC\PSoC Workspace\thingTouch\thingTouch.cydsn\codegentemp\cypins.h" value="NONE;cy_boot" />
+  <file name="P:\PSoC\PSoC Workspace\thingTouch\thingTouch.cydsn\codegentemp\core_cmFunc.h" value="NONE;cy_boot" />
+  <file name="P:\PSoC\PSoC Workspace\thingTouch\thingTouch.cydsn\codegentemp\core_cmInstr.h" value="NONE;cy_boot" />
+  <file name="P:\PSoC\PSoC Workspace\thingTouch\thingTouch.cydsn\codegentemp\Cm0Iar.icf" value="NONE;cy_boot" />
+  <file name="P:\PSoC\PSoC Workspace\thingTouch\thingTouch.cydsn\codegentemp\CyBootAsmIar.s" value="IAR_ASM_FILE;cy_boot" />
+  <file name="P:\PSoC\PSoC Workspace\thingTouch\thingTouch.cydsn\codegentemp\CyLFClk.c" value="ARM_C_FILE;cy_lfclk" />
+  <file name="P:\PSoC\PSoC Workspace\thingTouch\thingTouch.cydsn\codegentemp\CyLFClk.h" value="NONE;cy_lfclk" />
+  <file name="P:\PSoC\PSoC Workspace\thingTouch\thingTouch.cydsn\codegentemp\project.h" value="NONE;" />
 </fileSet>

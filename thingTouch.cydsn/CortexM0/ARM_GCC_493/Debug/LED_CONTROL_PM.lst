@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Amit\AppData\Local\Temp\cczv2KSQ.s 			page 1
+ARM GAS  C:\Users\lovelesh\AppData\Local\Temp\ccD1Z8TX.s 			page 1
 
 
    1              		.cpu cortex-m0
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Amit\AppData\Local\Temp\cczv2KSQ.s 			page 1
   26:.\Generated_Source\PSoC4/LED_CONTROL_PM.c **** ********************************************************************************
   27:.\Generated_Source\PSoC4/LED_CONTROL_PM.c **** *
   28:.\Generated_Source\PSoC4/LED_CONTROL_PM.c **** * Summary:
-ARM GAS  C:\Users\Amit\AppData\Local\Temp\cczv2KSQ.s 			page 2
+ARM GAS  C:\Users\lovelesh\AppData\Local\Temp\ccD1Z8TX.s 			page 2
 
 
   29:.\Generated_Source\PSoC4/LED_CONTROL_PM.c **** *  All configuration registers are retention. Nothing to save here.
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Amit\AppData\Local\Temp\cczv2KSQ.s 			page 1
   53              		.loc 1 59 0
   54              		.cfi_startproc
   55 0000 80B5     		push	{r7, lr}
-ARM GAS  C:\Users\Amit\AppData\Local\Temp\cczv2KSQ.s 			page 3
+ARM GAS  C:\Users\lovelesh\AppData\Local\Temp\ccD1Z8TX.s 			page 3
 
 
   56              		.cfi_def_cfa_offset 8
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Amit\AppData\Local\Temp\cczv2KSQ.s 			page 1
   98              		.thumb_func
   99              		.type	LED_CONTROL_RestoreConfig, %function
  100              	LED_CONTROL_RestoreConfig:
-ARM GAS  C:\Users\Amit\AppData\Local\Temp\cczv2KSQ.s 			page 4
+ARM GAS  C:\Users\lovelesh\AppData\Local\Temp\ccD1Z8TX.s 			page 4
 
 
  101              	.LFB2:
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Amit\AppData\Local\Temp\cczv2KSQ.s 			page 1
  102:.\Generated_Source\PSoC4/LED_CONTROL_PM.c **** *  None
  103:.\Generated_Source\PSoC4/LED_CONTROL_PM.c **** *
  104:.\Generated_Source\PSoC4/LED_CONTROL_PM.c **** * Return:
-ARM GAS  C:\Users\Amit\AppData\Local\Temp\cczv2KSQ.s 			page 5
+ARM GAS  C:\Users\lovelesh\AppData\Local\Temp\ccD1Z8TX.s 			page 5
 
 
  105:.\Generated_Source\PSoC4/LED_CONTROL_PM.c **** *  None
@@ -293,12 +293,12 @@ ARM GAS  C:\Users\Amit\AppData\Local\Temp\cczv2KSQ.s 			page 1
  162 0006 00000000 		.4byte	.Ldebug_abbrev0
  163 000a 04       		.byte	0x4
  164 000b 01       		.uleb128 0x1
- 165 000c D8000000 		.4byte	.LASF21
+ 165 000c E7000000 		.4byte	.LASF21
  166 0010 01       		.byte	0x1
- 167 0011 52000000 		.4byte	.LASF22
- 168 0015 2E000000 		.4byte	.LASF23
+ 167 0011 2E000000 		.4byte	.LASF22
+ 168 0015 9A000000 		.4byte	.LASF23
  169 0019 00000000 		.4byte	.Ldebug_ranges0+0
-ARM GAS  C:\Users\Amit\AppData\Local\Temp\cczv2KSQ.s 			page 6
+ARM GAS  C:\Users\lovelesh\AppData\Local\Temp\ccD1Z8TX.s 			page 6
 
 
  170 001d 00000000 		.4byte	0
@@ -306,27 +306,27 @@ ARM GAS  C:\Users\Amit\AppData\Local\Temp\cczv2KSQ.s 			page 1
  172 0025 02       		.uleb128 0x2
  173 0026 01       		.byte	0x1
  174 0027 06       		.byte	0x6
- 175 0028 A8010000 		.4byte	.LASF0
+ 175 0028 B7010000 		.4byte	.LASF0
  176 002c 02       		.uleb128 0x2
  177 002d 01       		.byte	0x1
  178 002e 08       		.byte	0x8
- 179 002f 66010000 		.4byte	.LASF1
+ 179 002f 75010000 		.4byte	.LASF1
  180 0033 02       		.uleb128 0x2
  181 0034 02       		.byte	0x2
  182 0035 05       		.byte	0x5
- 183 0036 EA010000 		.4byte	.LASF2
+ 183 0036 F9010000 		.4byte	.LASF2
  184 003a 02       		.uleb128 0x2
  185 003b 02       		.byte	0x2
  186 003c 07       		.byte	0x7
- 187 003d A5000000 		.4byte	.LASF3
+ 187 003d 81000000 		.4byte	.LASF3
  188 0041 02       		.uleb128 0x2
  189 0042 04       		.byte	0x4
  190 0043 05       		.byte	0x5
- 191 0044 8C010000 		.4byte	.LASF4
+ 191 0044 9B010000 		.4byte	.LASF4
  192 0048 02       		.uleb128 0x2
  193 0049 04       		.byte	0x4
  194 004a 07       		.byte	0x7
- 195 004b 7C000000 		.4byte	.LASF5
+ 195 004b 58000000 		.4byte	.LASF5
  196 004f 02       		.uleb128 0x2
  197 0050 08       		.byte	0x8
  198 0051 05       		.byte	0x5
@@ -334,7 +334,7 @@ ARM GAS  C:\Users\Amit\AppData\Local\Temp\cczv2KSQ.s 			page 1
  200 0056 02       		.uleb128 0x2
  201 0057 08       		.byte	0x8
  202 0058 07       		.byte	0x7
- 203 0059 8E000000 		.4byte	.LASF7
+ 203 0059 6A000000 		.4byte	.LASF7
  204 005d 03       		.uleb128 0x3
  205 005e 04       		.byte	0x4
  206 005f 05       		.byte	0x5
@@ -344,7 +344,7 @@ ARM GAS  C:\Users\Amit\AppData\Local\Temp\cczv2KSQ.s 			page 1
  210 0066 07       		.byte	0x7
  211 0067 21000000 		.4byte	.LASF8
  212 006b 04       		.uleb128 0x4
- 213 006c A2010000 		.4byte	.LASF9
+ 213 006c B1010000 		.4byte	.LASF9
  214 0070 02       		.byte	0x2
  215 0071 3801     		.2byte	0x138
  216 0073 2C000000 		.4byte	0x2c
@@ -356,20 +356,20 @@ ARM GAS  C:\Users\Amit\AppData\Local\Temp\cczv2KSQ.s 			page 1
  222 0083 02       		.uleb128 0x2
  223 0084 04       		.byte	0x4
  224 0085 04       		.byte	0x4
- 225 0086 B8000000 		.4byte	.LASF11
+ 225 0086 94000000 		.4byte	.LASF11
  226 008a 02       		.uleb128 0x2
-ARM GAS  C:\Users\Amit\AppData\Local\Temp\cczv2KSQ.s 			page 7
+ARM GAS  C:\Users\lovelesh\AppData\Local\Temp\ccD1Z8TX.s 			page 7
 
 
  227 008b 08       		.byte	0x8
  228 008c 04       		.byte	0x4
- 229 008d 95010000 		.4byte	.LASF12
+ 229 008d A4010000 		.4byte	.LASF12
  230 0091 02       		.uleb128 0x2
  231 0092 01       		.byte	0x1
  232 0093 08       		.byte	0x8
- 233 0094 74010000 		.4byte	.LASF13
+ 233 0094 83010000 		.4byte	.LASF13
  234 0098 04       		.uleb128 0x4
- 235 0099 9C010000 		.4byte	.LASF14
+ 235 0099 AB010000 		.4byte	.LASF14
  236 009d 02       		.byte	0x2
  237 009e E401     		.2byte	0x1e4
  238 00a0 A4000000 		.4byte	0xa4
@@ -378,7 +378,7 @@ ARM GAS  C:\Users\Amit\AppData\Local\Temp\cczv2KSQ.s 			page 1
  241 00a9 02       		.uleb128 0x2
  242 00aa 04       		.byte	0x4
  243 00ab 07       		.byte	0x7
- 244 00ac E1010000 		.4byte	.LASF15
+ 244 00ac F0010000 		.4byte	.LASF15
  245 00b0 06       		.uleb128 0x6
  246 00b1 01       		.byte	0x1
  247 00b2 03       		.byte	0x3
@@ -392,12 +392,12 @@ ARM GAS  C:\Users\Amit\AppData\Local\Temp\cczv2KSQ.s 			page 1
  255 00c3 00       		.byte	0
  256 00c4 00       		.byte	0
  257 00c5 08       		.uleb128 0x8
- 258 00c6 BE000000 		.4byte	.LASF16
+ 258 00c6 CD000000 		.4byte	.LASF16
  259 00ca 03       		.byte	0x3
  260 00cb 24       		.byte	0x24
  261 00cc B0000000 		.4byte	0xb0
  262 00d0 09       		.uleb128 0x9
- 263 00d1 F4010000 		.4byte	.LASF17
+ 263 00d1 03020000 		.4byte	.LASF17
  264 00d5 01       		.byte	0x1
  265 00d6 26       		.byte	0x26
  266 00d7 00000000 		.4byte	.LFB0
@@ -405,7 +405,7 @@ ARM GAS  C:\Users\Amit\AppData\Local\Temp\cczv2KSQ.s 			page 1
  268 00df 01       		.uleb128 0x1
  269 00e0 9C       		.byte	0x9c
  270 00e1 0A       		.uleb128 0xa
- 271 00e2 0B020000 		.4byte	.LASF18
+ 271 00e2 1A020000 		.4byte	.LASF18
  272 00e6 01       		.byte	0x1
  273 00e7 3A       		.byte	0x3a
  274 00e8 00000000 		.4byte	.LFB1
@@ -413,18 +413,18 @@ ARM GAS  C:\Users\Amit\AppData\Local\Temp\cczv2KSQ.s 			page 1
  276 00f0 01       		.uleb128 0x1
  277 00f1 9C       		.byte	0x9c
  278 00f2 09       		.uleb128 0x9
- 279 00f3 B4010000 		.4byte	.LASF19
+ 279 00f3 C3010000 		.4byte	.LASF19
  280 00f7 01       		.byte	0x1
  281 00f8 58       		.byte	0x58
  282 00f9 00000000 		.4byte	.LFB2
  283 00fd 08000000 		.4byte	.LFE2-.LFB2
-ARM GAS  C:\Users\Amit\AppData\Local\Temp\cczv2KSQ.s 			page 8
+ARM GAS  C:\Users\lovelesh\AppData\Local\Temp\ccD1Z8TX.s 			page 8
 
 
  284 0101 01       		.uleb128 0x1
  285 0102 9C       		.byte	0x9c
  286 0103 0A       		.uleb128 0xa
- 287 0104 CE010000 		.4byte	.LASF20
+ 287 0104 DD010000 		.4byte	.LASF20
  288 0108 01       		.byte	0x1
  289 0109 6C       		.byte	0x6c
  290 010a 00000000 		.4byte	.LFB3
@@ -432,7 +432,7 @@ ARM GAS  C:\Users\Amit\AppData\Local\Temp\cczv2KSQ.s 			page 1
  292 0112 01       		.uleb128 0x1
  293 0113 9C       		.byte	0x9c
  294 0114 0B       		.uleb128 0xb
- 295 0115 79010000 		.4byte	.LASF25
+ 295 0115 88010000 		.4byte	.LASF25
  296 0119 01       		.byte	0x1
  297 011a 15       		.byte	0x15
  298 011b C5000000 		.4byte	0xc5
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\Amit\AppData\Local\Temp\cczv2KSQ.s 			page 1
  338 0021 0B       		.uleb128 0xb
  339 0022 0B       		.uleb128 0xb
  340 0023 3E       		.uleb128 0x3e
-ARM GAS  C:\Users\Amit\AppData\Local\Temp\cczv2KSQ.s 			page 9
+ARM GAS  C:\Users\lovelesh\AppData\Local\Temp\ccD1Z8TX.s 			page 9
 
 
  341 0024 0B       		.uleb128 0xb
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\Amit\AppData\Local\Temp\cczv2KSQ.s 			page 1
  395 005a 16       		.uleb128 0x16
  396 005b 00       		.byte	0
  397 005c 03       		.uleb128 0x3
-ARM GAS  C:\Users\Amit\AppData\Local\Temp\cczv2KSQ.s 			page 10
+ARM GAS  C:\Users\lovelesh\AppData\Local\Temp\ccD1Z8TX.s 			page 10
 
 
  398 005d 0E       		.uleb128 0xe
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\Amit\AppData\Local\Temp\cczv2KSQ.s 			page 1
  452 0095 00       		.byte	0
  453 0096 0B       		.uleb128 0xb
  454 0097 34       		.uleb128 0x34
-ARM GAS  C:\Users\Amit\AppData\Local\Temp\cczv2KSQ.s 			page 11
+ARM GAS  C:\Users\lovelesh\AppData\Local\Temp\ccD1Z8TX.s 			page 11
 
 
  455 0098 00       		.byte	0
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\Amit\AppData\Local\Temp\cczv2KSQ.s 			page 1
  503      6720696E 
  503      7400
  504              	.LASF10:
-ARM GAS  C:\Users\Amit\AppData\Local\Temp\cczv2KSQ.s 			page 12
+ARM GAS  C:\Users\lovelesh\AppData\Local\Temp\ccD1Z8TX.s 			page 12
 
 
  505 000e 75696E74 		.ascii	"uint32\000"
@@ -672,128 +672,129 @@ ARM GAS  C:\Users\Amit\AppData\Local\Temp\cczv2KSQ.s 			page 1
  509      676E6564 
  509      20696E74 
  509      00
- 510              	.LASF23:
- 511 002e 463A5C50 		.ascii	"F:\\PSoC\\thingTouch\\thingTouch.cydsn\000"
- 511      536F435C 
- 511      7468696E 
- 511      67546F75 
- 511      63685C74 
- 512              	.LASF22:
- 513 0052 2E5C4765 		.ascii	".\\Generated_Source\\PSoC4\\LED_CONTROL_PM.c\000"
- 513      6E657261 
- 513      7465645F 
- 513      536F7572 
- 513      63655C50 
- 514              	.LASF5:
- 515 007c 6C6F6E67 		.ascii	"long unsigned int\000"
- 515      20756E73 
- 515      69676E65 
- 515      6420696E 
- 515      7400
- 516              	.LASF7:
- 517 008e 6C6F6E67 		.ascii	"long long unsigned int\000"
- 517      206C6F6E 
- 517      6720756E 
+ 510              	.LASF22:
+ 511 002e 2E5C4765 		.ascii	".\\Generated_Source\\PSoC4\\LED_CONTROL_PM.c\000"
+ 511      6E657261 
+ 511      7465645F 
+ 511      536F7572 
+ 511      63655C50 
+ 512              	.LASF5:
+ 513 0058 6C6F6E67 		.ascii	"long unsigned int\000"
+ 513      20756E73 
+ 513      69676E65 
+ 513      6420696E 
+ 513      7400
+ 514              	.LASF7:
+ 515 006a 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 515      206C6F6E 
+ 515      6720756E 
+ 515      7369676E 
+ 515      65642069 
+ 516              	.LASF3:
+ 517 0081 73686F72 		.ascii	"short unsigned int\000"
+ 517      7420756E 
  517      7369676E 
  517      65642069 
- 518              	.LASF3:
- 519 00a5 73686F72 		.ascii	"short unsigned int\000"
- 519      7420756E 
- 519      7369676E 
- 519      65642069 
- 519      6E7400
- 520              	.LASF11:
- 521 00b8 666C6F61 		.ascii	"float\000"
- 521      7400
- 522              	.LASF16:
- 523 00be 4C45445F 		.ascii	"LED_CONTROL_BACKUP_STRUCT\000"
- 523      434F4E54 
- 523      524F4C5F 
- 523      4241434B 
- 523      55505F53 
- 524              	.LASF21:
- 525 00d8 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
- 525      4320342E 
- 525      392E3320 
- 525      32303135 
- 525      30333033 
- 526 010b 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m0 -mthumb -g -O"
-ARM GAS  C:\Users\Amit\AppData\Local\Temp\cczv2KSQ.s 			page 13
+ 517      6E7400
+ 518              	.LASF11:
+ 519 0094 666C6F61 		.ascii	"float\000"
+ 519      7400
+ 520              	.LASF23:
+ 521 009a 503A5C50 		.ascii	"P:\\PSoC\\PSoC Workspace\\thingTouch\\thingTouch.cy"
+ 521      536F435C 
+ 521      50536F43 
+ 521      20576F72 
+ 521      6B737061 
+ 522 00c9 64736E00 		.ascii	"dsn\000"
+ 523              	.LASF16:
+ 524 00cd 4C45445F 		.ascii	"LED_CONTROL_BACKUP_STRUCT\000"
+ 524      434F4E54 
+ 524      524F4C5F 
+ 524      4241434B 
+ 524      55505F53 
+ 525              	.LASF21:
+ 526 00e7 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 526      4320342E 
+ 526      392E3320 
+ 526      32303135 
+ 526      30333033 
+ARM GAS  C:\Users\lovelesh\AppData\Local\Temp\ccD1Z8TX.s 			page 13
 
 
- 526      20726576 
- 526      6973696F 
- 526      6E203232 
- 526      31323230 
- 527 013e 30202D66 		.ascii	"0 -ffunction-sections -ffat-lto-objects\000"
- 527      66756E63 
- 527      74696F6E 
- 527      2D736563 
- 527      74696F6E 
- 528              	.LASF1:
- 529 0166 756E7369 		.ascii	"unsigned char\000"
- 529      676E6564 
- 529      20636861 
- 529      7200
- 530              	.LASF13:
- 531 0174 63686172 		.ascii	"char\000"
- 531      00
- 532              	.LASF25:
- 533 0179 4C45445F 		.ascii	"LED_CONTROL_backup\000"
- 533      434F4E54 
- 533      524F4C5F 
- 533      6261636B 
- 533      757000
- 534              	.LASF4:
- 535 018c 6C6F6E67 		.ascii	"long int\000"
- 535      20696E74 
- 535      00
- 536              	.LASF12:
- 537 0195 646F7562 		.ascii	"double\000"
- 537      6C6500
- 538              	.LASF14:
- 539 019c 72656733 		.ascii	"reg32\000"
- 539      3200
- 540              	.LASF9:
- 541 01a2 75696E74 		.ascii	"uint8\000"
- 541      3800
- 542              	.LASF0:
- 543 01a8 7369676E 		.ascii	"signed char\000"
- 543      65642063 
- 543      68617200 
- 544              	.LASF19:
- 545 01b4 4C45445F 		.ascii	"LED_CONTROL_RestoreConfig\000"
- 545      434F4E54 
- 545      524F4C5F 
- 545      52657374 
- 545      6F726543 
- 546              	.LASF20:
- 547 01ce 4C45445F 		.ascii	"LED_CONTROL_Wakeup\000"
- 547      434F4E54 
- 547      524F4C5F 
- 547      57616B65 
- 547      757000
- 548              	.LASF15:
- 549 01e1 73697A65 		.ascii	"sizetype\000"
- 549      74797065 
- 549      00
- 550              	.LASF2:
-ARM GAS  C:\Users\Amit\AppData\Local\Temp\cczv2KSQ.s 			page 14
+ 527 011a 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m0 -mthumb -g -O"
+ 527      20726576 
+ 527      6973696F 
+ 527      6E203232 
+ 527      31323230 
+ 528 014d 30202D66 		.ascii	"0 -ffunction-sections -ffat-lto-objects\000"
+ 528      66756E63 
+ 528      74696F6E 
+ 528      2D736563 
+ 528      74696F6E 
+ 529              	.LASF1:
+ 530 0175 756E7369 		.ascii	"unsigned char\000"
+ 530      676E6564 
+ 530      20636861 
+ 530      7200
+ 531              	.LASF13:
+ 532 0183 63686172 		.ascii	"char\000"
+ 532      00
+ 533              	.LASF25:
+ 534 0188 4C45445F 		.ascii	"LED_CONTROL_backup\000"
+ 534      434F4E54 
+ 534      524F4C5F 
+ 534      6261636B 
+ 534      757000
+ 535              	.LASF4:
+ 536 019b 6C6F6E67 		.ascii	"long int\000"
+ 536      20696E74 
+ 536      00
+ 537              	.LASF12:
+ 538 01a4 646F7562 		.ascii	"double\000"
+ 538      6C6500
+ 539              	.LASF14:
+ 540 01ab 72656733 		.ascii	"reg32\000"
+ 540      3200
+ 541              	.LASF9:
+ 542 01b1 75696E74 		.ascii	"uint8\000"
+ 542      3800
+ 543              	.LASF0:
+ 544 01b7 7369676E 		.ascii	"signed char\000"
+ 544      65642063 
+ 544      68617200 
+ 545              	.LASF19:
+ 546 01c3 4C45445F 		.ascii	"LED_CONTROL_RestoreConfig\000"
+ 546      434F4E54 
+ 546      524F4C5F 
+ 546      52657374 
+ 546      6F726543 
+ 547              	.LASF20:
+ 548 01dd 4C45445F 		.ascii	"LED_CONTROL_Wakeup\000"
+ 548      434F4E54 
+ 548      524F4C5F 
+ 548      57616B65 
+ 548      757000
+ 549              	.LASF15:
+ 550 01f0 73697A65 		.ascii	"sizetype\000"
+ 550      74797065 
+ 550      00
+ARM GAS  C:\Users\lovelesh\AppData\Local\Temp\ccD1Z8TX.s 			page 14
 
 
- 551 01ea 73686F72 		.ascii	"short int\000"
- 551      7420696E 
- 551      7400
- 552              	.LASF17:
- 553 01f4 4C45445F 		.ascii	"LED_CONTROL_SaveConfig\000"
- 553      434F4E54 
- 553      524F4C5F 
- 553      53617665 
- 553      436F6E66 
- 554              	.LASF18:
- 555 020b 4C45445F 		.ascii	"LED_CONTROL_Sleep\000"
- 555      434F4E54 
- 555      524F4C5F 
- 555      536C6565 
- 555      7000
- 556              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br
+ 551              	.LASF2:
+ 552 01f9 73686F72 		.ascii	"short int\000"
+ 552      7420696E 
+ 552      7400
+ 553              	.LASF17:
+ 554 0203 4C45445F 		.ascii	"LED_CONTROL_SaveConfig\000"
+ 554      434F4E54 
+ 554      524F4C5F 
+ 554      53617665 
+ 554      436F6E66 
+ 555              	.LASF18:
+ 556 021a 4C45445F 		.ascii	"LED_CONTROL_Sleep\000"
+ 556      434F4E54 
+ 556      524F4C5F 
+ 556      536C6565 
+ 556      7000
+ 557              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br

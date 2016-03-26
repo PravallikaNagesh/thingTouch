@@ -2,7 +2,7 @@
 --	Conversion of thingTouch.v to vh2:
 --
 --	Cypress Semiconductor - WARP Version 6.3 IR 41
---	Sat Mar 26 11:53:19 2016
+--	Sat Mar 26 12:16:53 2016
 --
 
 USE cypress.cypress.all;
