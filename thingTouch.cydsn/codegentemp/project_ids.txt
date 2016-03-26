@@ -1,0 +1,5 @@
+C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|33cd4d45-a083-411f-8861-b241c5016daa
+C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|798bf9c4-3b3a-41a8-a12b-2d098d845401
+C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|fb281e52-c845-4df8-af56-81a3cf6f1fa9
+C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|6dafcfe2-1329-46c6-87d1-750a5e8e5fa3
+F:\PSoC\thingTouch\thingTouch.cydsn\thingTouch.cyprj|6720c838-71ee-402d-b043-de301ae18175

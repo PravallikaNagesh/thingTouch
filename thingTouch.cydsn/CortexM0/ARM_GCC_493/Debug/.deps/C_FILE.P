@@ -1,0 +1,144 @@
+F:/PSoC/thingTouch/thingTouch.cydsn/CortexM0/ARM_GCC_493/Debug/main.o : F:/PSoC/thingTouch/thingTouch.cydsn/Generated_Source/PSoC4/CapSense.h F:/PSoC/thingTouch/thingTouch.cydsn/Generated_Source/PSoC4/CapSense_CSHL.h F:/PSoC/thingTouch/thingTouch.cydsn/Generated_Source/PSoC4/CapSense_IP.h F:/PSoC/thingTouch/thingTouch.cydsn/Generated_Source/PSoC4/CapSense_PVT.h F:/PSoC/thingTouch/thingTouch.cydsn/Generated_Source/PSoC4/CapSense_SMS.h F:/PSoC/thingTouch/thingTouch.cydsn/Generated_Source/PSoC4/CapSense_SampleClk.h F:/PSoC/thingTouch/thingTouch.cydsn/Generated_Source/PSoC4/CapSense_SenseClk.h F:/PSoC/thingTouch/thingTouch.cydsn/Generated_Source/PSoC4/CapSense_Sns_aliases.h F:/PSoC/thingTouch/thingTouch.cydsn/Generated_Source/PSoC4/CapSense_TunerHelper.h F:/PSoC/thingTouch/thingTouch.cydsn/Generated_Source/PSoC4/Clock_PWM.h F:/PSoC/thingTouch/thingTouch.cydsn/Generated_Source/PSoC4/CyFlash.h F:/PSoC/thingTouch/thingTouch.cydsn/Generated_Source/PSoC4/CyLFClk.h F:/PSoC/thingTouch/thingTouch.cydsn/Generated_Source/PSoC4/CyLib.h F:/PSoC/thingTouch/thingTouch.cydsn/Generated_Source/PSoC4/I2C_Slave.h F:/PSoC/thingTouch/thingTouch.cydsn/Generated_Source/PSoC4/I2C_Slave_BOOT.h F:/PSoC/thingTouch/thingTouch.cydsn/Generated_Source/PSoC4/I2C_Slave_I2C.h F:/PSoC/thingTouch/thingTouch.cydsn/Generated_Source/PSoC4/I2C_Slave_I2C_PVT.h F:/PSoC/thingTouch/thingTouch.cydsn/Generated_Source/PSoC4/I2C_Slave_PINS.h F:/PSoC/thingTouch/thingTouch.cydsn/Generated_Source/PSoC4/I2C_Slave_PVT.h F:/PSoC/thingTouch/thingTouch.cydsn/Generated_Source/PSoC4/I2C_Slave_SCBCLK.h F:/PSoC/thingTouch/thingTouch.cydsn/Generated_Source/PSoC4/I2C_Slave_SCB_IRQ.h F:/PSoC/thingTouch/thingTouch.cydsn/Generated_Source/PSoC4/I2C_Slave_scl.h F:/PSoC/thingTouch/thingTouch.cydsn/Generated_Source/PSoC4/I2C_Slave_scl_aliases.h F:/PSoC/thingTouch/thingTouch.cydsn/Generated_Source/PSoC4/I2C_Slave_sda.h F:/PSoC/thingTouch/thingTouch.cydsn/Generated_Source/PSoC4/I2C_Slave_sda_aliases.h F:/PSoC/thingTouch/thingTouch.cydsn/Generated_Source/PSoC4/InterPin.h F:/PSoC/thingTouch/thingTouch.cydsn/Generated_Source/PSoC4/InterPin_aliases.h F:/PSoC/thingTouch/thingTouch.cydsn/Generated_Source/PSoC4/LED1.h F:/PSoC/thingTouch/thingTouch.cydsn/Generated_Source/PSoC4/LED1_aliases.h F:/PSoC/thingTouch/thingTouch.cydsn/Generated_Source/PSoC4/LED2.h F:/PSoC/thingTouch/thingTouch.cydsn/Generated_Source/PSoC4/LED2_aliases.h F:/PSoC/thingTouch/thingTouch.cydsn/Generated_Source/PSoC4/LED3.h F:/PSoC/thingTouch/thingTouch.cydsn/Generated_Source/PSoC4/LED3_aliases.h F:/PSoC/thingTouch/thingTouch.cydsn/Generated_Source/PSoC4/LED4.h F:/PSoC/thingTouch/thingTouch.cydsn/Generated_Source/PSoC4/LED4_aliases.h F:/PSoC/thingTouch/thingTouch.cydsn/Generated_Source/PSoC4/LED5.h F:/PSoC/thingTouch/thingTouch.cydsn/Generated_Source/PSoC4/LED5_aliases.h F:/PSoC/thingTouch/thingTouch.cydsn/Generated_Source/PSoC4/LED6.h F:/PSoC/thingTouch/thingTouch.cydsn/Generated_Source/PSoC4/LED6_aliases.h F:/PSoC/thingTouch/thingTouch.cydsn/Generated_Source/PSoC4/LED7.h F:/PSoC/thingTouch/thingTouch.cydsn/Generated_Source/PSoC4/LED7_aliases.h F:/PSoC/thingTouch/thingTouch.cydsn/Generated_Source/PSoC4/LED_1.h F:/PSoC/thingTouch/thingTouch.cydsn/Generated_Source/PSoC4/LED_1_aliases.h F:/PSoC/thingTouch/thingTouch.cydsn/Generated_Source/PSoC4/LED_2.h F:/PSoC/thingTouch/thingTouch.cydsn/Generated_Source/PSoC4/LED_2_aliases.h F:/PSoC/thingTouch/thingTouch.cydsn/Generated_Source/PSoC4/LED_CONTROL.h F:/PSoC/thingTouch/thingTouch.cydsn/Generated_Source/PSoC4/UART.h F:/PSoC/thingTouch/thingTouch.cydsn/Generated_Source/PSoC4/UART_BOOT.h F:/PSoC/thingTouch/thingTouch.cydsn/Generated_Source/PSoC4/UART_PINS.h F:/PSoC/thingTouch/thingTouch.cydsn/Generated_Source/PSoC4/UART_PVT.h F:/PSoC/thingTouch/thingTouch.cydsn/Generated_Source/PSoC4/UART_SCBCLK.h F:/PSoC/thingTouch/thingTouch.cydsn/Generated_Source/PSoC4/UART_SPI_UART.h F:/PSoC/thingTouch/thingTouch.cydsn/Generated_Source/PSoC4/UART_SPI_UART_PVT.h F:/PSoC/thingTouch/thingTouch.cydsn/Generated_Source/PSoC4/UART_rx.h F:/PSoC/thingTouch/thingTouch.cydsn/Generated_Source/PSoC4/UART_rx_aliases.h F:/PSoC/thingTouch/thingTouch.cydsn/Generated_Source/PSoC4/UART_tx.h F:/PSoC/thingTouch/thingTouch.cydsn/Generated_Source/PSoC4/UART_tx_aliases.h F:/PSoC/thingTouch/thingTouch.cydsn/Generated_Source/PSoC4/core_cm0.h F:/PSoC/thingTouch/thingTouch.cydsn/Generated_Source/PSoC4/core_cm0_psoc4.h F:/PSoC/thingTouch/thingTouch.cydsn/Generated_Source/PSoC4/core_cmFunc.h F:/PSoC/thingTouch/thingTouch.cydsn/Generated_Source/PSoC4/core_cmInstr.h F:/PSoC/thingTouch/thingTouch.cydsn/Generated_Source/PSoC4/cyPm.h F:/PSoC/thingTouch/thingTouch.cydsn/Generated_Source/PSoC4/cydevice_trm.h F:/PSoC/thingTouch/thingTouch.cydsn/Generated_Source/PSoC4/cydisabledsheets.h F:/PSoC/thingTouch/thingTouch.cydsn/Generated_Source/PSoC4/cyfitter.h F:/PSoC/thingTouch/thingTouch.cydsn/Generated_Source/PSoC4/cyfitter_cfg.h F:/PSoC/thingTouch/thingTouch.cydsn/Generated_Source/PSoC4/cypins.h F:/PSoC/thingTouch/thingTouch.cydsn/Generated_Source/PSoC4/cytypes.h F:/PSoC/thingTouch/thingTouch.cydsn/Generated_Source/PSoC4/project.h F:/PSoC/thingTouch/thingTouch.cydsn/main.c F:/PSoC/thingTouch/thingTouch.cydsn/main.h 
+
+F:/PSoC/thingTouch/thingTouch.cydsn/Generated_Source/PSoC4/CapSense.h : 
+
+F:/PSoC/thingTouch/thingTouch.cydsn/Generated_Source/PSoC4/CapSense_CSHL.h : 
+
+F:/PSoC/thingTouch/thingTouch.cydsn/Generated_Source/PSoC4/CapSense_IP.h : 
+
+F:/PSoC/thingTouch/thingTouch.cydsn/Generated_Source/PSoC4/CapSense_PVT.h : 
+
+F:/PSoC/thingTouch/thingTouch.cydsn/Generated_Source/PSoC4/CapSense_SMS.h : 
+
+F:/PSoC/thingTouch/thingTouch.cydsn/Generated_Source/PSoC4/CapSense_SampleClk.h : 
+
+F:/PSoC/thingTouch/thingTouch.cydsn/Generated_Source/PSoC4/CapSense_SenseClk.h : 
+
+F:/PSoC/thingTouch/thingTouch.cydsn/Generated_Source/PSoC4/CapSense_Sns_aliases.h : 
+
+F:/PSoC/thingTouch/thingTouch.cydsn/Generated_Source/PSoC4/CapSense_TunerHelper.h : 
+
+F:/PSoC/thingTouch/thingTouch.cydsn/Generated_Source/PSoC4/Clock_PWM.h : 
+
+F:/PSoC/thingTouch/thingTouch.cydsn/Generated_Source/PSoC4/CyFlash.h : 
+
+F:/PSoC/thingTouch/thingTouch.cydsn/Generated_Source/PSoC4/CyLFClk.h : 
+
+F:/PSoC/thingTouch/thingTouch.cydsn/Generated_Source/PSoC4/CyLib.h : 
+
+F:/PSoC/thingTouch/thingTouch.cydsn/Generated_Source/PSoC4/I2C_Slave.h : 
+
+F:/PSoC/thingTouch/thingTouch.cydsn/Generated_Source/PSoC4/I2C_Slave_BOOT.h : 
+
+F:/PSoC/thingTouch/thingTouch.cydsn/Generated_Source/PSoC4/I2C_Slave_I2C.h : 
+
+F:/PSoC/thingTouch/thingTouch.cydsn/Generated_Source/PSoC4/I2C_Slave_I2C_PVT.h : 
+
+F:/PSoC/thingTouch/thingTouch.cydsn/Generated_Source/PSoC4/I2C_Slave_PINS.h : 
+
+F:/PSoC/thingTouch/thingTouch.cydsn/Generated_Source/PSoC4/I2C_Slave_PVT.h : 
+
+F:/PSoC/thingTouch/thingTouch.cydsn/Generated_Source/PSoC4/I2C_Slave_SCBCLK.h : 
+
+F:/PSoC/thingTouch/thingTouch.cydsn/Generated_Source/PSoC4/I2C_Slave_SCB_IRQ.h : 
+
+F:/PSoC/thingTouch/thingTouch.cydsn/Generated_Source/PSoC4/I2C_Slave_scl.h : 
+
+F:/PSoC/thingTouch/thingTouch.cydsn/Generated_Source/PSoC4/I2C_Slave_scl_aliases.h : 
+
+F:/PSoC/thingTouch/thingTouch.cydsn/Generated_Source/PSoC4/I2C_Slave_sda.h : 
+
+F:/PSoC/thingTouch/thingTouch.cydsn/Generated_Source/PSoC4/I2C_Slave_sda_aliases.h : 
+
+F:/PSoC/thingTouch/thingTouch.cydsn/Generated_Source/PSoC4/InterPin.h : 
+
+F:/PSoC/thingTouch/thingTouch.cydsn/Generated_Source/PSoC4/InterPin_aliases.h : 
+
+F:/PSoC/thingTouch/thingTouch.cydsn/Generated_Source/PSoC4/LED1.h : 
+
+F:/PSoC/thingTouch/thingTouch.cydsn/Generated_Source/PSoC4/LED1_aliases.h : 
+
+F:/PSoC/thingTouch/thingTouch.cydsn/Generated_Source/PSoC4/LED2.h : 
+
+F:/PSoC/thingTouch/thingTouch.cydsn/Generated_Source/PSoC4/LED2_aliases.h : 
+
+F:/PSoC/thingTouch/thingTouch.cydsn/Generated_Source/PSoC4/LED3.h : 
+
+F:/PSoC/thingTouch/thingTouch.cydsn/Generated_Source/PSoC4/LED3_aliases.h : 
+
+F:/PSoC/thingTouch/thingTouch.cydsn/Generated_Source/PSoC4/LED4.h : 
+
+F:/PSoC/thingTouch/thingTouch.cydsn/Generated_Source/PSoC4/LED4_aliases.h : 
+
+F:/PSoC/thingTouch/thingTouch.cydsn/Generated_Source/PSoC4/LED5.h : 
+
+F:/PSoC/thingTouch/thingTouch.cydsn/Generated_Source/PSoC4/LED5_aliases.h : 
+
+F:/PSoC/thingTouch/thingTouch.cydsn/Generated_Source/PSoC4/LED6.h : 
+
+F:/PSoC/thingTouch/thingTouch.cydsn/Generated_Source/PSoC4/LED6_aliases.h : 
+
+F:/PSoC/thingTouch/thingTouch.cydsn/Generated_Source/PSoC4/LED7.h : 
+
+F:/PSoC/thingTouch/thingTouch.cydsn/Generated_Source/PSoC4/LED7_aliases.h : 
+
+F:/PSoC/thingTouch/thingTouch.cydsn/Generated_Source/PSoC4/LED_1.h : 
+
+F:/PSoC/thingTouch/thingTouch.cydsn/Generated_Source/PSoC4/LED_1_aliases.h : 
+
+F:/PSoC/thingTouch/thingTouch.cydsn/Generated_Source/PSoC4/LED_2.h : 
+
+F:/PSoC/thingTouch/thingTouch.cydsn/Generated_Source/PSoC4/LED_2_aliases.h : 
+
+F:/PSoC/thingTouch/thingTouch.cydsn/Generated_Source/PSoC4/LED_CONTROL.h : 
+
+F:/PSoC/thingTouch/thingTouch.cydsn/Generated_Source/PSoC4/UART.h : 
+
+F:/PSoC/thingTouch/thingTouch.cydsn/Generated_Source/PSoC4/UART_BOOT.h : 
+
+F:/PSoC/thingTouch/thingTouch.cydsn/Generated_Source/PSoC4/UART_PINS.h : 
+
+F:/PSoC/thingTouch/thingTouch.cydsn/Generated_Source/PSoC4/UART_PVT.h : 
+
+F:/PSoC/thingTouch/thingTouch.cydsn/Generated_Source/PSoC4/UART_SCBCLK.h : 
+
+F:/PSoC/thingTouch/thingTouch.cydsn/Generated_Source/PSoC4/UART_SPI_UART.h : 
+
+F:/PSoC/thingTouch/thingTouch.cydsn/Generated_Source/PSoC4/UART_SPI_UART_PVT.h : 
+
+F:/PSoC/thingTouch/thingTouch.cydsn/Generated_Source/PSoC4/UART_rx.h : 
+
+F:/PSoC/thingTouch/thingTouch.cydsn/Generated_Source/PSoC4/UART_rx_aliases.h : 
+
+F:/PSoC/thingTouch/thingTouch.cydsn/Generated_Source/PSoC4/UART_tx.h : 
+
+F:/PSoC/thingTouch/thingTouch.cydsn/Generated_Source/PSoC4/UART_tx_aliases.h : 
+
+F:/PSoC/thingTouch/thingTouch.cydsn/Generated_Source/PSoC4/core_cm0.h : 
+
+F:/PSoC/thingTouch/thingTouch.cydsn/Generated_Source/PSoC4/core_cm0_psoc4.h : 
+
+F:/PSoC/thingTouch/thingTouch.cydsn/Generated_Source/PSoC4/core_cmFunc.h : 
+
+F:/PSoC/thingTouch/thingTouch.cydsn/Generated_Source/PSoC4/core_cmInstr.h : 
+
+F:/PSoC/thingTouch/thingTouch.cydsn/Generated_Source/PSoC4/cyPm.h : 
+
+F:/PSoC/thingTouch/thingTouch.cydsn/Generated_Source/PSoC4/cydevice_trm.h : 
+
+F:/PSoC/thingTouch/thingTouch.cydsn/Generated_Source/PSoC4/cydisabledsheets.h : 
+
+F:/PSoC/thingTouch/thingTouch.cydsn/Generated_Source/PSoC4/cyfitter.h : 
+
+F:/PSoC/thingTouch/thingTouch.cydsn/Generated_Source/PSoC4/cyfitter_cfg.h : 
+
+F:/PSoC/thingTouch/thingTouch.cydsn/Generated_Source/PSoC4/cypins.h : 
+
+F:/PSoC/thingTouch/thingTouch.cydsn/Generated_Source/PSoC4/cytypes.h : 
+
+F:/PSoC/thingTouch/thingTouch.cydsn/Generated_Source/PSoC4/project.h : 
+
+F:/PSoC/thingTouch/thingTouch.cydsn/main.c : 
+
+F:/PSoC/thingTouch/thingTouch.cydsn/main.h : 
+
