@@ -82,7 +82,7 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 *.c~
-*.lovelesh
+*.cywrk.lovelesh
 *.amit
-*.Amit
-*.ajit
+*.cywrk.Amit
+*.cywrk.ajit
