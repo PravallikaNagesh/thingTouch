@@ -1,0 +1,3191 @@
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccklALVd.s 			page 1
+
+
+   1              		.cpu cortex-m0
+   2              		.fpu softvfp
+   3              		.eabi_attribute 20, 1
+   4              		.eabi_attribute 21, 1
+   5              		.eabi_attribute 23, 3
+   6              		.eabi_attribute 24, 1
+   7              		.eabi_attribute 25, 1
+   8              		.eabi_attribute 26, 1
+   9              		.eabi_attribute 30, 6
+  10              		.eabi_attribute 34, 0
+  11              		.eabi_attribute 18, 4
+  12              		.code	16
+  13              		.file	"CapSense_SMS.c"
+  14              		.text
+  15              	.Ltext0:
+  16              		.cfi_sections	.debug_frame
+  17              		.global	CapSense_prescalerTable
+  18              		.section	.rodata
+  19              		.align	2
+  20              		.type	CapSense_prescalerTable, %object
+  21              		.size	CapSense_prescalerTable, 16
+  22              	CapSense_prescalerTable:
+  23 0000 02       		.byte	2
+  24 0001 02       		.byte	2
+  25 0002 02       		.byte	2
+  26 0003 04       		.byte	4
+  27 0004 04       		.byte	4
+  28 0005 04       		.byte	4
+  29 0006 04       		.byte	4
+  30 0007 08       		.byte	8
+  31 0008 08       		.byte	8
+  32 0009 08       		.byte	8
+  33 000a 08       		.byte	8
+  34 000b 08       		.byte	8
+  35 000c 08       		.byte	8
+  36 000d 08       		.byte	8
+  37 000e 08       		.byte	8
+  38 000f 08       		.byte	8
+  39              		.comm	CapSense_noiseEnvelopeTbl,8,4
+  40              		.comm	CapSense_runningDifferenceTbl,8,4
+  41              		.comm	CapSense_signRegisterTbl,8,4
+  42              		.comm	CapSense_sampleMinTbl,16,4
+  43              		.comm	CapSense_sampleMaxTbl,16,4
+  44              		.comm	CapSense_previousSampleTbl,16,4
+  45              		.comm	CapSense_kValueTbl,8,4
+  46              		.global	CapSense_sensorSensitivity
+  47              		.data
+  48              		.align	2
+  49              		.type	CapSense_sensorSensitivity, %object
+  50              		.size	CapSense_sensorSensitivity, 8
+  51              	CapSense_sensorSensitivity:
+  52 0000 02       		.byte	2
+  53 0001 02       		.byte	2
+  54 0002 02       		.byte	2
+  55 0003 02       		.byte	2
+  56 0004 02       		.byte	2
+  57 0005 02       		.byte	2
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccklALVd.s 			page 2
+
+
+  58 0006 02       		.byte	2
+  59 0007 02       		.byte	2
+  60              		.comm	CapSense_config,12,4
+  61              		.global	CapSense_configPointers
+  62              		.section	.rodata
+  63              		.align	2
+  64              		.type	CapSense_configPointers, %object
+  65              		.size	CapSense_configPointers, 92
+  66              	CapSense_configPointers:
+  67 0010 00000000 		.word	CapSense_modulationIDAC
+  68 0014 00000000 		.word	CapSense_compensationIDAC
+  69 0018 00000000 		.word	CapSense_sensorSensitivity
+  70 001c 00000000 		.word	CapSense_senseClkDividerVal
+  71 0020 00000000 		.word	CapSense_sampleClkDividerVal
+  72 0024 00000000 		.word	CapSense_widgetNumber
+  73 0028 00000000 		.word	CapSense_widgetResolution
+  74 002c 00000000 		.word	CapSense_noiseEnvelopeTbl
+  75 0030 00000000 		.word	CapSense_runningDifferenceTbl
+  76 0034 00000000 		.word	CapSense_signRegisterTbl
+  77 0038 00000000 		.word	CapSense_sampleMinTbl
+  78 003c 00000000 		.word	CapSense_sampleMaxTbl
+  79 0040 00000000 		.word	CapSense_previousSampleTbl
+  80 0044 00000000 		.word	CapSense_kValueTbl
+  81 0048 00000000 		.word	CapSense_scanSpeedTbl
+  82 004c 00000000 		.word	CapSense_prescalerTable
+  83 0050 00000000 		.word	CapSense_rawDataIndex
+  84 0054 00000000 		.word	CapSense_numberOfSensors
+  85 0058 00000000 		.word	CapSense_GetSensorRaw
+  86 005c 00000000 		.word	CapSense_PreScan
+  87 0060 00000000 		.word	CapSense_ReadSensorRaw
+  88 0064 00000000 		.word	CapSense_GetBitValue
+  89 0068 00000000 		.word	CapSense_SetBitValue
+  90              		.section	.text.CapSense_AutoTune,"ax",%progbits
+  91              		.align	2
+  92              		.global	CapSense_AutoTune
+  93              		.code	16
+  94              		.thumb_func
+  95              		.type	CapSense_AutoTune, %function
+  96              	CapSense_AutoTune:
+  97              	.LFB35:
+  98              		.file 1 "Generated_Source\\PSoC4\\CapSense_SMS.c"
+   1:Generated_Source\PSoC4/CapSense_SMS.c **** /*******************************************************************************
+   2:Generated_Source\PSoC4/CapSense_SMS.c **** * File Name: CapSense_SMS.c
+   3:Generated_Source\PSoC4/CapSense_SMS.c **** * Version 2.40
+   4:Generated_Source\PSoC4/CapSense_SMS.c **** *
+   5:Generated_Source\PSoC4/CapSense_SMS.c **** * Description:
+   6:Generated_Source\PSoC4/CapSense_SMS.c **** *  This file provides the source code of wrapper between CapSense CSD component
+   7:Generated_Source\PSoC4/CapSense_SMS.c **** *  and Auto Tuning library.
+   8:Generated_Source\PSoC4/CapSense_SMS.c **** *
+   9:Generated_Source\PSoC4/CapSense_SMS.c **** * Note:
+  10:Generated_Source\PSoC4/CapSense_SMS.c **** *
+  11:Generated_Source\PSoC4/CapSense_SMS.c **** ********************************************************************************
+  12:Generated_Source\PSoC4/CapSense_SMS.c **** * Copyright 2013-2015, Cypress Semiconductor Corporation.  All rights reserved.
+  13:Generated_Source\PSoC4/CapSense_SMS.c **** * You may use this file only in accordance with the license, terms, conditions,
+  14:Generated_Source\PSoC4/CapSense_SMS.c **** * disclaimers, and limitations in the end user license agreement accompanying
+  15:Generated_Source\PSoC4/CapSense_SMS.c **** * the software package with which this file was provided.
+  16:Generated_Source\PSoC4/CapSense_SMS.c **** *******************************************************************************/
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccklALVd.s 			page 3
+
+
+  17:Generated_Source\PSoC4/CapSense_SMS.c **** 
+  18:Generated_Source\PSoC4/CapSense_SMS.c **** #include "CapSense_SMS.h"
+  19:Generated_Source\PSoC4/CapSense_SMS.c **** #include "CapSense_PVT.h"
+  20:Generated_Source\PSoC4/CapSense_SMS.c **** 
+  21:Generated_Source\PSoC4/CapSense_SMS.c **** #include "cytypes.h"
+  22:Generated_Source\PSoC4/CapSense_SMS.c **** 
+  23:Generated_Source\PSoC4/CapSense_SMS.c **** #if (CapSense_TUNING_METHOD == CapSense__TUNING_AUTO)
+  24:Generated_Source\PSoC4/CapSense_SMS.c **** 
+  25:Generated_Source\PSoC4/CapSense_SMS.c **** 
+  26:Generated_Source\PSoC4/CapSense_SMS.c **** /*  Real Charge Divider values */
+  27:Generated_Source\PSoC4/CapSense_SMS.c **** #if ((0u != CapSense_IS_M0S8PERI_BLOCK) && (0u == CY_PSOC4_4000))
+  28:Generated_Source\PSoC4/CapSense_SMS.c ****     /*  Dividers are not chained */
+  29:Generated_Source\PSoC4/CapSense_SMS.c ****     #if (CYDEV_BCLK__HFCLK__MHZ > 24u)
+  30:Generated_Source\PSoC4/CapSense_SMS.c ****         const uint8 CapSense_prescalerTable[CapSense_PRESCALERS_TBL_SIZE] = {
+  31:Generated_Source\PSoC4/CapSense_SMS.c ****             4u,     4u,     4u,    8u,    8u,    8u,    8u,    16u,    16u,    16u,    16u,    16u,
+  32:Generated_Source\PSoC4/CapSense_SMS.c ****         };
+  33:Generated_Source\PSoC4/CapSense_SMS.c ****     #elif (CYDEV_BCLK__HFCLK__MHZ >12u)
+  34:Generated_Source\PSoC4/CapSense_SMS.c ****         const uint8 CapSense_prescalerTable[CapSense_PRESCALERS_TBL_SIZE] = {
+  35:Generated_Source\PSoC4/CapSense_SMS.c ****             2u,     2u,     2u,    4u,    4u,    4u,    4u,    8u,    8u,    8u,    8u,    8u,    8
+  36:Generated_Source\PSoC4/CapSense_SMS.c ****         };
+  37:Generated_Source\PSoC4/CapSense_SMS.c ****     #else   /* (CYDEV_BCLK__HFCLK__MHZ > 12u) */
+  38:Generated_Source\PSoC4/CapSense_SMS.c ****         const uint8 CapSense_prescalerTable[CapSense_PRESCALERS_TBL_SIZE] = {
+  39:Generated_Source\PSoC4/CapSense_SMS.c ****             1u,     1u,     1u,    2u,    2u,    2u,    2u,    4u,    4u,    4u,    4u,    4u,    4
+  40:Generated_Source\PSoC4/CapSense_SMS.c ****         };
+  41:Generated_Source\PSoC4/CapSense_SMS.c ****     #endif /* (CYDEV_BCLK__HFCLK__MHZ > 24u) */
+  42:Generated_Source\PSoC4/CapSense_SMS.c **** 
+  43:Generated_Source\PSoC4/CapSense_SMS.c **** #elif (0u != CapSense_IS_M0S8PERI_BLOCK)
+  44:Generated_Source\PSoC4/CapSense_SMS.c ****     /*  Dividers are not chained (PSoC 4000) */
+  45:Generated_Source\PSoC4/CapSense_SMS.c ****     #if (CYDEV_BCLK__HFCLK__MHZ >= 12u)
+  46:Generated_Source\PSoC4/CapSense_SMS.c ****         const uint8 CapSense_prescalerTable[CapSense_PRESCALERS_TBL_SIZE] = {
+  47:Generated_Source\PSoC4/CapSense_SMS.c ****             1u,     1u,     1u,    2u,    2u,    2u,    2u,    4u,    4u,    4u,    4u,    4u,    4
+  48:Generated_Source\PSoC4/CapSense_SMS.c ****         };
+  49:Generated_Source\PSoC4/CapSense_SMS.c **** 
+  50:Generated_Source\PSoC4/CapSense_SMS.c ****     #elif (CYDEV_BCLK__HFCLK__MHZ >= 6u)
+  51:Generated_Source\PSoC4/CapSense_SMS.c ****         const uint8 CapSense_prescalerTable[CapSense_PRESCALERS_TBL_SIZE] = {
+  52:Generated_Source\PSoC4/CapSense_SMS.c ****             1u,     1u,     1u,    1u,    1u,    1u,    1u,    2u,    2u,    2u,    2u,    2u,    2
+  53:Generated_Source\PSoC4/CapSense_SMS.c ****         };
+  54:Generated_Source\PSoC4/CapSense_SMS.c ****     #else
+  55:Generated_Source\PSoC4/CapSense_SMS.c ****         const uint8 CapSense_prescalerTable[CapSense_PRESCALERS_TBL_SIZE] = {
+  56:Generated_Source\PSoC4/CapSense_SMS.c ****             1u,     1u,     1u,    1u,    1u,    1u,    1u,    1u,    1u,    1u,    1u,    1u,    1
+  57:Generated_Source\PSoC4/CapSense_SMS.c ****         };
+  58:Generated_Source\PSoC4/CapSense_SMS.c ****     #endif /* (CYDEV_BCLK__HFCLK__MHZ > 12u) */
+  59:Generated_Source\PSoC4/CapSense_SMS.c **** 
+  60:Generated_Source\PSoC4/CapSense_SMS.c **** #else
+  61:Generated_Source\PSoC4/CapSense_SMS.c ****     /*  Dividers are chained (PSoC 4100, PSoC 4200) */
+  62:Generated_Source\PSoC4/CapSense_SMS.c ****     #if (CYDEV_BCLK__HFCLK__MHZ > 24u)
+  63:Generated_Source\PSoC4/CapSense_SMS.c ****         const uint8 CapSense_prescalerTable[CapSense_PRESCALERS_TBL_SIZE] = {
+  64:Generated_Source\PSoC4/CapSense_SMS.c ****             2u,     2u,     2u,    4u,    4u,    4u,    4u,    8u,    8u,    8u,    8u,    8u,    8
+  65:Generated_Source\PSoC4/CapSense_SMS.c ****         };
+  66:Generated_Source\PSoC4/CapSense_SMS.c **** 
+  67:Generated_Source\PSoC4/CapSense_SMS.c ****     #elif (CYDEV_BCLK__HFCLK__MHZ >12u)
+  68:Generated_Source\PSoC4/CapSense_SMS.c ****         const uint8 CapSense_prescalerTable[CapSense_PRESCALERS_TBL_SIZE] = {
+  69:Generated_Source\PSoC4/CapSense_SMS.c ****             1u,     1u,     1u,    2u,    2u,    2u,    2u,    4u,    4u,    4u,    4u,    4u,    4
+  70:Generated_Source\PSoC4/CapSense_SMS.c ****         };
+  71:Generated_Source\PSoC4/CapSense_SMS.c ****     #else   /* (CYDEV_BCLK__HFCLK__MHZ > 12u) */
+  72:Generated_Source\PSoC4/CapSense_SMS.c ****         const uint8 CapSense_prescalerTable[CapSense_PRESCALERS_TBL_SIZE] = {
+  73:Generated_Source\PSoC4/CapSense_SMS.c ****             1u,     1u,     1u,    1u,    1u,    1u,    1u,    2u,    2u,    2u,    2u,    2u,    2
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccklALVd.s 			page 4
+
+
+  74:Generated_Source\PSoC4/CapSense_SMS.c ****         };
+  75:Generated_Source\PSoC4/CapSense_SMS.c ****     #endif /* (CYDEV_BCLK__HFCLK__MHZ > 24u) */
+  76:Generated_Source\PSoC4/CapSense_SMS.c **** #endif /* ((0u != CapSense_IS_M0S8PERI_BLOCK) && (0u == CY_PSOC4_4000)) */
+  77:Generated_Source\PSoC4/CapSense_SMS.c **** 
+  78:Generated_Source\PSoC4/CapSense_SMS.c **** 
+  79:Generated_Source\PSoC4/CapSense_SMS.c **** uint8 CapSense_noiseEnvelopeTbl[CapSense_TOTAL_SENSOR_COUNT];
+  80:Generated_Source\PSoC4/CapSense_SMS.c **** uint8 CapSense_runningDifferenceTbl[CapSense_TOTAL_SENSOR_COUNT];
+  81:Generated_Source\PSoC4/CapSense_SMS.c **** uint8 CapSense_signRegisterTbl[CapSense_TOTAL_SENSOR_COUNT];
+  82:Generated_Source\PSoC4/CapSense_SMS.c **** uint16 CapSense_sampleMinTbl[CapSense_TOTAL_SENSOR_COUNT];
+  83:Generated_Source\PSoC4/CapSense_SMS.c **** uint16 CapSense_sampleMaxTbl[CapSense_TOTAL_SENSOR_COUNT];
+  84:Generated_Source\PSoC4/CapSense_SMS.c **** uint16 CapSense_previousSampleTbl[CapSense_TOTAL_SENSOR_COUNT];
+  85:Generated_Source\PSoC4/CapSense_SMS.c **** uint8 CapSense_kValueTbl[CapSense_TOTAL_SENSOR_COUNT];
+  86:Generated_Source\PSoC4/CapSense_SMS.c **** 
+  87:Generated_Source\PSoC4/CapSense_SMS.c **** uint8 CapSense_sensorSensitivity[] = {
+  88:Generated_Source\PSoC4/CapSense_SMS.c ****     2u, 2u, 2u, 2u, 2u, 2u, 2u, 2u, 
+  89:Generated_Source\PSoC4/CapSense_SMS.c **** };
+  90:Generated_Source\PSoC4/CapSense_SMS.c **** 
+  91:Generated_Source\PSoC4/CapSense_SMS.c **** CapSense_CONFIG_TYPE_P4_v2_40 CapSense_config;
+  92:Generated_Source\PSoC4/CapSense_SMS.c **** CapSense_CONFIG_TYPE_POINTERS_P4_v2_40 const CapSense_configPointers = {
+  93:Generated_Source\PSoC4/CapSense_SMS.c ****     CapSense_modulationIDAC,
+  94:Generated_Source\PSoC4/CapSense_SMS.c ****     CapSense_compensationIDAC,
+  95:Generated_Source\PSoC4/CapSense_SMS.c ****     CapSense_sensorSensitivity,
+  96:Generated_Source\PSoC4/CapSense_SMS.c ****     CapSense_senseClkDividerVal,
+  97:Generated_Source\PSoC4/CapSense_SMS.c ****     CapSense_sampleClkDividerVal,
+  98:Generated_Source\PSoC4/CapSense_SMS.c ****     CapSense_widgetNumber,
+  99:Generated_Source\PSoC4/CapSense_SMS.c ****     CapSense_widgetResolution,
+ 100:Generated_Source\PSoC4/CapSense_SMS.c ****     CapSense_noiseEnvelopeTbl,
+ 101:Generated_Source\PSoC4/CapSense_SMS.c ****     CapSense_runningDifferenceTbl,
+ 102:Generated_Source\PSoC4/CapSense_SMS.c ****     CapSense_signRegisterTbl,
+ 103:Generated_Source\PSoC4/CapSense_SMS.c ****     CapSense_sampleMinTbl,
+ 104:Generated_Source\PSoC4/CapSense_SMS.c ****     CapSense_sampleMaxTbl,
+ 105:Generated_Source\PSoC4/CapSense_SMS.c ****     CapSense_previousSampleTbl,
+ 106:Generated_Source\PSoC4/CapSense_SMS.c ****     CapSense_kValueTbl,
+ 107:Generated_Source\PSoC4/CapSense_SMS.c ****     CapSense_scanSpeedTbl,
+ 108:Generated_Source\PSoC4/CapSense_SMS.c ****     CapSense_prescalerTable,
+ 109:Generated_Source\PSoC4/CapSense_SMS.c ****     (const uint8  *)CapSense_rawDataIndex,
+ 110:Generated_Source\PSoC4/CapSense_SMS.c ****     (const uint8  *)CapSense_numberOfSensors,
+ 111:Generated_Source\PSoC4/CapSense_SMS.c ****     &CapSense_GetSensorRaw,
+ 112:Generated_Source\PSoC4/CapSense_SMS.c ****     &CapSense_PreScan,
+ 113:Generated_Source\PSoC4/CapSense_SMS.c ****     &CapSense_ReadSensorRaw,
+ 114:Generated_Source\PSoC4/CapSense_SMS.c ****     &CapSense_GetBitValue,
+ 115:Generated_Source\PSoC4/CapSense_SMS.c ****     &CapSense_SetBitValue
+ 116:Generated_Source\PSoC4/CapSense_SMS.c **** };
+ 117:Generated_Source\PSoC4/CapSense_SMS.c **** 
+ 118:Generated_Source\PSoC4/CapSense_SMS.c **** 
+ 119:Generated_Source\PSoC4/CapSense_SMS.c **** /*******************************************************************************
+ 120:Generated_Source\PSoC4/CapSense_SMS.c **** * Function Name: CapSense_AutoTune
+ 121:Generated_Source\PSoC4/CapSense_SMS.c **** ********************************************************************************
+ 122:Generated_Source\PSoC4/CapSense_SMS.c **** *
+ 123:Generated_Source\PSoC4/CapSense_SMS.c **** * Summary:
+ 124:Generated_Source\PSoC4/CapSense_SMS.c **** *  Provides the tuning procedure for all sensors.
+ 125:Generated_Source\PSoC4/CapSense_SMS.c **** *
+ 126:Generated_Source\PSoC4/CapSense_SMS.c **** * Parameters:
+ 127:Generated_Source\PSoC4/CapSense_SMS.c **** *  None
+ 128:Generated_Source\PSoC4/CapSense_SMS.c **** *
+ 129:Generated_Source\PSoC4/CapSense_SMS.c **** * Return:
+ 130:Generated_Source\PSoC4/CapSense_SMS.c **** *  None
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccklALVd.s 			page 5
+
+
+ 131:Generated_Source\PSoC4/CapSense_SMS.c **** *
+ 132:Generated_Source\PSoC4/CapSense_SMS.c **** * Global Variables:
+ 133:Generated_Source\PSoC4/CapSense_SMS.c **** *   CapSense_config: the structure which contains configuration parameters
+ 134:Generated_Source\PSoC4/CapSense_SMS.c **** *   CapSense_senseClkDividerVal[]: used to store the Analog Switch
+ 135:Generated_Source\PSoC4/CapSense_SMS.c **** *   dividers for each sensor.
+ 136:Generated_Source\PSoC4/CapSense_SMS.c **** *   CapSense_senseClkDividerVal[]: used to store the
+ 137:Generated_Source\PSoC4/CapSense_SMS.c **** *    Analog Switch divider for all sensors.
+ 138:Generated_Source\PSoC4/CapSense_SMS.c **** *   CapSense_prescalersTuningDone - used to notify the Tuner GUI that
+ 139:Generated_Source\PSoC4/CapSense_SMS.c **** *   the pre-scalers tuning  is done.
+ 140:Generated_Source\PSoC4/CapSense_SMS.c **** *
+ 141:Generated_Source\PSoC4/CapSense_SMS.c **** * Side Effects:
+ 142:Generated_Source\PSoC4/CapSense_SMS.c **** *  None
+ 143:Generated_Source\PSoC4/CapSense_SMS.c **** *
+ 144:Generated_Source\PSoC4/CapSense_SMS.c **** *******************************************************************************/
+ 145:Generated_Source\PSoC4/CapSense_SMS.c **** void CapSense_AutoTune(void)
+ 146:Generated_Source\PSoC4/CapSense_SMS.c **** {
+  99              		.loc 1 146 0
+ 100              		.cfi_startproc
+ 101 0000 80B5     		push	{r7, lr}
+ 102              		.cfi_def_cfa_offset 8
+ 103              		.cfi_offset 7, -8
+ 104              		.cfi_offset 14, -4
+ 105 0002 82B0     		sub	sp, sp, #8
+ 106              		.cfi_def_cfa_offset 16
+ 107 0004 00AF     		add	r7, sp, #0
+ 108              		.cfi_def_cfa_register 7
+ 147:Generated_Source\PSoC4/CapSense_SMS.c ****     uint32 curSensor;
+ 148:Generated_Source\PSoC4/CapSense_SMS.c ****     uint32 widget;
+ 149:Generated_Source\PSoC4/CapSense_SMS.c **** 
+ 150:Generated_Source\PSoC4/CapSense_SMS.c ****     CapSense_config.totalScanslotsNum = CapSense_TOTAL_SCANSLOT_COUNT;
+ 109              		.loc 1 150 0
+ 110 0006 324B     		ldr	r3, .L8
+ 111 0008 0822     		mov	r2, #8
+ 112 000a 1A70     		strb	r2, [r3]
+ 151:Generated_Source\PSoC4/CapSense_SMS.c ****     CapSense_config.totalWidgetsNum = CapSense_END_OF_WIDGETS_INDEX;
+ 113              		.loc 1 151 0
+ 114 000c 304B     		ldr	r3, .L8
+ 115 000e 0822     		mov	r2, #8
+ 116 0010 5A70     		strb	r2, [r3, #1]
+ 152:Generated_Source\PSoC4/CapSense_SMS.c ****     CapSense_config.totalSensorsNum = CapSense_TOTAL_SENSOR_COUNT;
+ 117              		.loc 1 152 0
+ 118 0012 2F4B     		ldr	r3, .L8
+ 119 0014 0822     		mov	r2, #8
+ 120 0016 9A70     		strb	r2, [r3, #2]
+ 153:Generated_Source\PSoC4/CapSense_SMS.c **** 
+ 154:Generated_Source\PSoC4/CapSense_SMS.c ****     CapSense_config.hfclkFreq_MHz = CYDEV_BCLK__HFCLK__MHZ;
+ 121              		.loc 1 154 0
+ 122 0018 2D4B     		ldr	r3, .L8
+ 123 001a 1822     		mov	r2, #24
+ 124 001c DA80     		strh	r2, [r3, #6]
+ 155:Generated_Source\PSoC4/CapSense_SMS.c ****     CapSense_config.sensetivitySeed = CapSense_SENSETIVITY_FACTOR;
+ 125              		.loc 1 155 0
+ 126 001e 2C4B     		ldr	r3, .L8
+ 127 0020 2C4A     		ldr	r2, .L8+4
+ 128 0022 9A80     		strh	r2, [r3, #4]
+ 156:Generated_Source\PSoC4/CapSense_SMS.c **** 
+ 157:Generated_Source\PSoC4/CapSense_SMS.c ****     CapSense_config.pointers = &CapSense_configPointers;
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccklALVd.s 			page 6
+
+
+ 129              		.loc 1 157 0
+ 130 0024 2A4B     		ldr	r3, .L8
+ 131 0026 2C4A     		ldr	r2, .L8+8
+ 132 0028 9A60     		str	r2, [r3, #8]
+ 158:Generated_Source\PSoC4/CapSense_SMS.c **** 
+ 159:Generated_Source\PSoC4/CapSense_SMS.c ****     CapSense_SetAnalogSwitchesSrcDirect();
+ 133              		.loc 1 159 0
+ 134 002a FFF7FEFF 		bl	CapSense_SetAnalogSwitchesSrcDirect
+ 160:Generated_Source\PSoC4/CapSense_SMS.c **** 
+ 161:Generated_Source\PSoC4/CapSense_SMS.c ****     for(widget = 0u; widget < CapSense_config.totalWidgetsNum; widget++)
+ 135              		.loc 1 161 0
+ 136 002e 0023     		mov	r3, #0
+ 137 0030 3B60     		str	r3, [r7]
+ 138 0032 07E0     		b	.L2
+ 139              	.L3:
+ 162:Generated_Source\PSoC4/CapSense_SMS.c ****     {
+ 163:Generated_Source\PSoC4/CapSense_SMS.c ****         CapSense_widgetResolution[widget] = CapSense_CALIBRATION_RESOLUTION;
+ 140              		.loc 1 163 0 discriminator 3
+ 141 0034 294B     		ldr	r3, .L8+12
+ 142 0036 3A68     		ldr	r2, [r7]
+ 143 0038 9200     		lsl	r2, r2, #2
+ 144 003a 2949     		ldr	r1, .L8+16
+ 145 003c D150     		str	r1, [r2, r3]
+ 161:Generated_Source\PSoC4/CapSense_SMS.c ****     {
+ 146              		.loc 1 161 0 discriminator 3
+ 147 003e 3B68     		ldr	r3, [r7]
+ 148 0040 0133     		add	r3, r3, #1
+ 149 0042 3B60     		str	r3, [r7]
+ 150              	.L2:
+ 161:Generated_Source\PSoC4/CapSense_SMS.c ****     {
+ 151              		.loc 1 161 0 is_stmt 0 discriminator 1
+ 152 0044 224B     		ldr	r3, .L8
+ 153 0046 5B78     		ldrb	r3, [r3, #1]
+ 154 0048 1A1E     		sub	r2, r3, #0
+ 155 004a 3B68     		ldr	r3, [r7]
+ 156 004c 9A42     		cmp	r2, r3
+ 157 004e F1D8     		bhi	.L3
+ 164:Generated_Source\PSoC4/CapSense_SMS.c ****     }
+ 165:Generated_Source\PSoC4/CapSense_SMS.c **** 
+ 166:Generated_Source\PSoC4/CapSense_SMS.c **** 
+ 167:Generated_Source\PSoC4/CapSense_SMS.c ****     for(curSensor = 0u; curSensor < CapSense_TOTAL_SCANSLOT_COUNT; curSensor++)
+ 158              		.loc 1 167 0 is_stmt 1
+ 159 0050 0023     		mov	r3, #0
+ 160 0052 7B60     		str	r3, [r7, #4]
+ 161 0054 0CE0     		b	.L4
+ 162              	.L5:
+ 168:Generated_Source\PSoC4/CapSense_SMS.c ****     {
+ 169:Generated_Source\PSoC4/CapSense_SMS.c ****         CapSense_senseClkDividerVal[curSensor] = CapSense_CALIBRATION_ASD;
+ 163              		.loc 1 169 0 discriminator 3
+ 164 0056 234A     		ldr	r2, .L8+20
+ 165 0058 7B68     		ldr	r3, [r7, #4]
+ 166 005a D318     		add	r3, r2, r3
+ 167 005c 0822     		mov	r2, #8
+ 168 005e 1A70     		strb	r2, [r3]
+ 170:Generated_Source\PSoC4/CapSense_SMS.c ****         CapSense_sampleClkDividerVal[curSensor] = CapSense_CALIBRATION_MD;
+ 169              		.loc 1 170 0 discriminator 3
+ 170 0060 214A     		ldr	r2, .L8+24
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccklALVd.s 			page 7
+
+
+ 171 0062 7B68     		ldr	r3, [r7, #4]
+ 172 0064 D318     		add	r3, r2, r3
+ 173 0066 0222     		mov	r2, #2
+ 174 0068 1A70     		strb	r2, [r3]
+ 167:Generated_Source\PSoC4/CapSense_SMS.c ****     {
+ 175              		.loc 1 167 0 discriminator 3
+ 176 006a 7B68     		ldr	r3, [r7, #4]
+ 177 006c 0133     		add	r3, r3, #1
+ 178 006e 7B60     		str	r3, [r7, #4]
+ 179              	.L4:
+ 167:Generated_Source\PSoC4/CapSense_SMS.c ****     {
+ 180              		.loc 1 167 0 is_stmt 0 discriminator 1
+ 181 0070 7B68     		ldr	r3, [r7, #4]
+ 182 0072 072B     		cmp	r3, #7
+ 183 0074 EFD9     		bls	.L5
+ 171:Generated_Source\PSoC4/CapSense_SMS.c ****     }
+ 172:Generated_Source\PSoC4/CapSense_SMS.c **** 
+ 173:Generated_Source\PSoC4/CapSense_SMS.c ****     CapSense_DisableBaselineIDAC();
+ 184              		.loc 1 173 0 is_stmt 1
+ 185 0076 FFF7FEFF 		bl	CapSense_DisableBaselineIDAC
+ 174:Generated_Source\PSoC4/CapSense_SMS.c **** 
+ 175:Generated_Source\PSoC4/CapSense_SMS.c ****     CalibrateSensors_P4_v2_40(&CapSense_config, CapSense_CAL_RAW_COUNT);
+ 186              		.loc 1 175 0
+ 187 007a 154B     		ldr	r3, .L8
+ 188 007c 1B4A     		ldr	r2, .L8+28
+ 189 007e 181C     		mov	r0, r3
+ 190 0080 111C     		mov	r1, r2
+ 191 0082 FFF7FEFF 		bl	CalibrateSensors_P4_v2_40
+ 176:Generated_Source\PSoC4/CapSense_SMS.c **** 
+ 177:Generated_Source\PSoC4/CapSense_SMS.c ****     #if(0u != CapSense_TOTAL_CENTROIDS_COUNT)
+ 178:Generated_Source\PSoC4/CapSense_SMS.c ****         CapSense_NormalizeWidgets(CapSense_END_OF_WIDGETS_INDEX, CapSense_modulationIDAC);
+ 179:Generated_Source\PSoC4/CapSense_SMS.c ****     #endif /* (0u != CapSense_TOTAL_CENTROIDS_COUNT)  */
+ 180:Generated_Source\PSoC4/CapSense_SMS.c **** 
+ 181:Generated_Source\PSoC4/CapSense_SMS.c ****     TunePrescalers_P4_v2_40(&CapSense_config);
+ 192              		.loc 1 181 0
+ 193 0086 124B     		ldr	r3, .L8
+ 194 0088 181C     		mov	r0, r3
+ 195 008a FFF7FEFF 		bl	TunePrescalers_P4_v2_40
+ 182:Generated_Source\PSoC4/CapSense_SMS.c **** 
+ 183:Generated_Source\PSoC4/CapSense_SMS.c ****     #if(CapSense_PRS_OPTIONS != CapSense__PRS_NONE)
+ 184:Generated_Source\PSoC4/CapSense_SMS.c ****         CapSense_prescalersTuningDone = 1u;
+ 196              		.loc 1 184 0
+ 197 008e 184B     		ldr	r3, .L8+32
+ 198 0090 0122     		mov	r2, #1
+ 199 0092 1A70     		strb	r2, [r3]
+ 185:Generated_Source\PSoC4/CapSense_SMS.c ****     #endif /* (CapSense_PRS_OPTIONS == CapSense__PRS_NONE) */
+ 186:Generated_Source\PSoC4/CapSense_SMS.c **** 
+ 187:Generated_Source\PSoC4/CapSense_SMS.c ****     CalibrateSensors_P4_v2_40(&CapSense_config, CapSense_CAL_RAW_COUNT);
+ 200              		.loc 1 187 0
+ 201 0094 0E4B     		ldr	r3, .L8
+ 202 0096 154A     		ldr	r2, .L8+28
+ 203 0098 181C     		mov	r0, r3
+ 204 009a 111C     		mov	r1, r2
+ 205 009c FFF7FEFF 		bl	CalibrateSensors_P4_v2_40
+ 188:Generated_Source\PSoC4/CapSense_SMS.c ****     #if(0u != CapSense_TOTAL_CENTROIDS_COUNT)
+ 189:Generated_Source\PSoC4/CapSense_SMS.c ****         CapSense_NormalizeWidgets(CapSense_END_OF_WIDGETS_INDEX, CapSense_modulationIDAC);
+ 190:Generated_Source\PSoC4/CapSense_SMS.c ****     #endif /* (0u != CapSense_TOTAL_CENTROIDS_COUNT)  */
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccklALVd.s 			page 8
+
+
+ 191:Generated_Source\PSoC4/CapSense_SMS.c ****     TuneSensitivity_P4_v2_40(&CapSense_config);
+ 206              		.loc 1 191 0
+ 207 00a0 0B4B     		ldr	r3, .L8
+ 208 00a2 181C     		mov	r0, r3
+ 209 00a4 FFF7FEFF 		bl	TuneSensitivity_P4_v2_40
+ 192:Generated_Source\PSoC4/CapSense_SMS.c **** 
+ 193:Generated_Source\PSoC4/CapSense_SMS.c ****     CapSense_EnableBaselineIDAC(&CapSense_config);
+ 210              		.loc 1 193 0
+ 211 00a8 094B     		ldr	r3, .L8
+ 212 00aa 181C     		mov	r0, r3
+ 213 00ac FFF7FEFF 		bl	CapSense_EnableBaselineIDAC
+ 194:Generated_Source\PSoC4/CapSense_SMS.c **** 
+ 195:Generated_Source\PSoC4/CapSense_SMS.c ****     for(curSensor = 0u; curSensor < CapSense_TOTAL_SCANSLOT_COUNT; curSensor++)
+ 214              		.loc 1 195 0
+ 215 00b0 0023     		mov	r3, #0
+ 216 00b2 7B60     		str	r3, [r7, #4]
+ 217 00b4 06E0     		b	.L6
+ 218              	.L7:
+ 196:Generated_Source\PSoC4/CapSense_SMS.c ****     {
+ 197:Generated_Source\PSoC4/CapSense_SMS.c ****         CapSense_UpdateThresholds(curSensor);
+ 219              		.loc 1 197 0 discriminator 3
+ 220 00b6 7B68     		ldr	r3, [r7, #4]
+ 221 00b8 181C     		mov	r0, r3
+ 222 00ba FFF7FEFF 		bl	CapSense_UpdateThresholds
+ 195:Generated_Source\PSoC4/CapSense_SMS.c ****     {
+ 223              		.loc 1 195 0 discriminator 3
+ 224 00be 7B68     		ldr	r3, [r7, #4]
+ 225 00c0 0133     		add	r3, r3, #1
+ 226 00c2 7B60     		str	r3, [r7, #4]
+ 227              	.L6:
+ 195:Generated_Source\PSoC4/CapSense_SMS.c ****     {
+ 228              		.loc 1 195 0 is_stmt 0 discriminator 1
+ 229 00c4 7B68     		ldr	r3, [r7, #4]
+ 230 00c6 072B     		cmp	r3, #7
+ 231 00c8 F5D9     		bls	.L7
+ 198:Generated_Source\PSoC4/CapSense_SMS.c ****     }
+ 199:Generated_Source\PSoC4/CapSense_SMS.c **** }
+ 232              		.loc 1 199 0 is_stmt 1
+ 233 00ca BD46     		mov	sp, r7
+ 234 00cc 02B0     		add	sp, sp, #8
+ 235              		@ sp needed
+ 236 00ce 80BD     		pop	{r7, pc}
+ 237              	.L9:
+ 238              		.align	2
+ 239              	.L8:
+ 240 00d0 00000000 		.word	CapSense_config
+ 241 00d4 CC040000 		.word	1228
+ 242 00d8 00000000 		.word	CapSense_configPointers
+ 243 00dc 00000000 		.word	CapSense_widgetResolution
+ 244 00e0 0000FF0F 		.word	268369920
+ 245 00e4 00000000 		.word	CapSense_senseClkDividerVal
+ 246 00e8 00000000 		.word	CapSense_sampleClkDividerVal
+ 247 00ec 9A0D0000 		.word	3482
+ 248 00f0 00000000 		.word	CapSense_prescalersTuningDone
+ 249              		.cfi_endproc
+ 250              	.LFE35:
+ 251              		.size	CapSense_AutoTune, .-CapSense_AutoTune
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccklALVd.s 			page 9
+
+
+ 252              		.section	.text.CapSense_UpdateThresholds,"ax",%progbits
+ 253              		.align	2
+ 254              		.global	CapSense_UpdateThresholds
+ 255              		.code	16
+ 256              		.thumb_func
+ 257              		.type	CapSense_UpdateThresholds, %function
+ 258              	CapSense_UpdateThresholds:
+ 259              	.LFB36:
+ 200:Generated_Source\PSoC4/CapSense_SMS.c **** 
+ 201:Generated_Source\PSoC4/CapSense_SMS.c **** 
+ 202:Generated_Source\PSoC4/CapSense_SMS.c **** /*******************************************************************************
+ 203:Generated_Source\PSoC4/CapSense_SMS.c **** * Function Name: CapSense_UpdateThresholds
+ 204:Generated_Source\PSoC4/CapSense_SMS.c **** ********************************************************************************
+ 205:Generated_Source\PSoC4/CapSense_SMS.c **** *
+ 206:Generated_Source\PSoC4/CapSense_SMS.c **** * Summary:
+ 207:Generated_Source\PSoC4/CapSense_SMS.c **** *  The API updates the Finger Threshold, Hysteresis, Noise Threshold, and
+ 208:Generated_Source\PSoC4/CapSense_SMS.c **** *  Negative Noise Threshold in the AutoTuning (Smartsense) Mode.
+ 209:Generated_Source\PSoC4/CapSense_SMS.c **** *
+ 210:Generated_Source\PSoC4/CapSense_SMS.c **** * Parameters:
+ 211:Generated_Source\PSoC4/CapSense_SMS.c **** *  sensor: sensor number.
+ 212:Generated_Source\PSoC4/CapSense_SMS.c **** *
+ 213:Generated_Source\PSoC4/CapSense_SMS.c **** * Return:
+ 214:Generated_Source\PSoC4/CapSense_SMS.c **** *  None
+ 215:Generated_Source\PSoC4/CapSense_SMS.c **** *
+ 216:Generated_Source\PSoC4/CapSense_SMS.c **** * Global Variables:
+ 217:Generated_Source\PSoC4/CapSense_SMS.c **** *  CapSense_widgetNumber[] - contains widget Number for given sensor.
+ 218:Generated_Source\PSoC4/CapSense_SMS.c **** *  0 through 7 (sensor 0 is bit 0, sensor 1 is bit 1).
+ 219:Generated_Source\PSoC4/CapSense_SMS.c **** *  For other sensors the array element equals to 255.
+ 220:Generated_Source\PSoC4/CapSense_SMS.c **** *  CapSense_numberOfSensors[widget] - Number of sensors in the widget.
+ 221:Generated_Source\PSoC4/CapSense_SMS.c **** *   CapSense_fingerThreshold[] - contains the level of signal for each sensor
+ 222:Generated_Source\PSoC4/CapSense_SMS.c **** *   that determines if a finger present on the sensor.
+ 223:Generated_Source\PSoC4/CapSense_SMS.c **** *   CapSense_negativeNoiseThreshold[] - negative Noise Threshold
+ 224:Generated_Source\PSoC4/CapSense_SMS.c **** *   CapSense_hysteresis[] - the array with hysteresis values.
+ 225:Generated_Source\PSoC4/CapSense_SMS.c **** *
+ 226:Generated_Source\PSoC4/CapSense_SMS.c **** * Side Effects:
+ 227:Generated_Source\PSoC4/CapSense_SMS.c **** *  None
+ 228:Generated_Source\PSoC4/CapSense_SMS.c **** *
+ 229:Generated_Source\PSoC4/CapSense_SMS.c **** *******************************************************************************/
+ 230:Generated_Source\PSoC4/CapSense_SMS.c **** void CapSense_UpdateThresholds(uint32 sensor)
+ 231:Generated_Source\PSoC4/CapSense_SMS.c **** {
+ 260              		.loc 1 231 0
+ 261              		.cfi_startproc
+ 262 0000 90B5     		push	{r4, r7, lr}
+ 263              		.cfi_def_cfa_offset 12
+ 264              		.cfi_offset 4, -12
+ 265              		.cfi_offset 7, -8
+ 266              		.cfi_offset 14, -4
+ 267 0002 87B0     		sub	sp, sp, #28
+ 268              		.cfi_def_cfa_offset 40
+ 269 0004 02AF     		add	r7, sp, #8
+ 270              		.cfi_def_cfa 7, 32
+ 271 0006 7860     		str	r0, [r7, #4]
+ 232:Generated_Source\PSoC4/CapSense_SMS.c ****     uint8 fingerThreshold;
+ 233:Generated_Source\PSoC4/CapSense_SMS.c ****     uint32 widget;
+ 234:Generated_Source\PSoC4/CapSense_SMS.c **** 
+ 235:Generated_Source\PSoC4/CapSense_SMS.c ****     widget = CapSense_widgetNumber[sensor];
+ 272              		.loc 1 235 0
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccklALVd.s 			page 10
+
+
+ 273 0008 334A     		ldr	r2, .L16
+ 274 000a 7B68     		ldr	r3, [r7, #4]
+ 275 000c D318     		add	r3, r2, r3
+ 276 000e 1B78     		ldrb	r3, [r3]
+ 277 0010 FB60     		str	r3, [r7, #12]
+ 236:Generated_Source\PSoC4/CapSense_SMS.c **** 
+ 237:Generated_Source\PSoC4/CapSense_SMS.c ****     #if(0u != CapSense_FLEXIBLE_THRESHOLDS_EN)
+ 238:Generated_Source\PSoC4/CapSense_SMS.c ****         fingerThreshold = CapSense_fingerThreshold[widget];
+ 239:Generated_Source\PSoC4/CapSense_SMS.c ****         /* Update Threshold manually (flexible) */
+ 240:Generated_Source\PSoC4/CapSense_SMS.c ****         CapSense_noiseThreshold[widget] = (uint8)(fingerThreshold >> 1u);
+ 241:Generated_Source\PSoC4/CapSense_SMS.c ****         CapSense_negativeNoiseThreshold[widget] = (uint8)(fingerThreshold >> 1u);
+ 242:Generated_Source\PSoC4/CapSense_SMS.c ****         CapSense_hysteresis[widget] = (uint8)(fingerThreshold >> 3u);
+ 243:Generated_Source\PSoC4/CapSense_SMS.c ****     #else
+ 244:Generated_Source\PSoC4/CapSense_SMS.c ****         /* Calculate Finger Threshold and Noise Threshold with Smartsense (automatic) */
+ 245:Generated_Source\PSoC4/CapSense_SMS.c ****         CalculateThresholds_P4_v2_40(&CapSense_config, (uint8)sensor, (uint8)widget, CapSense_finge
+ 278              		.loc 1 245 0
+ 279 0012 7B68     		ldr	r3, [r7, #4]
+ 280 0014 D9B2     		uxtb	r1, r3
+ 281 0016 FB68     		ldr	r3, [r7, #12]
+ 282 0018 DAB2     		uxtb	r2, r3
+ 283 001a 3048     		ldr	r0, .L16+4
+ 284 001c 304C     		ldr	r4, .L16+8
+ 285 001e 314B     		ldr	r3, .L16+12
+ 286 0020 0093     		str	r3, [sp]
+ 287 0022 231C     		mov	r3, r4
+ 288 0024 FFF7FEFF 		bl	CalculateThresholds_P4_v2_40
+ 246:Generated_Source\PSoC4/CapSense_SMS.c **** 
+ 247:Generated_Source\PSoC4/CapSense_SMS.c ****         fingerThreshold = CapSense_fingerThreshold[widget];
+ 289              		.loc 1 247 0
+ 290 0028 0B23     		mov	r3, #11
+ 291 002a FB18     		add	r3, r7, r3
+ 292 002c 2C49     		ldr	r1, .L16+8
+ 293 002e FA68     		ldr	r2, [r7, #12]
+ 294 0030 8A18     		add	r2, r1, r2
+ 295 0032 1278     		ldrb	r2, [r2]
+ 296 0034 1A70     		strb	r2, [r3]
+ 248:Generated_Source\PSoC4/CapSense_SMS.c **** 
+ 249:Generated_Source\PSoC4/CapSense_SMS.c ****         /* Update Threshold based on calculated with Smartsense (automatic) */
+ 250:Generated_Source\PSoC4/CapSense_SMS.c ****         CapSense_negativeNoiseThreshold[widget] = CapSense_noiseThreshold[widget];
+ 297              		.loc 1 250 0
+ 298 0036 2B4A     		ldr	r2, .L16+12
+ 299 0038 FB68     		ldr	r3, [r7, #12]
+ 300 003a D318     		add	r3, r2, r3
+ 301 003c 1978     		ldrb	r1, [r3]
+ 302 003e 2A4A     		ldr	r2, .L16+16
+ 303 0040 FB68     		ldr	r3, [r7, #12]
+ 304 0042 D318     		add	r3, r2, r3
+ 305 0044 0A1C     		add	r2, r1, #0
+ 306 0046 1A70     		strb	r2, [r3]
+ 251:Generated_Source\PSoC4/CapSense_SMS.c **** 
+ 252:Generated_Source\PSoC4/CapSense_SMS.c ****         if(fingerThreshold < CapSense_THRESHOLD_1)
+ 307              		.loc 1 252 0
+ 308 0048 0B23     		mov	r3, #11
+ 309 004a FB18     		add	r3, r7, r3
+ 310 004c 1B78     		ldrb	r3, [r3]
+ 311 004e DB2B     		cmp	r3, #219
+ 312 0050 0AD8     		bhi	.L11
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccklALVd.s 			page 11
+
+
+ 253:Generated_Source\PSoC4/CapSense_SMS.c ****         {
+ 254:Generated_Source\PSoC4/CapSense_SMS.c ****             CapSense_hysteresis[widget] = (uint8)(fingerThreshold >> 3u);
+ 313              		.loc 1 254 0
+ 314 0052 0B23     		mov	r3, #11
+ 315 0054 FB18     		add	r3, r7, r3
+ 316 0056 1B78     		ldrb	r3, [r3]
+ 317 0058 DB08     		lsr	r3, r3, #3
+ 318 005a D9B2     		uxtb	r1, r3
+ 319 005c 234A     		ldr	r2, .L16+20
+ 320 005e FB68     		ldr	r3, [r7, #12]
+ 321 0060 D318     		add	r3, r2, r3
+ 322 0062 0A1C     		add	r2, r1, #0
+ 323 0064 1A70     		strb	r2, [r3]
+ 324 0066 34E0     		b	.L10
+ 325              	.L11:
+ 255:Generated_Source\PSoC4/CapSense_SMS.c ****         }
+ 256:Generated_Source\PSoC4/CapSense_SMS.c ****         else if(fingerThreshold <  CapSense_THRESHOLD_2)
+ 326              		.loc 1 256 0
+ 327 0068 0B23     		mov	r3, #11
+ 328 006a FB18     		add	r3, r7, r3
+ 329 006c 1B78     		ldrb	r3, [r3]
+ 330 006e EC2B     		cmp	r3, #236
+ 331 0070 0AD8     		bhi	.L13
+ 257:Generated_Source\PSoC4/CapSense_SMS.c ****         {
+ 258:Generated_Source\PSoC4/CapSense_SMS.c ****             CapSense_hysteresis[widget] = (uint8)(fingerThreshold >> 4u);
+ 332              		.loc 1 258 0
+ 333 0072 0B23     		mov	r3, #11
+ 334 0074 FB18     		add	r3, r7, r3
+ 335 0076 1B78     		ldrb	r3, [r3]
+ 336 0078 1B09     		lsr	r3, r3, #4
+ 337 007a D9B2     		uxtb	r1, r3
+ 338 007c 1B4A     		ldr	r2, .L16+20
+ 339 007e FB68     		ldr	r3, [r7, #12]
+ 340 0080 D318     		add	r3, r2, r3
+ 341 0082 0A1C     		add	r2, r1, #0
+ 342 0084 1A70     		strb	r2, [r3]
+ 343 0086 24E0     		b	.L10
+ 344              	.L13:
+ 259:Generated_Source\PSoC4/CapSense_SMS.c ****         }
+ 260:Generated_Source\PSoC4/CapSense_SMS.c ****         else if(fingerThreshold <  CapSense_THRESHOLD_3)
+ 345              		.loc 1 260 0
+ 346 0088 0B23     		mov	r3, #11
+ 347 008a FB18     		add	r3, r7, r3
+ 348 008c 1B78     		ldrb	r3, [r3]
+ 349 008e F42B     		cmp	r3, #244
+ 350 0090 0AD8     		bhi	.L14
+ 261:Generated_Source\PSoC4/CapSense_SMS.c ****         {
+ 262:Generated_Source\PSoC4/CapSense_SMS.c ****             CapSense_hysteresis[widget] = (uint8)(fingerThreshold >> 5u);
+ 351              		.loc 1 262 0
+ 352 0092 0B23     		mov	r3, #11
+ 353 0094 FB18     		add	r3, r7, r3
+ 354 0096 1B78     		ldrb	r3, [r3]
+ 355 0098 5B09     		lsr	r3, r3, #5
+ 356 009a D9B2     		uxtb	r1, r3
+ 357 009c 134A     		ldr	r2, .L16+20
+ 358 009e FB68     		ldr	r3, [r7, #12]
+ 359 00a0 D318     		add	r3, r2, r3
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccklALVd.s 			page 12
+
+
+ 360 00a2 0A1C     		add	r2, r1, #0
+ 361 00a4 1A70     		strb	r2, [r3]
+ 362 00a6 14E0     		b	.L10
+ 363              	.L14:
+ 263:Generated_Source\PSoC4/CapSense_SMS.c ****         }
+ 264:Generated_Source\PSoC4/CapSense_SMS.c ****         else if(fingerThreshold <  CapSense_THRESHOLD_4)
+ 364              		.loc 1 264 0
+ 365 00a8 0B23     		mov	r3, #11
+ 366 00aa FB18     		add	r3, r7, r3
+ 367 00ac 1B78     		ldrb	r3, [r3]
+ 368 00ae F92B     		cmp	r3, #249
+ 369 00b0 0AD8     		bhi	.L15
+ 265:Generated_Source\PSoC4/CapSense_SMS.c ****         {
+ 266:Generated_Source\PSoC4/CapSense_SMS.c ****             CapSense_hysteresis[widget] = (uint8)(fingerThreshold >> 6u);
+ 370              		.loc 1 266 0
+ 371 00b2 0B23     		mov	r3, #11
+ 372 00b4 FB18     		add	r3, r7, r3
+ 373 00b6 1B78     		ldrb	r3, [r3]
+ 374 00b8 9B09     		lsr	r3, r3, #6
+ 375 00ba D9B2     		uxtb	r1, r3
+ 376 00bc 0B4A     		ldr	r2, .L16+20
+ 377 00be FB68     		ldr	r3, [r7, #12]
+ 378 00c0 D318     		add	r3, r2, r3
+ 379 00c2 0A1C     		add	r2, r1, #0
+ 380 00c4 1A70     		strb	r2, [r3]
+ 381 00c6 04E0     		b	.L10
+ 382              	.L15:
+ 267:Generated_Source\PSoC4/CapSense_SMS.c ****         }
+ 268:Generated_Source\PSoC4/CapSense_SMS.c ****         else
+ 269:Generated_Source\PSoC4/CapSense_SMS.c ****         {
+ 270:Generated_Source\PSoC4/CapSense_SMS.c ****             CapSense_hysteresis[widget] = 0u;
+ 383              		.loc 1 270 0
+ 384 00c8 084A     		ldr	r2, .L16+20
+ 385 00ca FB68     		ldr	r3, [r7, #12]
+ 386 00cc D318     		add	r3, r2, r3
+ 387 00ce 0022     		mov	r2, #0
+ 388 00d0 1A70     		strb	r2, [r3]
+ 389              	.L10:
+ 271:Generated_Source\PSoC4/CapSense_SMS.c ****         }
+ 272:Generated_Source\PSoC4/CapSense_SMS.c ****     #endif /* (0u != CapSense_FLEXIBLE_THRESHOLDS_EN)  */
+ 273:Generated_Source\PSoC4/CapSense_SMS.c **** }
+ 390              		.loc 1 273 0
+ 391 00d2 BD46     		mov	sp, r7
+ 392 00d4 05B0     		add	sp, sp, #20
+ 393              		@ sp needed
+ 394 00d6 90BD     		pop	{r4, r7, pc}
+ 395              	.L17:
+ 396              		.align	2
+ 397              	.L16:
+ 398 00d8 00000000 		.word	CapSense_widgetNumber
+ 399 00dc 00000000 		.word	CapSense_config
+ 400 00e0 00000000 		.word	CapSense_fingerThreshold
+ 401 00e4 00000000 		.word	CapSense_noiseThreshold
+ 402 00e8 00000000 		.word	CapSense_negativeNoiseThreshold
+ 403 00ec 00000000 		.word	CapSense_hysteresis
+ 404              		.cfi_endproc
+ 405              	.LFE36:
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccklALVd.s 			page 13
+
+
+ 406              		.size	CapSense_UpdateThresholds, .-CapSense_UpdateThresholds
+ 407              		.section	.text.CapSense_SetAnalogSwitchesSrcDirect,"ax",%progbits
+ 408              		.align	2
+ 409              		.global	CapSense_SetAnalogSwitchesSrcDirect
+ 410              		.code	16
+ 411              		.thumb_func
+ 412              		.type	CapSense_SetAnalogSwitchesSrcDirect, %function
+ 413              	CapSense_SetAnalogSwitchesSrcDirect:
+ 414              	.LFB37:
+ 274:Generated_Source\PSoC4/CapSense_SMS.c **** 
+ 275:Generated_Source\PSoC4/CapSense_SMS.c **** /*******************************************************************************
+ 276:Generated_Source\PSoC4/CapSense_SMS.c **** * Function Name: CapSense_SetAnalogSwitchesSrcDirect
+ 277:Generated_Source\PSoC4/CapSense_SMS.c **** ********************************************************************************
+ 278:Generated_Source\PSoC4/CapSense_SMS.c **** *
+ 279:Generated_Source\PSoC4/CapSense_SMS.c **** * Summary:
+ 280:Generated_Source\PSoC4/CapSense_SMS.c **** *  This API switches the charge clock source to prescaler.
+ 281:Generated_Source\PSoC4/CapSense_SMS.c **** *
+ 282:Generated_Source\PSoC4/CapSense_SMS.c **** * Parameters:
+ 283:Generated_Source\PSoC4/CapSense_SMS.c **** *  None
+ 284:Generated_Source\PSoC4/CapSense_SMS.c **** *
+ 285:Generated_Source\PSoC4/CapSense_SMS.c **** * Return:
+ 286:Generated_Source\PSoC4/CapSense_SMS.c **** *  None
+ 287:Generated_Source\PSoC4/CapSense_SMS.c **** *
+ 288:Generated_Source\PSoC4/CapSense_SMS.c **** * Global Variables:
+ 289:Generated_Source\PSoC4/CapSense_SMS.c **** *  None
+ 290:Generated_Source\PSoC4/CapSense_SMS.c **** *
+ 291:Generated_Source\PSoC4/CapSense_SMS.c **** * Side Effects:
+ 292:Generated_Source\PSoC4/CapSense_SMS.c **** *  None
+ 293:Generated_Source\PSoC4/CapSense_SMS.c **** *
+ 294:Generated_Source\PSoC4/CapSense_SMS.c **** *******************************************************************************/
+ 295:Generated_Source\PSoC4/CapSense_SMS.c **** void CapSense_SetAnalogSwitchesSrcDirect(void)
+ 296:Generated_Source\PSoC4/CapSense_SMS.c **** {
+ 415              		.loc 1 296 0
+ 416              		.cfi_startproc
+ 417 0000 80B5     		push	{r7, lr}
+ 418              		.cfi_def_cfa_offset 8
+ 419              		.cfi_offset 7, -8
+ 420              		.cfi_offset 14, -4
+ 421 0002 00AF     		add	r7, sp, #0
+ 422              		.cfi_def_cfa_register 7
+ 297:Generated_Source\PSoC4/CapSense_SMS.c ****     CapSense_CSD_CFG_REG &= ~(CapSense_CSD_CFG_PRS_SELECT);
+ 423              		.loc 1 297 0
+ 424 0004 034B     		ldr	r3, .L19
+ 425 0006 034A     		ldr	r2, .L19
+ 426 0008 1268     		ldr	r2, [r2]
+ 427 000a 4021     		mov	r1, #64
+ 428 000c 8A43     		bic	r2, r1
+ 429 000e 1A60     		str	r2, [r3]
+ 298:Generated_Source\PSoC4/CapSense_SMS.c **** }
+ 430              		.loc 1 298 0
+ 431 0010 BD46     		mov	sp, r7
+ 432              		@ sp needed
+ 433 0012 80BD     		pop	{r7, pc}
+ 434              	.L20:
+ 435              		.align	2
+ 436              	.L19:
+ 437 0014 04002840 		.word	1076363268
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccklALVd.s 			page 14
+
+
+ 438              		.cfi_endproc
+ 439              	.LFE37:
+ 440              		.size	CapSense_SetAnalogSwitchesSrcDirect, .-CapSense_SetAnalogSwitchesSrcDirect
+ 441              		.section	.text.CapSense_DisableBaselineIDAC,"ax",%progbits
+ 442              		.align	2
+ 443              		.global	CapSense_DisableBaselineIDAC
+ 444              		.code	16
+ 445              		.thumb_func
+ 446              		.type	CapSense_DisableBaselineIDAC, %function
+ 447              	CapSense_DisableBaselineIDAC:
+ 448              	.LFB38:
+ 299:Generated_Source\PSoC4/CapSense_SMS.c **** 
+ 300:Generated_Source\PSoC4/CapSense_SMS.c **** 
+ 301:Generated_Source\PSoC4/CapSense_SMS.c **** /*******************************************************************************
+ 302:Generated_Source\PSoC4/CapSense_SMS.c **** * Function Name: CapSense_DisableBaselineIDAC
+ 303:Generated_Source\PSoC4/CapSense_SMS.c **** ********************************************************************************
+ 304:Generated_Source\PSoC4/CapSense_SMS.c **** *
+ 305:Generated_Source\PSoC4/CapSense_SMS.c **** * Summary:
+ 306:Generated_Source\PSoC4/CapSense_SMS.c **** *  The API disables the Compensation IDAC.
+ 307:Generated_Source\PSoC4/CapSense_SMS.c **** *
+ 308:Generated_Source\PSoC4/CapSense_SMS.c **** * Parameters:
+ 309:Generated_Source\PSoC4/CapSense_SMS.c **** *  None
+ 310:Generated_Source\PSoC4/CapSense_SMS.c **** *
+ 311:Generated_Source\PSoC4/CapSense_SMS.c **** * Return:
+ 312:Generated_Source\PSoC4/CapSense_SMS.c **** *  None
+ 313:Generated_Source\PSoC4/CapSense_SMS.c **** *
+ 314:Generated_Source\PSoC4/CapSense_SMS.c **** * Global Variables:
+ 315:Generated_Source\PSoC4/CapSense_SMS.c **** *  None
+ 316:Generated_Source\PSoC4/CapSense_SMS.c **** *
+ 317:Generated_Source\PSoC4/CapSense_SMS.c **** * Side Effects:
+ 318:Generated_Source\PSoC4/CapSense_SMS.c **** *  None
+ 319:Generated_Source\PSoC4/CapSense_SMS.c **** *
+ 320:Generated_Source\PSoC4/CapSense_SMS.c **** *******************************************************************************/
+ 321:Generated_Source\PSoC4/CapSense_SMS.c **** void CapSense_DisableBaselineIDAC(void)
+ 322:Generated_Source\PSoC4/CapSense_SMS.c **** {
+ 449              		.loc 1 322 0
+ 450              		.cfi_startproc
+ 451 0000 80B5     		push	{r7, lr}
+ 452              		.cfi_def_cfa_offset 8
+ 453              		.cfi_offset 7, -8
+ 454              		.cfi_offset 14, -4
+ 455 0002 82B0     		sub	sp, sp, #8
+ 456              		.cfi_def_cfa_offset 16
+ 457 0004 00AF     		add	r7, sp, #0
+ 458              		.cfi_def_cfa_register 7
+ 323:Generated_Source\PSoC4/CapSense_SMS.c ****     uint32 newRegValue;
+ 324:Generated_Source\PSoC4/CapSense_SMS.c **** 
+ 325:Generated_Source\PSoC4/CapSense_SMS.c ****     newRegValue = CapSense_CSD_IDAC_REG;
+ 459              		.loc 1 325 0
+ 460 0006 094B     		ldr	r3, .L22
+ 461 0008 1B68     		ldr	r3, [r3]
+ 462 000a 7B60     		str	r3, [r7, #4]
+ 326:Generated_Source\PSoC4/CapSense_SMS.c **** 
+ 327:Generated_Source\PSoC4/CapSense_SMS.c ****     newRegValue &= ~(CapSense_CSD_IDAC1_MODE_MASK | CapSense_CSD_IDAC2_MODE_MASK);
+ 463              		.loc 1 327 0
+ 464 000c 7B68     		ldr	r3, [r7, #4]
+ 465 000e 084A     		ldr	r2, .L22+4
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccklALVd.s 			page 15
+
+
+ 466 0010 1340     		and	r3, r2
+ 467 0012 7B60     		str	r3, [r7, #4]
+ 328:Generated_Source\PSoC4/CapSense_SMS.c ****     newRegValue |= CapSense_CSD_IDAC1_MODE_VARIABLE;
+ 468              		.loc 1 328 0
+ 469 0014 7B68     		ldr	r3, [r7, #4]
+ 470 0016 8022     		mov	r2, #128
+ 471 0018 9200     		lsl	r2, r2, #2
+ 472 001a 1343     		orr	r3, r2
+ 473 001c 7B60     		str	r3, [r7, #4]
+ 329:Generated_Source\PSoC4/CapSense_SMS.c **** 
+ 330:Generated_Source\PSoC4/CapSense_SMS.c ****     CapSense_CSD_IDAC_REG = newRegValue;
+ 474              		.loc 1 330 0
+ 475 001e 034B     		ldr	r3, .L22
+ 476 0020 7A68     		ldr	r2, [r7, #4]
+ 477 0022 1A60     		str	r2, [r3]
+ 331:Generated_Source\PSoC4/CapSense_SMS.c **** }
+ 478              		.loc 1 331 0
+ 479 0024 BD46     		mov	sp, r7
+ 480 0026 02B0     		add	sp, sp, #8
+ 481              		@ sp needed
+ 482 0028 80BD     		pop	{r7, pc}
+ 483              	.L23:
+ 484 002a C046     		.align	2
+ 485              	.L22:
+ 486 002c 08002840 		.word	1076363272
+ 487 0030 FFFCFFFC 		.word	-50332417
+ 488              		.cfi_endproc
+ 489              	.LFE38:
+ 490              		.size	CapSense_DisableBaselineIDAC, .-CapSense_DisableBaselineIDAC
+ 491              		.section	.text.CapSense_EnableBaselineIDAC,"ax",%progbits
+ 492              		.align	2
+ 493              		.global	CapSense_EnableBaselineIDAC
+ 494              		.code	16
+ 495              		.thumb_func
+ 496              		.type	CapSense_EnableBaselineIDAC, %function
+ 497              	CapSense_EnableBaselineIDAC:
+ 498              	.LFB39:
+ 332:Generated_Source\PSoC4/CapSense_SMS.c **** 
+ 333:Generated_Source\PSoC4/CapSense_SMS.c **** 
+ 334:Generated_Source\PSoC4/CapSense_SMS.c **** /*******************************************************************************
+ 335:Generated_Source\PSoC4/CapSense_SMS.c **** * Function Name: CapSense_EnableBaselineIDAC
+ 336:Generated_Source\PSoC4/CapSense_SMS.c **** ********************************************************************************
+ 337:Generated_Source\PSoC4/CapSense_SMS.c **** *
+ 338:Generated_Source\PSoC4/CapSense_SMS.c **** * Summary:
+ 339:Generated_Source\PSoC4/CapSense_SMS.c **** *  The API enables the Compensation IDAC.
+ 340:Generated_Source\PSoC4/CapSense_SMS.c **** *
+ 341:Generated_Source\PSoC4/CapSense_SMS.c **** * Parameters:
+ 342:Generated_Source\PSoC4/CapSense_SMS.c **** *  None
+ 343:Generated_Source\PSoC4/CapSense_SMS.c **** *
+ 344:Generated_Source\PSoC4/CapSense_SMS.c **** * Return:
+ 345:Generated_Source\PSoC4/CapSense_SMS.c **** *  None
+ 346:Generated_Source\PSoC4/CapSense_SMS.c **** *
+ 347:Generated_Source\PSoC4/CapSense_SMS.c **** * Global Variables:
+ 348:Generated_Source\PSoC4/CapSense_SMS.c **** *  CapSense_compensationIDAC[] - used to store a 7-bit idac value for all the sensors.
+ 349:Generated_Source\PSoC4/CapSense_SMS.c **** *
+ 350:Generated_Source\PSoC4/CapSense_SMS.c **** * Side Effects:
+ 351:Generated_Source\PSoC4/CapSense_SMS.c **** *  None
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccklALVd.s 			page 16
+
+
+ 352:Generated_Source\PSoC4/CapSense_SMS.c **** *
+ 353:Generated_Source\PSoC4/CapSense_SMS.c **** *******************************************************************************/
+ 354:Generated_Source\PSoC4/CapSense_SMS.c **** void  CapSense_EnableBaselineIDAC(const CapSense_CONFIG_TYPE_P4_v2_40 *config)
+ 355:Generated_Source\PSoC4/CapSense_SMS.c **** {
+ 499              		.loc 1 355 0
+ 500              		.cfi_startproc
+ 501 0000 80B5     		push	{r7, lr}
+ 502              		.cfi_def_cfa_offset 8
+ 503              		.cfi_offset 7, -8
+ 504              		.cfi_offset 14, -4
+ 505 0002 84B0     		sub	sp, sp, #16
+ 506              		.cfi_def_cfa_offset 24
+ 507 0004 00AF     		add	r7, sp, #0
+ 508              		.cfi_def_cfa_register 7
+ 509 0006 7860     		str	r0, [r7, #4]
+ 356:Generated_Source\PSoC4/CapSense_SMS.c ****     uint32 curSensor;
+ 357:Generated_Source\PSoC4/CapSense_SMS.c ****     uint32 newRegValue;
+ 358:Generated_Source\PSoC4/CapSense_SMS.c **** 
+ 359:Generated_Source\PSoC4/CapSense_SMS.c ****     for(curSensor = 0u; curSensor < config->totalScanslotsNum; curSensor++)
+ 510              		.loc 1 359 0
+ 511 0008 0023     		mov	r3, #0
+ 512 000a FB60     		str	r3, [r7, #12]
+ 513 000c 19E0     		b	.L25
+ 514              	.L26:
+ 360:Generated_Source\PSoC4/CapSense_SMS.c ****     {
+ 361:Generated_Source\PSoC4/CapSense_SMS.c ****         CapSense_compensationIDAC[curSensor] = CapSense_modulationIDAC[curSensor] / 2u;
+ 515              		.loc 1 361 0 discriminator 3
+ 516 000e 1B4A     		ldr	r2, .L27
+ 517 0010 FB68     		ldr	r3, [r7, #12]
+ 518 0012 D318     		add	r3, r2, r3
+ 519 0014 1B78     		ldrb	r3, [r3]
+ 520 0016 5B08     		lsr	r3, r3, #1
+ 521 0018 D9B2     		uxtb	r1, r3
+ 522 001a 194A     		ldr	r2, .L27+4
+ 523 001c FB68     		ldr	r3, [r7, #12]
+ 524 001e D318     		add	r3, r2, r3
+ 525 0020 0A1C     		add	r2, r1, #0
+ 526 0022 1A70     		strb	r2, [r3]
+ 362:Generated_Source\PSoC4/CapSense_SMS.c ****         CapSense_modulationIDAC[curSensor] = (CapSense_modulationIDAC[curSensor] + 1u) / 2u;
+ 527              		.loc 1 362 0 discriminator 3
+ 528 0024 154A     		ldr	r2, .L27
+ 529 0026 FB68     		ldr	r3, [r7, #12]
+ 530 0028 D318     		add	r3, r2, r3
+ 531 002a 1B78     		ldrb	r3, [r3]
+ 532 002c 0133     		add	r3, r3, #1
+ 533 002e 5B08     		lsr	r3, r3, #1
+ 534 0030 D9B2     		uxtb	r1, r3
+ 535 0032 124A     		ldr	r2, .L27
+ 536 0034 FB68     		ldr	r3, [r7, #12]
+ 537 0036 D318     		add	r3, r2, r3
+ 538 0038 0A1C     		add	r2, r1, #0
+ 539 003a 1A70     		strb	r2, [r3]
+ 359:Generated_Source\PSoC4/CapSense_SMS.c ****     {
+ 540              		.loc 1 359 0 discriminator 3
+ 541 003c FB68     		ldr	r3, [r7, #12]
+ 542 003e 0133     		add	r3, r3, #1
+ 543 0040 FB60     		str	r3, [r7, #12]
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccklALVd.s 			page 17
+
+
+ 544              	.L25:
+ 359:Generated_Source\PSoC4/CapSense_SMS.c ****     {
+ 545              		.loc 1 359 0 is_stmt 0 discriminator 1
+ 546 0042 7B68     		ldr	r3, [r7, #4]
+ 547 0044 1B78     		ldrb	r3, [r3]
+ 548 0046 1A1E     		sub	r2, r3, #0
+ 549 0048 FB68     		ldr	r3, [r7, #12]
+ 550 004a 9A42     		cmp	r2, r3
+ 551 004c DFD8     		bhi	.L26
+ 363:Generated_Source\PSoC4/CapSense_SMS.c ****     }
+ 364:Generated_Source\PSoC4/CapSense_SMS.c **** 
+ 365:Generated_Source\PSoC4/CapSense_SMS.c ****     CyIntDisable(CapSense_ISR_NUMBER);
+ 552              		.loc 1 365 0 is_stmt 1
+ 553 004e 1120     		mov	r0, #17
+ 554 0050 FFF7FEFF 		bl	CyIntDisable
+ 366:Generated_Source\PSoC4/CapSense_SMS.c **** 
+ 367:Generated_Source\PSoC4/CapSense_SMS.c ****     newRegValue = CapSense_CSD_IDAC_REG;
+ 555              		.loc 1 367 0
+ 556 0054 0B4B     		ldr	r3, .L27+8
+ 557 0056 1B68     		ldr	r3, [r3]
+ 558 0058 BB60     		str	r3, [r7, #8]
+ 368:Generated_Source\PSoC4/CapSense_SMS.c ****     newRegValue &= ~(CapSense_CSD_IDAC1_MODE_MASK | CapSense_CSD_IDAC2_MODE_MASK);
+ 559              		.loc 1 368 0
+ 560 005a BB68     		ldr	r3, [r7, #8]
+ 561 005c 0A4A     		ldr	r2, .L27+12
+ 562 005e 1340     		and	r3, r2
+ 563 0060 BB60     		str	r3, [r7, #8]
+ 369:Generated_Source\PSoC4/CapSense_SMS.c ****     newRegValue |= (CapSense_CSD_IDAC1_MODE_VARIABLE | CapSense_CSD_IDAC2_MODE_FIXED);
+ 564              		.loc 1 369 0
+ 565 0062 BB68     		ldr	r3, [r7, #8]
+ 566 0064 094A     		ldr	r2, .L27+16
+ 567 0066 1343     		orr	r3, r2
+ 568 0068 BB60     		str	r3, [r7, #8]
+ 370:Generated_Source\PSoC4/CapSense_SMS.c ****     CapSense_CSD_IDAC_REG = newRegValue;
+ 569              		.loc 1 370 0
+ 570 006a 064B     		ldr	r3, .L27+8
+ 571 006c BA68     		ldr	r2, [r7, #8]
+ 572 006e 1A60     		str	r2, [r3]
+ 371:Generated_Source\PSoC4/CapSense_SMS.c **** 
+ 372:Generated_Source\PSoC4/CapSense_SMS.c ****     CyIntEnable(CapSense_ISR_NUMBER);
+ 573              		.loc 1 372 0
+ 574 0070 1120     		mov	r0, #17
+ 575 0072 FFF7FEFF 		bl	CyIntEnable
+ 373:Generated_Source\PSoC4/CapSense_SMS.c **** }
+ 576              		.loc 1 373 0
+ 577 0076 BD46     		mov	sp, r7
+ 578 0078 04B0     		add	sp, sp, #16
+ 579              		@ sp needed
+ 580 007a 80BD     		pop	{r7, pc}
+ 581              	.L28:
+ 582              		.align	2
+ 583              	.L27:
+ 584 007c 00000000 		.word	CapSense_modulationIDAC
+ 585 0080 00000000 		.word	CapSense_compensationIDAC
+ 586 0084 08002840 		.word	1076363272
+ 587 0088 FFFCFFFC 		.word	-50332417
+ 588 008c 00020001 		.word	16777728
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccklALVd.s 			page 18
+
+
+ 589              		.cfi_endproc
+ 590              	.LFE39:
+ 591              		.size	CapSense_EnableBaselineIDAC, .-CapSense_EnableBaselineIDAC
+ 592              		.section	.text.CapSense_SetSensitivity,"ax",%progbits
+ 593              		.align	2
+ 594              		.global	CapSense_SetSensitivity
+ 595              		.code	16
+ 596              		.thumb_func
+ 597              		.type	CapSense_SetSensitivity, %function
+ 598              	CapSense_SetSensitivity:
+ 599              	.LFB40:
+ 374:Generated_Source\PSoC4/CapSense_SMS.c **** 
+ 375:Generated_Source\PSoC4/CapSense_SMS.c **** 
+ 376:Generated_Source\PSoC4/CapSense_SMS.c **** /*******************************************************************************
+ 377:Generated_Source\PSoC4/CapSense_SMS.c **** * Function Name: CapSense_SetSensitivity
+ 378:Generated_Source\PSoC4/CapSense_SMS.c **** ********************************************************************************
+ 379:Generated_Source\PSoC4/CapSense_SMS.c **** *
+ 380:Generated_Source\PSoC4/CapSense_SMS.c **** * Summary:
+ 381:Generated_Source\PSoC4/CapSense_SMS.c **** *  This API sets the sensitivity value for the sensor. The sensitivity
+ 382:Generated_Source\PSoC4/CapSense_SMS.c **** *  value is used during the auto-tuning algorithm executed as part of the CapSense_Start API.
+ 383:Generated_Source\PSoC4/CapSense_SMS.c **** *  This API is called by the application layer prior to calling the CapSense_Start API.
+ 384:Generated_Source\PSoC4/CapSense_SMS.c **** *  Calling this API after execution of CapSense_Start API has no effect.
+ 385:Generated_Source\PSoC4/CapSense_SMS.c **** *
+ 386:Generated_Source\PSoC4/CapSense_SMS.c **** * Parameters:
+ 387:Generated_Source\PSoC4/CapSense_SMS.c **** *  sensor  Sensor index
+ 388:Generated_Source\PSoC4/CapSense_SMS.c **** *  data    Sensitivity of the sensor. Possible values are below
+ 389:Generated_Source\PSoC4/CapSense_SMS.c **** *  1 - 0.1pf sensitivity
+ 390:Generated_Source\PSoC4/CapSense_SMS.c **** *  2 - 0.2pf sensitivity
+ 391:Generated_Source\PSoC4/CapSense_SMS.c **** *  3 - 0.3pf sensitivity
+ 392:Generated_Source\PSoC4/CapSense_SMS.c **** *  4 - 0.4pf sensitivity
+ 393:Generated_Source\PSoC4/CapSense_SMS.c **** *  5 - 0.5pf sensitivity
+ 394:Generated_Source\PSoC4/CapSense_SMS.c **** *  6 - 0.6pf sensitivity
+ 395:Generated_Source\PSoC4/CapSense_SMS.c **** *  7 - 0.7pf sensitivity
+ 396:Generated_Source\PSoC4/CapSense_SMS.c **** *  8 - 0.8pf sensitivity
+ 397:Generated_Source\PSoC4/CapSense_SMS.c **** *  9 - 0.9pf sensitivity
+ 398:Generated_Source\PSoC4/CapSense_SMS.c **** *  10 - 1.0pf sensitivity
+ 399:Generated_Source\PSoC4/CapSense_SMS.c **** *  All other values, set sensitivity to 1.0pf
+ 400:Generated_Source\PSoC4/CapSense_SMS.c **** *
+ 401:Generated_Source\PSoC4/CapSense_SMS.c **** *  Return Value:
+ 402:Generated_Source\PSoC4/CapSense_SMS.c **** *   None
+ 403:Generated_Source\PSoC4/CapSense_SMS.c **** *
+ 404:Generated_Source\PSoC4/CapSense_SMS.c **** * Global Variables:
+ 405:Generated_Source\PSoC4/CapSense_SMS.c **** * CapSense_sensorSensitivity[] - This 8-bits array contains Sensitivity in the LSB nibble
+ 406:Generated_Source\PSoC4/CapSense_SMS.c **** *                                and Noise Reset Counter value in the MSB nibble.
+ 407:Generated_Source\PSoC4/CapSense_SMS.c **** *
+ 408:Generated_Source\PSoC4/CapSense_SMS.c **** * Side Effects:
+ 409:Generated_Source\PSoC4/CapSense_SMS.c **** *  None
+ 410:Generated_Source\PSoC4/CapSense_SMS.c **** *
+ 411:Generated_Source\PSoC4/CapSense_SMS.c **** *******************************************************************************/
+ 412:Generated_Source\PSoC4/CapSense_SMS.c **** void CapSense_SetSensitivity(uint32 sensor, uint32 value)
+ 413:Generated_Source\PSoC4/CapSense_SMS.c **** {
+ 600              		.loc 1 413 0
+ 601              		.cfi_startproc
+ 602 0000 80B5     		push	{r7, lr}
+ 603              		.cfi_def_cfa_offset 8
+ 604              		.cfi_offset 7, -8
+ 605              		.cfi_offset 14, -4
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccklALVd.s 			page 19
+
+
+ 606 0002 82B0     		sub	sp, sp, #8
+ 607              		.cfi_def_cfa_offset 16
+ 608 0004 00AF     		add	r7, sp, #0
+ 609              		.cfi_def_cfa_register 7
+ 610 0006 7860     		str	r0, [r7, #4]
+ 611 0008 3960     		str	r1, [r7]
+ 414:Generated_Source\PSoC4/CapSense_SMS.c ****     if(value > 10u)
+ 612              		.loc 1 414 0
+ 613 000a 3B68     		ldr	r3, [r7]
+ 614 000c 0A2B     		cmp	r3, #10
+ 615 000e 01D9     		bls	.L30
+ 415:Generated_Source\PSoC4/CapSense_SMS.c ****     {
+ 416:Generated_Source\PSoC4/CapSense_SMS.c ****         value = 10u;
+ 616              		.loc 1 416 0
+ 617 0010 0A23     		mov	r3, #10
+ 618 0012 3B60     		str	r3, [r7]
+ 619              	.L30:
+ 417:Generated_Source\PSoC4/CapSense_SMS.c ****     }
+ 418:Generated_Source\PSoC4/CapSense_SMS.c **** 
+ 419:Generated_Source\PSoC4/CapSense_SMS.c ****     /* Clear SensorSensitivity value in LSB nibble */
+ 420:Generated_Source\PSoC4/CapSense_SMS.c ****     CapSense_sensorSensitivity[sensor] &= (uint8)~CapSense_SENSITIVITY_MASK;
+ 620              		.loc 1 420 0
+ 621 0014 0D4A     		ldr	r2, .L31
+ 622 0016 7B68     		ldr	r3, [r7, #4]
+ 623 0018 D318     		add	r3, r2, r3
+ 624 001a 1B78     		ldrb	r3, [r3]
+ 625 001c 0F22     		mov	r2, #15
+ 626 001e 9343     		bic	r3, r2
+ 627 0020 D9B2     		uxtb	r1, r3
+ 628 0022 0A4A     		ldr	r2, .L31
+ 629 0024 7B68     		ldr	r3, [r7, #4]
+ 630 0026 D318     		add	r3, r2, r3
+ 631 0028 0A1C     		add	r2, r1, #0
+ 632 002a 1A70     		strb	r2, [r3]
+ 421:Generated_Source\PSoC4/CapSense_SMS.c ****     /* Set SensorSensitivity value in LSB nibble */
+ 422:Generated_Source\PSoC4/CapSense_SMS.c ****     CapSense_sensorSensitivity[sensor] |= (uint8)value;
+ 633              		.loc 1 422 0
+ 634 002c 074A     		ldr	r2, .L31
+ 635 002e 7B68     		ldr	r3, [r7, #4]
+ 636 0030 D318     		add	r3, r2, r3
+ 637 0032 1A78     		ldrb	r2, [r3]
+ 638 0034 3B68     		ldr	r3, [r7]
+ 639 0036 DBB2     		uxtb	r3, r3
+ 640 0038 1343     		orr	r3, r2
+ 641 003a D9B2     		uxtb	r1, r3
+ 642 003c 034A     		ldr	r2, .L31
+ 643 003e 7B68     		ldr	r3, [r7, #4]
+ 644 0040 D318     		add	r3, r2, r3
+ 645 0042 0A1C     		add	r2, r1, #0
+ 646 0044 1A70     		strb	r2, [r3]
+ 423:Generated_Source\PSoC4/CapSense_SMS.c **** }
+ 647              		.loc 1 423 0
+ 648 0046 BD46     		mov	sp, r7
+ 649 0048 02B0     		add	sp, sp, #8
+ 650              		@ sp needed
+ 651 004a 80BD     		pop	{r7, pc}
+ 652              	.L32:
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccklALVd.s 			page 20
+
+
+ 653              		.align	2
+ 654              	.L31:
+ 655 004c 00000000 		.word	CapSense_sensorSensitivity
+ 656              		.cfi_endproc
+ 657              	.LFE40:
+ 658              		.size	CapSense_SetSensitivity, .-CapSense_SetSensitivity
+ 659              		.section	.text.CapSense_GetSensitivityCoefficient,"ax",%progbits
+ 660              		.align	2
+ 661              		.global	CapSense_GetSensitivityCoefficient
+ 662              		.code	16
+ 663              		.thumb_func
+ 664              		.type	CapSense_GetSensitivityCoefficient, %function
+ 665              	CapSense_GetSensitivityCoefficient:
+ 666              	.LFB41:
+ 424:Generated_Source\PSoC4/CapSense_SMS.c **** 
+ 425:Generated_Source\PSoC4/CapSense_SMS.c **** 
+ 426:Generated_Source\PSoC4/CapSense_SMS.c **** /*******************************************************************************
+ 427:Generated_Source\PSoC4/CapSense_SMS.c **** * Function Name: CapSense_GetSensitivityCoefficient
+ 428:Generated_Source\PSoC4/CapSense_SMS.c **** ********************************************************************************
+ 429:Generated_Source\PSoC4/CapSense_SMS.c **** *
+ 430:Generated_Source\PSoC4/CapSense_SMS.c **** * Summary:
+ 431:Generated_Source\PSoC4/CapSense_SMS.c **** *  This API returns the K coefficient for the appropriate sensor.
+ 432:Generated_Source\PSoC4/CapSense_SMS.c **** *
+ 433:Generated_Source\PSoC4/CapSense_SMS.c **** * Parameters:
+ 434:Generated_Source\PSoC4/CapSense_SMS.c **** *  sensor:  Sensor index
+ 435:Generated_Source\PSoC4/CapSense_SMS.c **** *
+ 436:Generated_Source\PSoC4/CapSense_SMS.c **** *  Return Value:
+ 437:Generated_Source\PSoC4/CapSense_SMS.c **** *   K - value for the appropriate sensor.
+ 438:Generated_Source\PSoC4/CapSense_SMS.c **** *
+ 439:Generated_Source\PSoC4/CapSense_SMS.c **** * Global Variables:
+ 440:Generated_Source\PSoC4/CapSense_SMS.c **** *  CapSense_kValueTbl[] - This 8-bits array contains the K value for each sensor.
+ 441:Generated_Source\PSoC4/CapSense_SMS.c **** *
+ 442:Generated_Source\PSoC4/CapSense_SMS.c **** * Side Effects:
+ 443:Generated_Source\PSoC4/CapSense_SMS.c **** *  None
+ 444:Generated_Source\PSoC4/CapSense_SMS.c **** *
+ 445:Generated_Source\PSoC4/CapSense_SMS.c **** *******************************************************************************/
+ 446:Generated_Source\PSoC4/CapSense_SMS.c **** uint8 CapSense_GetSensitivityCoefficient(uint32 sensor)
+ 447:Generated_Source\PSoC4/CapSense_SMS.c **** {
+ 667              		.loc 1 447 0
+ 668              		.cfi_startproc
+ 669 0000 80B5     		push	{r7, lr}
+ 670              		.cfi_def_cfa_offset 8
+ 671              		.cfi_offset 7, -8
+ 672              		.cfi_offset 14, -4
+ 673 0002 82B0     		sub	sp, sp, #8
+ 674              		.cfi_def_cfa_offset 16
+ 675 0004 00AF     		add	r7, sp, #0
+ 676              		.cfi_def_cfa_register 7
+ 677 0006 7860     		str	r0, [r7, #4]
+ 448:Generated_Source\PSoC4/CapSense_SMS.c ****     return (CapSense_kValueTbl[sensor]);
+ 678              		.loc 1 448 0
+ 679 0008 034A     		ldr	r2, .L35
+ 680 000a 7B68     		ldr	r3, [r7, #4]
+ 681 000c D318     		add	r3, r2, r3
+ 682 000e 1B78     		ldrb	r3, [r3]
+ 449:Generated_Source\PSoC4/CapSense_SMS.c **** }
+ 683              		.loc 1 449 0
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccklALVd.s 			page 21
+
+
+ 684 0010 181C     		mov	r0, r3
+ 685 0012 BD46     		mov	sp, r7
+ 686 0014 02B0     		add	sp, sp, #8
+ 687              		@ sp needed
+ 688 0016 80BD     		pop	{r7, pc}
+ 689              	.L36:
+ 690              		.align	2
+ 691              	.L35:
+ 692 0018 00000000 		.word	CapSense_kValueTbl
+ 693              		.cfi_endproc
+ 694              	.LFE41:
+ 695              		.size	CapSense_GetSensitivityCoefficient, .-CapSense_GetSensitivityCoefficient
+ 696              		.section	.text.CapSense_GetNoiseEnvelope,"ax",%progbits
+ 697              		.align	2
+ 698              		.global	CapSense_GetNoiseEnvelope
+ 699              		.code	16
+ 700              		.thumb_func
+ 701              		.type	CapSense_GetNoiseEnvelope, %function
+ 702              	CapSense_GetNoiseEnvelope:
+ 703              	.LFB42:
+ 450:Generated_Source\PSoC4/CapSense_SMS.c **** 
+ 451:Generated_Source\PSoC4/CapSense_SMS.c **** 
+ 452:Generated_Source\PSoC4/CapSense_SMS.c **** /*******************************************************************************
+ 453:Generated_Source\PSoC4/CapSense_SMS.c **** * Function Name: CapSense_GetNoiseEnvelope
+ 454:Generated_Source\PSoC4/CapSense_SMS.c **** ********************************************************************************
+ 455:Generated_Source\PSoC4/CapSense_SMS.c **** *
+ 456:Generated_Source\PSoC4/CapSense_SMS.c **** * Summary:
+ 457:Generated_Source\PSoC4/CapSense_SMS.c **** *  This function returns the noise value of a
+ 458:Generated_Source\PSoC4/CapSense_SMS.c **** *  component.
+ 459:Generated_Source\PSoC4/CapSense_SMS.c **** *
+ 460:Generated_Source\PSoC4/CapSense_SMS.c **** * Parameters:
+ 461:Generated_Source\PSoC4/CapSense_SMS.c **** *  sensor - Sensor number.
+ 462:Generated_Source\PSoC4/CapSense_SMS.c **** *
+ 463:Generated_Source\PSoC4/CapSense_SMS.c **** * Return:
+ 464:Generated_Source\PSoC4/CapSense_SMS.c **** *  The noise envelope value of the sensor
+ 465:Generated_Source\PSoC4/CapSense_SMS.c **** *  indicated by argument.
+ 466:Generated_Source\PSoC4/CapSense_SMS.c **** *
+ 467:Generated_Source\PSoC4/CapSense_SMS.c **** * Global Variables:
+ 468:Generated_Source\PSoC4/CapSense_SMS.c **** *  CapSense_noiseEnvelopeTbl[] - array with Noise Envelope.
+ 469:Generated_Source\PSoC4/CapSense_SMS.c **** *
+ 470:Generated_Source\PSoC4/CapSense_SMS.c **** * Side Effects:
+ 471:Generated_Source\PSoC4/CapSense_SMS.c **** *  None
+ 472:Generated_Source\PSoC4/CapSense_SMS.c **** *
+ 473:Generated_Source\PSoC4/CapSense_SMS.c **** *******************************************************************************/
+ 474:Generated_Source\PSoC4/CapSense_SMS.c **** uint16 CapSense_GetNoiseEnvelope(uint32 sensor)
+ 475:Generated_Source\PSoC4/CapSense_SMS.c **** {
+ 704              		.loc 1 475 0
+ 705              		.cfi_startproc
+ 706 0000 80B5     		push	{r7, lr}
+ 707              		.cfi_def_cfa_offset 8
+ 708              		.cfi_offset 7, -8
+ 709              		.cfi_offset 14, -4
+ 710 0002 82B0     		sub	sp, sp, #8
+ 711              		.cfi_def_cfa_offset 16
+ 712 0004 00AF     		add	r7, sp, #0
+ 713              		.cfi_def_cfa_register 7
+ 714 0006 7860     		str	r0, [r7, #4]
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccklALVd.s 			page 22
+
+
+ 476:Generated_Source\PSoC4/CapSense_SMS.c ****     return((uint16)((uint16)CapSense_noiseEnvelopeTbl[sensor] << 1u) + 1u);
+ 715              		.loc 1 476 0
+ 716 0008 064A     		ldr	r2, .L39
+ 717 000a 7B68     		ldr	r3, [r7, #4]
+ 718 000c D318     		add	r3, r2, r3
+ 719 000e 1B78     		ldrb	r3, [r3]
+ 720 0010 9BB2     		uxth	r3, r3
+ 721 0012 DB18     		add	r3, r3, r3
+ 722 0014 9BB2     		uxth	r3, r3
+ 723 0016 0133     		add	r3, r3, #1
+ 724 0018 9BB2     		uxth	r3, r3
+ 477:Generated_Source\PSoC4/CapSense_SMS.c **** }
+ 725              		.loc 1 477 0
+ 726 001a 181C     		mov	r0, r3
+ 727 001c BD46     		mov	sp, r7
+ 728 001e 02B0     		add	sp, sp, #8
+ 729              		@ sp needed
+ 730 0020 80BD     		pop	{r7, pc}
+ 731              	.L40:
+ 732 0022 C046     		.align	2
+ 733              	.L39:
+ 734 0024 00000000 		.word	CapSense_noiseEnvelopeTbl
+ 735              		.cfi_endproc
+ 736              	.LFE42:
+ 737              		.size	CapSense_GetNoiseEnvelope, .-CapSense_GetNoiseEnvelope
+ 738              		.global	__aeabi_uidiv
+ 739              		.section	.text.CapSense_GetNormalizedDiffCountData,"ax",%progbits
+ 740              		.align	2
+ 741              		.global	CapSense_GetNormalizedDiffCountData
+ 742              		.code	16
+ 743              		.thumb_func
+ 744              		.type	CapSense_GetNormalizedDiffCountData, %function
+ 745              	CapSense_GetNormalizedDiffCountData:
+ 746              	.LFB43:
+ 478:Generated_Source\PSoC4/CapSense_SMS.c **** 
+ 479:Generated_Source\PSoC4/CapSense_SMS.c **** 
+ 480:Generated_Source\PSoC4/CapSense_SMS.c **** /*******************************************************************************
+ 481:Generated_Source\PSoC4/CapSense_SMS.c **** * Function Name: CapSense_GetNormalizedDiffCountData
+ 482:Generated_Source\PSoC4/CapSense_SMS.c **** ********************************************************************************
+ 483:Generated_Source\PSoC4/CapSense_SMS.c **** *
+ 484:Generated_Source\PSoC4/CapSense_SMS.c **** * Summary:
+ 485:Generated_Source\PSoC4/CapSense_SMS.c **** *  This API returns normalized difference count data.
+ 486:Generated_Source\PSoC4/CapSense_SMS.c **** *
+ 487:Generated_Source\PSoC4/CapSense_SMS.c **** * Parameters:
+ 488:Generated_Source\PSoC4/CapSense_SMS.c **** *  sensor:  Sensor number.
+ 489:Generated_Source\PSoC4/CapSense_SMS.c **** *
+ 490:Generated_Source\PSoC4/CapSense_SMS.c **** * Return:
+ 491:Generated_Source\PSoC4/CapSense_SMS.c **** *  This API returns a normalized count value of the sensor indicated by the
+ 492:Generated_Source\PSoC4/CapSense_SMS.c **** *  argument.
+ 493:Generated_Source\PSoC4/CapSense_SMS.c **** *
+ 494:Generated_Source\PSoC4/CapSense_SMS.c **** * Global Variables:
+ 495:Generated_Source\PSoC4/CapSense_SMS.c **** *  CapSense_sensorSignal[] - array with difference counts for sensors
+ 496:Generated_Source\PSoC4/CapSense_SMS.c **** *
+ 497:Generated_Source\PSoC4/CapSense_SMS.c **** * Side Effects:
+ 498:Generated_Source\PSoC4/CapSense_SMS.c **** *  None
+ 499:Generated_Source\PSoC4/CapSense_SMS.c **** *
+ 500:Generated_Source\PSoC4/CapSense_SMS.c **** *******************************************************************************/
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccklALVd.s 			page 23
+
+
+ 501:Generated_Source\PSoC4/CapSense_SMS.c **** uint16 CapSense_GetNormalizedDiffCountData(uint32 sensor)
+ 502:Generated_Source\PSoC4/CapSense_SMS.c **** {
+ 747              		.loc 1 502 0
+ 748              		.cfi_startproc
+ 749 0000 80B5     		push	{r7, lr}
+ 750              		.cfi_def_cfa_offset 8
+ 751              		.cfi_offset 7, -8
+ 752              		.cfi_offset 14, -4
+ 753 0002 82B0     		sub	sp, sp, #8
+ 754              		.cfi_def_cfa_offset 16
+ 755 0004 00AF     		add	r7, sp, #0
+ 756              		.cfi_def_cfa_register 7
+ 757 0006 7860     		str	r0, [r7, #4]
+ 503:Generated_Source\PSoC4/CapSense_SMS.c ****     return (uint16)(((uint32)CapSense_sensorSignal[sensor] << 7u) / CapSense_kValueTbl[sensor]);
+ 758              		.loc 1 503 0
+ 759 0008 094A     		ldr	r2, .L43
+ 760 000a 7B68     		ldr	r3, [r7, #4]
+ 761 000c D318     		add	r3, r2, r3
+ 762 000e 1B78     		ldrb	r3, [r3]
+ 763 0010 D901     		lsl	r1, r3, #7
+ 764 0012 084A     		ldr	r2, .L43+4
+ 765 0014 7B68     		ldr	r3, [r7, #4]
+ 766 0016 D318     		add	r3, r2, r3
+ 767 0018 1B78     		ldrb	r3, [r3]
+ 768 001a 081C     		mov	r0, r1
+ 769 001c 191C     		mov	r1, r3
+ 770 001e FFF7FEFF 		bl	__aeabi_uidiv
+ 771 0022 031C     		mov	r3, r0
+ 772 0024 9BB2     		uxth	r3, r3
+ 504:Generated_Source\PSoC4/CapSense_SMS.c **** }
+ 773              		.loc 1 504 0
+ 774 0026 181C     		mov	r0, r3
+ 775 0028 BD46     		mov	sp, r7
+ 776 002a 02B0     		add	sp, sp, #8
+ 777              		@ sp needed
+ 778 002c 80BD     		pop	{r7, pc}
+ 779              	.L44:
+ 780 002e C046     		.align	2
+ 781              	.L43:
+ 782 0030 00000000 		.word	CapSense_sensorSignal
+ 783 0034 00000000 		.word	CapSense_kValueTbl
+ 784              		.cfi_endproc
+ 785              	.LFE43:
+ 786              		.size	CapSense_GetNormalizedDiffCountData, .-CapSense_GetNormalizedDiffCountData
+ 787              		.text
+ 788              	.Letext0:
+ 789              		.file 2 "Generated_Source\\PSoC4\\cytypes.h"
+ 790              		.file 3 "Generated_Source\\PSoC4\\CapSense_PVT.h"
+ 791              		.file 4 "Generated_Source\\PSoC4\\CapSense.h"
+ 792              		.file 5 "Generated_Source\\PSoC4\\CapSense_CSHL.h"
+ 793              		.section	.debug_info,"",%progbits
+ 794              	.Ldebug_info0:
+ 795 0000 3F060000 		.4byte	0x63f
+ 796 0004 0400     		.2byte	0x4
+ 797 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 798 000a 04       		.byte	0x4
+ 799 000b 01       		.uleb128 0x1
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccklALVd.s 			page 24
+
+
+ 800 000c 36060000 		.4byte	.LASF89
+ 801 0010 01       		.byte	0x1
+ 802 0011 A8050000 		.4byte	.LASF90
+ 803 0015 5C000000 		.4byte	.LASF91
+ 804 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 805 001d 00000000 		.4byte	0
+ 806 0021 00000000 		.4byte	.Ldebug_line0
+ 807 0025 02       		.uleb128 0x2
+ 808 0026 01       		.byte	0x1
+ 809 0027 06       		.byte	0x6
+ 810 0028 34010000 		.4byte	.LASF0
+ 811 002c 02       		.uleb128 0x2
+ 812 002d 01       		.byte	0x1
+ 813 002e 08       		.byte	0x8
+ 814 002f 5A040000 		.4byte	.LASF1
+ 815 0033 02       		.uleb128 0x2
+ 816 0034 02       		.byte	0x2
+ 817 0035 05       		.byte	0x5
+ 818 0036 93040000 		.4byte	.LASF2
+ 819 003a 02       		.uleb128 0x2
+ 820 003b 02       		.byte	0x2
+ 821 003c 07       		.byte	0x7
+ 822 003d A6020000 		.4byte	.LASF3
+ 823 0041 02       		.uleb128 0x2
+ 824 0042 04       		.byte	0x4
+ 825 0043 05       		.byte	0x5
+ 826 0044 8A010000 		.4byte	.LASF4
+ 827 0048 02       		.uleb128 0x2
+ 828 0049 04       		.byte	0x4
+ 829 004a 07       		.byte	0x7
+ 830 004b 76020000 		.4byte	.LASF5
+ 831 004f 02       		.uleb128 0x2
+ 832 0050 08       		.byte	0x8
+ 833 0051 05       		.byte	0x5
+ 834 0052 26010000 		.4byte	.LASF6
+ 835 0056 02       		.uleb128 0x2
+ 836 0057 08       		.byte	0x8
+ 837 0058 07       		.byte	0x7
+ 838 0059 DB000000 		.4byte	.LASF7
+ 839 005d 03       		.uleb128 0x3
+ 840 005e 04       		.byte	0x4
+ 841 005f 05       		.byte	0x5
+ 842 0060 696E7400 		.ascii	"int\000"
+ 843 0064 02       		.uleb128 0x2
+ 844 0065 04       		.byte	0x4
+ 845 0066 07       		.byte	0x7
+ 846 0067 5C020000 		.4byte	.LASF8
+ 847 006b 04       		.uleb128 0x4
+ 848 006c B1010000 		.4byte	.LASF9
+ 849 0070 02       		.byte	0x2
+ 850 0071 3801     		.2byte	0x138
+ 851 0073 2C000000 		.4byte	0x2c
+ 852 0077 04       		.uleb128 0x4
+ 853 0078 27000000 		.4byte	.LASF10
+ 854 007c 02       		.byte	0x2
+ 855 007d 3901     		.2byte	0x139
+ 856 007f 3A000000 		.4byte	0x3a
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccklALVd.s 			page 25
+
+
+ 857 0083 04       		.uleb128 0x4
+ 858 0084 13020000 		.4byte	.LASF11
+ 859 0088 02       		.byte	0x2
+ 860 0089 3A01     		.2byte	0x13a
+ 861 008b 48000000 		.4byte	0x48
+ 862 008f 02       		.uleb128 0x2
+ 863 0090 04       		.byte	0x4
+ 864 0091 04       		.byte	0x4
+ 865 0092 1F040000 		.4byte	.LASF12
+ 866 0096 02       		.uleb128 0x2
+ 867 0097 08       		.byte	0x8
+ 868 0098 04       		.byte	0x4
+ 869 0099 D2010000 		.4byte	.LASF13
+ 870 009d 02       		.uleb128 0x2
+ 871 009e 01       		.byte	0x1
+ 872 009f 08       		.byte	0x8
+ 873 00a0 37050000 		.4byte	.LASF14
+ 874 00a4 04       		.uleb128 0x4
+ 875 00a5 5C030000 		.4byte	.LASF15
+ 876 00a9 02       		.byte	0x2
+ 877 00aa E401     		.2byte	0x1e4
+ 878 00ac B0000000 		.4byte	0xb0
+ 879 00b0 05       		.uleb128 0x5
+ 880 00b1 83000000 		.4byte	0x83
+ 881 00b5 02       		.uleb128 0x2
+ 882 00b6 04       		.byte	0x4
+ 883 00b7 07       		.byte	0x7
+ 884 00b8 9D030000 		.4byte	.LASF16
+ 885 00bc 06       		.uleb128 0x6
+ 886 00bd 5C       		.byte	0x5c
+ 887 00be 03       		.byte	0x3
+ 888 00bf 2F       		.byte	0x2f
+ 889 00c0 D9010000 		.4byte	0x1d9
+ 890 00c4 07       		.uleb128 0x7
+ 891 00c5 D8030000 		.4byte	.LASF17
+ 892 00c9 03       		.byte	0x3
+ 893 00ca 31       		.byte	0x31
+ 894 00cb D9010000 		.4byte	0x1d9
+ 895 00cf 00       		.byte	0
+ 896 00d0 07       		.uleb128 0x7
+ 897 00d1 E7030000 		.4byte	.LASF18
+ 898 00d5 03       		.byte	0x3
+ 899 00d6 32       		.byte	0x32
+ 900 00d7 D9010000 		.4byte	0x1d9
+ 901 00db 04       		.byte	0x4
+ 902 00dc 07       		.uleb128 0x7
+ 903 00dd B9020000 		.4byte	.LASF19
+ 904 00e1 03       		.byte	0x3
+ 905 00e2 33       		.byte	0x33
+ 906 00e3 D9010000 		.4byte	0x1d9
+ 907 00e7 08       		.byte	0x8
+ 908 00e8 07       		.uleb128 0x7
+ 909 00e9 F0020000 		.4byte	.LASF20
+ 910 00ed 03       		.byte	0x3
+ 911 00ee 34       		.byte	0x34
+ 912 00ef D9010000 		.4byte	0x1d9
+ 913 00f3 0C       		.byte	0xc
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccklALVd.s 			page 26
+
+
+ 914 00f4 07       		.uleb128 0x7
+ 915 00f5 A4040000 		.4byte	.LASF21
+ 916 00f9 03       		.byte	0x3
+ 917 00fa 35       		.byte	0x35
+ 918 00fb D9010000 		.4byte	0x1d9
+ 919 00ff 10       		.byte	0x10
+ 920 0100 07       		.uleb128 0x7
+ 921 0101 50010000 		.4byte	.LASF22
+ 922 0105 03       		.byte	0x3
+ 923 0106 36       		.byte	0x36
+ 924 0107 DF010000 		.4byte	0x1df
+ 925 010b 14       		.byte	0x14
+ 926 010c 07       		.uleb128 0x7
+ 927 010d 88020000 		.4byte	.LASF23
+ 928 0111 03       		.byte	0x3
+ 929 0112 37       		.byte	0x37
+ 930 0113 EA010000 		.4byte	0x1ea
+ 931 0117 18       		.byte	0x18
+ 932 0118 07       		.uleb128 0x7
+ 933 0119 62030000 		.4byte	.LASF24
+ 934 011d 03       		.byte	0x3
+ 935 011e 38       		.byte	0x38
+ 936 011f D9010000 		.4byte	0x1d9
+ 937 0123 1C       		.byte	0x1c
+ 938 0124 07       		.uleb128 0x7
+ 939 0125 3C050000 		.4byte	.LASF25
+ 940 0129 03       		.byte	0x3
+ 941 012a 39       		.byte	0x39
+ 942 012b D9010000 		.4byte	0x1d9
+ 943 012f 20       		.byte	0x20
+ 944 0130 07       		.uleb128 0x7
+ 945 0131 3B040000 		.4byte	.LASF26
+ 946 0135 03       		.byte	0x3
+ 947 0136 3A       		.byte	0x3a
+ 948 0137 D9010000 		.4byte	0x1d9
+ 949 013b 24       		.byte	0x24
+ 950 013c 07       		.uleb128 0x7
+ 951 013d 3D030000 		.4byte	.LASF27
+ 952 0141 03       		.byte	0x3
+ 953 0142 3B       		.byte	0x3b
+ 954 0143 F0010000 		.4byte	0x1f0
+ 955 0147 28       		.byte	0x28
+ 956 0148 07       		.uleb128 0x7
+ 957 0149 69020000 		.4byte	.LASF28
+ 958 014d 03       		.byte	0x3
+ 959 014e 3C       		.byte	0x3c
+ 960 014f F0010000 		.4byte	0x1f0
+ 961 0153 2C       		.byte	0x2c
+ 962 0154 07       		.uleb128 0x7
+ 963 0155 25050000 		.4byte	.LASF29
+ 964 0159 03       		.byte	0x3
+ 965 015a 3D       		.byte	0x3d
+ 966 015b F0010000 		.4byte	0x1f0
+ 967 015f 30       		.byte	0x30
+ 968 0160 07       		.uleb128 0x7
+ 969 0161 E8040000 		.4byte	.LASF30
+ 970 0165 03       		.byte	0x3
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccklALVd.s 			page 27
+
+
+ 971 0166 3E       		.byte	0x3e
+ 972 0167 D9010000 		.4byte	0x1d9
+ 973 016b 34       		.byte	0x34
+ 974 016c 07       		.uleb128 0x7
+ 975 016d 9B050000 		.4byte	.LASF31
+ 976 0171 03       		.byte	0x3
+ 977 0172 3F       		.byte	0x3f
+ 978 0173 D9010000 		.4byte	0x1d9
+ 979 0177 38       		.byte	0x38
+ 980 0178 07       		.uleb128 0x7
+ 981 0179 4B040000 		.4byte	.LASF32
+ 982 017d 03       		.byte	0x3
+ 983 017e 40       		.byte	0x40
+ 984 017f DF010000 		.4byte	0x1df
+ 985 0183 3C       		.byte	0x3c
+ 986 0184 07       		.uleb128 0x7
+ 987 0185 14070000 		.4byte	.LASF33
+ 988 0189 03       		.byte	0x3
+ 989 018a 41       		.byte	0x41
+ 990 018b DF010000 		.4byte	0x1df
+ 991 018f 40       		.byte	0x40
+ 992 0190 07       		.uleb128 0x7
+ 993 0191 40010000 		.4byte	.LASF34
+ 994 0195 03       		.byte	0x3
+ 995 0196 42       		.byte	0x42
+ 996 0197 DF010000 		.4byte	0x1df
+ 997 019b 44       		.byte	0x44
+ 998 019c 07       		.uleb128 0x7
+ 999 019d 52000000 		.4byte	.LASF35
+ 1000 01a1 03       		.byte	0x3
+ 1001 01a2 43       		.byte	0x43
+ 1002 01a3 05020000 		.4byte	0x205
+ 1003 01a7 48       		.byte	0x48
+ 1004 01a8 07       		.uleb128 0x7
+ 1005 01a9 73050000 		.4byte	.LASF36
+ 1006 01ad 03       		.byte	0x3
+ 1007 01ae 44       		.byte	0x44
+ 1008 01af 16020000 		.4byte	0x216
+ 1009 01b3 4C       		.byte	0x4c
+ 1010 01b4 07       		.uleb128 0x7
+ 1011 01b5 68040000 		.4byte	.LASF37
+ 1012 01b9 03       		.byte	0x3
+ 1013 01ba 45       		.byte	0x45
+ 1014 01bb 05020000 		.4byte	0x205
+ 1015 01bf 50       		.byte	0x50
+ 1016 01c0 07       		.uleb128 0x7
+ 1017 01c1 97020000 		.4byte	.LASF38
+ 1018 01c5 03       		.byte	0x3
+ 1019 01c6 46       		.byte	0x46
+ 1020 01c7 30020000 		.4byte	0x230
+ 1021 01cb 54       		.byte	0x54
+ 1022 01cc 07       		.uleb128 0x7
+ 1023 01cd C4060000 		.4byte	.LASF39
+ 1024 01d1 03       		.byte	0x3
+ 1025 01d2 47       		.byte	0x47
+ 1026 01d3 4B020000 		.4byte	0x24b
+ 1027 01d7 58       		.byte	0x58
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccklALVd.s 			page 28
+
+
+ 1028 01d8 00       		.byte	0
+ 1029 01d9 08       		.uleb128 0x8
+ 1030 01da 04       		.byte	0x4
+ 1031 01db 6B000000 		.4byte	0x6b
+ 1032 01df 08       		.uleb128 0x8
+ 1033 01e0 04       		.byte	0x4
+ 1034 01e1 E5010000 		.4byte	0x1e5
+ 1035 01e5 09       		.uleb128 0x9
+ 1036 01e6 6B000000 		.4byte	0x6b
+ 1037 01ea 08       		.uleb128 0x8
+ 1038 01eb 04       		.byte	0x4
+ 1039 01ec 83000000 		.4byte	0x83
+ 1040 01f0 08       		.uleb128 0x8
+ 1041 01f1 04       		.byte	0x4
+ 1042 01f2 77000000 		.4byte	0x77
+ 1043 01f6 0A       		.uleb128 0xa
+ 1044 01f7 77000000 		.4byte	0x77
+ 1045 01fb 05020000 		.4byte	0x205
+ 1046 01ff 0B       		.uleb128 0xb
+ 1047 0200 83000000 		.4byte	0x83
+ 1048 0204 00       		.byte	0
+ 1049 0205 08       		.uleb128 0x8
+ 1050 0206 04       		.byte	0x4
+ 1051 0207 F6010000 		.4byte	0x1f6
+ 1052 020b 0C       		.uleb128 0xc
+ 1053 020c 16020000 		.4byte	0x216
+ 1054 0210 0B       		.uleb128 0xb
+ 1055 0211 83000000 		.4byte	0x83
+ 1056 0215 00       		.byte	0
+ 1057 0216 08       		.uleb128 0x8
+ 1058 0217 04       		.byte	0x4
+ 1059 0218 0B020000 		.4byte	0x20b
+ 1060 021c 0A       		.uleb128 0xa
+ 1061 021d 83000000 		.4byte	0x83
+ 1062 0221 30020000 		.4byte	0x230
+ 1063 0225 0B       		.uleb128 0xb
+ 1064 0226 DF010000 		.4byte	0x1df
+ 1065 022a 0B       		.uleb128 0xb
+ 1066 022b 83000000 		.4byte	0x83
+ 1067 022f 00       		.byte	0
+ 1068 0230 08       		.uleb128 0x8
+ 1069 0231 04       		.byte	0x4
+ 1070 0232 1C020000 		.4byte	0x21c
+ 1071 0236 0C       		.uleb128 0xc
+ 1072 0237 4B020000 		.4byte	0x24b
+ 1073 023b 0B       		.uleb128 0xb
+ 1074 023c D9010000 		.4byte	0x1d9
+ 1075 0240 0B       		.uleb128 0xb
+ 1076 0241 83000000 		.4byte	0x83
+ 1077 0245 0B       		.uleb128 0xb
+ 1078 0246 83000000 		.4byte	0x83
+ 1079 024a 00       		.byte	0
+ 1080 024b 08       		.uleb128 0x8
+ 1081 024c 04       		.byte	0x4
+ 1082 024d 36020000 		.4byte	0x236
+ 1083 0251 0D       		.uleb128 0xd
+ 1084 0252 16030000 		.4byte	.LASF40
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccklALVd.s 			page 29
+
+
+ 1085 0256 03       		.byte	0x3
+ 1086 0257 48       		.byte	0x48
+ 1087 0258 BC000000 		.4byte	0xbc
+ 1088 025c 06       		.uleb128 0x6
+ 1089 025d 0C       		.byte	0xc
+ 1090 025e 03       		.byte	0x3
+ 1091 025f 4A       		.byte	0x4a
+ 1092 0260 AD020000 		.4byte	0x2ad
+ 1093 0264 07       		.uleb128 0x7
+ 1094 0265 24060000 		.4byte	.LASF41
+ 1095 0269 03       		.byte	0x3
+ 1096 026a 4C       		.byte	0x4c
+ 1097 026b 6B000000 		.4byte	0x6b
+ 1098 026f 00       		.byte	0
+ 1099 0270 07       		.uleb128 0x7
+ 1100 0271 21070000 		.4byte	.LASF42
+ 1101 0275 03       		.byte	0x3
+ 1102 0276 4D       		.byte	0x4d
+ 1103 0277 6B000000 		.4byte	0x6b
+ 1104 027b 01       		.byte	0x1
+ 1105 027c 07       		.uleb128 0x7
+ 1106 027d 46020000 		.4byte	.LASF43
+ 1107 0281 03       		.byte	0x3
+ 1108 0282 4E       		.byte	0x4e
+ 1109 0283 6B000000 		.4byte	0x6b
+ 1110 0287 02       		.byte	0x2
+ 1111 0288 07       		.uleb128 0x7
+ 1112 0289 36020000 		.4byte	.LASF44
+ 1113 028d 03       		.byte	0x3
+ 1114 028e 4F       		.byte	0x4f
+ 1115 028f 77000000 		.4byte	0x77
+ 1116 0293 04       		.byte	0x4
+ 1117 0294 07       		.uleb128 0x7
+ 1118 0295 8F030000 		.4byte	.LASF45
+ 1119 0299 03       		.byte	0x3
+ 1120 029a 50       		.byte	0x50
+ 1121 029b 77000000 		.4byte	0x77
+ 1122 029f 06       		.byte	0x6
+ 1123 02a0 07       		.uleb128 0x7
+ 1124 02a1 CF020000 		.4byte	.LASF46
+ 1125 02a5 03       		.byte	0x3
+ 1126 02a6 51       		.byte	0x51
+ 1127 02a7 AD020000 		.4byte	0x2ad
+ 1128 02ab 08       		.byte	0x8
+ 1129 02ac 00       		.byte	0
+ 1130 02ad 08       		.uleb128 0x8
+ 1131 02ae 04       		.byte	0x4
+ 1132 02af B3020000 		.4byte	0x2b3
+ 1133 02b3 09       		.uleb128 0x9
+ 1134 02b4 51020000 		.4byte	0x251
+ 1135 02b8 0D       		.uleb128 0xd
+ 1136 02b9 F6060000 		.4byte	.LASF47
+ 1137 02bd 03       		.byte	0x3
+ 1138 02be 52       		.byte	0x52
+ 1139 02bf 5C020000 		.4byte	0x25c
+ 1140 02c3 0E       		.uleb128 0xe
+ 1141 02c4 4A030000 		.4byte	.LASF50
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccklALVd.s 			page 30
+
+
+ 1142 02c8 01       		.byte	0x1
+ 1143 02c9 91       		.byte	0x91
+ 1144 02ca 00000000 		.4byte	.LFB35
+ 1145 02ce F4000000 		.4byte	.LFE35-.LFB35
+ 1146 02d2 01       		.uleb128 0x1
+ 1147 02d3 9C       		.byte	0x9c
+ 1148 02d4 F5020000 		.4byte	0x2f5
+ 1149 02d8 0F       		.uleb128 0xf
+ 1150 02d9 00000000 		.4byte	.LASF48
+ 1151 02dd 01       		.byte	0x1
+ 1152 02de 93       		.byte	0x93
+ 1153 02df 83000000 		.4byte	0x83
+ 1154 02e3 02       		.uleb128 0x2
+ 1155 02e4 91       		.byte	0x91
+ 1156 02e5 74       		.sleb128 -12
+ 1157 02e6 0F       		.uleb128 0xf
+ 1158 02e7 9D040000 		.4byte	.LASF49
+ 1159 02eb 01       		.byte	0x1
+ 1160 02ec 94       		.byte	0x94
+ 1161 02ed 83000000 		.4byte	0x83
+ 1162 02f1 02       		.uleb128 0x2
+ 1163 02f2 91       		.byte	0x91
+ 1164 02f3 70       		.sleb128 -16
+ 1165 02f4 00       		.byte	0
+ 1166 02f5 0E       		.uleb128 0xe
+ 1167 02f6 CE050000 		.4byte	.LASF51
+ 1168 02fa 01       		.byte	0x1
+ 1169 02fb E6       		.byte	0xe6
+ 1170 02fc 00000000 		.4byte	.LFB36
+ 1171 0300 F0000000 		.4byte	.LFE36-.LFB36
+ 1172 0304 01       		.uleb128 0x1
+ 1173 0305 9C       		.byte	0x9c
+ 1174 0306 35030000 		.4byte	0x335
+ 1175 030a 10       		.uleb128 0x10
+ 1176 030b C8020000 		.4byte	.LASF56
+ 1177 030f 01       		.byte	0x1
+ 1178 0310 E6       		.byte	0xe6
+ 1179 0311 83000000 		.4byte	0x83
+ 1180 0315 02       		.uleb128 0x2
+ 1181 0316 91       		.byte	0x91
+ 1182 0317 64       		.sleb128 -28
+ 1183 0318 0F       		.uleb128 0xf
+ 1184 0319 42000000 		.4byte	.LASF52
+ 1185 031d 01       		.byte	0x1
+ 1186 031e E8       		.byte	0xe8
+ 1187 031f 6B000000 		.4byte	0x6b
+ 1188 0323 02       		.uleb128 0x2
+ 1189 0324 91       		.byte	0x91
+ 1190 0325 6B       		.sleb128 -21
+ 1191 0326 0F       		.uleb128 0xf
+ 1192 0327 9D040000 		.4byte	.LASF49
+ 1193 032b 01       		.byte	0x1
+ 1194 032c E9       		.byte	0xe9
+ 1195 032d 83000000 		.4byte	0x83
+ 1196 0331 02       		.uleb128 0x2
+ 1197 0332 91       		.byte	0x91
+ 1198 0333 6C       		.sleb128 -20
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccklALVd.s 			page 31
+
+
+ 1199 0334 00       		.byte	0
+ 1200 0335 11       		.uleb128 0x11
+ 1201 0336 AE040000 		.4byte	.LASF92
+ 1202 033a 01       		.byte	0x1
+ 1203 033b 2701     		.2byte	0x127
+ 1204 033d 00000000 		.4byte	.LFB37
+ 1205 0341 18000000 		.4byte	.LFE37-.LFB37
+ 1206 0345 01       		.uleb128 0x1
+ 1207 0346 9C       		.byte	0x9c
+ 1208 0347 12       		.uleb128 0x12
+ 1209 0348 7E050000 		.4byte	.LASF53
+ 1210 034c 01       		.byte	0x1
+ 1211 034d 4101     		.2byte	0x141
+ 1212 034f 00000000 		.4byte	.LFB38
+ 1213 0353 34000000 		.4byte	.LFE38-.LFB38
+ 1214 0357 01       		.uleb128 0x1
+ 1215 0358 9C       		.byte	0x9c
+ 1216 0359 6D030000 		.4byte	0x36d
+ 1217 035d 13       		.uleb128 0x13
+ 1218 035e 07020000 		.4byte	.LASF54
+ 1219 0362 01       		.byte	0x1
+ 1220 0363 4301     		.2byte	0x143
+ 1221 0365 83000000 		.4byte	0x83
+ 1222 0369 02       		.uleb128 0x2
+ 1223 036a 91       		.byte	0x91
+ 1224 036b 74       		.sleb128 -12
+ 1225 036c 00       		.byte	0
+ 1226 036d 14       		.uleb128 0x14
+ 1227 036e 1A020000 		.4byte	.LASF55
+ 1228 0372 01       		.byte	0x1
+ 1229 0373 6201     		.2byte	0x162
+ 1230 0375 00000000 		.4byte	.LFB39
+ 1231 0379 90000000 		.4byte	.LFE39-.LFB39
+ 1232 037d 01       		.uleb128 0x1
+ 1233 037e 9C       		.byte	0x9c
+ 1234 037f B1030000 		.4byte	0x3b1
+ 1235 0383 15       		.uleb128 0x15
+ 1236 0384 51050000 		.4byte	.LASF57
+ 1237 0388 01       		.byte	0x1
+ 1238 0389 6201     		.2byte	0x162
+ 1239 038b B1030000 		.4byte	0x3b1
+ 1240 038f 02       		.uleb128 0x2
+ 1241 0390 91       		.byte	0x91
+ 1242 0391 6C       		.sleb128 -20
+ 1243 0392 13       		.uleb128 0x13
+ 1244 0393 00000000 		.4byte	.LASF48
+ 1245 0397 01       		.byte	0x1
+ 1246 0398 6401     		.2byte	0x164
+ 1247 039a 83000000 		.4byte	0x83
+ 1248 039e 02       		.uleb128 0x2
+ 1249 039f 91       		.byte	0x91
+ 1250 03a0 74       		.sleb128 -12
+ 1251 03a1 13       		.uleb128 0x13
+ 1252 03a2 07020000 		.4byte	.LASF54
+ 1253 03a6 01       		.byte	0x1
+ 1254 03a7 6501     		.2byte	0x165
+ 1255 03a9 83000000 		.4byte	0x83
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccklALVd.s 			page 32
+
+
+ 1256 03ad 02       		.uleb128 0x2
+ 1257 03ae 91       		.byte	0x91
+ 1258 03af 70       		.sleb128 -16
+ 1259 03b0 00       		.byte	0
+ 1260 03b1 08       		.uleb128 0x8
+ 1261 03b2 04       		.byte	0x4
+ 1262 03b3 B7030000 		.4byte	0x3b7
+ 1263 03b7 09       		.uleb128 0x9
+ 1264 03b8 B8020000 		.4byte	0x2b8
+ 1265 03bc 12       		.uleb128 0x12
+ 1266 03bd D8020000 		.4byte	.LASF58
+ 1267 03c1 01       		.byte	0x1
+ 1268 03c2 9C01     		.2byte	0x19c
+ 1269 03c4 00000000 		.4byte	.LFB40
+ 1270 03c8 50000000 		.4byte	.LFE40-.LFB40
+ 1271 03cc 01       		.uleb128 0x1
+ 1272 03cd 9C       		.byte	0x9c
+ 1273 03ce F1030000 		.4byte	0x3f1
+ 1274 03d2 15       		.uleb128 0x15
+ 1275 03d3 C8020000 		.4byte	.LASF56
+ 1276 03d7 01       		.byte	0x1
+ 1277 03d8 9C01     		.2byte	0x19c
+ 1278 03da 83000000 		.4byte	0x83
+ 1279 03de 02       		.uleb128 0x2
+ 1280 03df 91       		.byte	0x91
+ 1281 03e0 74       		.sleb128 -12
+ 1282 03e1 15       		.uleb128 0x15
+ 1283 03e2 56020000 		.4byte	.LASF59
+ 1284 03e6 01       		.byte	0x1
+ 1285 03e7 9C01     		.2byte	0x19c
+ 1286 03e9 83000000 		.4byte	0x83
+ 1287 03ed 02       		.uleb128 0x2
+ 1288 03ee 91       		.byte	0x91
+ 1289 03ef 70       		.sleb128 -16
+ 1290 03f0 00       		.byte	0
+ 1291 03f1 16       		.uleb128 0x16
+ 1292 03f2 D3060000 		.4byte	.LASF60
+ 1293 03f6 01       		.byte	0x1
+ 1294 03f7 BE01     		.2byte	0x1be
+ 1295 03f9 6B000000 		.4byte	0x6b
+ 1296 03fd 00000000 		.4byte	.LFB41
+ 1297 0401 1C000000 		.4byte	.LFE41-.LFB41
+ 1298 0405 01       		.uleb128 0x1
+ 1299 0406 9C       		.byte	0x9c
+ 1300 0407 1B040000 		.4byte	0x41b
+ 1301 040b 15       		.uleb128 0x15
+ 1302 040c C8020000 		.4byte	.LASF56
+ 1303 0410 01       		.byte	0x1
+ 1304 0411 BE01     		.2byte	0x1be
+ 1305 0413 83000000 		.4byte	0x83
+ 1306 0417 02       		.uleb128 0x2
+ 1307 0418 91       		.byte	0x91
+ 1308 0419 74       		.sleb128 -12
+ 1309 041a 00       		.byte	0
+ 1310 041b 16       		.uleb128 0x16
+ 1311 041c BE030000 		.4byte	.LASF61
+ 1312 0420 01       		.byte	0x1
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccklALVd.s 			page 33
+
+
+ 1313 0421 DA01     		.2byte	0x1da
+ 1314 0423 77000000 		.4byte	0x77
+ 1315 0427 00000000 		.4byte	.LFB42
+ 1316 042b 28000000 		.4byte	.LFE42-.LFB42
+ 1317 042f 01       		.uleb128 0x1
+ 1318 0430 9C       		.byte	0x9c
+ 1319 0431 45040000 		.4byte	0x445
+ 1320 0435 15       		.uleb128 0x15
+ 1321 0436 C8020000 		.4byte	.LASF56
+ 1322 043a 01       		.byte	0x1
+ 1323 043b DA01     		.2byte	0x1da
+ 1324 043d 83000000 		.4byte	0x83
+ 1325 0441 02       		.uleb128 0x2
+ 1326 0442 91       		.byte	0x91
+ 1327 0443 74       		.sleb128 -12
+ 1328 0444 00       		.byte	0
+ 1329 0445 17       		.uleb128 0x17
+ 1330 0446 00060000 		.4byte	.LASF62
+ 1331 044a 01       		.byte	0x1
+ 1332 044b F501     		.2byte	0x1f5
+ 1333 044d 77000000 		.4byte	0x77
+ 1334 0451 00000000 		.4byte	.LFB43
+ 1335 0455 38000000 		.4byte	.LFE43-.LFB43
+ 1336 0459 01       		.uleb128 0x1
+ 1337 045a 9C       		.byte	0x9c
+ 1338 045b 6F040000 		.4byte	0x46f
+ 1339 045f 15       		.uleb128 0x15
+ 1340 0460 C8020000 		.4byte	.LASF56
+ 1341 0464 01       		.byte	0x1
+ 1342 0465 F501     		.2byte	0x1f5
+ 1343 0467 83000000 		.4byte	0x83
+ 1344 046b 02       		.uleb128 0x2
+ 1345 046c 91       		.byte	0x91
+ 1346 046d 74       		.sleb128 -12
+ 1347 046e 00       		.byte	0
+ 1348 046f 18       		.uleb128 0x18
+ 1349 0470 6B000000 		.4byte	0x6b
+ 1350 0474 7F040000 		.4byte	0x47f
+ 1351 0478 19       		.uleb128 0x19
+ 1352 0479 B5000000 		.4byte	0xb5
+ 1353 047d 00       		.byte	0
+ 1354 047e 00       		.byte	0
+ 1355 047f 1A       		.uleb128 0x1a
+ 1356 0480 25040000 		.4byte	.LASF63
+ 1357 0484 04       		.byte	0x4
+ 1358 0485 DA02     		.2byte	0x2da
+ 1359 0487 6F040000 		.4byte	0x46f
+ 1360 048b 1A       		.uleb128 0x1a
+ 1361 048c 08010000 		.4byte	.LASF64
+ 1362 0490 04       		.byte	0x4
+ 1363 0491 DF02     		.2byte	0x2df
+ 1364 0493 6B000000 		.4byte	0x6b
+ 1365 0497 18       		.uleb128 0x18
+ 1366 0498 6B000000 		.4byte	0x6b
+ 1367 049c A7040000 		.4byte	0x4a7
+ 1368 04a0 19       		.uleb128 0x19
+ 1369 04a1 B5000000 		.4byte	0xb5
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccklALVd.s 			page 34
+
+
+ 1370 04a5 07       		.byte	0x7
+ 1371 04a6 00       		.byte	0
+ 1372 04a7 1A       		.uleb128 0x1a
+ 1373 04a8 C3000000 		.4byte	.LASF65
+ 1374 04ac 04       		.byte	0x4
+ 1375 04ad EB02     		.2byte	0x2eb
+ 1376 04af 97040000 		.4byte	0x497
+ 1377 04b3 1A       		.uleb128 0x1a
+ 1378 04b4 0B050000 		.4byte	.LASF66
+ 1379 04b8 04       		.byte	0x4
+ 1380 04b9 EC02     		.2byte	0x2ec
+ 1381 04bb 97040000 		.4byte	0x497
+ 1382 04bf 18       		.uleb128 0x18
+ 1383 04c0 83000000 		.4byte	0x83
+ 1384 04c4 CF040000 		.4byte	0x4cf
+ 1385 04c8 19       		.uleb128 0x19
+ 1386 04c9 B5000000 		.4byte	0xb5
+ 1387 04cd 07       		.byte	0x7
+ 1388 04ce 00       		.byte	0
+ 1389 04cf 1A       		.uleb128 0x1a
+ 1390 04d0 79040000 		.4byte	.LASF67
+ 1391 04d4 04       		.byte	0x4
+ 1392 04d5 F302     		.2byte	0x2f3
+ 1393 04d7 BF040000 		.4byte	0x4bf
+ 1394 04db 1A       		.uleb128 0x1a
+ 1395 04dc 73030000 		.4byte	.LASF68
+ 1396 04e0 04       		.byte	0x4
+ 1397 04e1 F502     		.2byte	0x2f5
+ 1398 04e3 97040000 		.4byte	0x497
+ 1399 04e7 1A       		.uleb128 0x1a
+ 1400 04e8 0A000000 		.4byte	.LASF69
+ 1401 04ec 04       		.byte	0x4
+ 1402 04ed F602     		.2byte	0x2f6
+ 1403 04ef 97040000 		.4byte	0x497
+ 1404 04f3 1A       		.uleb128 0x1a
+ 1405 04f4 F1010000 		.4byte	.LASF70
+ 1406 04f8 04       		.byte	0x4
+ 1407 04f9 0603     		.2byte	0x306
+ 1408 04fb FF040000 		.4byte	0x4ff
+ 1409 04ff 09       		.uleb128 0x9
+ 1410 0500 97040000 		.4byte	0x497
+ 1411 0504 1A       		.uleb128 0x1a
+ 1412 0505 F2000000 		.4byte	.LASF71
+ 1413 0509 05       		.byte	0x5
+ 1414 050a 2D01     		.2byte	0x12d
+ 1415 050c 97040000 		.4byte	0x497
+ 1416 0510 1A       		.uleb128 0x1a
+ 1417 0511 F6030000 		.4byte	.LASF72
+ 1418 0515 05       		.byte	0x5
+ 1419 0516 3501     		.2byte	0x135
+ 1420 0518 97040000 		.4byte	0x497
+ 1421 051c 1A       		.uleb128 0x1a
+ 1422 051d A6030000 		.4byte	.LASF73
+ 1423 0521 05       		.byte	0x5
+ 1424 0522 3601     		.2byte	0x136
+ 1425 0524 97040000 		.4byte	0x497
+ 1426 0528 1A       		.uleb128 0x1a
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccklALVd.s 			page 35
+
+
+ 1427 0529 31070000 		.4byte	.LASF74
+ 1428 052d 05       		.byte	0x5
+ 1429 052e 3701     		.2byte	0x137
+ 1430 0530 97040000 		.4byte	0x497
+ 1431 0534 1A       		.uleb128 0x1a
+ 1432 0535 2E000000 		.4byte	.LASF75
+ 1433 0539 05       		.byte	0x5
+ 1434 053a 3801     		.2byte	0x138
+ 1435 053c 97040000 		.4byte	0x497
+ 1436 0540 1A       		.uleb128 0x1a
+ 1437 0541 D2040000 		.4byte	.LASF76
+ 1438 0545 05       		.byte	0x5
+ 1439 0546 4101     		.2byte	0x141
+ 1440 0548 4C050000 		.4byte	0x54c
+ 1441 054c 09       		.uleb128 0x9
+ 1442 054d 97040000 		.4byte	0x497
+ 1443 0551 1A       		.uleb128 0x1a
+ 1444 0552 F2040000 		.4byte	.LASF77
+ 1445 0556 05       		.byte	0x5
+ 1446 0557 4201     		.2byte	0x142
+ 1447 0559 5D050000 		.4byte	0x55d
+ 1448 055d 09       		.uleb128 0x9
+ 1449 055e 97040000 		.4byte	0x497
+ 1450 0562 1B       		.uleb128 0x1b
+ 1451 0563 A9000000 		.4byte	.LASF78
+ 1452 0567 01       		.byte	0x1
+ 1453 0568 4F       		.byte	0x4f
+ 1454 0569 97040000 		.4byte	0x497
+ 1455 056d 05       		.uleb128 0x5
+ 1456 056e 03       		.byte	0x3
+ 1457 056f 00000000 		.4byte	CapSense_noiseEnvelopeTbl
+ 1458 0573 1B       		.uleb128 0x1b
+ 1459 0574 93010000 		.4byte	.LASF79
+ 1460 0578 01       		.byte	0x1
+ 1461 0579 50       		.byte	0x50
+ 1462 057a 97040000 		.4byte	0x497
+ 1463 057e 05       		.uleb128 0x5
+ 1464 057f 03       		.byte	0x3
+ 1465 0580 00000000 		.4byte	CapSense_runningDifferenceTbl
+ 1466 0584 1B       		.uleb128 0x1b
+ 1467 0585 FD020000 		.4byte	.LASF80
+ 1468 0589 01       		.byte	0x1
+ 1469 058a 51       		.byte	0x51
+ 1470 058b 97040000 		.4byte	0x497
+ 1471 058f 05       		.uleb128 0x5
+ 1472 0590 03       		.byte	0x3
+ 1473 0591 00000000 		.4byte	CapSense_signRegisterTbl
+ 1474 0595 18       		.uleb128 0x18
+ 1475 0596 77000000 		.4byte	0x77
+ 1476 059a A5050000 		.4byte	0x5a5
+ 1477 059e 19       		.uleb128 0x19
+ 1478 059f B5000000 		.4byte	0xb5
+ 1479 05a3 07       		.byte	0x7
+ 1480 05a4 00       		.byte	0
+ 1481 05a5 1B       		.uleb128 0x1b
+ 1482 05a6 74010000 		.4byte	.LASF81
+ 1483 05aa 01       		.byte	0x1
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccklALVd.s 			page 36
+
+
+ 1484 05ab 52       		.byte	0x52
+ 1485 05ac 95050000 		.4byte	0x595
+ 1486 05b0 05       		.uleb128 0x5
+ 1487 05b1 03       		.byte	0x3
+ 1488 05b2 00000000 		.4byte	CapSense_sampleMinTbl
+ 1489 05b6 1B       		.uleb128 0x1b
+ 1490 05b7 93000000 		.4byte	.LASF82
+ 1491 05bb 01       		.byte	0x1
+ 1492 05bc 53       		.byte	0x53
+ 1493 05bd 95050000 		.4byte	0x595
+ 1494 05c1 05       		.uleb128 0x5
+ 1495 05c2 03       		.byte	0x3
+ 1496 05c3 00000000 		.4byte	CapSense_sampleMaxTbl
+ 1497 05c7 1B       		.uleb128 0x1b
+ 1498 05c8 58050000 		.4byte	.LASF83
+ 1499 05cc 01       		.byte	0x1
+ 1500 05cd 54       		.byte	0x54
+ 1501 05ce 95050000 		.4byte	0x595
+ 1502 05d2 05       		.uleb128 0x5
+ 1503 05d3 03       		.byte	0x3
+ 1504 05d4 00000000 		.4byte	CapSense_previousSampleTbl
+ 1505 05d8 1B       		.uleb128 0x1b
+ 1506 05d9 61010000 		.4byte	.LASF84
+ 1507 05dd 01       		.byte	0x1
+ 1508 05de 55       		.byte	0x55
+ 1509 05df 97040000 		.4byte	0x497
+ 1510 05e3 05       		.uleb128 0x5
+ 1511 05e4 03       		.byte	0x3
+ 1512 05e5 00000000 		.4byte	CapSense_kValueTbl
+ 1513 05e9 18       		.uleb128 0x18
+ 1514 05ea 6B000000 		.4byte	0x6b
+ 1515 05ee F9050000 		.4byte	0x5f9
+ 1516 05f2 19       		.uleb128 0x19
+ 1517 05f3 B5000000 		.4byte	0xb5
+ 1518 05f7 0F       		.byte	0xf
+ 1519 05f8 00       		.byte	0
+ 1520 05f9 1B       		.uleb128 0x1b
+ 1521 05fa D9010000 		.4byte	.LASF85
+ 1522 05fe 01       		.byte	0x1
+ 1523 05ff 22       		.byte	0x22
+ 1524 0600 0A060000 		.4byte	0x60a
+ 1525 0604 05       		.uleb128 0x5
+ 1526 0605 03       		.byte	0x3
+ 1527 0606 00000000 		.4byte	CapSense_prescalerTable
+ 1528 060a 09       		.uleb128 0x9
+ 1529 060b E9050000 		.4byte	0x5e9
+ 1530 060f 1B       		.uleb128 0x1b
+ 1531 0610 B7010000 		.4byte	.LASF86
+ 1532 0614 01       		.byte	0x1
+ 1533 0615 57       		.byte	0x57
+ 1534 0616 97040000 		.4byte	0x497
+ 1535 061a 05       		.uleb128 0x5
+ 1536 061b 03       		.byte	0x3
+ 1537 061c 00000000 		.4byte	CapSense_sensorSensitivity
+ 1538 0620 1B       		.uleb128 0x1b
+ 1539 0621 0F040000 		.4byte	.LASF87
+ 1540 0625 01       		.byte	0x1
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccklALVd.s 			page 37
+
+
+ 1541 0626 5B       		.byte	0x5b
+ 1542 0627 B8020000 		.4byte	0x2b8
+ 1543 062b 05       		.uleb128 0x5
+ 1544 062c 03       		.byte	0x3
+ 1545 062d 00000000 		.4byte	CapSense_config
+ 1546 0631 1B       		.uleb128 0x1b
+ 1547 0632 E8050000 		.4byte	.LASF88
+ 1548 0636 01       		.byte	0x1
+ 1549 0637 5C       		.byte	0x5c
+ 1550 0638 B3020000 		.4byte	0x2b3
+ 1551 063c 05       		.uleb128 0x5
+ 1552 063d 03       		.byte	0x3
+ 1553 063e 00000000 		.4byte	CapSense_configPointers
+ 1554 0642 00       		.byte	0
+ 1555              		.section	.debug_abbrev,"",%progbits
+ 1556              	.Ldebug_abbrev0:
+ 1557 0000 01       		.uleb128 0x1
+ 1558 0001 11       		.uleb128 0x11
+ 1559 0002 01       		.byte	0x1
+ 1560 0003 25       		.uleb128 0x25
+ 1561 0004 0E       		.uleb128 0xe
+ 1562 0005 13       		.uleb128 0x13
+ 1563 0006 0B       		.uleb128 0xb
+ 1564 0007 03       		.uleb128 0x3
+ 1565 0008 0E       		.uleb128 0xe
+ 1566 0009 1B       		.uleb128 0x1b
+ 1567 000a 0E       		.uleb128 0xe
+ 1568 000b 55       		.uleb128 0x55
+ 1569 000c 17       		.uleb128 0x17
+ 1570 000d 11       		.uleb128 0x11
+ 1571 000e 01       		.uleb128 0x1
+ 1572 000f 10       		.uleb128 0x10
+ 1573 0010 17       		.uleb128 0x17
+ 1574 0011 00       		.byte	0
+ 1575 0012 00       		.byte	0
+ 1576 0013 02       		.uleb128 0x2
+ 1577 0014 24       		.uleb128 0x24
+ 1578 0015 00       		.byte	0
+ 1579 0016 0B       		.uleb128 0xb
+ 1580 0017 0B       		.uleb128 0xb
+ 1581 0018 3E       		.uleb128 0x3e
+ 1582 0019 0B       		.uleb128 0xb
+ 1583 001a 03       		.uleb128 0x3
+ 1584 001b 0E       		.uleb128 0xe
+ 1585 001c 00       		.byte	0
+ 1586 001d 00       		.byte	0
+ 1587 001e 03       		.uleb128 0x3
+ 1588 001f 24       		.uleb128 0x24
+ 1589 0020 00       		.byte	0
+ 1590 0021 0B       		.uleb128 0xb
+ 1591 0022 0B       		.uleb128 0xb
+ 1592 0023 3E       		.uleb128 0x3e
+ 1593 0024 0B       		.uleb128 0xb
+ 1594 0025 03       		.uleb128 0x3
+ 1595 0026 08       		.uleb128 0x8
+ 1596 0027 00       		.byte	0
+ 1597 0028 00       		.byte	0
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccklALVd.s 			page 38
+
+
+ 1598 0029 04       		.uleb128 0x4
+ 1599 002a 16       		.uleb128 0x16
+ 1600 002b 00       		.byte	0
+ 1601 002c 03       		.uleb128 0x3
+ 1602 002d 0E       		.uleb128 0xe
+ 1603 002e 3A       		.uleb128 0x3a
+ 1604 002f 0B       		.uleb128 0xb
+ 1605 0030 3B       		.uleb128 0x3b
+ 1606 0031 05       		.uleb128 0x5
+ 1607 0032 49       		.uleb128 0x49
+ 1608 0033 13       		.uleb128 0x13
+ 1609 0034 00       		.byte	0
+ 1610 0035 00       		.byte	0
+ 1611 0036 05       		.uleb128 0x5
+ 1612 0037 35       		.uleb128 0x35
+ 1613 0038 00       		.byte	0
+ 1614 0039 49       		.uleb128 0x49
+ 1615 003a 13       		.uleb128 0x13
+ 1616 003b 00       		.byte	0
+ 1617 003c 00       		.byte	0
+ 1618 003d 06       		.uleb128 0x6
+ 1619 003e 13       		.uleb128 0x13
+ 1620 003f 01       		.byte	0x1
+ 1621 0040 0B       		.uleb128 0xb
+ 1622 0041 0B       		.uleb128 0xb
+ 1623 0042 3A       		.uleb128 0x3a
+ 1624 0043 0B       		.uleb128 0xb
+ 1625 0044 3B       		.uleb128 0x3b
+ 1626 0045 0B       		.uleb128 0xb
+ 1627 0046 01       		.uleb128 0x1
+ 1628 0047 13       		.uleb128 0x13
+ 1629 0048 00       		.byte	0
+ 1630 0049 00       		.byte	0
+ 1631 004a 07       		.uleb128 0x7
+ 1632 004b 0D       		.uleb128 0xd
+ 1633 004c 00       		.byte	0
+ 1634 004d 03       		.uleb128 0x3
+ 1635 004e 0E       		.uleb128 0xe
+ 1636 004f 3A       		.uleb128 0x3a
+ 1637 0050 0B       		.uleb128 0xb
+ 1638 0051 3B       		.uleb128 0x3b
+ 1639 0052 0B       		.uleb128 0xb
+ 1640 0053 49       		.uleb128 0x49
+ 1641 0054 13       		.uleb128 0x13
+ 1642 0055 38       		.uleb128 0x38
+ 1643 0056 0B       		.uleb128 0xb
+ 1644 0057 00       		.byte	0
+ 1645 0058 00       		.byte	0
+ 1646 0059 08       		.uleb128 0x8
+ 1647 005a 0F       		.uleb128 0xf
+ 1648 005b 00       		.byte	0
+ 1649 005c 0B       		.uleb128 0xb
+ 1650 005d 0B       		.uleb128 0xb
+ 1651 005e 49       		.uleb128 0x49
+ 1652 005f 13       		.uleb128 0x13
+ 1653 0060 00       		.byte	0
+ 1654 0061 00       		.byte	0
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccklALVd.s 			page 39
+
+
+ 1655 0062 09       		.uleb128 0x9
+ 1656 0063 26       		.uleb128 0x26
+ 1657 0064 00       		.byte	0
+ 1658 0065 49       		.uleb128 0x49
+ 1659 0066 13       		.uleb128 0x13
+ 1660 0067 00       		.byte	0
+ 1661 0068 00       		.byte	0
+ 1662 0069 0A       		.uleb128 0xa
+ 1663 006a 15       		.uleb128 0x15
+ 1664 006b 01       		.byte	0x1
+ 1665 006c 27       		.uleb128 0x27
+ 1666 006d 19       		.uleb128 0x19
+ 1667 006e 49       		.uleb128 0x49
+ 1668 006f 13       		.uleb128 0x13
+ 1669 0070 01       		.uleb128 0x1
+ 1670 0071 13       		.uleb128 0x13
+ 1671 0072 00       		.byte	0
+ 1672 0073 00       		.byte	0
+ 1673 0074 0B       		.uleb128 0xb
+ 1674 0075 05       		.uleb128 0x5
+ 1675 0076 00       		.byte	0
+ 1676 0077 49       		.uleb128 0x49
+ 1677 0078 13       		.uleb128 0x13
+ 1678 0079 00       		.byte	0
+ 1679 007a 00       		.byte	0
+ 1680 007b 0C       		.uleb128 0xc
+ 1681 007c 15       		.uleb128 0x15
+ 1682 007d 01       		.byte	0x1
+ 1683 007e 27       		.uleb128 0x27
+ 1684 007f 19       		.uleb128 0x19
+ 1685 0080 01       		.uleb128 0x1
+ 1686 0081 13       		.uleb128 0x13
+ 1687 0082 00       		.byte	0
+ 1688 0083 00       		.byte	0
+ 1689 0084 0D       		.uleb128 0xd
+ 1690 0085 16       		.uleb128 0x16
+ 1691 0086 00       		.byte	0
+ 1692 0087 03       		.uleb128 0x3
+ 1693 0088 0E       		.uleb128 0xe
+ 1694 0089 3A       		.uleb128 0x3a
+ 1695 008a 0B       		.uleb128 0xb
+ 1696 008b 3B       		.uleb128 0x3b
+ 1697 008c 0B       		.uleb128 0xb
+ 1698 008d 49       		.uleb128 0x49
+ 1699 008e 13       		.uleb128 0x13
+ 1700 008f 00       		.byte	0
+ 1701 0090 00       		.byte	0
+ 1702 0091 0E       		.uleb128 0xe
+ 1703 0092 2E       		.uleb128 0x2e
+ 1704 0093 01       		.byte	0x1
+ 1705 0094 3F       		.uleb128 0x3f
+ 1706 0095 19       		.uleb128 0x19
+ 1707 0096 03       		.uleb128 0x3
+ 1708 0097 0E       		.uleb128 0xe
+ 1709 0098 3A       		.uleb128 0x3a
+ 1710 0099 0B       		.uleb128 0xb
+ 1711 009a 3B       		.uleb128 0x3b
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccklALVd.s 			page 40
+
+
+ 1712 009b 0B       		.uleb128 0xb
+ 1713 009c 27       		.uleb128 0x27
+ 1714 009d 19       		.uleb128 0x19
+ 1715 009e 11       		.uleb128 0x11
+ 1716 009f 01       		.uleb128 0x1
+ 1717 00a0 12       		.uleb128 0x12
+ 1718 00a1 06       		.uleb128 0x6
+ 1719 00a2 40       		.uleb128 0x40
+ 1720 00a3 18       		.uleb128 0x18
+ 1721 00a4 9642     		.uleb128 0x2116
+ 1722 00a6 19       		.uleb128 0x19
+ 1723 00a7 01       		.uleb128 0x1
+ 1724 00a8 13       		.uleb128 0x13
+ 1725 00a9 00       		.byte	0
+ 1726 00aa 00       		.byte	0
+ 1727 00ab 0F       		.uleb128 0xf
+ 1728 00ac 34       		.uleb128 0x34
+ 1729 00ad 00       		.byte	0
+ 1730 00ae 03       		.uleb128 0x3
+ 1731 00af 0E       		.uleb128 0xe
+ 1732 00b0 3A       		.uleb128 0x3a
+ 1733 00b1 0B       		.uleb128 0xb
+ 1734 00b2 3B       		.uleb128 0x3b
+ 1735 00b3 0B       		.uleb128 0xb
+ 1736 00b4 49       		.uleb128 0x49
+ 1737 00b5 13       		.uleb128 0x13
+ 1738 00b6 02       		.uleb128 0x2
+ 1739 00b7 18       		.uleb128 0x18
+ 1740 00b8 00       		.byte	0
+ 1741 00b9 00       		.byte	0
+ 1742 00ba 10       		.uleb128 0x10
+ 1743 00bb 05       		.uleb128 0x5
+ 1744 00bc 00       		.byte	0
+ 1745 00bd 03       		.uleb128 0x3
+ 1746 00be 0E       		.uleb128 0xe
+ 1747 00bf 3A       		.uleb128 0x3a
+ 1748 00c0 0B       		.uleb128 0xb
+ 1749 00c1 3B       		.uleb128 0x3b
+ 1750 00c2 0B       		.uleb128 0xb
+ 1751 00c3 49       		.uleb128 0x49
+ 1752 00c4 13       		.uleb128 0x13
+ 1753 00c5 02       		.uleb128 0x2
+ 1754 00c6 18       		.uleb128 0x18
+ 1755 00c7 00       		.byte	0
+ 1756 00c8 00       		.byte	0
+ 1757 00c9 11       		.uleb128 0x11
+ 1758 00ca 2E       		.uleb128 0x2e
+ 1759 00cb 00       		.byte	0
+ 1760 00cc 3F       		.uleb128 0x3f
+ 1761 00cd 19       		.uleb128 0x19
+ 1762 00ce 03       		.uleb128 0x3
+ 1763 00cf 0E       		.uleb128 0xe
+ 1764 00d0 3A       		.uleb128 0x3a
+ 1765 00d1 0B       		.uleb128 0xb
+ 1766 00d2 3B       		.uleb128 0x3b
+ 1767 00d3 05       		.uleb128 0x5
+ 1768 00d4 27       		.uleb128 0x27
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccklALVd.s 			page 41
+
+
+ 1769 00d5 19       		.uleb128 0x19
+ 1770 00d6 11       		.uleb128 0x11
+ 1771 00d7 01       		.uleb128 0x1
+ 1772 00d8 12       		.uleb128 0x12
+ 1773 00d9 06       		.uleb128 0x6
+ 1774 00da 40       		.uleb128 0x40
+ 1775 00db 18       		.uleb128 0x18
+ 1776 00dc 9742     		.uleb128 0x2117
+ 1777 00de 19       		.uleb128 0x19
+ 1778 00df 00       		.byte	0
+ 1779 00e0 00       		.byte	0
+ 1780 00e1 12       		.uleb128 0x12
+ 1781 00e2 2E       		.uleb128 0x2e
+ 1782 00e3 01       		.byte	0x1
+ 1783 00e4 3F       		.uleb128 0x3f
+ 1784 00e5 19       		.uleb128 0x19
+ 1785 00e6 03       		.uleb128 0x3
+ 1786 00e7 0E       		.uleb128 0xe
+ 1787 00e8 3A       		.uleb128 0x3a
+ 1788 00e9 0B       		.uleb128 0xb
+ 1789 00ea 3B       		.uleb128 0x3b
+ 1790 00eb 05       		.uleb128 0x5
+ 1791 00ec 27       		.uleb128 0x27
+ 1792 00ed 19       		.uleb128 0x19
+ 1793 00ee 11       		.uleb128 0x11
+ 1794 00ef 01       		.uleb128 0x1
+ 1795 00f0 12       		.uleb128 0x12
+ 1796 00f1 06       		.uleb128 0x6
+ 1797 00f2 40       		.uleb128 0x40
+ 1798 00f3 18       		.uleb128 0x18
+ 1799 00f4 9742     		.uleb128 0x2117
+ 1800 00f6 19       		.uleb128 0x19
+ 1801 00f7 01       		.uleb128 0x1
+ 1802 00f8 13       		.uleb128 0x13
+ 1803 00f9 00       		.byte	0
+ 1804 00fa 00       		.byte	0
+ 1805 00fb 13       		.uleb128 0x13
+ 1806 00fc 34       		.uleb128 0x34
+ 1807 00fd 00       		.byte	0
+ 1808 00fe 03       		.uleb128 0x3
+ 1809 00ff 0E       		.uleb128 0xe
+ 1810 0100 3A       		.uleb128 0x3a
+ 1811 0101 0B       		.uleb128 0xb
+ 1812 0102 3B       		.uleb128 0x3b
+ 1813 0103 05       		.uleb128 0x5
+ 1814 0104 49       		.uleb128 0x49
+ 1815 0105 13       		.uleb128 0x13
+ 1816 0106 02       		.uleb128 0x2
+ 1817 0107 18       		.uleb128 0x18
+ 1818 0108 00       		.byte	0
+ 1819 0109 00       		.byte	0
+ 1820 010a 14       		.uleb128 0x14
+ 1821 010b 2E       		.uleb128 0x2e
+ 1822 010c 01       		.byte	0x1
+ 1823 010d 3F       		.uleb128 0x3f
+ 1824 010e 19       		.uleb128 0x19
+ 1825 010f 03       		.uleb128 0x3
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccklALVd.s 			page 42
+
+
+ 1826 0110 0E       		.uleb128 0xe
+ 1827 0111 3A       		.uleb128 0x3a
+ 1828 0112 0B       		.uleb128 0xb
+ 1829 0113 3B       		.uleb128 0x3b
+ 1830 0114 05       		.uleb128 0x5
+ 1831 0115 27       		.uleb128 0x27
+ 1832 0116 19       		.uleb128 0x19
+ 1833 0117 11       		.uleb128 0x11
+ 1834 0118 01       		.uleb128 0x1
+ 1835 0119 12       		.uleb128 0x12
+ 1836 011a 06       		.uleb128 0x6
+ 1837 011b 40       		.uleb128 0x40
+ 1838 011c 18       		.uleb128 0x18
+ 1839 011d 9642     		.uleb128 0x2116
+ 1840 011f 19       		.uleb128 0x19
+ 1841 0120 01       		.uleb128 0x1
+ 1842 0121 13       		.uleb128 0x13
+ 1843 0122 00       		.byte	0
+ 1844 0123 00       		.byte	0
+ 1845 0124 15       		.uleb128 0x15
+ 1846 0125 05       		.uleb128 0x5
+ 1847 0126 00       		.byte	0
+ 1848 0127 03       		.uleb128 0x3
+ 1849 0128 0E       		.uleb128 0xe
+ 1850 0129 3A       		.uleb128 0x3a
+ 1851 012a 0B       		.uleb128 0xb
+ 1852 012b 3B       		.uleb128 0x3b
+ 1853 012c 05       		.uleb128 0x5
+ 1854 012d 49       		.uleb128 0x49
+ 1855 012e 13       		.uleb128 0x13
+ 1856 012f 02       		.uleb128 0x2
+ 1857 0130 18       		.uleb128 0x18
+ 1858 0131 00       		.byte	0
+ 1859 0132 00       		.byte	0
+ 1860 0133 16       		.uleb128 0x16
+ 1861 0134 2E       		.uleb128 0x2e
+ 1862 0135 01       		.byte	0x1
+ 1863 0136 3F       		.uleb128 0x3f
+ 1864 0137 19       		.uleb128 0x19
+ 1865 0138 03       		.uleb128 0x3
+ 1866 0139 0E       		.uleb128 0xe
+ 1867 013a 3A       		.uleb128 0x3a
+ 1868 013b 0B       		.uleb128 0xb
+ 1869 013c 3B       		.uleb128 0x3b
+ 1870 013d 05       		.uleb128 0x5
+ 1871 013e 27       		.uleb128 0x27
+ 1872 013f 19       		.uleb128 0x19
+ 1873 0140 49       		.uleb128 0x49
+ 1874 0141 13       		.uleb128 0x13
+ 1875 0142 11       		.uleb128 0x11
+ 1876 0143 01       		.uleb128 0x1
+ 1877 0144 12       		.uleb128 0x12
+ 1878 0145 06       		.uleb128 0x6
+ 1879 0146 40       		.uleb128 0x40
+ 1880 0147 18       		.uleb128 0x18
+ 1881 0148 9742     		.uleb128 0x2117
+ 1882 014a 19       		.uleb128 0x19
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccklALVd.s 			page 43
+
+
+ 1883 014b 01       		.uleb128 0x1
+ 1884 014c 13       		.uleb128 0x13
+ 1885 014d 00       		.byte	0
+ 1886 014e 00       		.byte	0
+ 1887 014f 17       		.uleb128 0x17
+ 1888 0150 2E       		.uleb128 0x2e
+ 1889 0151 01       		.byte	0x1
+ 1890 0152 3F       		.uleb128 0x3f
+ 1891 0153 19       		.uleb128 0x19
+ 1892 0154 03       		.uleb128 0x3
+ 1893 0155 0E       		.uleb128 0xe
+ 1894 0156 3A       		.uleb128 0x3a
+ 1895 0157 0B       		.uleb128 0xb
+ 1896 0158 3B       		.uleb128 0x3b
+ 1897 0159 05       		.uleb128 0x5
+ 1898 015a 27       		.uleb128 0x27
+ 1899 015b 19       		.uleb128 0x19
+ 1900 015c 49       		.uleb128 0x49
+ 1901 015d 13       		.uleb128 0x13
+ 1902 015e 11       		.uleb128 0x11
+ 1903 015f 01       		.uleb128 0x1
+ 1904 0160 12       		.uleb128 0x12
+ 1905 0161 06       		.uleb128 0x6
+ 1906 0162 40       		.uleb128 0x40
+ 1907 0163 18       		.uleb128 0x18
+ 1908 0164 9642     		.uleb128 0x2116
+ 1909 0166 19       		.uleb128 0x19
+ 1910 0167 01       		.uleb128 0x1
+ 1911 0168 13       		.uleb128 0x13
+ 1912 0169 00       		.byte	0
+ 1913 016a 00       		.byte	0
+ 1914 016b 18       		.uleb128 0x18
+ 1915 016c 01       		.uleb128 0x1
+ 1916 016d 01       		.byte	0x1
+ 1917 016e 49       		.uleb128 0x49
+ 1918 016f 13       		.uleb128 0x13
+ 1919 0170 01       		.uleb128 0x1
+ 1920 0171 13       		.uleb128 0x13
+ 1921 0172 00       		.byte	0
+ 1922 0173 00       		.byte	0
+ 1923 0174 19       		.uleb128 0x19
+ 1924 0175 21       		.uleb128 0x21
+ 1925 0176 00       		.byte	0
+ 1926 0177 49       		.uleb128 0x49
+ 1927 0178 13       		.uleb128 0x13
+ 1928 0179 2F       		.uleb128 0x2f
+ 1929 017a 0B       		.uleb128 0xb
+ 1930 017b 00       		.byte	0
+ 1931 017c 00       		.byte	0
+ 1932 017d 1A       		.uleb128 0x1a
+ 1933 017e 34       		.uleb128 0x34
+ 1934 017f 00       		.byte	0
+ 1935 0180 03       		.uleb128 0x3
+ 1936 0181 0E       		.uleb128 0xe
+ 1937 0182 3A       		.uleb128 0x3a
+ 1938 0183 0B       		.uleb128 0xb
+ 1939 0184 3B       		.uleb128 0x3b
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccklALVd.s 			page 44
+
+
+ 1940 0185 05       		.uleb128 0x5
+ 1941 0186 49       		.uleb128 0x49
+ 1942 0187 13       		.uleb128 0x13
+ 1943 0188 3F       		.uleb128 0x3f
+ 1944 0189 19       		.uleb128 0x19
+ 1945 018a 3C       		.uleb128 0x3c
+ 1946 018b 19       		.uleb128 0x19
+ 1947 018c 00       		.byte	0
+ 1948 018d 00       		.byte	0
+ 1949 018e 1B       		.uleb128 0x1b
+ 1950 018f 34       		.uleb128 0x34
+ 1951 0190 00       		.byte	0
+ 1952 0191 03       		.uleb128 0x3
+ 1953 0192 0E       		.uleb128 0xe
+ 1954 0193 3A       		.uleb128 0x3a
+ 1955 0194 0B       		.uleb128 0xb
+ 1956 0195 3B       		.uleb128 0x3b
+ 1957 0196 0B       		.uleb128 0xb
+ 1958 0197 49       		.uleb128 0x49
+ 1959 0198 13       		.uleb128 0x13
+ 1960 0199 3F       		.uleb128 0x3f
+ 1961 019a 19       		.uleb128 0x19
+ 1962 019b 02       		.uleb128 0x2
+ 1963 019c 18       		.uleb128 0x18
+ 1964 019d 00       		.byte	0
+ 1965 019e 00       		.byte	0
+ 1966 019f 00       		.byte	0
+ 1967              		.section	.debug_aranges,"",%progbits
+ 1968 0000 5C000000 		.4byte	0x5c
+ 1969 0004 0200     		.2byte	0x2
+ 1970 0006 00000000 		.4byte	.Ldebug_info0
+ 1971 000a 04       		.byte	0x4
+ 1972 000b 00       		.byte	0
+ 1973 000c 0000     		.2byte	0
+ 1974 000e 0000     		.2byte	0
+ 1975 0010 00000000 		.4byte	.LFB35
+ 1976 0014 F4000000 		.4byte	.LFE35-.LFB35
+ 1977 0018 00000000 		.4byte	.LFB36
+ 1978 001c F0000000 		.4byte	.LFE36-.LFB36
+ 1979 0020 00000000 		.4byte	.LFB37
+ 1980 0024 18000000 		.4byte	.LFE37-.LFB37
+ 1981 0028 00000000 		.4byte	.LFB38
+ 1982 002c 34000000 		.4byte	.LFE38-.LFB38
+ 1983 0030 00000000 		.4byte	.LFB39
+ 1984 0034 90000000 		.4byte	.LFE39-.LFB39
+ 1985 0038 00000000 		.4byte	.LFB40
+ 1986 003c 50000000 		.4byte	.LFE40-.LFB40
+ 1987 0040 00000000 		.4byte	.LFB41
+ 1988 0044 1C000000 		.4byte	.LFE41-.LFB41
+ 1989 0048 00000000 		.4byte	.LFB42
+ 1990 004c 28000000 		.4byte	.LFE42-.LFB42
+ 1991 0050 00000000 		.4byte	.LFB43
+ 1992 0054 38000000 		.4byte	.LFE43-.LFB43
+ 1993 0058 00000000 		.4byte	0
+ 1994 005c 00000000 		.4byte	0
+ 1995              		.section	.debug_ranges,"",%progbits
+ 1996              	.Ldebug_ranges0:
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccklALVd.s 			page 45
+
+
+ 1997 0000 00000000 		.4byte	.LFB35
+ 1998 0004 F4000000 		.4byte	.LFE35
+ 1999 0008 00000000 		.4byte	.LFB36
+ 2000 000c F0000000 		.4byte	.LFE36
+ 2001 0010 00000000 		.4byte	.LFB37
+ 2002 0014 18000000 		.4byte	.LFE37
+ 2003 0018 00000000 		.4byte	.LFB38
+ 2004 001c 34000000 		.4byte	.LFE38
+ 2005 0020 00000000 		.4byte	.LFB39
+ 2006 0024 90000000 		.4byte	.LFE39
+ 2007 0028 00000000 		.4byte	.LFB40
+ 2008 002c 50000000 		.4byte	.LFE40
+ 2009 0030 00000000 		.4byte	.LFB41
+ 2010 0034 1C000000 		.4byte	.LFE41
+ 2011 0038 00000000 		.4byte	.LFB42
+ 2012 003c 28000000 		.4byte	.LFE42
+ 2013 0040 00000000 		.4byte	.LFB43
+ 2014 0044 38000000 		.4byte	.LFE43
+ 2015 0048 00000000 		.4byte	0
+ 2016 004c 00000000 		.4byte	0
+ 2017              		.section	.debug_line,"",%progbits
+ 2018              	.Ldebug_line0:
+ 2019 0000 9C010000 		.section	.debug_str,"MS",%progbits,1
+ 2019      02007C00 
+ 2019      00000201 
+ 2019      FB0E0D00 
+ 2019      01010101 
+ 2020              	.LASF48:
+ 2021 0000 63757253 		.ascii	"curSensor\000"
+ 2021      656E736F 
+ 2021      7200
+ 2022              	.LASF69:
+ 2023 000a 43617053 		.ascii	"CapSense_sampleClkDividerVal\000"
+ 2023      656E7365 
+ 2023      5F73616D 
+ 2023      706C6543 
+ 2023      6C6B4469 
+ 2024              	.LASF10:
+ 2025 0027 75696E74 		.ascii	"uint16\000"
+ 2025      313600
+ 2026              	.LASF75:
+ 2027 002e 43617053 		.ascii	"CapSense_hysteresis\000"
+ 2027      656E7365 
+ 2027      5F687973 
+ 2027      74657265 
+ 2027      73697300 
+ 2028              	.LASF52:
+ 2029 0042 66696E67 		.ascii	"fingerThreshold\000"
+ 2029      65725468 
+ 2029      72657368 
+ 2029      6F6C6400 
+ 2030              	.LASF35:
+ 2031 0052 70747247 		.ascii	"ptrGetRaw\000"
+ 2031      65745261 
+ 2031      7700
+ 2032              	.LASF91:
+ 2033 005c 433A5C55 		.ascii	"C:\\Users\\poornima\\Documents\\GitHub\\thingTouch\\"
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccklALVd.s 			page 46
+
+
+ 2033      73657273 
+ 2033      5C706F6F 
+ 2033      726E696D 
+ 2033      615C446F 
+ 2034 008a 38532E63 		.ascii	"8S.cydsn\000"
+ 2034      7964736E 
+ 2034      00
+ 2035              	.LASF82:
+ 2036 0093 43617053 		.ascii	"CapSense_sampleMaxTbl\000"
+ 2036      656E7365 
+ 2036      5F73616D 
+ 2036      706C654D 
+ 2036      61785462 
+ 2037              	.LASF78:
+ 2038 00a9 43617053 		.ascii	"CapSense_noiseEnvelopeTbl\000"
+ 2038      656E7365 
+ 2038      5F6E6F69 
+ 2038      7365456E 
+ 2038      76656C6F 
+ 2039              	.LASF65:
+ 2040 00c3 43617053 		.ascii	"CapSense_modulationIDAC\000"
+ 2040      656E7365 
+ 2040      5F6D6F64 
+ 2040      756C6174 
+ 2040      696F6E49 
+ 2041              	.LASF7:
+ 2042 00db 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 2042      206C6F6E 
+ 2042      6720756E 
+ 2042      7369676E 
+ 2042      65642069 
+ 2043              	.LASF71:
+ 2044 00f2 43617053 		.ascii	"CapSense_sensorSignal\000"
+ 2044      656E7365 
+ 2044      5F73656E 
+ 2044      736F7253 
+ 2044      69676E61 
+ 2045              	.LASF64:
+ 2046 0108 43617053 		.ascii	"CapSense_prescalersTuningDone\000"
+ 2046      656E7365 
+ 2046      5F707265 
+ 2046      7363616C 
+ 2046      65727354 
+ 2047              	.LASF6:
+ 2048 0126 6C6F6E67 		.ascii	"long long int\000"
+ 2048      206C6F6E 
+ 2048      6720696E 
+ 2048      7400
+ 2049              	.LASF0:
+ 2050 0134 7369676E 		.ascii	"signed char\000"
+ 2050      65642063 
+ 2050      68617200 
+ 2051              	.LASF34:
+ 2052 0140 6E756D62 		.ascii	"numberOfSensors\000"
+ 2052      65724F66 
+ 2052      53656E73 
+ 2052      6F727300 
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccklALVd.s 			page 47
+
+
+ 2053              	.LASF22:
+ 2054 0150 77696467 		.ascii	"widgetNubmersTbl\000"
+ 2054      65744E75 
+ 2054      626D6572 
+ 2054      7354626C 
+ 2054      00
+ 2055              	.LASF84:
+ 2056 0161 43617053 		.ascii	"CapSense_kValueTbl\000"
+ 2056      656E7365 
+ 2056      5F6B5661 
+ 2056      6C756554 
+ 2056      626C00
+ 2057              	.LASF81:
+ 2058 0174 43617053 		.ascii	"CapSense_sampleMinTbl\000"
+ 2058      656E7365 
+ 2058      5F73616D 
+ 2058      706C654D 
+ 2058      696E5462 
+ 2059              	.LASF4:
+ 2060 018a 6C6F6E67 		.ascii	"long int\000"
+ 2060      20696E74 
+ 2060      00
+ 2061              	.LASF79:
+ 2062 0193 43617053 		.ascii	"CapSense_runningDifferenceTbl\000"
+ 2062      656E7365 
+ 2062      5F72756E 
+ 2062      6E696E67 
+ 2062      44696666 
+ 2063              	.LASF9:
+ 2064 01b1 75696E74 		.ascii	"uint8\000"
+ 2064      3800
+ 2065              	.LASF86:
+ 2066 01b7 43617053 		.ascii	"CapSense_sensorSensitivity\000"
+ 2066      656E7365 
+ 2066      5F73656E 
+ 2066      736F7253 
+ 2066      656E7369 
+ 2067              	.LASF13:
+ 2068 01d2 646F7562 		.ascii	"double\000"
+ 2068      6C6500
+ 2069              	.LASF85:
+ 2070 01d9 43617053 		.ascii	"CapSense_prescalerTable\000"
+ 2070      656E7365 
+ 2070      5F707265 
+ 2070      7363616C 
+ 2070      65725461 
+ 2071              	.LASF70:
+ 2072 01f1 43617053 		.ascii	"CapSense_widgetNumber\000"
+ 2072      656E7365 
+ 2072      5F776964 
+ 2072      6765744E 
+ 2072      756D6265 
+ 2073              	.LASF54:
+ 2074 0207 6E657752 		.ascii	"newRegValue\000"
+ 2074      65675661 
+ 2074      6C756500 
+ 2075              	.LASF11:
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccklALVd.s 			page 48
+
+
+ 2076 0213 75696E74 		.ascii	"uint32\000"
+ 2076      333200
+ 2077              	.LASF55:
+ 2078 021a 43617053 		.ascii	"CapSense_EnableBaselineIDAC\000"
+ 2078      656E7365 
+ 2078      5F456E61 
+ 2078      626C6542 
+ 2078      6173656C 
+ 2079              	.LASF44:
+ 2080 0236 73656E73 		.ascii	"sensetivitySeed\000"
+ 2080      65746976 
+ 2080      69747953 
+ 2080      65656400 
+ 2081              	.LASF43:
+ 2082 0246 746F7461 		.ascii	"totalSensorsNum\000"
+ 2082      6C53656E 
+ 2082      736F7273 
+ 2082      4E756D00 
+ 2083              	.LASF59:
+ 2084 0256 76616C75 		.ascii	"value\000"
+ 2084      6500
+ 2085              	.LASF8:
+ 2086 025c 756E7369 		.ascii	"unsigned int\000"
+ 2086      676E6564 
+ 2086      20696E74 
+ 2086      00
+ 2087              	.LASF28:
+ 2088 0269 73616D70 		.ascii	"sampleMaxTbl\000"
+ 2088      6C654D61 
+ 2088      7854626C 
+ 2088      00
+ 2089              	.LASF5:
+ 2090 0276 6C6F6E67 		.ascii	"long unsigned int\000"
+ 2090      20756E73 
+ 2090      69676E65 
+ 2090      6420696E 
+ 2090      7400
+ 2091              	.LASF23:
+ 2092 0288 7265736F 		.ascii	"resolutionsTbl\000"
+ 2092      6C757469 
+ 2092      6F6E7354 
+ 2092      626C00
+ 2093              	.LASF38:
+ 2094 0297 70747247 		.ascii	"ptrGetBitValue\000"
+ 2094      65744269 
+ 2094      7456616C 
+ 2094      756500
+ 2095              	.LASF3:
+ 2096 02a6 73686F72 		.ascii	"short unsigned int\000"
+ 2096      7420756E 
+ 2096      7369676E 
+ 2096      65642069 
+ 2096      6E7400
+ 2097              	.LASF19:
+ 2098 02b9 73656E73 		.ascii	"sensetivityTbl\000"
+ 2098      65746976 
+ 2098      69747954 
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccklALVd.s 			page 49
+
+
+ 2098      626C00
+ 2099              	.LASF56:
+ 2100 02c8 73656E73 		.ascii	"sensor\000"
+ 2100      6F7200
+ 2101              	.LASF46:
+ 2102 02cf 706F696E 		.ascii	"pointers\000"
+ 2102      74657273 
+ 2102      00
+ 2103              	.LASF58:
+ 2104 02d8 43617053 		.ascii	"CapSense_SetSensitivity\000"
+ 2104      656E7365 
+ 2104      5F536574 
+ 2104      53656E73 
+ 2104      69746976 
+ 2105              	.LASF20:
+ 2106 02f0 63686172 		.ascii	"chargeDivTbl\000"
+ 2106      67654469 
+ 2106      7654626C 
+ 2106      00
+ 2107              	.LASF80:
+ 2108 02fd 43617053 		.ascii	"CapSense_signRegisterTbl\000"
+ 2108      656E7365 
+ 2108      5F736967 
+ 2108      6E526567 
+ 2108      69737465 
+ 2109              	.LASF40:
+ 2110 0316 43617053 		.ascii	"CapSense_CONFIG_TYPE_POINTERS_P4_v2_40\000"
+ 2110      656E7365 
+ 2110      5F434F4E 
+ 2110      4649475F 
+ 2110      54595045 
+ 2111              	.LASF27:
+ 2112 033d 73616D70 		.ascii	"sampleMinTbl\000"
+ 2112      6C654D69 
+ 2112      6E54626C 
+ 2112      00
+ 2113              	.LASF50:
+ 2114 034a 43617053 		.ascii	"CapSense_AutoTune\000"
+ 2114      656E7365 
+ 2114      5F417574 
+ 2114      6F54756E 
+ 2114      6500
+ 2115              	.LASF15:
+ 2116 035c 72656733 		.ascii	"reg32\000"
+ 2116      3200
+ 2117              	.LASF24:
+ 2118 0362 6E6F6973 		.ascii	"noiseEnvelopeTbl\000"
+ 2118      65456E76 
+ 2118      656C6F70 
+ 2118      6554626C 
+ 2118      00
+ 2119              	.LASF68:
+ 2120 0373 43617053 		.ascii	"CapSense_senseClkDividerVal\000"
+ 2120      656E7365 
+ 2120      5F73656E 
+ 2120      7365436C 
+ 2120      6B446976 
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccklALVd.s 			page 50
+
+
+ 2121              	.LASF45:
+ 2122 038f 6866636C 		.ascii	"hfclkFreq_MHz\000"
+ 2122      6B467265 
+ 2122      715F4D48 
+ 2122      7A00
+ 2123              	.LASF16:
+ 2124 039d 73697A65 		.ascii	"sizetype\000"
+ 2124      74797065 
+ 2124      00
+ 2125              	.LASF73:
+ 2126 03a6 43617053 		.ascii	"CapSense_noiseThreshold\000"
+ 2126      656E7365 
+ 2126      5F6E6F69 
+ 2126      73655468 
+ 2126      72657368 
+ 2127              	.LASF61:
+ 2128 03be 43617053 		.ascii	"CapSense_GetNoiseEnvelope\000"
+ 2128      656E7365 
+ 2128      5F476574 
+ 2128      4E6F6973 
+ 2128      65456E76 
+ 2129              	.LASF17:
+ 2130 03d8 69646163 		.ascii	"idac1LevelsTbl\000"
+ 2130      314C6576 
+ 2130      656C7354 
+ 2130      626C00
+ 2131              	.LASF18:
+ 2132 03e7 69646163 		.ascii	"idac2LevelsTbl\000"
+ 2132      324C6576 
+ 2132      656C7354 
+ 2132      626C00
+ 2133              	.LASF72:
+ 2134 03f6 43617053 		.ascii	"CapSense_fingerThreshold\000"
+ 2134      656E7365 
+ 2134      5F66696E 
+ 2134      67657254 
+ 2134      68726573 
+ 2135              	.LASF87:
+ 2136 040f 43617053 		.ascii	"CapSense_config\000"
+ 2136      656E7365 
+ 2136      5F636F6E 
+ 2136      66696700 
+ 2137              	.LASF12:
+ 2138 041f 666C6F61 		.ascii	"float\000"
+ 2138      7400
+ 2139              	.LASF63:
+ 2140 0425 43617053 		.ascii	"CapSense_scanSpeedTbl\000"
+ 2140      656E7365 
+ 2140      5F736361 
+ 2140      6E537065 
+ 2140      65645462 
+ 2141              	.LASF26:
+ 2142 043b 7369676E 		.ascii	"signRegisterTbl\000"
+ 2142      52656769 
+ 2142      73746572 
+ 2142      54626C00 
+ 2143              	.LASF32:
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccklALVd.s 			page 51
+
+
+ 2144 044b 70726573 		.ascii	"prescalerTable\000"
+ 2144      63616C65 
+ 2144      72546162 
+ 2144      6C6500
+ 2145              	.LASF1:
+ 2146 045a 756E7369 		.ascii	"unsigned char\000"
+ 2146      676E6564 
+ 2146      20636861 
+ 2146      7200
+ 2147              	.LASF37:
+ 2148 0468 70747252 		.ascii	"ptrReadSensorRaw\000"
+ 2148      65616453 
+ 2148      656E736F 
+ 2148      72526177 
+ 2148      00
+ 2149              	.LASF67:
+ 2150 0479 43617053 		.ascii	"CapSense_widgetResolution\000"
+ 2150      656E7365 
+ 2150      5F776964 
+ 2150      67657452 
+ 2150      65736F6C 
+ 2151              	.LASF2:
+ 2152 0493 73686F72 		.ascii	"short int\000"
+ 2152      7420696E 
+ 2152      7400
+ 2153              	.LASF49:
+ 2154 049d 77696467 		.ascii	"widget\000"
+ 2154      657400
+ 2155              	.LASF21:
+ 2156 04a4 6D6F6444 		.ascii	"modDivTbl\000"
+ 2156      69765462 
+ 2156      6C00
+ 2157              	.LASF92:
+ 2158 04ae 43617053 		.ascii	"CapSense_SetAnalogSwitchesSrcDirect\000"
+ 2158      656E7365 
+ 2158      5F536574 
+ 2158      416E616C 
+ 2158      6F675377 
+ 2159              	.LASF76:
+ 2160 04d2 43617053 		.ascii	"CapSense_rawDataIndex\000"
+ 2160      656E7365 
+ 2160      5F726177 
+ 2160      44617461 
+ 2160      496E6465 
+ 2161              	.LASF30:
+ 2162 04e8 6B56616C 		.ascii	"kValueTbl\000"
+ 2162      75655462 
+ 2162      6C00
+ 2163              	.LASF77:
+ 2164 04f2 43617053 		.ascii	"CapSense_numberOfSensors\000"
+ 2164      656E7365 
+ 2164      5F6E756D 
+ 2164      6265724F 
+ 2164      6653656E 
+ 2165              	.LASF66:
+ 2166 050b 43617053 		.ascii	"CapSense_compensationIDAC\000"
+ 2166      656E7365 
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccklALVd.s 			page 52
+
+
+ 2166      5F636F6D 
+ 2166      70656E73 
+ 2166      6174696F 
+ 2167              	.LASF29:
+ 2168 0525 70726576 		.ascii	"previousSampleTbl\000"
+ 2168      696F7573 
+ 2168      53616D70 
+ 2168      6C655462 
+ 2168      6C00
+ 2169              	.LASF14:
+ 2170 0537 63686172 		.ascii	"char\000"
+ 2170      00
+ 2171              	.LASF25:
+ 2172 053c 72756E6E 		.ascii	"runningDifferenceTbl\000"
+ 2172      696E6744 
+ 2172      69666665 
+ 2172      72656E63 
+ 2172      6554626C 
+ 2173              	.LASF57:
+ 2174 0551 636F6E66 		.ascii	"config\000"
+ 2174      696700
+ 2175              	.LASF83:
+ 2176 0558 43617053 		.ascii	"CapSense_previousSampleTbl\000"
+ 2176      656E7365 
+ 2176      5F707265 
+ 2176      76696F75 
+ 2176      7353616D 
+ 2177              	.LASF36:
+ 2178 0573 70747250 		.ascii	"ptrPreScan\000"
+ 2178      72655363 
+ 2178      616E00
+ 2179              	.LASF53:
+ 2180 057e 43617053 		.ascii	"CapSense_DisableBaselineIDAC\000"
+ 2180      656E7365 
+ 2180      5F446973 
+ 2180      61626C65 
+ 2180      42617365 
+ 2181              	.LASF31:
+ 2182 059b 7363616E 		.ascii	"scanSpeedTbl\000"
+ 2182      53706565 
+ 2182      6454626C 
+ 2182      00
+ 2183              	.LASF90:
+ 2184 05a8 47656E65 		.ascii	"Generated_Source\\PSoC4\\CapSense_SMS.c\000"
+ 2184      72617465 
+ 2184      645F536F 
+ 2184      75726365 
+ 2184      5C50536F 
+ 2185              	.LASF51:
+ 2186 05ce 43617053 		.ascii	"CapSense_UpdateThresholds\000"
+ 2186      656E7365 
+ 2186      5F557064 
+ 2186      61746554 
+ 2186      68726573 
+ 2187              	.LASF88:
+ 2188 05e8 43617053 		.ascii	"CapSense_configPointers\000"
+ 2188      656E7365 
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccklALVd.s 			page 53
+
+
+ 2188      5F636F6E 
+ 2188      66696750 
+ 2188      6F696E74 
+ 2189              	.LASF62:
+ 2190 0600 43617053 		.ascii	"CapSense_GetNormalizedDiffCountData\000"
+ 2190      656E7365 
+ 2190      5F476574 
+ 2190      4E6F726D 
+ 2190      616C697A 
+ 2191              	.LASF41:
+ 2192 0624 746F7461 		.ascii	"totalScanslotsNum\000"
+ 2192      6C536361 
+ 2192      6E736C6F 
+ 2192      74734E75 
+ 2192      6D00
+ 2193              	.LASF89:
+ 2194 0636 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 2194      4320342E 
+ 2194      392E3320 
+ 2194      32303135 
+ 2194      30333033 
+ 2195 0669 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m0 -mthumb -g -O"
+ 2195      20726576 
+ 2195      6973696F 
+ 2195      6E203232 
+ 2195      31323230 
+ 2196 069c 30202D66 		.ascii	"0 -ffunction-sections -ffat-lto-objects\000"
+ 2196      66756E63 
+ 2196      74696F6E 
+ 2196      2D736563 
+ 2196      74696F6E 
+ 2197              	.LASF39:
+ 2198 06c4 70747253 		.ascii	"ptrSetBitValue\000"
+ 2198      65744269 
+ 2198      7456616C 
+ 2198      756500
+ 2199              	.LASF60:
+ 2200 06d3 43617053 		.ascii	"CapSense_GetSensitivityCoefficient\000"
+ 2200      656E7365 
+ 2200      5F476574 
+ 2200      53656E73 
+ 2200      69746976 
+ 2201              	.LASF47:
+ 2202 06f6 43617053 		.ascii	"CapSense_CONFIG_TYPE_P4_v2_40\000"
+ 2202      656E7365 
+ 2202      5F434F4E 
+ 2202      4649475F 
+ 2202      54595045 
+ 2203              	.LASF33:
+ 2204 0714 72617744 		.ascii	"rawDataIndex\000"
+ 2204      61746149 
+ 2204      6E646578 
+ 2204      00
+ 2205              	.LASF42:
+ 2206 0721 746F7461 		.ascii	"totalWidgetsNum\000"
+ 2206      6C576964 
+ 2206      67657473 
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccklALVd.s 			page 54
+
+
+ 2206      4E756D00 
+ 2207              	.LASF74:
+ 2208 0731 43617053 		.ascii	"CapSense_negativeNoiseThreshold\000"
+ 2208      656E7365 
+ 2208      5F6E6567 
+ 2208      61746976 
+ 2208      654E6F69 
+ 2209              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br

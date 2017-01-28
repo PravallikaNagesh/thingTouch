@@ -1,0 +1,7 @@
+C:\Users\poornima\Documents\GitHub\thingTouch\2F5S1SOC.cydsn\2F5S1SOC.cyprj|4be6fb9a-8c2c-49da-acce-01f7129899a5
+C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|5ad311de-db99-479b-a93c-750d4fce9c85
+C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|b64f1cb0-8e86-4b2f-bedb-5f1d474a9894
+C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|be6fc6ad-bf4f-4b60-8591-d55d3d52419c
+C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|330e4760-6af2-4c53-81be-93e22f89a375
+C:\Users\poornima\Documents\GitHub\thingTouch\8S.cydsn\8S.cyprj|a98aa116-a5a3-4be5-bd14-c184f2c51803
+C:\Users\poornima\Documents\GitHub\thingTouch\1F3S1SOC.cydsn\1F3S1SOC.cyprj|cbf94365-c8ba-4f8a-9142-5dbabbdbbce1
