@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <blockRegMap version="1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://cypress.com/xsd/cyblockregmap cyblockregmap.xsd" xmlns="http://cypress.com/xsd/cyblockregmap">
-  <block name="LED8" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="LED9" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="LED16" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="Triac2" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="LED8" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="LED_CONTROL2" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false">
     <block name="VMux_count" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
     <block name="VMux_reload" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
@@ -18,13 +16,16 @@
     <register name="PERIOD" address="0x40200114" bitWidth="32" desc="Period value" hidden="false" />
     <register name="PERIOD_BUF" address="0x40200118" bitWidth="32" desc="Period buffer value" hidden="false" />
   </block>
-  <block name="LED13" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="LED12" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="Triac8" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="Triac2" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="LED14" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="LED10" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="LED13" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="LED15" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="Triac6" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="Triac5" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="LED9" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="LED10" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="Triac7" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="WdtIsr" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="GlobalSignal" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="cy_boot" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="cy_lfclk" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="DMAC" BASE="0x0" SIZE="0x0" desc="DMAC Registers" visible="true" hidden="false">
@@ -1406,11 +1407,11 @@
       <field name="CURR_DATA_NR" from="15" to="0" access="RW" resetVal="" desc="Specifies the index of the current data transfer. This value increases from 0 to CONTROL.DATA_NR. HW sets this field: &#xA; - When a descriptor is done (RESPONSE is DONE), the field is set to '0' when PING_CTL.INV_DESCR is '0' and the field is set to PING_CTL.DATA_NR when PING_CTL.INV_DESCR is '1'.                                                                 &#xA; - When a descriptor is not done (RESPONSE is NO_ERROR), the field reflects the progress of a data transfer.                                                                 &#xA; - In case of erroneous behavior (RESPONSE is neither DONE or NO_ERROR), the field is not updated, but keeps its value to ease debugging.                                                                 &#xA; HW only modifies this field for an active descriptor (STATUS.VALID to be '1'). At descriptor initialization, SW should set this field to '0'.                                                                 &#xA; This field allows software to read the progress of the data transfer. Note that SRC.ADDR and DST.ADDR represent base addresses and are not modified during data transfer. However, STATUS.CURR_DATA_NR is modified during data transfer and provides an offset wrt. the base addresses." hidden="false" />
     </register>
   </block>
-  <block name="Triac7" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="Triac8" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="Resistor_Red_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="VDD_4" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="D_4" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="Resistor_Red_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="Triac6" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="Triac5" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="D_3" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="Triac3" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="Resistor_Red" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
@@ -1816,6 +1817,8 @@
     <register name="PERIOD_BUF" address="0x40200158" bitWidth="32" desc="Period buffer value" hidden="false" />
   </block>
   <block name="Clock_PWM1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="LED1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="LED6" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="UART" BASE="0x0" SIZE="0x0" desc="Serial Communication Block" visible="true" hidden="false">
     <block name="rx_wake_VM" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
     <block name="rx_VM" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
@@ -2171,13 +2174,12 @@
       <field name="BREAK_DETECT" from="11" to="11" access="RW" resetVal="" desc="Logical and of corresponding request and mask bits" hidden="false" />
     </register>
   </block>
-  <block name="InterPin" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="LED6" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="LED11" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="LED7" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="LED2" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="LED1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="LED12" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="LED11" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="LED3" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="LED5" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="LED2" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="LED4" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="InterPin" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="LED5" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
 </blockRegMap>

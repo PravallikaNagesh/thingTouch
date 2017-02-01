@@ -89,6 +89,7 @@
 #include "Triac5_aliases.h"
 #include "Triac6.h"
 #include "Triac6_aliases.h"
+#include "WdtIsr.h"
 #include "CapSense_SampleClk.h"
 #include "CapSense_Sns_aliases.h"
 #include "CapSense_SenseClk.h"

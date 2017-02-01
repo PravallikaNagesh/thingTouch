@@ -1,5 +1,5 @@
 -- Project:   2F5S1SOC
--- Generated: 01/28/2017 15:24:44
+-- Generated: 02/01/2017 18:37:34
 -- PSoC Creator  4.0 Update 1
 
 ENTITY \2F5S1SOC\ IS
@@ -102,6 +102,7 @@ ARCHITECTURE __DEFAULT__ OF \2F5S1SOC\ IS
     SIGNAL Triac6(0)__PA : bit;
     SIGNAL Triac7(0)__PA : bit;
     SIGNAL Triac8(0)__PA : bit;
+    SIGNAL WDT_INT_OUT : bit;
     SIGNAL \\\CapSense:Cmod(0)\\__PA\ : bit;
     SIGNAL \CapSense:Net_248\ : bit;
     SIGNAL \CapSense:Net_328\ : bit;
@@ -269,6 +270,8 @@ ARCHITECTURE __DEFAULT__ OF \2F5S1SOC\ IS
     ATTRIBUTE Location OF \I2C_Slave:SCB\ : LABEL IS "F(SCB,0)";
     ATTRIBUTE Location OF \UART:SCB\ : LABEL IS "F(SCB,3)";
     ATTRIBUTE Location OF \LED_CONTROL2:cy_m0s8_tcpwm_1\ : LABEL IS "F(TCPWM,0)";
+    ATTRIBUTE Location OF WdtIsr : LABEL IS "[IntrContainer=(0)][IntrId=(7)]";
+    ATTRIBUTE Location OF WDT : LABEL IS "F(WDT,0)";
     COMPONENT interrupt
         PORT (
             interrupt : IN std_ulogic;
@@ -466,6 +469,10 @@ ARCHITECTURE __DEFAULT__ OF \2F5S1SOC\ IS
             line_out : OUT std_ulogic;
             line_out_compl : OUT std_ulogic;
             interrupt : OUT std_ulogic);
+    END COMPONENT;
+    COMPONENT m0s8wdtcell
+        PORT (
+            wdt_int : OUT std_ulogic);
     END COMPONENT;
     COMPONENT macrocell
         PORT (
@@ -3767,5 +3774,17 @@ BEGIN
             line_out => Net_373,
             line_out_compl => Net_403,
             interrupt => Net_398);
+
+    WdtIsr:interrupt
+        GENERIC MAP(
+            int_type => "10",
+            is_nmi => 0)
+        PORT MAP(
+            interrupt => WDT_INT_OUT,
+            clock => ClockBlock_HFCLK);
+
+    WDT:m0s8wdtcell
+        PORT MAP(
+            wdt_int => WDT_INT_OUT);
 
 END __DEFAULT__;

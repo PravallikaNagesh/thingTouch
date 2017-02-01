@@ -1,6 +1,6 @@
 // ======================================================================
 // 2F5S1SOC.v generated from TopDesign.cysch
-// 01/28/2017 at 15:24
+// 02/01/2017 at 18:37
 // This file is auto generated. ANY EDITS YOU MAKE MAY BE LOST WHEN THIS FILE IS REGENERATED!!!
 // ======================================================================
 
@@ -1210,6 +1210,7 @@ endmodule
 // top
 module top ;
 
+          wire  Net_406;
     electrical  Net_389;
           wire  Net_403;
           wire  Net_401;
@@ -3237,6 +3238,20 @@ module top ;
 		  .out_reset({1'b0}));
 
 	assign tmpOE__Triac6_net = (`CYDEV_CHIP_MEMBER_USED == `CYDEV_CHIP_MEMBER_3A && `CYDEV_CHIP_REVISION_USED < `CYDEV_CHIP_REVISION_3A_ES3) ? ~{1'b1} : {1'b1};
+
+
+	cy_gsref_v1_0
+		#(.guid("1563FAA8-0748-4a1c-9785-CED309984BE3"))
+		GlobalSignal
+		 (.sig_out(Net_406));
+
+
+
+	cy_isr_v1_0
+		#(.int_type(2'b10))
+		WdtIsr
+		 (.int_signal(Net_406));
+
 
 
 

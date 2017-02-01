@@ -16,8 +16,10 @@ set_io "\CapSense:Sns(11)\" iocell 6 1
 set_io "\CapSense:Sns(14)\" iocell 6 5
 set_location "ClockGenBlock" m0s8clockgenblockcell -1 -1 0
 set_io "\CapSense:Sns(15)\" iocell 3 0
+set_location "WDT" m0s8wdtcell -1 -1 0
 set_io "\UART:tx(0)\" iocell 7 1
 set_location "\CapSense:CSD_FFB\" p4csdcell -1 -1 0
+set_location "WdtIsr" interrupt -1 -1 7
 set_io "Triac1(0)" iocell 1 2
 set_location "\I2C_Slave:SCB_IRQ\" interrupt -1 -1 8
 set_location "\CapSense:ISR\" interrupt -1 -1 17

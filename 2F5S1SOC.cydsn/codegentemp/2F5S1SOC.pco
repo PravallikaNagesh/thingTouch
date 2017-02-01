@@ -1,5 +1,5 @@
 # 2F5S1SOC
-# 2017-01-28 09:54:44Z
+# 2017-02-01 13:07:34Z
 
 set_location "ClockGenBlock" m0s8clockgenblockcell -1 -1 0
 set_location "ClockBlock" m0s8clockblockcell -1 -1 0
@@ -59,3 +59,5 @@ set_location "\I2C_Slave:SCB_IRQ\" interrupt -1 -1 8
 set_location "\I2C_Slave:SCB\" m0s8scbcell -1 -1 0
 set_location "\UART:SCB\" m0s8scbcell -1 -1 3
 set_location "\LED_CONTROL2:cy_m0s8_tcpwm_1\" m0s8tcpwmcell -1 -1 0
+set_location "WdtIsr" interrupt -1 -1 7
+set_location "WDT" m0s8wdtcell -1 -1 0

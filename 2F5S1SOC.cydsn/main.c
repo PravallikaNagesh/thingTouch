@@ -28,6 +28,13 @@
 */
 #define SLIDER_POS_TO_COMPARE_SHIFT    (9u)
 
+/* WDT counter configuration */
+#define WDT_COUNT0_MATCH    (0x0FFFu)
+#define WDT_COUNT1_MATCH    (0x0008u)
+
+/* Prototype of WDT ISR */
+CY_ISR_PROTO(WdtIsrHandler);
+
 /*Defining a Flash Row ,that is to be used for caching the latest status*/
 /* Defines second ROW from the last ROW */
 #define CY_TEST_FLASH_ROW       (CY_FLASH_NUMBER_ROWS - 2u)
@@ -129,6 +136,11 @@ int main()
                 //UART_UartPutString("String cmp pass \n\r");
                 
                 /*Sendind master a ready ack*/
+                char8 temp = i2cWriteBuffer[0];
+                char8 temp2 = i2cWriteBuffer[1];
+                    UART_UartPutString(&temp);
+                    UART_UartPutString(&temp2);
+                
                 if(i2cWriteBuffer[0]==0x52 && i2cWriteBuffer[1]==0x44 )
                 {   
                     //UART_UartPutString("ready ack sent \n\r");
@@ -139,6 +151,36 @@ int main()
                     InterPin_Write(~InterPin_Read());
                     CyDelay(100);
                     InterPin_Write(~InterPin_Read());
+                    
+                }
+                if(i2cWriteBuffer[0]==0x52 && i2cWriteBuffer[1]==0x53 )
+                {   
+                    UART_UartPutString("reset\r\n");
+                   /* Setup ISR for interrupts at WDT counter 0 events. */
+    WdtIsr_StartEx(WdtIsrHandler);
+
+	/* Set WDT counter 0 to generate interrupt on match */
+	CySysWdtWriteMode(CY_SYS_WDT_COUNTER0, CY_SYS_WDT_MODE_INT);
+	CySysWdtWriteMatch(CY_SYS_WDT_COUNTER0, WDT_COUNT0_MATCH);
+	CySysWdtWriteClearOnMatch(CY_SYS_WDT_COUNTER0, 1u);
+	
+	/* Enable WDT counters 0 and 1 cascade */
+	CySysWdtWriteCascade(CY_SYS_WDT_CASCADE_01);
+    
+	/* Set WDT counter 1 to generate reset on match */
+	CySysWdtWriteMatch(CY_SYS_WDT_COUNTER1, WDT_COUNT1_MATCH);
+	CySysWdtWriteMode(CY_SYS_WDT_COUNTER1, CY_SYS_WDT_MODE_RESET);
+    CySysWdtWriteClearOnMatch(CY_SYS_WDT_COUNTER1, 1u);
+	
+	/* Enable WDT counters 0 and 1 */
+	CySysWdtEnable(CY_SYS_WDT_COUNTER0_MASK | CY_SYS_WDT_COUNTER1_MASK);
+	
+	/* Lock WDT registers and try to disable WDT counters 0 and 1 */
+	CySysWdtLock();
+	CySysWdtDisable(CY_SYS_WDT_COUNTER1_MASK);
+	CySysWdtUnlock();
+                    
+                    UART_UartPutString("reset completed\n\r");
                     
                 }
                 /*Sending data according to master request*/
@@ -830,5 +872,14 @@ void UpdateLedsFan2(uint16 curPos)
         cache[1]=curPos;
         CySysFlashWriteRow(CY_TEST_FLASH_ROW, cache);
     }
+}
+CY_ISR(WdtIsrHandler)
+{ 
+    UART_UartPutString("in WDT ISR\n\r");
+    /* Clear interrupts state */
+	CySysWdtClearInterrupt(CY_SYS_WDT_COUNTER0_INT);
+    WdtIsr_ClearPending();
+   
+   
 }
 /* [] END OF FILE */

@@ -28,6 +28,8 @@
 */
 #define SLIDER_POS_TO_COMPARE_SHIFT    (9u)
 
+
+
 /*Defining a Flash Row ,that is to be used for caching the latest status*/
 /* Defines second ROW from the last ROW */
 #define CY_TEST_FLASH_ROW       (CY_FLASH_NUMBER_ROWS - 2u)
