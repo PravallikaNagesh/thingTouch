@@ -1,6 +1,6 @@
 (DELAYFILE
  (SDFVERSION "IEEE 1497 4.0")
- (DATE "2017-01-28T10:18:52Z")
+ (DATE "2017-02-02T07:10:46Z")
  (DESIGN "1F3S1SOC")
  (VENDOR "Cypress Semiconductor")
  (PROGRAM "PSoC Creator")
@@ -14,10 +14,12 @@
    (ABSOLUTE
     (INTERCONNECT ClockBlock.hfclk \\CapSense\:ISR\\.clock (0.000:0.000:0.000))
     (INTERCONNECT ClockBlock.hfclk \\I2C_Slave\:SCB_IRQ\\.clock (0.000:0.000:0.000))
+    (INTERCONNECT ClockBlock.hfclk WdtIsr.clock (0.000:0.000:0.000))
     (INTERCONNECT \\LED_CONTROL1\:cy_m0s8_tcpwm_1\\.line_out Triac1\(0\).pin_input (5.698:5.698:5.698))
     (INTERCONNECT \\I2C_Slave\:SCB\\.interrupt \\I2C_Slave\:SCB_IRQ\\.interrupt (0.000:0.000:0.000))
     (INTERCONNECT ClockBlock.ff_div_11 \\LED_CONTROL1\:cy_m0s8_tcpwm_1\\.clock (0.000:0.000:0.000))
     (INTERCONNECT Triac1\(0\).pad_out Triac1\(0\).pad_in (0.000:0.000:0.000))
+    (INTERCONNECT WDT.wdt_int WdtIsr.interrupt (1.000:1.000:1.000))
     (INTERCONNECT \\CapSense\:CSD_FFB\\.irq \\CapSense\:ISR\\.interrupt (0.000:0.000:0.000))
     (INTERCONNECT ClockBlock.ff_div_7 \\CapSense\:CSD_FFB\\.clk2 (0.000:0.000:0.000))
     (INTERCONNECT ClockBlock.ff_div_6 \\CapSense\:CSD_FFB\\.clk1 (0.000:0.000:0.000))

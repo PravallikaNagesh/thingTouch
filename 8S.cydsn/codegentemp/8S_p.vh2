@@ -1,5 +1,5 @@
 -- Project:   8S
--- Generated: 01/28/2017 12:48:11
+-- Generated: 02/02/2017 12:58:04
 -- PSoC Creator  4.0 Update 1
 
 ENTITY \8S\ IS
@@ -70,6 +70,7 @@ ARCHITECTURE __DEFAULT__ OF \8S\ IS
     SIGNAL Triac6(0)__PA : bit;
     SIGNAL Triac7(0)__PA : bit;
     SIGNAL Triac8(0)__PA : bit;
+    SIGNAL WDT_INT_OUT : bit;
     SIGNAL \\\CapSense:Cmod(0)\\__PA\ : bit;
     SIGNAL \CapSense:Net_248\ : bit;
     SIGNAL \CapSense:Net_328\ : bit;
@@ -349,6 +350,10 @@ ARCHITECTURE __DEFAULT__ OF \8S\ IS
             sda : IN std_ulogic;
             rx_req : OUT std_ulogic;
             tx_req : OUT std_ulogic);
+    END COMPONENT;
+    COMPONENT m0s8wdtcell
+        PORT (
+            wdt_int : OUT std_ulogic);
     END COMPONENT;
     COMPONENT macrocell
         PORT (
@@ -2752,5 +2757,17 @@ BEGIN
             sclk_s => open,
             tx_req => Net_363,
             rx_req => Net_362);
+
+    WdtIsr:interrupt
+        GENERIC MAP(
+            int_type => "10",
+            is_nmi => 0)
+        PORT MAP(
+            interrupt => WDT_INT_OUT,
+            clock => ClockBlock_HFCLK);
+
+    WDT:m0s8wdtcell
+        PORT MAP(
+            wdt_int => WDT_INT_OUT);
 
 END __DEFAULT__;

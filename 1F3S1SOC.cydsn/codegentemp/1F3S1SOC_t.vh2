@@ -1,5 +1,5 @@
 -- Project:   C:\Users\poornima\Documents\GitHub\thingTouch\1F3S1SOC.cydsn\1F3S1SOC.cyprj
--- Generated: 01/28/2017 15:48:52
+-- Generated: 02/02/2017 12:40:46
 -- PSoC Creator  4.0 Update 1
 
 ENTITY \1F3S1SOC\ IS
@@ -74,6 +74,7 @@ ARCHITECTURE __DEFAULT__ OF \1F3S1SOC\ IS
     SIGNAL Triac3(0)__PA : bit;
     SIGNAL Triac4(0)__PA : bit;
     SIGNAL Triac5(0)__PA : bit;
+    SIGNAL WDT_INT_OUT : bit;
     SIGNAL \\\CapSense:Cmod(0)\\__PA\ : bit;
     SIGNAL \CapSense:Net_248\ : bit;
     SIGNAL \CapSense:Net_328\ : bit;
@@ -199,6 +200,8 @@ ARCHITECTURE __DEFAULT__ OF \1F3S1SOC\ IS
     ATTRIBUTE Location OF \I2C_Slave:SCB_IRQ\ : LABEL IS "[IntrContainer=(0)][IntrId=(8)]";
     ATTRIBUTE Location OF \I2C_Slave:SCB\ : LABEL IS "F(SCB,0)";
     ATTRIBUTE Location OF \UART:SCB\ : LABEL IS "F(SCB,3)";
+    ATTRIBUTE Location OF WdtIsr : LABEL IS "[IntrContainer=(0)][IntrId=(7)]";
+    ATTRIBUTE Location OF WDT : LABEL IS "F(WDT,0)";
     COMPONENT interrupt
         PORT (
             interrupt : IN std_ulogic;
@@ -396,6 +399,10 @@ ARCHITECTURE __DEFAULT__ OF \1F3S1SOC\ IS
             line_out : OUT std_ulogic;
             line_out_compl : OUT std_ulogic;
             interrupt : OUT std_ulogic);
+    END COMPONENT;
+    COMPONENT m0s8wdtcell
+        PORT (
+            wdt_int : OUT std_ulogic);
     END COMPONENT;
     COMPONENT macrocell
         PORT (
@@ -2651,5 +2658,17 @@ BEGIN
             sclk_s => open,
             tx_req => Net_363,
             rx_req => Net_362);
+
+    WdtIsr:interrupt
+        GENERIC MAP(
+            int_type => "10",
+            is_nmi => 0)
+        PORT MAP(
+            interrupt => WDT_INT_OUT,
+            clock => ClockBlock_HFCLK);
+
+    WDT:m0s8wdtcell
+        PORT MAP(
+            wdt_int => WDT_INT_OUT);
 
 END __DEFAULT__;

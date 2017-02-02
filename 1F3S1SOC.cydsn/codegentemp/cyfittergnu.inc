@@ -1058,6 +1058,17 @@
 .set Triac5__PS, CYREG_GPIO_PRT1_PS
 .set Triac5__SHIFT, 7
 
+/* WdtIsr */
+.set WdtIsr__INTC_CLR_EN_REG, CYREG_CM0_ICER
+.set WdtIsr__INTC_CLR_PD_REG, CYREG_CM0_ICPR
+.set WdtIsr__INTC_MASK, 0x80
+.set WdtIsr__INTC_NUMBER, 7
+.set WdtIsr__INTC_PRIOR_MASK, 0xC0000000
+.set WdtIsr__INTC_PRIOR_NUM, 3
+.set WdtIsr__INTC_PRIOR_REG, CYREG_CM0_IPR1
+.set WdtIsr__INTC_SET_EN_REG, CYREG_CM0_ISER
+.set WdtIsr__INTC_SET_PD_REG, CYREG_CM0_ISPR
+
 /* CapSense_Cmod */
 .set CapSense_Cmod__0__DR, CYREG_GPIO_PRT4_DR
 .set CapSense_Cmod__0__DR_CLR, CYREG_GPIO_PRT4_DR_CLR

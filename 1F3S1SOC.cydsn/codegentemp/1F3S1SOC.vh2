@@ -2,7 +2,7 @@
 --	Conversion of 1F3S1SOC.v to vh2:
 --
 --	Cypress Semiconductor - WARP Version 6.3 IR 41
---	Sat Jan 28 15:48:50 2017
+--	Thu Feb 02 12:40:39 2017
 --
 
 USE cypress.cypress.all;
@@ -263,6 +263,7 @@ SIGNAL tmpFB_0__Triac5_net_0 : bit;
 SIGNAL tmpIO_0__Triac5_net_0 : bit;
 TERMINAL tmpSIOVREF__Triac5_net_0 : bit;
 SIGNAL tmpINTERRUPT_0__Triac5_net_0 : bit;
+SIGNAL Net_409 : bit;
 BEGIN
 
 zero <=  ('0') ;
@@ -1912,5 +1913,12 @@ Triac5:cy_psoc3_pins_v1_10
 		out_clock_en=>tmpOE__Triac1_net_0,
 		out_reset=>zero,
 		interrupt=>tmpINTERRUPT_0__Triac5_net_0);
+GlobalSignal:cy_gsref_v1_0
+	GENERIC MAP(guid=>"1563FAA8-0748-4a1c-9785-CED309984BE3")
+	PORT MAP(sig_out=>Net_409);
+WdtIsr:cy_isr_v1_0
+	GENERIC MAP(int_type=>"10",
+		is_nmi=>'0')
+	PORT MAP(int_signal=>Net_409);
 
 END R_T_L;

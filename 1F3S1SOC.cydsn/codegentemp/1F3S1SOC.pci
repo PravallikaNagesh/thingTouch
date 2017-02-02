@@ -1,5 +1,5 @@
 # 1F3S1SOC
-# 2017-01-28 10:18:51Z
+# 2017-02-02 07:10:40Z
 
 set_location "ClockGenBlock" m0s8clockgenblockcell -1 -1 0
 set_io "Triac1(0)" iocell 1 2

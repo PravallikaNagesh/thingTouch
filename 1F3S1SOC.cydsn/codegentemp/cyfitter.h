@@ -1058,6 +1058,17 @@
 #define Triac5__PS CYREG_GPIO_PRT1_PS
 #define Triac5__SHIFT 7u
 
+/* WdtIsr */
+#define WdtIsr__INTC_CLR_EN_REG CYREG_CM0_ICER
+#define WdtIsr__INTC_CLR_PD_REG CYREG_CM0_ICPR
+#define WdtIsr__INTC_MASK 0x80u
+#define WdtIsr__INTC_NUMBER 7u
+#define WdtIsr__INTC_PRIOR_MASK 0xC0000000u
+#define WdtIsr__INTC_PRIOR_NUM 3u
+#define WdtIsr__INTC_PRIOR_REG CYREG_CM0_IPR1
+#define WdtIsr__INTC_SET_EN_REG CYREG_CM0_ISER
+#define WdtIsr__INTC_SET_PD_REG CYREG_CM0_ISPR
+
 /* CapSense_Cmod */
 #define CapSense_Cmod__0__DR CYREG_GPIO_PRT4_DR
 #define CapSense_Cmod__0__DR_CLR CYREG_GPIO_PRT4_DR_CLR

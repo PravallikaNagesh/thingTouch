@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 1
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccN2oUE9.s 			page 1
 
 
    1              		.cpu cortex-m0
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 1
   52              		.size	CapSense_sensorEnableMask, 1
   53              	CapSense_sensorEnableMask:
   54 0000 FF       		.byte	-1
-ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 2
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccN2oUE9.s 			page 2
 
 
   55              		.global	CapSense_pcTable
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 1
  109              		.comm	CapSense_compensationIDAC,8,4
  110              		.global	CapSense_widgetResolution
  111              		.data
-ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 3
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccN2oUE9.s 			page 3
 
 
  112              		.align	2
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 1
  166              		.global	CapSense_prtDRTbl
  167              		.align	2
  168              		.type	CapSense_prtDRTbl, %object
-ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 4
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccN2oUE9.s 			page 4
 
 
  169              		.size	CapSense_prtDRTbl, 32
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 1
   36:Generated_Source\PSoC4/CapSense.c ****     uint8 CapSense_lowLevelTuningDone = 0u;
   37:Generated_Source\PSoC4/CapSense.c ****     uint8 CapSense_scanSpeedTbl[((CapSense_TOTAL_SENSOR_COUNT - 1u) / 8u) + 1u];
   38:Generated_Source\PSoC4/CapSense.c **** #endif /* (CapSense_TUNING_METHOD == CapSense__TUNING_AUTO) */
-ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 5
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccN2oUE9.s 			page 5
 
 
   39:Generated_Source\PSoC4/CapSense.c **** 
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 1
   93:Generated_Source\PSoC4/CapSense.c ****     CapSense_Sns__Button2__BTN__MASK, 
   94:Generated_Source\PSoC4/CapSense.c ****     CapSense_Sns__Button3__BTN__MASK, 
   95:Generated_Source\PSoC4/CapSense.c ****     CapSense_Sns__Button4__BTN__MASK, 
-ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 6
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccN2oUE9.s 			page 6
 
 
   96:Generated_Source\PSoC4/CapSense.c ****     CapSense_Sns__Button5__BTN__MASK, 
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 1
  150:Generated_Source\PSoC4/CapSense.c **** 
  151:Generated_Source\PSoC4/CapSense.c **** reg32* const CapSense_prtCfgTbl[CapSense_CFG_REG_TBL_SIZE] = {
  152:Generated_Source\PSoC4/CapSense.c ****     ((reg32 *) CYREG_GPIO_PRT0_PC),
-ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 7
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccN2oUE9.s 			page 7
 
 
  153:Generated_Source\PSoC4/CapSense.c ****     ((reg32 *) CYREG_GPIO_PRT1_PC),
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 1
  197              		.cfi_def_cfa_register 7
  198:Generated_Source\PSoC4/CapSense.c ****     uint32 curSensor;
  199:Generated_Source\PSoC4/CapSense.c **** 
-ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 8
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccN2oUE9.s 			page 8
 
 
  200:Generated_Source\PSoC4/CapSense.c ****     #if(CapSense_IS_SHIELD_ENABLE)
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 1
  233:Generated_Source\PSoC4/CapSense.c ****     CapSense_CsdHwBlockInit();
  217              		.loc 1 233 0 is_stmt 1
  218 0022 FFF7FEFF 		bl	CapSense_CsdHwBlockInit
-ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 9
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccN2oUE9.s 			page 9
 
 
  234:Generated_Source\PSoC4/CapSense.c ****     CapSense_SetShieldDelay(CapSense_SHIELD_DELAY );
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 1
  244              		.cfi_offset 7, -8
  245              		.cfi_offset 14, -4
  246 0002 82B0     		sub	sp, sp, #8
-ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 10
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccN2oUE9.s 			page 10
 
 
  247              		.cfi_def_cfa_offset 16
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 1
  276 0030 7B68     		ldr	r3, [r7, #4]
  277 0032 F022     		mov	r2, #240
  278 0034 9343     		bic	r3, r2
-ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 11
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccN2oUE9.s 			page 11
 
 
  279 0036 7B60     		str	r3, [r7, #4]
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 1
  311              		.loc 1 309 0
  312 006a 7B68     		ldr	r3, [r7, #4]
  313 006c C022     		mov	r2, #192
-ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 12
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccN2oUE9.s 			page 12
 
 
  314 006e D200     		lsl	r2, r2, #3
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 1
  354              		.section	.text.CapSense_Enable,"ax",%progbits
  355              		.align	2
  356              		.global	CapSense_Enable
-ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 13
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccN2oUE9.s 			page 13
 
 
  357              		.code	16
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 1
  355:Generated_Source\PSoC4/CapSense.c ****     CapSense_SenseClk_SetDividerValue((uint16)CapSense_INITIAL_CLK_DIVIDER);
  380              		.loc 1 355 0
  381 0016 0020     		mov	r0, #0
-ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 14
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccN2oUE9.s 			page 14
 
 
  382 0018 0021     		mov	r1, #0
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 1
  418              		.size	CapSense_Enable, .-CapSense_Enable
  419              		.section	.text.CapSense_Start,"ax",%progbits
  420              		.align	2
-ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 15
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccN2oUE9.s 			page 15
 
 
  421              		.global	CapSense_Start
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 1
  414:Generated_Source\PSoC4/CapSense.c ****     #endif /* ((0u != CapSense_AUTOCALIBRATION_ENABLE) && (CapSense_TUNING_METHOD != CapSense__TUNI
  415:Generated_Source\PSoC4/CapSense.c **** 
  416:Generated_Source\PSoC4/CapSense.c ****     if (CapSense_initVar == 0u)
-ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 16
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccN2oUE9.s 			page 16
 
 
  435              		.loc 1 416 0
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 1
  451:Generated_Source\PSoC4/CapSense.c ****             #if(CapSense_IDAC_CNT > 1u)
  452:Generated_Source\PSoC4/CapSense.c ****                 for(curSensor = 0u; curSensor < CapSense_TOTAL_SCANSLOT_COUNT; curSensor++)
  453:Generated_Source\PSoC4/CapSense.c ****                 {
-ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 17
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccN2oUE9.s 			page 17
 
 
  454:Generated_Source\PSoC4/CapSense.c ****                     CapSense_compensationIDAC[curSensor] = CapSense_modulationIDAC[curSensor] / 2u;
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 1
  479:Generated_Source\PSoC4/CapSense.c **** *  Stops the sensor scanning, disables component interrupts, and resets all the
  480:Generated_Source\PSoC4/CapSense.c **** *  sensors to an inactive state. Disables the Active mode power template bits for
  481:Generated_Source\PSoC4/CapSense.c **** *  the subcomponents used within CapSense.
-ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 18
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccN2oUE9.s 			page 18
 
 
  482:Generated_Source\PSoC4/CapSense.c **** *
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 1
  510 0022 FFF7FEFF 		bl	CapSense_SenseClk_Stop
  510:Generated_Source\PSoC4/CapSense.c ****     CapSense_SampleClk_Stop();
  511              		.loc 1 510 0
-ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 19
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccN2oUE9.s 			page 19
 
 
  512 0026 FFF7FEFF 		bl	CapSense_SampleClk_Stop
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 1
  540              		.cfi_def_cfa_offset 24
  541 0004 00AF     		add	r7, sp, #0
  542              		.cfi_def_cfa_register 7
-ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 20
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccN2oUE9.s 			page 20
 
 
  543 0006 021C     		mov	r2, r0
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 1
  580 003e BD46     		mov	sp, r7
  581 0040 04B0     		add	sp, sp, #16
  582              		@ sp needed
-ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 21
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccN2oUE9.s 			page 21
 
 
  583 0042 80BD     		pop	{r7, pc}
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 1
  606              		.cfi_def_cfa_offset 16
  607 0004 00AF     		add	r7, sp, #0
  608              		.cfi_def_cfa_register 7
-ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 22
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccN2oUE9.s 			page 22
 
 
  609 0006 7860     		str	r0, [r7, #4]
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 1
  600:Generated_Source\PSoC4/CapSense.c **** * Summary:
  601:Generated_Source\PSoC4/CapSense.c **** *  Sets the scan settings and starts scanning a widget.
  602:Generated_Source\PSoC4/CapSense.c **** *
-ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 23
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccN2oUE9.s 			page 23
 
 
  603:Generated_Source\PSoC4/CapSense.c **** * Parameters:
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 1
  633:Generated_Source\PSoC4/CapSense.c **** 
  634:Generated_Source\PSoC4/CapSense.c ****     /* Check if generic Sensor */
  635:Generated_Source\PSoC4/CapSense.c ****     if(sensorsPerWidget == 0u)
-ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 24
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccN2oUE9.s 			page 24
 
 
  672              		.loc 1 635 0
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 1
  712 005a 002B     		cmp	r3, #0
  713 005c F0D0     		beq	.L30
  648:Generated_Source\PSoC4/CapSense.c ****     }
-ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 25
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccN2oUE9.s 			page 25
 
 
  649:Generated_Source\PSoC4/CapSense.c **** 
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 1
  753              	.L31:
  651:Generated_Source\PSoC4/CapSense.c ****     {
  754              		.loc 1 651 0 is_stmt 0 discriminator 1
-ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 26
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccN2oUE9.s 			page 26
 
 
  755 009e 3B69     		ldr	r3, [r7, #16]
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 1
  797              		.type	CapSense_ScanEnabledWidgets, %function
  798              	CapSense_ScanEnabledWidgets:
  799              	.LFB43:
-ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 27
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccN2oUE9.s 			page 27
 
 
  675:Generated_Source\PSoC4/CapSense.c **** #endif /* (0u != CapSense_CSHL_API_GENERATE) */
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 1
  713:Generated_Source\PSoC4/CapSense.c ****     /* Find next sensor */
  714:Generated_Source\PSoC4/CapSense.c ****     CapSense_sensorIndex = (uint8)CapSense_FindNextSensor(CapSense_sensorIndex);
  816              		.loc 1 714 0
-ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 28
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccN2oUE9.s 			page 28
 
 
  817 0010 104B     		ldr	r3, .L40+4
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 1
  863              		.code	16
  864              		.thumb_func
  865              		.type	CapSense_IsBusy, %function
-ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 29
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccN2oUE9.s 			page 29
 
 
  866              	CapSense_IsBusy:
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 1
  891 0018 00000000 		.word	CapSense_csdStatusVar
  892              		.cfi_endproc
  893              	.LFE44:
-ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 30
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccN2oUE9.s 			page 30
 
 
  894              		.size	CapSense_IsBusy, .-CapSense_IsBusy
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 1
  781:Generated_Source\PSoC4/CapSense.c **** }
  919              		.loc 1 781 0
  920 0010 181C     		mov	r0, r3
-ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 31
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccN2oUE9.s 			page 31
 
 
  921 0012 BD46     		mov	sp, r7
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 1
  950 0006 7860     		str	r0, [r7, #4]
  951 0008 0A1C     		mov	r2, r1
  952 000a BB1C     		add	r3, r7, #2
-ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 32
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccN2oUE9.s 			page 32
 
 
  953 000c 1A80     		strh	r2, [r3]
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 1
  833:Generated_Source\PSoC4/CapSense.c ****     *              CapSense_RESOLUTION_14_BITS
  834:Generated_Source\PSoC4/CapSense.c ****     *              CapSense_RESOLUTION_15_BITS
  835:Generated_Source\PSoC4/CapSense.c ****     *              CapSense_RESOLUTION_16_BITS
-ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 33
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccN2oUE9.s 			page 33
 
 
  836:Generated_Source\PSoC4/CapSense.c ****     *
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 1
  852:Generated_Source\PSoC4/CapSense.c **** 
  853:Generated_Source\PSoC4/CapSense.c **** 
  854:Generated_Source\PSoC4/CapSense.c **** /*******************************************************************************
-ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 34
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccN2oUE9.s 			page 34
 
 
  855:Generated_Source\PSoC4/CapSense.c **** * Function Name: CapSense_GetScanResolution
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 1
  1036 0010 181C     		mov	r0, r3
  1037 0012 BD46     		mov	sp, r7
  1038 0014 02B0     		add	sp, sp, #8
-ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 35
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccN2oUE9.s 			page 35
 
 
  1039              		@ sp needed
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 1
  919:Generated_Source\PSoC4/CapSense.c ****     for (snsIndex = 0u; snsIndex < CapSense_TOTAL_SENSOR_COUNT; snsIndex++)
  1066              		.loc 1 919 0
  1067 0006 0023     		mov	r3, #0
-ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 36
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccN2oUE9.s 			page 36
 
 
  1068 0008 7B60     		str	r3, [r7, #4]
@@ -2158,7 +2158,7 @@ ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 1
  940:Generated_Source\PSoC4/CapSense.c ****     *  None
  941:Generated_Source\PSoC4/CapSense.c ****     *
  942:Generated_Source\PSoC4/CapSense.c ****     * Global Constants:
-ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 37
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccN2oUE9.s 			page 37
 
 
  943:Generated_Source\PSoC4/CapSense.c ****     *  CapSense_portTable[]  - used to store the port number that pin
@@ -2218,7 +2218,7 @@ ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 1
  997:Generated_Source\PSoC4/CapSense.c ****     *  None
  998:Generated_Source\PSoC4/CapSense.c ****     *
  999:Generated_Source\PSoC4/CapSense.c ****     * Global Variables:
-ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 38
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccN2oUE9.s 			page 38
 
 
 1000:Generated_Source\PSoC4/CapSense.c ****     *  CapSense_portTable[]  - used to store the port number that pin
@@ -2278,7 +2278,7 @@ ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 1
 1054:Generated_Source\PSoC4/CapSense.c **** *  sensor:  Sensor number.
 1055:Generated_Source\PSoC4/CapSense.c **** *
 1056:Generated_Source\PSoC4/CapSense.c **** * Return:
-ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 39
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccN2oUE9.s 			page 39
 
 
 1057:Generated_Source\PSoC4/CapSense.c **** *  None
@@ -2338,7 +2338,7 @@ ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 1
  1128 0024 5B18     		add	r3, r3, r1
  1129 0026 1370     		strb	r3, [r2]
 1083:Generated_Source\PSoC4/CapSense.c ****     pinHSIOMShift = CapSense_pinShiftTbl[sensor] * CapSense_HSIOM_PIN_CFG_SIZE;
-ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 40
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccN2oUE9.s 			page 40
 
 
  1130              		.loc 1 1083 0
@@ -2398,7 +2398,7 @@ ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 1
  1176 007a 9200     		lsl	r2, r2, #2
  1177 007c D358     		ldr	r3, [r2, r3]
  1178 007e 114A     		ldr	r2, .L64+12
-ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 41
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccN2oUE9.s 			page 41
 
 
  1179 0080 7969     		ldr	r1, [r7, #20]
@@ -2458,7 +2458,7 @@ ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 1
 1097:Generated_Source\PSoC4/CapSense.c **** 
 1098:Generated_Source\PSoC4/CapSense.c **** /*******************************************************************************
 1099:Generated_Source\PSoC4/CapSense.c **** * Function Name: CapSense_DisableSensor
-ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 42
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccN2oUE9.s 			page 42
 
 
 1100:Generated_Source\PSoC4/CapSense.c **** ********************************************************************************
@@ -2518,7 +2518,7 @@ ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 1
  1249 0016 D318     		add	r3, r2, r3
  1250 0018 1A78     		ldrb	r2, [r3]
  1251 001a 1323     		mov	r3, #19
-ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 43
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccN2oUE9.s 			page 43
 
 
  1252 001c FB18     		add	r3, r7, r3
@@ -2578,7 +2578,7 @@ ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 1
 1144:Generated_Source\PSoC4/CapSense.c ****         /* Connected to Ground if shield is disabled */
 1145:Generated_Source\PSoC4/CapSense.c ****         if(sensorState == (uint32)CapSense__SHIELD)
  1295              		.loc 1 1145 0
-ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 44
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccN2oUE9.s 			page 44
 
 
  1296 006a BB69     		ldr	r3, [r7, #24]
@@ -2638,7 +2638,7 @@ ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 1
 1161:Generated_Source\PSoC4/CapSense.c ****         newRegisterValue |=  (uint32)(inactiveConnect << pinModeShift);
  1335              		.loc 1 1161 0
  1336 00aa 1223     		mov	r3, #18
-ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 45
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccN2oUE9.s 			page 45
 
 
  1337 00ac FB18     		add	r3, r7, r3
@@ -2698,7 +2698,7 @@ ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 1
 1175:Generated_Source\PSoC4/CapSense.c **** }
  1378              		.loc 1 1175 0
  1379 00fa BD46     		mov	sp, r7
-ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 46
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccN2oUE9.s 			page 46
 
 
  1380 00fc 09B0     		add	sp, sp, #36
@@ -2758,7 +2758,7 @@ ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 1
  1405 0000 80B5     		push	{r7, lr}
  1406              		.cfi_def_cfa_offset 8
  1407              		.cfi_offset 7, -8
-ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 47
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccN2oUE9.s 			page 47
 
 
  1408              		.cfi_offset 14, -4
@@ -2818,7 +2818,7 @@ ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 1
  1430 0020 FB18     		add	r3, r7, r3
  1431 0022 1B78     		ldrb	r3, [r3]
  1432 0024 104A     		ldr	r2, .L74+4
-ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 48
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccN2oUE9.s 			page 48
 
 
  1433 0026 D35C     		ldrb	r3, [r2, r3]
@@ -2878,7 +2878,7 @@ ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 1
  1470              		.align	2
  1471              	.L74:
  1472 0064 00000000 		.word	CapSense_portTable
-ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 49
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccN2oUE9.s 			page 49
 
 
  1473 0068 00000000 		.word	CapSense_pinShiftTbl
@@ -2938,7 +2938,7 @@ ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 1
 1281:Generated_Source\PSoC4/CapSense.c **** 
 1282:Generated_Source\PSoC4/CapSense.c ****     newRegisterValue = CapSense_CMOD_CONNECTION_REG;
  1498              		.loc 1 1282 0
-ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 50
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccN2oUE9.s 			page 50
 
 
  1499 000c 084B     		ldr	r3, .L77
@@ -2998,7 +2998,7 @@ ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 1
  1535              		.type	CapSense_SetPinDriveMode, %function
  1536              	CapSense_SetPinDriveMode:
  1537              	.LFB54:
-ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 51
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccN2oUE9.s 			page 51
 
 
 1301:Generated_Source\PSoC4/CapSense.c **** 
@@ -3058,7 +3058,7 @@ ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 1
  1557              		.loc 1 1335 0
  1558 0016 0F4B     		ldr	r3, .L80
  1559 0018 7A68     		ldr	r2, [r7, #4]
-ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 52
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccN2oUE9.s 			page 52
 
 
  1560 001a 9200     		lsl	r2, r2, #2
@@ -3118,7 +3118,7 @@ ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 1
 1342:Generated_Source\PSoC4/CapSense.c **** /*******************************************************************************
 1343:Generated_Source\PSoC4/CapSense.c **** * Function Name: CapSense_PreScan
 1344:Generated_Source\PSoC4/CapSense.c **** ********************************************************************************
-ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 53
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccN2oUE9.s 			page 53
 
 
 1345:Generated_Source\PSoC4/CapSense.c **** *
@@ -3178,7 +3178,7 @@ ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 1
  1623 000c 4249     		ldr	r1, .L84
  1624 000e 7A68     		ldr	r2, [r7, #4]
  1625 0010 8A18     		add	r2, r1, r2
-ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 54
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccN2oUE9.s 			page 54
 
 
  1626 0012 1278     		ldrb	r2, [r2]
@@ -3238,7 +3238,7 @@ ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 1
  1656 004a 9BB2     		uxth	r3, r3
  1657 004c 013B     		sub	r3, r3, #1
  1658 004e 9BB2     		uxth	r3, r3
-ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 55
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccN2oUE9.s 			page 55
 
 
  1659 0050 181C     		mov	r0, r3
@@ -3298,7 +3298,7 @@ ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 1
  1680              		.loc 1 1440 0
  1681 0078 FB68     		ldr	r3, [r7, #12]
  1682 007a 4022     		mov	r2, #64
-ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 56
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccN2oUE9.s 			page 56
 
 
  1683 007c 1343     		orr	r3, r2
@@ -3358,7 +3358,7 @@ ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 1
 1478:Generated_Source\PSoC4/CapSense.c **** 
 1479:Generated_Source\PSoC4/CapSense.c **** #if (CapSense_IDAC_CNT == 1u)
 1480:Generated_Source\PSoC4/CapSense.c ****     newRegValue &= ~(CapSense_CSD_IDAC1_DATA_MASK);
-ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 57
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccN2oUE9.s 			page 57
 
 
 1481:Generated_Source\PSoC4/CapSense.c ****     newRegValue |= CapSense_modulationIDAC[sensor];
@@ -3418,7 +3418,7 @@ ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 1
  1729 00c6 FB60     		str	r3, [r7, #12]
 1505:Generated_Source\PSoC4/CapSense.c ****     newRegValue &= ~(CapSense_PRECHARGE_CONFIG_MASK);
  1730              		.loc 1 1505 0
-ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 58
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccN2oUE9.s 			page 58
 
 
  1731 00c8 FB68     		ldr	r3, [r7, #12]
@@ -3478,7 +3478,7 @@ ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 1
 1531:Generated_Source\PSoC4/CapSense.c ****     CapSense_PreScan_Debug_Callback();
 1532:Generated_Source\PSoC4/CapSense.c **** #endif /* CapSense_PRE_SCAN_DEBUG_CALLBACK */
 1533:Generated_Source\PSoC4/CapSense.c **** 
-ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 59
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccN2oUE9.s 			page 59
 
 
 1534:Generated_Source\PSoC4/CapSense.c ****     CapSense_CSD_CNT_REG = counterResolution;
@@ -3538,7 +3538,7 @@ ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 1
 1546:Generated_Source\PSoC4/CapSense.c **** *  disconnects the IDAC(Sink mode), and applies Vref on AMUX.
 1547:Generated_Source\PSoC4/CapSense.c **** *
 1548:Generated_Source\PSoC4/CapSense.c **** * Parameters:
-ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 60
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccN2oUE9.s 			page 60
 
 
 1549:Generated_Source\PSoC4/CapSense.c **** *  sensor:  Sensor number.
@@ -3598,7 +3598,7 @@ ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 1
 1584:Generated_Source\PSoC4/CapSense.c ****     widget = CapSense_widgetNumber[sensor];
 1585:Generated_Source\PSoC4/CapSense.c ****     if(CapSense_widgetResolution[widget] < CapSense_RESOLUTION_16_BITS)
 1586:Generated_Source\PSoC4/CapSense.c ****     {
-ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 61
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccN2oUE9.s 			page 61
 
 
 1587:Generated_Source\PSoC4/CapSense.c ****         oversamplingFactor = CapSense_GetBitValue(CapSense_scanSpeedTbl, sensor);
@@ -3658,7 +3658,7 @@ ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 1
 1619:Generated_Source\PSoC4/CapSense.c ****     CapSense_CSD_CFG_REG = newRegValue;
  1843              		.loc 1 1619 0
  1844 003c 094B     		ldr	r3, .L87+8
-ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 62
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccN2oUE9.s 			page 62
 
 
  1845 003e FA68     		ldr	r2, [r7, #12]
@@ -3718,7 +3718,7 @@ ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 1
 1637:Generated_Source\PSoC4/CapSense.c **** *  This API enables or disables the shield electrode on a specified port pin.
 1638:Generated_Source\PSoC4/CapSense.c **** *
 1639:Generated_Source\PSoC4/CapSense.c **** * Parameters:
-ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 63
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccN2oUE9.s 			page 63
 
 
 1640:Generated_Source\PSoC4/CapSense.c **** *  portNumber: contains the shield electrode port number (0, 1, 2).
@@ -3778,7 +3778,7 @@ ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 1
  1916 0032 3A68     		ldr	r2, [r7]
  1917 0034 9200     		lsl	r2, r2, #2
  1918 0036 D358     		ldr	r3, [r2, r3]
-ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 64
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccN2oUE9.s 			page 64
 
 
  1919 0038 1B68     		ldr	r3, [r3]
@@ -3838,7 +3838,7 @@ ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 1
 1665:Generated_Source\PSoC4/CapSense.c **** 
 1666:Generated_Source\PSoC4/CapSense.c **** /*******************************************************************************
 1667:Generated_Source\PSoC4/CapSense.c **** * Function Name: CapSense_SetShieldDelay
-ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 65
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccN2oUE9.s 			page 65
 
 
 1668:Generated_Source\PSoC4/CapSense.c **** ********************************************************************************
@@ -3898,7 +3898,7 @@ ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 1
  1992 001c 1343     		orr	r3, r2
  1993 001e FB60     		str	r3, [r7, #12]
 1698:Generated_Source\PSoC4/CapSense.c ****     CapSense_CSD_CFG_REG = newRegValue;
-ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 66
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccN2oUE9.s 			page 66
 
 
  1994              		.loc 1 1698 0
@@ -3958,7 +3958,7 @@ ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 1
  2020 0000 80B5     		push	{r7, lr}
  2021              		.cfi_def_cfa_offset 8
  2022              		.cfi_offset 7, -8
-ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 67
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccN2oUE9.s 			page 67
 
 
  2023              		.cfi_offset 14, -4
@@ -4018,7 +4018,7 @@ ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 1
 1739:Generated_Source\PSoC4/CapSense.c **** * Parameters:
 1740:Generated_Source\PSoC4/CapSense.c **** *  table[] - array with bit masks.
 1741:Generated_Source\PSoC4/CapSense.c **** *  position - position of bit in the table[] array.
-ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 68
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccN2oUE9.s 			page 68
 
 
 1742:Generated_Source\PSoC4/CapSense.c **** *
@@ -4078,7 +4078,7 @@ ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 1
  2090              		.loc 1 1770 0
  2091 0020 7A68     		ldr	r2, [r7, #4]
  2092 0022 FB68     		ldr	r3, [r7, #12]
-ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 69
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccN2oUE9.s 			page 69
 
 
  2093 0024 D318     		add	r3, r2, r3
@@ -4138,7 +4138,7 @@ ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 1
 1792:Generated_Source\PSoC4/CapSense.c **** * Side Effects:
 1793:Generated_Source\PSoC4/CapSense.c **** *  None
 1794:Generated_Source\PSoC4/CapSense.c **** *
-ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 70
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccN2oUE9.s 			page 70
 
 
 1795:Generated_Source\PSoC4/CapSense.c **** *******************************************************************************/
@@ -4198,7 +4198,7 @@ ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 1
  2159 002c D318     		add	r3, r2, r3
  2160 002e F968     		ldr	r1, [r7, #12]
  2161 0030 7A69     		ldr	r2, [r7, #20]
-ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 71
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccN2oUE9.s 			page 71
 
 
  2162 0032 8A18     		add	r2, r1, r2
@@ -4258,7 +4258,7 @@ ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 1
 1827:Generated_Source\PSoC4/CapSense.c **** ********************************************************************************
 1828:Generated_Source\PSoC4/CapSense.c **** *
 1829:Generated_Source\PSoC4/CapSense.c **** * Summary:
-ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 72
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccN2oUE9.s 			page 72
 
 
 1830:Generated_Source\PSoC4/CapSense.c **** *  This API returns a value of the sense clock divider for the  sensor.
@@ -4318,7 +4318,7 @@ ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 1
  2235              		.align	2
  2236              		.global	CapSense_SetSenseClkDivider
  2237              		.code	16
-ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 73
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccN2oUE9.s 			page 73
 
 
  2238              		.thumb_func
@@ -4378,7 +4378,7 @@ ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 1
 1884:Generated_Source\PSoC4/CapSense.c ****     }
  2262              		.loc 1 1884 0
  2263 0018 BD46     		mov	sp, r7
-ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 74
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccN2oUE9.s 			page 74
 
 
  2264 001a 02B0     		add	sp, sp, #8
@@ -4438,7 +4438,7 @@ ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 1
  2292 0006 7860     		str	r0, [r7, #4]
 1911:Generated_Source\PSoC4/CapSense.c ****     #if(0u != CapSense_MULTIPLE_FREQUENCY_SET)
 1912:Generated_Source\PSoC4/CapSense.c ****         return((uint32)CapSense_sampleClkDividerVal[sensor]);
-ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 75
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccN2oUE9.s 			page 75
 
 
  2293              		.loc 1 1912 0
@@ -4498,7 +4498,7 @@ ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 1
 1941:Generated_Source\PSoC4/CapSense.c ****     {
  2319              		.loc 1 1941 0
  2320              		.cfi_startproc
-ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 76
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccN2oUE9.s 			page 76
 
 
  2321 0000 80B5     		push	{r7, lr}
@@ -4558,7 +4558,7 @@ ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 1
 1958:Generated_Source\PSoC4/CapSense.c **** *  sensor: sensor index. The index value can be
 1959:Generated_Source\PSoC4/CapSense.c **** *  from 0 to (CapSense_TOTAL_SENSOR_COUNT-1).
 1960:Generated_Source\PSoC4/CapSense.c **** *
-ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 77
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccN2oUE9.s 			page 77
 
 
 1961:Generated_Source\PSoC4/CapSense.c **** * Return:
@@ -4618,7 +4618,7 @@ ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 1
 1978:Generated_Source\PSoC4/CapSense.c ****     * Function Name: CapSense_SetModulationIDAC
 1979:Generated_Source\PSoC4/CapSense.c ****     ********************************************************************************
 1980:Generated_Source\PSoC4/CapSense.c ****     *
-ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 78
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccN2oUE9.s 			page 78
 
 
 1981:Generated_Source\PSoC4/CapSense.c ****     * Summary:
@@ -4678,7 +4678,7 @@ ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 1
  2429              		.align	2
  2430              		.global	CapSense_GetCompensationIDAC
  2431              		.code	16
-ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 79
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccN2oUE9.s 			page 79
 
 
  2432              		.thumb_func
@@ -4738,7 +4738,7 @@ ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 1
  2457 0016 80BD     		pop	{r7, pc}
  2458              	.L132:
  2459              		.align	2
-ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 80
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccN2oUE9.s 			page 80
 
 
  2460              	.L131:
@@ -4798,7 +4798,7 @@ ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 1
  2486 000a 3B68     		ldr	r3, [r7]
  2487 000c D9B2     		uxtb	r1, r3
  2488 000e 044A     		ldr	r2, .L134
-ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 81
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccN2oUE9.s 			page 81
 
 
  2489 0010 7B68     		ldr	r3, [r7, #4]
@@ -4858,7 +4858,7 @@ ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 1
  2515 0000 80B5     		push	{r7, lr}
  2516              		.cfi_def_cfa_offset 8
  2517              		.cfi_offset 7, -8
-ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 82
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccN2oUE9.s 			page 82
 
 
  2518              		.cfi_offset 14, -4
@@ -4918,7 +4918,7 @@ ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 1
 2104:Generated_Source\PSoC4/CapSense.c ****     *
 2105:Generated_Source\PSoC4/CapSense.c ****     * Return:
 2106:Generated_Source\PSoC4/CapSense.c ****     *  None.
-ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 83
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccN2oUE9.s 			page 83
 
 
 2107:Generated_Source\PSoC4/CapSense.c ****     *
@@ -4978,7 +4978,7 @@ ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 1
 2129:Generated_Source\PSoC4/CapSense.c ****         }
 2130:Generated_Source\PSoC4/CapSense.c ****     }
  2587              		.loc 1 2130 0
-ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 84
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccN2oUE9.s 			page 84
 
 
  2588 0028 BD46     		mov	sp, r7
@@ -5038,7 +5038,7 @@ ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 1
  2616              		.cfi_def_cfa_offset 24
  2617 0004 00AF     		add	r7, sp, #0
  2618              		.cfi_def_cfa_register 7
-ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 85
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccN2oUE9.s 			page 85
 
 
  2619 0006 7860     		str	r0, [r7, #4]
@@ -5098,7 +5098,7 @@ ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 1
 2170:Generated_Source\PSoC4/CapSense.c **** 
 2171:Generated_Source\PSoC4/CapSense.c ****         return((uint16)(avgVal / CapSense_AVG_SAMPLES_NUM));
  2658              		.loc 1 2171 0 is_stmt 1
-ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 86
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccN2oUE9.s 			page 86
 
 
  2659 0044 BB68     		ldr	r3, [r7, #8]
@@ -5158,7 +5158,7 @@ ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 1
 2207:Generated_Source\PSoC4/CapSense.c **** 
 2208:Generated_Source\PSoC4/CapSense.c ****         do
 2209:Generated_Source\PSoC4/CapSense.c ****         {
-ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 87
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccN2oUE9.s 			page 87
 
 
 2210:Generated_Source\PSoC4/CapSense.c ****             /* Set bit for null Channel */
@@ -5218,7 +5218,7 @@ ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 1
  2679              		.cfi_startproc
  2680 0000 80B5     		push	{r7, lr}
  2681              		.cfi_def_cfa_offset 8
-ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 88
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccN2oUE9.s 			page 88
 
 
  2682              		.cfi_offset 7, -8
@@ -5278,7 +5278,7 @@ ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 1
  2708              	.LFE73:
  2709              		.size	CapSense_SetUnscannedSensorState, .-CapSense_SetUnscannedSensorState
  2710              		.bss
-ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 89
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccN2oUE9.s 			page 89
 
 
  2711              	CapSense_initVar.5289:
@@ -5338,7 +5338,7 @@ ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 1
  2765 005f 05       		.byte	0x5
  2766 0060 696E7400 		.ascii	"int\000"
  2767 0064 02       		.uleb128 0x2
-ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 90
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccN2oUE9.s 			page 90
 
 
  2768 0065 04       		.byte	0x4
@@ -5398,7 +5398,7 @@ ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 1
  2822 00d9 07       		.uleb128 0x7
  2823 00da 6B000000 		.4byte	0x6b
  2824 00de 08       		.uleb128 0x8
-ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 91
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccN2oUE9.s 			page 91
 
 
  2825 00df 00000000 		.4byte	.LASF18
@@ -5458,7 +5458,7 @@ ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 1
  2879 014f 4A040000 		.4byte	.LASF23
  2880 0153 01       		.byte	0x1
  2881 0154 9501     		.2byte	0x195
-ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 92
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccN2oUE9.s 			page 92
 
 
  2882 0156 00000000 		.4byte	.LFB38
@@ -5518,7 +5518,7 @@ ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 1
  2936 01ce 34000000 		.4byte	.LFE41-.LFB41
  2937 01d2 01       		.uleb128 0x1
  2938 01d3 9C       		.byte	0x9c
-ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 93
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccN2oUE9.s 			page 93
 
 
  2939 01d4 E8010000 		.4byte	0x1e8
@@ -5578,7 +5578,7 @@ ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 1
  2993 0240 01       		.byte	0x1
  2994 0241 C302     		.2byte	0x2c3
  2995 0243 00000000 		.4byte	.LFB43
-ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 94
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccN2oUE9.s 			page 94
 
 
  2996 0247 58000000 		.4byte	.LFE43-.LFB43
@@ -5638,7 +5638,7 @@ ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 1
  3050 02bf 91       		.byte	0x91
  3051 02c0 72       		.sleb128 -14
  3052 02c1 00       		.byte	0
-ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 95
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccN2oUE9.s 			page 95
 
 
  3053 02c2 11       		.uleb128 0x11
@@ -5698,7 +5698,7 @@ ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 1
  3107 0337 0B       		.uleb128 0xb
  3108 0338 0E030000 		.4byte	.LASF27
  3109 033c 01       		.byte	0x1
-ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 96
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccN2oUE9.s 			page 96
 
 
  3110 033d 9503     		.2byte	0x395
@@ -5758,7 +5758,7 @@ ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 1
  3164 03a7 64       		.sleb128 -28
  3165 03a8 0B       		.uleb128 0xb
  3166 03a9 8C060000 		.4byte	.LASF48
-ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 97
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccN2oUE9.s 			page 97
 
 
  3167 03ad 01       		.byte	0x1
@@ -5818,7 +5818,7 @@ ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 1
  3221 0417 91       		.byte	0x91
  3222 0418 63       		.sleb128 -29
  3223 0419 0B       		.uleb128 0xb
-ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 98
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccN2oUE9.s 			page 98
 
 
  3224 041a 66040000 		.4byte	.LASF44
@@ -5878,7 +5878,7 @@ ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 1
  3278 0487 02       		.uleb128 0x2
  3279 0488 91       		.byte	0x91
  3280 0489 70       		.sleb128 -16
-ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 99
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccN2oUE9.s 			page 99
 
 
  3281 048a 0B       		.uleb128 0xb
@@ -5938,7 +5938,7 @@ ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 1
  3335 04f9 01       		.byte	0x1
  3336 04fa 3005     		.2byte	0x530
  3337 04fc 83000000 		.4byte	0x83
-ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 100
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccN2oUE9.s 			page 100
 
 
  3338 0500 02       		.uleb128 0x2
@@ -5998,7 +5998,7 @@ ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 1
  3392 0566 73040000 		.4byte	.LASF21
  3393 056a 01       		.byte	0x1
  3394 056b 5805     		.2byte	0x558
-ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 101
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccN2oUE9.s 			page 101
 
 
  3395 056d 83000000 		.4byte	0x83
@@ -6058,7 +6058,7 @@ ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 1
  3449 05dc 91       		.byte	0x91
  3450 05dd 6C       		.sleb128 -20
  3451 05de 0E       		.uleb128 0xe
-ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 102
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccN2oUE9.s 			page 102
 
 
  3452 05df 5E030000 		.4byte	.LASF59
@@ -6118,7 +6118,7 @@ ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 1
  3506 064e D906     		.2byte	0x6d9
  3507 0650 83000000 		.4byte	0x83
  3508 0654 00000000 		.4byte	.LFB60
-ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 103
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccN2oUE9.s 			page 103
 
 
  3509 0658 44000000 		.4byte	.LFE60-.LFB60
@@ -6178,7 +6178,7 @@ ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 1
  3563 06c4 0E       		.uleb128 0xe
  3564 06c5 24030000 		.4byte	.LASF70
  3565 06c9 01       		.byte	0x1
-ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 104
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccN2oUE9.s 			page 104
 
 
  3566 06ca 0407     		.2byte	0x704
@@ -6238,7 +6238,7 @@ ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 1
  3620 0737 24000000 		.4byte	.LFE63-.LFB63
  3621 073b 01       		.uleb128 0x1
  3622 073c 9C       		.byte	0x9c
-ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 105
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccN2oUE9.s 			page 105
 
 
  3623 073d 60070000 		.4byte	0x760
@@ -6298,7 +6298,7 @@ ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 1
  3677 07af 0E       		.uleb128 0xe
  3678 07b0 99040000 		.4byte	.LASF79
  3679 07b4 01       		.byte	0x1
-ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 106
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccN2oUE9.s 			page 106
 
 
  3680 07b5 9407     		.2byte	0x794
@@ -6358,7 +6358,7 @@ ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 1
  3734 0824 EB07     		.2byte	0x7eb
  3735 0826 83000000 		.4byte	0x83
  3736 082a 00000000 		.4byte	.LFB68
-ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 107
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccN2oUE9.s 			page 107
 
 
  3737 082e 1C000000 		.4byte	.LFE68-.LFB68
@@ -6418,7 +6418,7 @@ ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 1
  3791 08a3 01       		.uleb128 0x1
  3792 08a4 9C       		.byte	0x9c
  3793 08a5 B9080000 		.4byte	0x8b9
-ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 108
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccN2oUE9.s 			page 108
 
 
  3794 08a9 0E       		.uleb128 0xe
@@ -6478,7 +6478,7 @@ ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 1
  3848 0918 0D090000 		.4byte	.LASF28
  3849 091c 01       		.byte	0x1
  3850 091d D508     		.2byte	0x8d5
-ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 109
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccN2oUE9.s 			page 109
 
 
  3851 091f 83000000 		.4byte	0x83
@@ -6538,7 +6538,7 @@ ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 1
  3905 098f 01       		.byte	0x1
  3906 0990 2E       		.byte	0x2e
  3907 0991 B0000000 		.4byte	0xb0
-ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 110
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccN2oUE9.s 			page 110
 
 
  3908 0995 05       		.uleb128 0x5
@@ -6598,7 +6598,7 @@ ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 1
  3962 0a0a 05       		.uleb128 0x5
  3963 0a0b 03       		.byte	0x3
  3964 0a0c 00000000 		.4byte	CapSense_modulationIDAC
-ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 111
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccN2oUE9.s 			page 111
 
 
  3965 0a10 12       		.uleb128 0x12
@@ -6658,7 +6658,7 @@ ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 1
  4019 0a88 07       		.byte	0x7
  4020 0a89 00       		.byte	0
  4021 0a8a 06       		.uleb128 0x6
-ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 112
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccN2oUE9.s 			page 112
 
 
  4022 0a8b 04       		.byte	0x4
@@ -6718,7 +6718,7 @@ ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 1
  4076 0b03 01       		.byte	0x1
  4077 0b04 5A       		.byte	0x5a
  4078 0b05 0F0B0000 		.4byte	0xb0f
-ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 113
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccN2oUE9.s 			page 113
 
 
  4079 0b09 05       		.uleb128 0x5
@@ -6778,7 +6778,7 @@ ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 1
  4133 000e 01       		.uleb128 0x1
  4134 000f 10       		.uleb128 0x10
  4135 0010 17       		.uleb128 0x17
-ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 114
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccN2oUE9.s 			page 114
 
 
  4136 0011 00       		.byte	0
@@ -6838,7 +6838,7 @@ ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 1
  4190 0047 26       		.uleb128 0x26
  4191 0048 00       		.byte	0
  4192 0049 49       		.uleb128 0x49
-ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 115
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccN2oUE9.s 			page 115
 
 
  4193 004a 13       		.uleb128 0x13
@@ -6898,7 +6898,7 @@ ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 1
  4247 0081 27       		.uleb128 0x27
  4248 0082 19       		.uleb128 0x19
  4249 0083 11       		.uleb128 0x11
-ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 116
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccN2oUE9.s 			page 116
 
 
  4250 0084 01       		.uleb128 0x1
@@ -6958,7 +6958,7 @@ ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 1
  4304 00bc 03       		.uleb128 0x3
  4305 00bd 0E       		.uleb128 0xe
  4306 00be 3A       		.uleb128 0x3a
-ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 117
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccN2oUE9.s 			page 117
 
 
  4307 00bf 0B       		.uleb128 0xb
@@ -7018,7 +7018,7 @@ ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 1
  4361 00f6 18       		.uleb128 0x18
  4362 00f7 9742     		.uleb128 0x2117
  4363 00f9 19       		.uleb128 0x19
-ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 118
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccN2oUE9.s 			page 118
 
 
  4364 00fa 00       		.byte	0
@@ -7078,7 +7078,7 @@ ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 1
  4418 0132 12       		.uleb128 0x12
  4419 0133 34       		.uleb128 0x34
  4420 0134 00       		.byte	0
-ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 119
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccN2oUE9.s 			page 119
 
 
  4421 0135 03       		.uleb128 0x3
@@ -7138,7 +7138,7 @@ ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 1
  4475 000a 04       		.byte	0x4
  4476 000b 00       		.byte	0
  4477 000c 0000     		.2byte	0
-ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 120
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccN2oUE9.s 			page 120
 
 
  4478 000e 0000     		.2byte	0
@@ -7198,7 +7198,7 @@ ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 1
  4532 00e4 68000000 		.4byte	.LFE61-.LFB61
  4533 00e8 00000000 		.4byte	.LFB62
  4534 00ec 1C000000 		.4byte	.LFE62-.LFB62
-ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 121
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccN2oUE9.s 			page 121
 
 
  4535 00f0 00000000 		.4byte	.LFB63
@@ -7258,7 +7258,7 @@ ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 1
  4589 0070 00000000 		.4byte	.LFB49
  4590 0074 26000000 		.4byte	.LFE49
  4591 0078 00000000 		.4byte	.LFB50
-ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 122
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccN2oUE9.s 			page 122
 
 
  4592 007c C8000000 		.4byte	.LFE50
@@ -7318,7 +7318,7 @@ ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 1
  4643      FB0E0D00 
  4643      01010101 
  4644              	.LASF18:
-ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 123
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccN2oUE9.s 			page 123
 
 
  4645 0000 43617053 		.ascii	"CapSense_Init\000"
@@ -7378,7 +7378,7 @@ ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 1
  4666              	.LASF17:
  4667 00c5 73697A65 		.ascii	"sizetype\000"
  4667      74797065 
-ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 124
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccN2oUE9.s 			page 124
 
 
  4667      00
@@ -7438,7 +7438,7 @@ ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 1
  4691      6B446976 
  4692              	.LASF34:
  4693 018f 43617053 		.ascii	"CapSense_ScanEnabledWidgets\000"
-ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 125
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccN2oUE9.s 			page 125
 
 
  4693      656E7365 
@@ -7498,7 +7498,7 @@ ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 1
  4713      44726976 
  4714              	.LASF114:
  4715 026b 43617053 		.ascii	"CapSense_pinShiftTbl\000"
-ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 126
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccN2oUE9.s 			page 126
 
 
  4715      656E7365 
@@ -7558,7 +7558,7 @@ ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 1
  4736              	.LASF54:
  4737 0317 7072744E 		.ascii	"prtNumberTmp\000"
  4737      756D6265 
-ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 127
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccN2oUE9.s 			page 127
 
 
  4737      72546D70 
@@ -7618,7 +7618,7 @@ ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 1
  4757      6720756E 
  4757      7369676E 
  4757      65642069 
-ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 128
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccN2oUE9.s 			page 128
 
 
  4758              	.LASF84:
@@ -7678,7 +7678,7 @@ ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 1
  4778      5F446973 
  4778      61626C65 
  4778      53656E73 
-ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 129
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccN2oUE9.s 			page 129
 
 
  4779              	.LASF87:
@@ -7738,7 +7738,7 @@ ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 1
  4800      4320342E 
  4800      392E3320 
  4800      32303135 
-ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 130
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccN2oUE9.s 			page 130
 
 
  4800      30333033 
@@ -7798,7 +7798,7 @@ ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 1
  4822 06a0 43617053 		.ascii	"CapSense_GetModulatorClkDivider\000"
  4822      656E7365 
  4822      5F476574 
-ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 131
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccN2oUE9.s 			page 131
 
 
  4822      4D6F6475 
@@ -7858,7 +7858,7 @@ ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 1
  4844      5F6D6F64 
  4844      756C6174 
  4844      696F6E49 
-ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 132
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccN2oUE9.s 			page 132
 
 
  4845              	.LASF113:
@@ -7918,7 +7918,7 @@ ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 1
  4865              	.LASF45:
  4866 0843 70696E48 		.ascii	"pinHSIOMShift\000"
  4866      53494F4D 
-ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 133
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccN2oUE9.s 			page 133
 
 
  4866      53686966 
@@ -7978,7 +7978,7 @@ ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 1
  4884      00
  4885              	.LASF28:
  4886 090d 73656E73 		.ascii	"sensor\000"
-ARM GAS  C:\Users\poornima\AppData\Local\Temp\cczWZeBd.s 			page 134
+ARM GAS  C:\Users\poornima\AppData\Local\Temp\ccN2oUE9.s 			page 134
 
 
  4886      6F7200

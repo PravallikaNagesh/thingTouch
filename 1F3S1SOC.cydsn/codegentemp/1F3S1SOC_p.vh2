@@ -1,5 +1,5 @@
 -- Project:   1F3S1SOC
--- Generated: 01/28/2017 15:48:51
+-- Generated: 02/02/2017 12:40:40
 -- PSoC Creator  4.0 Update 1
 
 ENTITY \1F3S1SOC\ IS
@@ -74,6 +74,7 @@ ARCHITECTURE __DEFAULT__ OF \1F3S1SOC\ IS
     SIGNAL Triac3(0)__PA : bit;
     SIGNAL Triac4(0)__PA : bit;
     SIGNAL Triac5(0)__PA : bit;
+    SIGNAL WDT_INT_OUT : bit;
     SIGNAL \\\CapSense:Cmod(0)\\__PA\ : bit;
     SIGNAL \CapSense:Net_248\ : bit;
     SIGNAL \CapSense:Net_328\ : bit;
@@ -369,6 +370,10 @@ ARCHITECTURE __DEFAULT__ OF \1F3S1SOC\ IS
             line_out : OUT std_ulogic;
             line_out_compl : OUT std_ulogic;
             interrupt : OUT std_ulogic);
+    END COMPONENT;
+    COMPONENT m0s8wdtcell
+        PORT (
+            wdt_int : OUT std_ulogic);
     END COMPONENT;
     COMPONENT macrocell
         PORT (
@@ -2630,5 +2635,17 @@ BEGIN
             sclk_s => open,
             tx_req => Net_363,
             rx_req => Net_362);
+
+    WdtIsr:interrupt
+        GENERIC MAP(
+            int_type => "10",
+            is_nmi => 0)
+        PORT MAP(
+            interrupt => WDT_INT_OUT,
+            clock => ClockBlock_HFCLK);
+
+    WDT:m0s8wdtcell
+        PORT MAP(
+            wdt_int => WDT_INT_OUT);
 
 END __DEFAULT__;

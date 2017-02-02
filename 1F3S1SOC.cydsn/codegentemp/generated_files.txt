@@ -117,6 +117,8 @@
   <file name="C:\Users\poornima\Documents\GitHub\thingTouch\1F3S1SOC.cydsn\codegentemp\Triac5.h" value="HEADER;;;;;Triac5" />
   <file name="C:\Users\poornima\Documents\GitHub\thingTouch\1F3S1SOC.cydsn\codegentemp\Triac5_aliases.h" value="HEADER;;;;;Triac5" />
   <file name="C:\Users\poornima\Documents\GitHub\thingTouch\1F3S1SOC.cydsn\codegentemp\Triac5_PM.c" value="SOURCE_C;CortexM0;;;;Triac5" />
+  <file name="C:\Users\poornima\Documents\GitHub\thingTouch\1F3S1SOC.cydsn\codegentemp\WdtIsr.c" value="SOURCE_C;CortexM0;;;;WdtIsr" />
+  <file name="C:\Users\poornima\Documents\GitHub\thingTouch\1F3S1SOC.cydsn\codegentemp\WdtIsr.h" value="HEADER;;;;;WdtIsr" />
   <file name="C:\Users\poornima\Documents\GitHub\thingTouch\1F3S1SOC.cydsn\codegentemp\CapSense_SampleClk.c" value="SOURCE_C;CortexM0;;;;CapSense_SampleClk" />
   <file name="C:\Users\poornima\Documents\GitHub\thingTouch\1F3S1SOC.cydsn\codegentemp\CapSense_SampleClk.h" value="HEADER;;;;;CapSense_SampleClk" />
   <file name="C:\Users\poornima\Documents\GitHub\thingTouch\1F3S1SOC.cydsn\codegentemp\CapSense_Sns_aliases.h" value="HEADER;;;;;CapSense_Sns" />

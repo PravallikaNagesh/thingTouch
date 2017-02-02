@@ -120,6 +120,8 @@
   <file name="C:\Users\poornima\Documents\GitHub\thingTouch\8S.cydsn\codegentemp\Triac4.h" value="HEADER;;;;;Triac4" />
   <file name="C:\Users\poornima\Documents\GitHub\thingTouch\8S.cydsn\codegentemp\Triac4_aliases.h" value="HEADER;;;;;Triac4" />
   <file name="C:\Users\poornima\Documents\GitHub\thingTouch\8S.cydsn\codegentemp\Triac4_PM.c" value="SOURCE_C;CortexM0;;;;Triac4" />
+  <file name="C:\Users\poornima\Documents\GitHub\thingTouch\8S.cydsn\codegentemp\WdtIsr.c" value="SOURCE_C;CortexM0;;;;WdtIsr" />
+  <file name="C:\Users\poornima\Documents\GitHub\thingTouch\8S.cydsn\codegentemp\WdtIsr.h" value="HEADER;;;;;WdtIsr" />
   <file name="C:\Users\poornima\Documents\GitHub\thingTouch\8S.cydsn\codegentemp\CapSense_SampleClk.c" value="SOURCE_C;CortexM0;;;;CapSense_SampleClk" />
   <file name="C:\Users\poornima\Documents\GitHub\thingTouch\8S.cydsn\codegentemp\CapSense_SampleClk.h" value="HEADER;;;;;CapSense_SampleClk" />
   <file name="C:\Users\poornima\Documents\GitHub\thingTouch\8S.cydsn\codegentemp\CapSense_Sns_aliases.h" value="HEADER;;;;;CapSense_Sns" />

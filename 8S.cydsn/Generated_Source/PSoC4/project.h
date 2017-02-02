@@ -70,6 +70,7 @@
 #include "Triac3_aliases.h"
 #include "Triac4.h"
 #include "Triac4_aliases.h"
+#include "WdtIsr.h"
 #include "CapSense_SampleClk.h"
 #include "CapSense_Sns_aliases.h"
 #include "CapSense_SenseClk.h"

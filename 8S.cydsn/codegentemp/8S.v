@@ -1,6 +1,6 @@
 // ======================================================================
 // 8S.v generated from TopDesign.cysch
-// 01/28/2017 at 12:48
+// 02/02/2017 at 12:57
 // This file is auto generated. ANY EDITS YOU MAKE MAY BE LOST WHEN THIS FILE IS REGENERATED!!!
 // ======================================================================
 
@@ -1044,6 +1044,7 @@ endmodule
 // top
 module top ;
 
+          wire  Net_414;
           wire  Net_363;
           wire  Net_362;
           wire  Net_361;
@@ -2341,6 +2342,20 @@ module top ;
 		  .out_reset({1'b0}));
 
 	assign tmpOE__Triac4_net = (`CYDEV_CHIP_MEMBER_USED == `CYDEV_CHIP_MEMBER_3A && `CYDEV_CHIP_REVISION_USED < `CYDEV_CHIP_REVISION_3A_ES3) ? ~{1'b1} : {1'b1};
+
+
+	cy_gsref_v1_0
+		#(.guid("1563FAA8-0748-4a1c-9785-CED309984BE3"))
+		GlobalSignal
+		 (.sig_out(Net_414));
+
+
+
+	cy_isr_v1_0
+		#(.int_type(2'b10))
+		WdtIsr
+		 (.int_signal(Net_414));
+
 
 
 
