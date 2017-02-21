@@ -69,8 +69,8 @@ Port Name  Setup to Clk  Clock Name:Phase
 
 Port Name      Clock to Out  Clock Name:Phase   
 -------------  ------------  -----------------  
-Triac1(0)_PAD  22018         Clock_PWM1(FFB):R  
-Triac2(0)_PAD  21664         Clock_PWM1(FFB):R  
+Triac1(0)_PAD  21985         Clock_PWM1(FFB):R  
+Triac2(0)_PAD  22149         Clock_PWM1(FFB):R  
 
 
                          3.3::Pad to Pad

@@ -2,7 +2,7 @@
 --	Conversion of 2F5S1SOC.v to vh2:
 --
 --	Cypress Semiconductor - WARP Version 6.3 IR 41
---	Wed Feb 01 18:37:31 2017
+--	Fri Feb 17 17:40:39 2017
 --
 
 USE cypress.cypress.all;
@@ -13,7 +13,7 @@ END top_RTL;
 --------------------------------------------------------
 ARCHITECTURE R_T_L OF top_RTL IS
 SIGNAL tmpOE__Triac1_net_0 : bit;
-SIGNAL Net_322 : bit;
+SIGNAL Net_780 : bit;
 SIGNAL tmpFB_0__Triac1_net_0 : bit;
 SIGNAL tmpIO_0__Triac1_net_0 : bit;
 TERMINAL tmpSIOVREF__Triac1_net_0 : bit;
@@ -119,17 +119,17 @@ SIGNAL \LED_CONTROL1:Net_69\ : bit;
 SIGNAL \LED_CONTROL1:Net_66\ : bit;
 SIGNAL \LED_CONTROL1:Net_82\ : bit;
 SIGNAL \LED_CONTROL1:Net_72\ : bit;
-SIGNAL Net_332 : bit;
-SIGNAL Net_331 : bit;
-SIGNAL Net_333 : bit;
-SIGNAL Net_323 : bit;
-SIGNAL Net_330 : bit;
+SIGNAL Net_778 : bit;
+SIGNAL Net_777 : bit;
+SIGNAL Net_779 : bit;
+SIGNAL Net_781 : bit;
+SIGNAL Net_776 : bit;
 SIGNAL tmpOE__Triac3_net_0 : bit;
 SIGNAL tmpFB_0__Triac3_net_0 : bit;
 SIGNAL tmpIO_0__Triac3_net_0 : bit;
 TERMINAL tmpSIOVREF__Triac3_net_0 : bit;
 SIGNAL tmpINTERRUPT_0__Triac3_net_0 : bit;
-TERMINAL Net_335 : bit;
+TERMINAL Net_770 : bit;
 TERMINAL Net_52 : bit;
 SIGNAL \I2C_Slave:Net_847\ : bit;
 SIGNAL \I2C_Slave:Net_459\ : bit;
@@ -157,7 +157,7 @@ TERMINAL \I2C_Slave:tmpSIOVREF__scl_net_0\ : bit;
 SIGNAL \I2C_Slave:tmpINTERRUPT_0__scl_net_0\ : bit;
 SIGNAL \I2C_Slave:Net_1099\ : bit;
 SIGNAL \I2C_Slave:Net_1258\ : bit;
-SIGNAL Net_348 : bit;
+SIGNAL Net_766 : bit;
 SIGNAL \I2C_Slave:Net_1175\ : bit;
 SIGNAL \I2C_Slave:Net_747\ : bit;
 SIGNAL \I2C_Slave:Net_1062\ : bit;
@@ -169,8 +169,8 @@ SIGNAL \I2C_Slave:ss_1\ : bit;
 SIGNAL \I2C_Slave:ss_0\ : bit;
 SIGNAL \I2C_Slave:Net_1059\ : bit;
 SIGNAL \I2C_Slave:Net_1055\ : bit;
-SIGNAL Net_351 : bit;
-SIGNAL Net_350 : bit;
+SIGNAL Net_769 : bit;
+SIGNAL Net_768 : bit;
 SIGNAL \I2C_Slave:Net_547\ : bit;
 SIGNAL \I2C_Slave:Net_1091\ : bit;
 SIGNAL \I2C_Slave:Net_891\ : bit;
@@ -239,7 +239,7 @@ TERMINAL \UART:tmpSIOVREF__rx_net_0\ : bit;
 SIGNAL \UART:tmpINTERRUPT_0__rx_net_0\ : bit;
 SIGNAL \UART:Net_1175\ : bit;
 SIGNAL \UART:Net_747\ : bit;
-SIGNAL Net_360 : bit;
+SIGNAL Net_762 : bit;
 SIGNAL \UART:Net_1053\ : bit;
 SIGNAL \UART:Net_1061\ : bit;
 SIGNAL \UART:ss_3\ : bit;
@@ -250,8 +250,8 @@ SIGNAL \UART:Net_1059\ : bit;
 SIGNAL \UART:Net_1055\ : bit;
 SIGNAL \UART:Net_580\ : bit;
 SIGNAL \UART:Net_581\ : bit;
-SIGNAL Net_363 : bit;
-SIGNAL Net_362 : bit;
+SIGNAL Net_765 : bit;
+SIGNAL Net_764 : bit;
 SIGNAL \UART:Net_547\ : bit;
 SIGNAL \UART:Net_1091\ : bit;
 SIGNAL \UART:Net_891\ : bit;
@@ -322,17 +322,17 @@ SIGNAL \LED_CONTROL2:Net_69\ : bit;
 SIGNAL \LED_CONTROL2:Net_66\ : bit;
 SIGNAL \LED_CONTROL2:Net_82\ : bit;
 SIGNAL \LED_CONTROL2:Net_72\ : bit;
-SIGNAL Net_400 : bit;
-SIGNAL Net_399 : bit;
-SIGNAL Net_401 : bit;
+SIGNAL Net_792 : bit;
+SIGNAL Net_791 : bit;
+SIGNAL Net_793 : bit;
 SIGNAL Net_373 : bit;
-SIGNAL Net_403 : bit;
-SIGNAL Net_398 : bit;
+SIGNAL Net_794 : bit;
+SIGNAL Net_790 : bit;
 SIGNAL tmpOE__Triac2_net_0 : bit;
 SIGNAL tmpFB_0__Triac2_net_0 : bit;
 SIGNAL tmpIO_0__Triac2_net_0 : bit;
 TERMINAL tmpSIOVREF__Triac2_net_0 : bit;
-TERMINAL Net_390 : bit;
+TERMINAL Net_797 : bit;
 SIGNAL tmpINTERRUPT_0__Triac2_net_0 : bit;
 SIGNAL tmpOE__Triac8_net_0 : bit;
 SIGNAL tmpFB_0__Triac8_net_0 : bit;
@@ -344,8 +344,8 @@ SIGNAL tmpFB_0__Triac7_net_0 : bit;
 SIGNAL tmpIO_0__Triac7_net_0 : bit;
 TERMINAL tmpSIOVREF__Triac7_net_0 : bit;
 SIGNAL tmpINTERRUPT_0__Triac7_net_0 : bit;
-TERMINAL Net_391 : bit;
-TERMINAL Net_389 : bit;
+TERMINAL Net_798 : bit;
+TERMINAL Net_799 : bit;
 SIGNAL tmpOE__Triac5_net_0 : bit;
 SIGNAL tmpFB_0__Triac5_net_0 : bit;
 SIGNAL tmpIO_0__Triac5_net_0 : bit;
@@ -356,7 +356,7 @@ SIGNAL tmpFB_0__Triac6_net_0 : bit;
 SIGNAL tmpIO_0__Triac6_net_0 : bit;
 TERMINAL tmpSIOVREF__Triac6_net_0 : bit;
 SIGNAL tmpINTERRUPT_0__Triac6_net_0 : bit;
-SIGNAL Net_406 : bit;
+SIGNAL Net_577 : bit;
 BEGIN
 
 zero <=  ('0') ;
@@ -420,7 +420,7 @@ Triac1:cy_psoc3_pins_v1_10
 		ovt_hyst_trim=>"0",
 		input_buffer_sel=>"00")
 	PORT MAP(oe=>(tmpOE__Triac1_net_0),
-		y=>Net_322,
+		y=>Net_780,
 		fb=>(tmpFB_0__Triac1_net_0),
 		analog=>(open),
 		io=>(tmpIO_0__Triac1_net_0),
@@ -736,12 +736,12 @@ Clock_PWM1:cy_clock_v1_0
 		reload=>zero,
 		stop=>zero,
 		start=>zero,
-		underflow=>Net_332,
-		overflow=>Net_331,
-		compare_match=>Net_333,
-		line_out=>Net_322,
-		line_out_compl=>Net_323,
-		interrupt=>Net_330);
+		underflow=>Net_778,
+		overflow=>Net_777,
+		compare_match=>Net_779,
+		line_out=>Net_780,
+		line_out_compl=>Net_781,
+		interrupt=>Net_776);
 Triac3:cy_psoc3_pins_v1_10
 	GENERIC MAP(id=>"796c75d6-cc13-4e41-b2f6-2327638b85d7",
 		drive_mode=>"011",
@@ -816,12 +816,12 @@ D_3:cy_annotation_universal_v1_0
 	GENERIC MAP(comp_name=>"LED_v1_0",
 		port_names=>"A, K",
 		width=>2)
-	PORT MAP(connect=>(Net_335, Net_56));
+	PORT MAP(connect=>(Net_770, Net_56));
 Resistor_Red:cy_annotation_universal_v1_0
 	GENERIC MAP(comp_name=>"Resistor_v1_0",
 		port_names=>"T1, T2",
 		width=>2)
-	PORT MAP(connect=>(Net_52, Net_335));
+	PORT MAP(connect=>(Net_52, Net_770));
 VDD_2:cy_annotation_universal_v1_0
 	GENERIC MAP(comp_name=>"Power_v1_0",
 		port_names=>"T1",
@@ -980,12 +980,12 @@ VDD_2:cy_annotation_universal_v1_0
 \I2C_Slave:SCB_IRQ\:cy_isr_v1_0
 	GENERIC MAP(int_type=>"10",
 		is_nmi=>'0')
-	PORT MAP(int_signal=>Net_348);
+	PORT MAP(int_signal=>Net_766);
 \I2C_Slave:SCB\:cy_m0s8_scb_v2_0
 	GENERIC MAP(cy_registers=>"",
 		scb_mode=>0)
 	PORT MAP(clock=>\I2C_Slave:Net_847\,
-		interrupt=>Net_348,
+		interrupt=>Net_766,
 		rx=>zero,
 		tx=>\I2C_Slave:Net_1062\,
 		cts=>zero,
@@ -1000,8 +1000,8 @@ VDD_2:cy_annotation_universal_v1_0
 		sclk_s=>zero,
 		scl=>\I2C_Slave:Net_580\,
 		sda=>\I2C_Slave:Net_581\,
-		tx_req=>Net_351,
-		rx_req=>Net_350);
+		tx_req=>Net_769,
+		rx_req=>Net_768);
 LED1:cy_psoc3_pins_v1_10
 	GENERIC MAP(id=>"e851a3b9-efb8-48be-bbb8-b303b216c393",
 		drive_mode=>"011",
@@ -1576,7 +1576,7 @@ InterPin:cy_psoc3_pins_v1_10
 	GENERIC MAP(cy_registers=>"",
 		scb_mode=>2)
 	PORT MAP(clock=>\UART:Net_847\,
-		interrupt=>Net_360,
+		interrupt=>Net_762,
 		rx=>\UART:Net_654\,
 		tx=>\UART:Net_1062\,
 		cts=>zero,
@@ -1591,8 +1591,8 @@ InterPin:cy_psoc3_pins_v1_10
 		sclk_s=>zero,
 		scl=>\UART:Net_580\,
 		sda=>\UART:Net_581\,
-		tx_req=>Net_363,
-		rx_req=>Net_362);
+		tx_req=>Net_765,
+		rx_req=>Net_764);
 LED6:cy_psoc3_pins_v1_10
 	GENERIC MAP(id=>"12bebebc-a576-4895-8a47-87673bdf030c",
 		drive_mode=>"011",
@@ -2371,12 +2371,12 @@ LED16:cy_psoc3_pins_v1_10
 		reload=>zero,
 		stop=>zero,
 		start=>zero,
-		underflow=>Net_400,
-		overflow=>Net_399,
-		compare_match=>Net_401,
+		underflow=>Net_792,
+		overflow=>Net_791,
+		compare_match=>Net_793,
 		line_out=>Net_373,
-		line_out_compl=>Net_403,
-		interrupt=>Net_398);
+		line_out_compl=>Net_794,
+		interrupt=>Net_790);
 Triac2:cy_psoc3_pins_v1_10
 	GENERIC MAP(id=>"494626a3-3779-47ae-a2e0-56d56f1324e4",
 		drive_mode=>"110",
@@ -2439,7 +2439,7 @@ Triac2:cy_psoc3_pins_v1_10
 		analog=>(open),
 		io=>(tmpIO_0__Triac2_net_0),
 		siovref=>(tmpSIOVREF__Triac2_net_0),
-		annotation=>Net_390,
+		annotation=>Net_797,
 		in_clock=>zero,
 		in_clock_en=>tmpOE__Triac1_net_0,
 		in_reset=>zero,
@@ -2591,17 +2591,17 @@ VDD_4:cy_annotation_universal_v1_0
 	GENERIC MAP(comp_name=>"Power_v1_0",
 		port_names=>"T1",
 		width=>1)
-	PORT MAP(connect=>Net_391);
+	PORT MAP(connect=>Net_798);
 Resistor_Red_1:cy_annotation_universal_v1_0
 	GENERIC MAP(comp_name=>"Resistor_v1_0",
 		port_names=>"T1, T2",
 		width=>2)
-	PORT MAP(connect=>(Net_391, Net_389));
+	PORT MAP(connect=>(Net_798, Net_799));
 D_4:cy_annotation_universal_v1_0
 	GENERIC MAP(comp_name=>"LED_v1_0",
 		port_names=>"A, K",
 		width=>2)
-	PORT MAP(connect=>(Net_389, Net_390));
+	PORT MAP(connect=>(Net_799, Net_797));
 Triac5:cy_psoc3_pins_v1_10
 	GENERIC MAP(id=>"f01d7502-5380-4d60-ab8a-58b7a8537ae6",
 		drive_mode=>"011",
@@ -2744,10 +2744,10 @@ Triac6:cy_psoc3_pins_v1_10
 		interrupt=>tmpINTERRUPT_0__Triac6_net_0);
 GlobalSignal:cy_gsref_v1_0
 	GENERIC MAP(guid=>"1563FAA8-0748-4a1c-9785-CED309984BE3")
-	PORT MAP(sig_out=>Net_406);
+	PORT MAP(sig_out=>Net_577);
 WdtIsr:cy_isr_v1_0
 	GENERIC MAP(int_type=>"10",
 		is_nmi=>'0')
-	PORT MAP(int_signal=>Net_406);
+	PORT MAP(int_signal=>Net_577);
 
 END R_T_L;

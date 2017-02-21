@@ -1,5 +1,5 @@
 -- Project:   2F5S1SOC
--- Generated: 02/01/2017 18:37:34
+-- Generated: 02/17/2017 17:40:42
 -- PSoC Creator  4.0 Update 1
 
 ENTITY \2F5S1SOC\ IS
@@ -76,24 +76,24 @@ ARCHITECTURE __DEFAULT__ OF \2F5S1SOC\ IS
     ATTRIBUTE global_signal OF Net_225_ff11 : SIGNAL IS true;
     SIGNAL Net_225_ff12 : bit;
     ATTRIBUTE global_signal OF Net_225_ff12 : SIGNAL IS true;
-    SIGNAL Net_322 : bit;
-    SIGNAL Net_323 : bit;
-    SIGNAL Net_330 : bit;
-    SIGNAL Net_331 : bit;
-    SIGNAL Net_332 : bit;
-    SIGNAL Net_333 : bit;
-    SIGNAL Net_348 : bit;
-    SIGNAL Net_350 : bit;
-    SIGNAL Net_351 : bit;
-    SIGNAL Net_360 : bit;
-    SIGNAL Net_362 : bit;
-    SIGNAL Net_363 : bit;
     SIGNAL Net_373 : bit;
-    SIGNAL Net_398 : bit;
-    SIGNAL Net_399 : bit;
-    SIGNAL Net_400 : bit;
-    SIGNAL Net_401 : bit;
-    SIGNAL Net_403 : bit;
+    SIGNAL Net_762 : bit;
+    SIGNAL Net_764 : bit;
+    SIGNAL Net_765 : bit;
+    SIGNAL Net_766 : bit;
+    SIGNAL Net_768 : bit;
+    SIGNAL Net_769 : bit;
+    SIGNAL Net_776 : bit;
+    SIGNAL Net_777 : bit;
+    SIGNAL Net_778 : bit;
+    SIGNAL Net_779 : bit;
+    SIGNAL Net_780 : bit;
+    SIGNAL Net_781 : bit;
+    SIGNAL Net_790 : bit;
+    SIGNAL Net_791 : bit;
+    SIGNAL Net_792 : bit;
+    SIGNAL Net_793 : bit;
+    SIGNAL Net_794 : bit;
     SIGNAL Triac1(0)__PA : bit;
     SIGNAL Triac2(0)__PA : bit;
     SIGNAL Triac3(0)__PA : bit;
@@ -646,7 +646,7 @@ BEGIN
         PORT MAP(
             pa_out => Triac1(0)__PA,
             oe => open,
-            pin_input => Net_322,
+            pin_input => Net_780,
             pad_out => Triac1(0)_PAD,
             pad_in => Triac1(0)_PAD,
             in_clock => open,
@@ -3691,19 +3691,19 @@ BEGIN
             reload => '0',
             stop => '0',
             start => '0',
-            tr_underflow => Net_332,
-            tr_overflow => Net_331,
-            tr_compare_match => Net_333,
-            line_out => Net_322,
-            line_out_compl => Net_323,
-            interrupt => Net_330);
+            tr_underflow => Net_778,
+            tr_overflow => Net_777,
+            tr_compare_match => Net_779,
+            line_out => Net_780,
+            line_out_compl => Net_781,
+            interrupt => Net_776);
 
     \I2C_Slave:SCB_IRQ\:interrupt
         GENERIC MAP(
             int_type => "10",
             is_nmi => 0)
         PORT MAP(
-            interrupt => Net_348,
+            interrupt => Net_766,
             clock => ClockBlock_HFCLK);
 
     \I2C_Slave:SCB\:m0s8scbcell
@@ -3712,7 +3712,7 @@ BEGIN
             scb_mode => 0)
         PORT MAP(
             clock => \I2C_Slave:Net_847_ff2\,
-            interrupt => Net_348,
+            interrupt => Net_766,
             rx => open,
             tx => \I2C_Slave:Net_1062\,
             cts => open,
@@ -3730,8 +3730,8 @@ BEGIN
             sclk_s => open,
             scl => \I2C_Slave:Net_580\,
             sda => \I2C_Slave:Net_581\,
-            tx_req => Net_351,
-            rx_req => Net_350);
+            tx_req => Net_769,
+            rx_req => Net_768);
 
     \UART:SCB\:m0s8scbcell
         GENERIC MAP(
@@ -3739,7 +3739,7 @@ BEGIN
             scb_mode => 2)
         PORT MAP(
             clock => \UART:Net_847_ff3\,
-            interrupt => Net_360,
+            interrupt => Net_762,
             rx => \UART:Net_654\,
             tx => \UART:Net_1062\,
             cts => open,
@@ -3755,8 +3755,8 @@ BEGIN
             miso_s => \UART:Net_1055\,
             select_s => open,
             sclk_s => open,
-            tx_req => Net_363,
-            rx_req => Net_362);
+            tx_req => Net_765,
+            rx_req => Net_764);
 
     \LED_CONTROL2:cy_m0s8_tcpwm_1\:m0s8tcpwmcell
         GENERIC MAP(
@@ -3768,12 +3768,12 @@ BEGIN
             reload => '0',
             stop => '0',
             start => '0',
-            tr_underflow => Net_400,
-            tr_overflow => Net_399,
-            tr_compare_match => Net_401,
+            tr_underflow => Net_792,
+            tr_overflow => Net_791,
+            tr_compare_match => Net_793,
             line_out => Net_373,
-            line_out_compl => Net_403,
-            interrupt => Net_398);
+            line_out_compl => Net_794,
+            interrupt => Net_790);
 
     WdtIsr:interrupt
         GENERIC MAP(

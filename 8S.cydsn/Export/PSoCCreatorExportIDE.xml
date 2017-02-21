@@ -188,36 +188,36 @@
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Triac1.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Triac1_aliases.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Triac1_PM.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Triac4.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Triac4.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Triac4_aliases.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Triac4_PM.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Triac3.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Triac3.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Triac3_aliases.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Triac3_PM.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Triac2.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Triac2.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Triac2_aliases.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Triac2_PM.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Triac8.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Triac8.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Triac8_aliases.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Triac8_PM.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Triac7.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Triac7.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Triac7_aliases.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Triac7_PM.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Triac5.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Triac5.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Triac5_aliases.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Triac5_PM.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Triac6.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Triac6.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Triac6_aliases.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Triac6_PM.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\WdtIsr.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\WdtIsr.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Relay2.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Relay2.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Relay2_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Relay2_PM.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Relay6.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Relay6.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Relay6_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Relay6_PM.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Relay5.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Relay5.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Relay5_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Relay5_PM.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Relay3.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Relay3.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Relay3_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Relay3_PM.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Relay4.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Relay4.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Relay4_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Relay4_PM.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Relay1.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Relay1.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Relay1_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Relay1_PM.c</File>
         </Files>
       </Folder>
       <Folder BuildType="STRICT" Path="C:\Users\poornima\Documents\GitHub\thingTouch\8S.cydsn\Export\ARM_GCC_Generic\CapSense_CSD_P4_v2_40">

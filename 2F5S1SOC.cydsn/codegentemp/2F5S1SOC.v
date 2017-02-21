@@ -1,6 +1,6 @@
 // ======================================================================
 // 2F5S1SOC.v generated from TopDesign.cysch
-// 02/01/2017 at 18:37
+// 02/17/2017 at 17:40
 // This file is auto generated. ANY EDITS YOU MAKE MAY BE LOST WHEN THIS FILE IS REGENERATED!!!
 // ======================================================================
 
@@ -1210,45 +1210,45 @@ endmodule
 // top
 module top ;
 
-          wire  Net_406;
-    electrical  Net_389;
-          wire  Net_403;
-          wire  Net_401;
-          wire  Net_400;
-          wire  Net_399;
-          wire  Net_398;
-          wire  Net_397;
-          wire  Net_396;
-          wire  Net_395;
-          wire  Net_394;
-          wire  Net_393;
-          wire  Net_363;
-          wire  Net_362;
-          wire  Net_361;
-          wire  Net_360;
-          wire  Net_351;
-          wire  Net_350;
-          wire  Net_349;
-          wire  Net_348;
-    electrical  Net_335;
-          wire  Net_323;
-          wire  Net_333;
-          wire  Net_332;
-          wire  Net_331;
-          wire  Net_330;
-          wire  Net_329;
-          wire  Net_328;
-          wire  Net_327;
-          wire  Net_326;
-          wire  Net_325;
-          wire  Net_324;
-          wire  Net_322;
+          wire  Net_577;
+    electrical  Net_799;
+          wire  Net_794;
+          wire  Net_793;
+          wire  Net_792;
+          wire  Net_791;
+          wire  Net_790;
+          wire  Net_789;
+          wire  Net_788;
+          wire  Net_787;
+          wire  Net_786;
+          wire  Net_785;
+          wire  Net_765;
+          wire  Net_764;
+          wire  Net_763;
+          wire  Net_762;
+          wire  Net_769;
+          wire  Net_768;
+          wire  Net_767;
+          wire  Net_766;
+    electrical  Net_770;
+          wire  Net_781;
+          wire  Net_779;
+          wire  Net_778;
+          wire  Net_777;
+          wire  Net_776;
+          wire  Net_775;
+          wire  Net_774;
+          wire  Net_773;
+          wire  Net_772;
+          wire  Net_771;
+          wire  Net_796;
+          wire  Net_780;
+    electrical  Net_798;
+    electrical  Net_797;
           wire  Net_225;
           wire  Net_373;
-    electrical  Net_390;
-    electrical  Net_391;
-    electrical  Net_56;
     electrical  Net_52;
+    electrical  Net_56;
 
 	wire [0:0] tmpOE__Triac1_net;
 	wire [0:0] tmpFB_0__Triac1_net;
@@ -1311,7 +1311,7 @@ module top ;
 		  .input_buffer_sel(2'b00))
 		Triac1
 		 (.oe(tmpOE__Triac1_net),
-		  .y({Net_322}),
+		  .y({Net_780}),
 		  .fb({tmpFB_0__Triac1_net[0:0]}),
 		  .io({tmpIO_0__Triac1_net[0:0]}),
 		  .siovref(tmpSIOVREF__Triac1_net),
@@ -1421,12 +1421,12 @@ module top ;
         .start(1'b0),
         .count(1'b1),
         .capture(1'b0),
-        .interrupt(Net_330),
-        .ov(Net_331),
-        .un(Net_332),
-        .cc(Net_333),
-        .line(Net_322),
-        .line_n(Net_323),
+        .interrupt(Net_776),
+        .ov(Net_777),
+        .un(Net_778),
+        .cc(Net_779),
+        .line(Net_780),
+        .line_n(Net_781),
         .clock(Net_225));
 
 	wire [0:0] tmpOE__Triac3_net;
@@ -1506,7 +1506,7 @@ module top ;
 
     cy_annotation_universal_v1_0 D_3 (
         .connect({
-            Net_335,
+            Net_770,
             Net_56
         })
     );
@@ -1517,7 +1517,7 @@ module top ;
     cy_annotation_universal_v1_0 Resistor_Red (
         .connect({
             Net_52,
-            Net_335
+            Net_770
         })
     );
     defparam Resistor_Red.comp_name = "Resistor_v1_0";
@@ -1534,10 +1534,10 @@ module top ;
     defparam VDD_2.width = 1;
 
     SCB_P4_v3_10_4 I2C_Slave (
-        .interrupt(Net_348),
+        .interrupt(Net_766),
         .clock(1'b0),
-        .rx_tr_out(Net_350),
-        .tx_tr_out(Net_351));
+        .rx_tr_out(Net_768),
+        .tx_tr_out(Net_769));
 
 	wire [0:0] tmpOE__LED1_net;
 	wire [0:0] tmpFB_0__LED1_net;
@@ -1990,10 +1990,10 @@ module top ;
 	assign tmpOE__InterPin_net = (`CYDEV_CHIP_MEMBER_USED == `CYDEV_CHIP_MEMBER_3A && `CYDEV_CHIP_REVISION_USED < `CYDEV_CHIP_REVISION_3A_ES3) ? ~{1'b1} : {1'b1};
 
     SCB_P4_v3_10_5 UART (
-        .interrupt(Net_360),
+        .interrupt(Net_762),
         .clock(1'b0),
-        .rx_tr_out(Net_362),
-        .tx_tr_out(Net_363));
+        .rx_tr_out(Net_764),
+        .tx_tr_out(Net_765));
 
 	wire [0:0] tmpOE__LED6_net;
 	wire [0:0] tmpFB_0__LED6_net;
@@ -2826,12 +2826,12 @@ module top ;
         .start(1'b0),
         .count(1'b1),
         .capture(1'b0),
-        .interrupt(Net_398),
-        .ov(Net_399),
-        .un(Net_400),
-        .cc(Net_401),
+        .interrupt(Net_790),
+        .ov(Net_791),
+        .un(Net_792),
+        .cc(Net_793),
         .line(Net_373),
-        .line_n(Net_403),
+        .line_n(Net_794),
         .clock(Net_225));
 
 	wire [0:0] tmpOE__Triac2_net;
@@ -2900,7 +2900,7 @@ module top ;
 		  .io({tmpIO_0__Triac2_net[0:0]}),
 		  .siovref(tmpSIOVREF__Triac2_net),
 		  .interrupt({tmpINTERRUPT_0__Triac2_net[0:0]}),
-		  .annotation({Net_390}),
+		  .annotation({Net_797}),
 		  .in_clock({1'b0}),
 		  .in_clock_en({1'b1}),
 		  .in_reset({1'b0}),
@@ -3062,7 +3062,7 @@ module top ;
 
     cy_annotation_universal_v1_0 VDD_4 (
         .connect({
-            Net_391
+            Net_798
         })
     );
     defparam VDD_4.comp_name = "Power_v1_0";
@@ -3071,8 +3071,8 @@ module top ;
 
     cy_annotation_universal_v1_0 Resistor_Red_1 (
         .connect({
-            Net_391,
-            Net_389
+            Net_798,
+            Net_799
         })
     );
     defparam Resistor_Red_1.comp_name = "Resistor_v1_0";
@@ -3081,8 +3081,8 @@ module top ;
 
     cy_annotation_universal_v1_0 D_4 (
         .connect({
-            Net_389,
-            Net_390
+            Net_799,
+            Net_797
         })
     );
     defparam D_4.comp_name = "LED_v1_0";
@@ -3243,14 +3243,14 @@ module top ;
 	cy_gsref_v1_0
 		#(.guid("1563FAA8-0748-4a1c-9785-CED309984BE3"))
 		GlobalSignal
-		 (.sig_out(Net_406));
+		 (.sig_out(Net_577));
 
 
 
 	cy_isr_v1_0
 		#(.int_type(2'b10))
 		WdtIsr
-		 (.int_signal(Net_406));
+		 (.int_signal(Net_577));
 
 
 

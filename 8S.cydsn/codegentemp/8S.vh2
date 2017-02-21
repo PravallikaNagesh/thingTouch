@@ -2,7 +2,7 @@
 --	Conversion of 8S.v to vh2:
 --
 --	Cypress Semiconductor - WARP Version 6.3 IR 41
---	Thu Feb 02 12:58:03 2017
+--	Sat Feb 18 12:17:36 2017
 --
 
 USE cypress.cypress.all;
@@ -68,16 +68,16 @@ SIGNAL \CapSense:tmpINTERRUPT_0__Sns_net_0\ : bit;
 SIGNAL \CapSense:IDAC1:Net_3\ : bit;
 SIGNAL \CapSense:Net_545\ : bit;
 SIGNAL \CapSense:Net_544\ : bit;
-SIGNAL tmpOE__Triac2_net_0 : bit;
-SIGNAL tmpFB_0__Triac2_net_0 : bit;
-SIGNAL tmpIO_0__Triac2_net_0 : bit;
-TERMINAL tmpSIOVREF__Triac2_net_0 : bit;
-SIGNAL tmpINTERRUPT_0__Triac2_net_0 : bit;
-SIGNAL tmpOE__Triac1_net_0 : bit;
-SIGNAL tmpFB_0__Triac1_net_0 : bit;
-SIGNAL tmpIO_0__Triac1_net_0 : bit;
-TERMINAL tmpSIOVREF__Triac1_net_0 : bit;
-SIGNAL tmpINTERRUPT_0__Triac1_net_0 : bit;
+SIGNAL tmpOE__Relay2_net_0 : bit;
+SIGNAL tmpFB_0__Relay2_net_0 : bit;
+SIGNAL tmpIO_0__Relay2_net_0 : bit;
+TERMINAL tmpSIOVREF__Relay2_net_0 : bit;
+SIGNAL tmpINTERRUPT_0__Relay2_net_0 : bit;
+SIGNAL tmpOE__Relay1_net_0 : bit;
+SIGNAL tmpFB_0__Relay1_net_0 : bit;
+SIGNAL tmpIO_0__Relay1_net_0 : bit;
+TERMINAL tmpSIOVREF__Relay1_net_0 : bit;
+SIGNAL tmpINTERRUPT_0__Relay1_net_0 : bit;
 SIGNAL \I2C_Slave:Net_847\ : bit;
 SIGNAL \I2C_Slave:Net_459\ : bit;
 SIGNAL \I2C_Slave:Net_652\ : bit;
@@ -223,36 +223,36 @@ SIGNAL tmpFB_0__LED8_net_0 : bit;
 SIGNAL tmpIO_0__LED8_net_0 : bit;
 TERMINAL tmpSIOVREF__LED8_net_0 : bit;
 SIGNAL tmpINTERRUPT_0__LED8_net_0 : bit;
-SIGNAL tmpOE__Triac6_net_0 : bit;
-SIGNAL tmpFB_0__Triac6_net_0 : bit;
-SIGNAL tmpIO_0__Triac6_net_0 : bit;
-TERMINAL tmpSIOVREF__Triac6_net_0 : bit;
-SIGNAL tmpINTERRUPT_0__Triac6_net_0 : bit;
-SIGNAL tmpOE__Triac5_net_0 : bit;
-SIGNAL tmpFB_0__Triac5_net_0 : bit;
-SIGNAL tmpIO_0__Triac5_net_0 : bit;
-TERMINAL tmpSIOVREF__Triac5_net_0 : bit;
-SIGNAL tmpINTERRUPT_0__Triac5_net_0 : bit;
-SIGNAL tmpOE__Triac7_net_0 : bit;
-SIGNAL tmpFB_0__Triac7_net_0 : bit;
-SIGNAL tmpIO_0__Triac7_net_0 : bit;
-TERMINAL tmpSIOVREF__Triac7_net_0 : bit;
-SIGNAL tmpINTERRUPT_0__Triac7_net_0 : bit;
-SIGNAL tmpOE__Triac8_net_0 : bit;
-SIGNAL tmpFB_0__Triac8_net_0 : bit;
-SIGNAL tmpIO_0__Triac8_net_0 : bit;
-TERMINAL tmpSIOVREF__Triac8_net_0 : bit;
-SIGNAL tmpINTERRUPT_0__Triac8_net_0 : bit;
-SIGNAL tmpOE__Triac3_net_0 : bit;
-SIGNAL tmpFB_0__Triac3_net_0 : bit;
-SIGNAL tmpIO_0__Triac3_net_0 : bit;
-TERMINAL tmpSIOVREF__Triac3_net_0 : bit;
-SIGNAL tmpINTERRUPT_0__Triac3_net_0 : bit;
-SIGNAL tmpOE__Triac4_net_0 : bit;
-SIGNAL tmpFB_0__Triac4_net_0 : bit;
-SIGNAL tmpIO_0__Triac4_net_0 : bit;
-TERMINAL tmpSIOVREF__Triac4_net_0 : bit;
-SIGNAL tmpINTERRUPT_0__Triac4_net_0 : bit;
+SIGNAL tmpOE__Relay6_net_0 : bit;
+SIGNAL tmpFB_0__Relay6_net_0 : bit;
+SIGNAL tmpIO_0__Relay6_net_0 : bit;
+TERMINAL tmpSIOVREF__Relay6_net_0 : bit;
+SIGNAL tmpINTERRUPT_0__Relay6_net_0 : bit;
+SIGNAL tmpOE__Relay5_net_0 : bit;
+SIGNAL tmpFB_0__Relay5_net_0 : bit;
+SIGNAL tmpIO_0__Relay5_net_0 : bit;
+TERMINAL tmpSIOVREF__Relay5_net_0 : bit;
+SIGNAL tmpINTERRUPT_0__Relay5_net_0 : bit;
+SIGNAL tmpOE__Triac1_net_0 : bit;
+SIGNAL tmpFB_0__Triac1_net_0 : bit;
+SIGNAL tmpIO_0__Triac1_net_0 : bit;
+TERMINAL tmpSIOVREF__Triac1_net_0 : bit;
+SIGNAL tmpINTERRUPT_0__Triac1_net_0 : bit;
+SIGNAL tmpOE__Triac2_net_0 : bit;
+SIGNAL tmpFB_0__Triac2_net_0 : bit;
+SIGNAL tmpIO_0__Triac2_net_0 : bit;
+TERMINAL tmpSIOVREF__Triac2_net_0 : bit;
+SIGNAL tmpINTERRUPT_0__Triac2_net_0 : bit;
+SIGNAL tmpOE__Relay3_net_0 : bit;
+SIGNAL tmpFB_0__Relay3_net_0 : bit;
+SIGNAL tmpIO_0__Relay3_net_0 : bit;
+TERMINAL tmpSIOVREF__Relay3_net_0 : bit;
+SIGNAL tmpINTERRUPT_0__Relay3_net_0 : bit;
+SIGNAL tmpOE__Relay4_net_0 : bit;
+SIGNAL tmpFB_0__Relay4_net_0 : bit;
+SIGNAL tmpIO_0__Relay4_net_0 : bit;
+TERMINAL tmpSIOVREF__Relay4_net_0 : bit;
+SIGNAL tmpINTERRUPT_0__Relay4_net_0 : bit;
 SIGNAL Net_414 : bit;
 BEGIN
 
@@ -461,7 +461,7 @@ one <=  ('1') ;
 		is_digital=>'0')
 	PORT MAP(clock_out=>\CapSense:Net_429\,
 		dig_domain_out=>open);
-Triac2:cy_psoc3_pins_v1_10
+Relay2:cy_psoc3_pins_v1_10
 	GENERIC MAP(id=>"05727b33-2349-491f-91dc-304d1886864b",
 		drive_mode=>"011",
 		ibuf_enabled=>"1",
@@ -519,10 +519,10 @@ Triac2:cy_psoc3_pins_v1_10
 		input_buffer_sel=>"00")
 	PORT MAP(oe=>(one),
 		y=>(zero),
-		fb=>(tmpFB_0__Triac2_net_0),
+		fb=>(tmpFB_0__Relay2_net_0),
 		analog=>(open),
-		io=>(tmpIO_0__Triac2_net_0),
-		siovref=>(tmpSIOVREF__Triac2_net_0),
+		io=>(tmpIO_0__Relay2_net_0),
+		siovref=>(tmpSIOVREF__Relay2_net_0),
 		annotation=>(open),
 		in_clock=>zero,
 		in_clock_en=>one,
@@ -530,8 +530,8 @@ Triac2:cy_psoc3_pins_v1_10
 		out_clock=>zero,
 		out_clock_en=>one,
 		out_reset=>zero,
-		interrupt=>tmpINTERRUPT_0__Triac2_net_0);
-Triac1:cy_psoc3_pins_v1_10
+		interrupt=>tmpINTERRUPT_0__Relay2_net_0);
+Relay1:cy_psoc3_pins_v1_10
 	GENERIC MAP(id=>"796c75d6-cc13-4e41-b2f6-2327638b85d7",
 		drive_mode=>"011",
 		ibuf_enabled=>"1",
@@ -589,10 +589,10 @@ Triac1:cy_psoc3_pins_v1_10
 		input_buffer_sel=>"00")
 	PORT MAP(oe=>(one),
 		y=>(zero),
-		fb=>(tmpFB_0__Triac1_net_0),
+		fb=>(tmpFB_0__Relay1_net_0),
 		analog=>(open),
-		io=>(tmpIO_0__Triac1_net_0),
-		siovref=>(tmpSIOVREF__Triac1_net_0),
+		io=>(tmpIO_0__Relay1_net_0),
+		siovref=>(tmpSIOVREF__Relay1_net_0),
 		annotation=>(open),
 		in_clock=>zero,
 		in_clock_en=>one,
@@ -600,7 +600,7 @@ Triac1:cy_psoc3_pins_v1_10
 		out_clock=>zero,
 		out_clock_en=>one,
 		out_reset=>zero,
-		interrupt=>tmpINTERRUPT_0__Triac1_net_0);
+		interrupt=>tmpINTERRUPT_0__Relay1_net_0);
 \I2C_Slave:SCBCLK\:cy_clock_v1_0
 	GENERIC MAP(cy_registers=>"",
 		id=>"3dbba19d-7851-4a83-b204-a0a386fe8d68/2dc2d7a8-ce2b-43c7-af4a-821c8cd73ccf",
@@ -1577,7 +1577,7 @@ LED8:cy_psoc3_pins_v1_10
 		out_clock_en=>one,
 		out_reset=>zero,
 		interrupt=>tmpINTERRUPT_0__LED8_net_0);
-Triac6:cy_psoc3_pins_v1_10
+Relay6:cy_psoc3_pins_v1_10
 	GENERIC MAP(id=>"6710e00f-9840-46c9-9af8-cdca74e7087d",
 		drive_mode=>"011",
 		ibuf_enabled=>"1",
@@ -1635,10 +1635,10 @@ Triac6:cy_psoc3_pins_v1_10
 		input_buffer_sel=>"00")
 	PORT MAP(oe=>(one),
 		y=>(zero),
-		fb=>(tmpFB_0__Triac6_net_0),
+		fb=>(tmpFB_0__Relay6_net_0),
 		analog=>(open),
-		io=>(tmpIO_0__Triac6_net_0),
-		siovref=>(tmpSIOVREF__Triac6_net_0),
+		io=>(tmpIO_0__Relay6_net_0),
+		siovref=>(tmpSIOVREF__Relay6_net_0),
 		annotation=>(open),
 		in_clock=>zero,
 		in_clock_en=>one,
@@ -1646,8 +1646,8 @@ Triac6:cy_psoc3_pins_v1_10
 		out_clock=>zero,
 		out_clock_en=>one,
 		out_reset=>zero,
-		interrupt=>tmpINTERRUPT_0__Triac6_net_0);
-Triac5:cy_psoc3_pins_v1_10
+		interrupt=>tmpINTERRUPT_0__Relay6_net_0);
+Relay5:cy_psoc3_pins_v1_10
 	GENERIC MAP(id=>"65526edb-0a7e-4c7d-9967-4ba9b497aa58",
 		drive_mode=>"011",
 		ibuf_enabled=>"1",
@@ -1705,10 +1705,10 @@ Triac5:cy_psoc3_pins_v1_10
 		input_buffer_sel=>"00")
 	PORT MAP(oe=>(one),
 		y=>(zero),
-		fb=>(tmpFB_0__Triac5_net_0),
+		fb=>(tmpFB_0__Relay5_net_0),
 		analog=>(open),
-		io=>(tmpIO_0__Triac5_net_0),
-		siovref=>(tmpSIOVREF__Triac5_net_0),
+		io=>(tmpIO_0__Relay5_net_0),
+		siovref=>(tmpSIOVREF__Relay5_net_0),
 		annotation=>(open),
 		in_clock=>zero,
 		in_clock_en=>one,
@@ -1716,8 +1716,8 @@ Triac5:cy_psoc3_pins_v1_10
 		out_clock=>zero,
 		out_clock_en=>one,
 		out_reset=>zero,
-		interrupt=>tmpINTERRUPT_0__Triac5_net_0);
-Triac7:cy_psoc3_pins_v1_10
+		interrupt=>tmpINTERRUPT_0__Relay5_net_0);
+Triac1:cy_psoc3_pins_v1_10
 	GENERIC MAP(id=>"0d4b5aef-ace2-4def-b188-c9a08a3d8def",
 		drive_mode=>"011",
 		ibuf_enabled=>"1",
@@ -1775,10 +1775,10 @@ Triac7:cy_psoc3_pins_v1_10
 		input_buffer_sel=>"00")
 	PORT MAP(oe=>(one),
 		y=>(zero),
-		fb=>(tmpFB_0__Triac7_net_0),
+		fb=>(tmpFB_0__Triac1_net_0),
 		analog=>(open),
-		io=>(tmpIO_0__Triac7_net_0),
-		siovref=>(tmpSIOVREF__Triac7_net_0),
+		io=>(tmpIO_0__Triac1_net_0),
+		siovref=>(tmpSIOVREF__Triac1_net_0),
 		annotation=>(open),
 		in_clock=>zero,
 		in_clock_en=>one,
@@ -1786,8 +1786,8 @@ Triac7:cy_psoc3_pins_v1_10
 		out_clock=>zero,
 		out_clock_en=>one,
 		out_reset=>zero,
-		interrupt=>tmpINTERRUPT_0__Triac7_net_0);
-Triac8:cy_psoc3_pins_v1_10
+		interrupt=>tmpINTERRUPT_0__Triac1_net_0);
+Triac2:cy_psoc3_pins_v1_10
 	GENERIC MAP(id=>"18270768-c609-4c82-b77e-8fda45ec8260",
 		drive_mode=>"011",
 		ibuf_enabled=>"1",
@@ -1845,10 +1845,10 @@ Triac8:cy_psoc3_pins_v1_10
 		input_buffer_sel=>"00")
 	PORT MAP(oe=>(one),
 		y=>(zero),
-		fb=>(tmpFB_0__Triac8_net_0),
+		fb=>(tmpFB_0__Triac2_net_0),
 		analog=>(open),
-		io=>(tmpIO_0__Triac8_net_0),
-		siovref=>(tmpSIOVREF__Triac8_net_0),
+		io=>(tmpIO_0__Triac2_net_0),
+		siovref=>(tmpSIOVREF__Triac2_net_0),
 		annotation=>(open),
 		in_clock=>zero,
 		in_clock_en=>one,
@@ -1856,8 +1856,8 @@ Triac8:cy_psoc3_pins_v1_10
 		out_clock=>zero,
 		out_clock_en=>one,
 		out_reset=>zero,
-		interrupt=>tmpINTERRUPT_0__Triac8_net_0);
-Triac3:cy_psoc3_pins_v1_10
+		interrupt=>tmpINTERRUPT_0__Triac2_net_0);
+Relay3:cy_psoc3_pins_v1_10
 	GENERIC MAP(id=>"f01d7502-5380-4d60-ab8a-58b7a8537ae6",
 		drive_mode=>"011",
 		ibuf_enabled=>"1",
@@ -1915,10 +1915,10 @@ Triac3:cy_psoc3_pins_v1_10
 		input_buffer_sel=>"00")
 	PORT MAP(oe=>(one),
 		y=>(zero),
-		fb=>(tmpFB_0__Triac3_net_0),
+		fb=>(tmpFB_0__Relay3_net_0),
 		analog=>(open),
-		io=>(tmpIO_0__Triac3_net_0),
-		siovref=>(tmpSIOVREF__Triac3_net_0),
+		io=>(tmpIO_0__Relay3_net_0),
+		siovref=>(tmpSIOVREF__Relay3_net_0),
 		annotation=>(open),
 		in_clock=>zero,
 		in_clock_en=>one,
@@ -1926,8 +1926,8 @@ Triac3:cy_psoc3_pins_v1_10
 		out_clock=>zero,
 		out_clock_en=>one,
 		out_reset=>zero,
-		interrupt=>tmpINTERRUPT_0__Triac3_net_0);
-Triac4:cy_psoc3_pins_v1_10
+		interrupt=>tmpINTERRUPT_0__Relay3_net_0);
+Relay4:cy_psoc3_pins_v1_10
 	GENERIC MAP(id=>"026b6972-1177-429f-baa6-89b398d027d6",
 		drive_mode=>"011",
 		ibuf_enabled=>"1",
@@ -1985,10 +1985,10 @@ Triac4:cy_psoc3_pins_v1_10
 		input_buffer_sel=>"00")
 	PORT MAP(oe=>(one),
 		y=>(zero),
-		fb=>(tmpFB_0__Triac4_net_0),
+		fb=>(tmpFB_0__Relay4_net_0),
 		analog=>(open),
-		io=>(tmpIO_0__Triac4_net_0),
-		siovref=>(tmpSIOVREF__Triac4_net_0),
+		io=>(tmpIO_0__Relay4_net_0),
+		siovref=>(tmpSIOVREF__Relay4_net_0),
 		annotation=>(open),
 		in_clock=>zero,
 		in_clock_en=>one,
@@ -1996,7 +1996,7 @@ Triac4:cy_psoc3_pins_v1_10
 		out_clock=>zero,
 		out_clock_en=>one,
 		out_reset=>zero,
-		interrupt=>tmpINTERRUPT_0__Triac4_net_0);
+		interrupt=>tmpINTERRUPT_0__Relay4_net_0);
 GlobalSignal:cy_gsref_v1_0
 	GENERIC MAP(guid=>"1563FAA8-0748-4a1c-9785-CED309984BE3")
 	PORT MAP(sig_out=>Net_414);

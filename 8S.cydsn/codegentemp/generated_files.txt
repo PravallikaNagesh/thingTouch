@@ -26,14 +26,14 @@
   <file name="C:\Users\poornima\Documents\GitHub\thingTouch\8S.cydsn\codegentemp\CapSense_SMS.h" value="HEADER;;;;;CapSense" />
   <file name="C:\Users\poornima\Documents\GitHub\thingTouch\8S.cydsn\codegentemp\CapSense_PVT.h" value="HEADER;;;;;CapSense" />
   <file name="C:\Users\poornima\Documents\GitHub\thingTouch\8S.cydsn\codegentemp\CapSense_IP.h" value="HEADER;;;;;CapSense" />
-  <file name="C:\Users\poornima\Documents\GitHub\thingTouch\8S.cydsn\codegentemp\Triac2.c" value="SOURCE_C;CortexM0;;;;Triac2" />
-  <file name="C:\Users\poornima\Documents\GitHub\thingTouch\8S.cydsn\codegentemp\Triac2.h" value="HEADER;;;;;Triac2" />
-  <file name="C:\Users\poornima\Documents\GitHub\thingTouch\8S.cydsn\codegentemp\Triac2_aliases.h" value="HEADER;;;;;Triac2" />
-  <file name="C:\Users\poornima\Documents\GitHub\thingTouch\8S.cydsn\codegentemp\Triac2_PM.c" value="SOURCE_C;CortexM0;;;;Triac2" />
-  <file name="C:\Users\poornima\Documents\GitHub\thingTouch\8S.cydsn\codegentemp\Triac1.c" value="SOURCE_C;CortexM0;;;;Triac1" />
-  <file name="C:\Users\poornima\Documents\GitHub\thingTouch\8S.cydsn\codegentemp\Triac1.h" value="HEADER;;;;;Triac1" />
-  <file name="C:\Users\poornima\Documents\GitHub\thingTouch\8S.cydsn\codegentemp\Triac1_aliases.h" value="HEADER;;;;;Triac1" />
-  <file name="C:\Users\poornima\Documents\GitHub\thingTouch\8S.cydsn\codegentemp\Triac1_PM.c" value="SOURCE_C;CortexM0;;;;Triac1" />
+  <file name="C:\Users\poornima\Documents\GitHub\thingTouch\8S.cydsn\codegentemp\Relay2.c" value="SOURCE_C;CortexM0;;;;Relay2" />
+  <file name="C:\Users\poornima\Documents\GitHub\thingTouch\8S.cydsn\codegentemp\Relay2.h" value="HEADER;;;;;Relay2" />
+  <file name="C:\Users\poornima\Documents\GitHub\thingTouch\8S.cydsn\codegentemp\Relay2_aliases.h" value="HEADER;;;;;Relay2" />
+  <file name="C:\Users\poornima\Documents\GitHub\thingTouch\8S.cydsn\codegentemp\Relay2_PM.c" value="SOURCE_C;CortexM0;;;;Relay2" />
+  <file name="C:\Users\poornima\Documents\GitHub\thingTouch\8S.cydsn\codegentemp\Relay1.c" value="SOURCE_C;CortexM0;;;;Relay1" />
+  <file name="C:\Users\poornima\Documents\GitHub\thingTouch\8S.cydsn\codegentemp\Relay1.h" value="HEADER;;;;;Relay1" />
+  <file name="C:\Users\poornima\Documents\GitHub\thingTouch\8S.cydsn\codegentemp\Relay1_aliases.h" value="HEADER;;;;;Relay1" />
+  <file name="C:\Users\poornima\Documents\GitHub\thingTouch\8S.cydsn\codegentemp\Relay1_PM.c" value="SOURCE_C;CortexM0;;;;Relay1" />
   <file name="C:\Users\poornima\Documents\GitHub\thingTouch\8S.cydsn\codegentemp\I2C_Slave.c" value="SOURCE_C;CortexM0;;;;I2C_Slave" />
   <file name="C:\Users\poornima\Documents\GitHub\thingTouch\8S.cydsn\codegentemp\I2C_Slave.h" value="HEADER;;;;;I2C_Slave" />
   <file name="C:\Users\poornima\Documents\GitHub\thingTouch\8S.cydsn\codegentemp\I2C_Slave_I2C.h" value="HEADER;;;;;I2C_Slave" />
@@ -96,30 +96,30 @@
   <file name="C:\Users\poornima\Documents\GitHub\thingTouch\8S.cydsn\codegentemp\LED8.h" value="HEADER;;;;;LED8" />
   <file name="C:\Users\poornima\Documents\GitHub\thingTouch\8S.cydsn\codegentemp\LED8_aliases.h" value="HEADER;;;;;LED8" />
   <file name="C:\Users\poornima\Documents\GitHub\thingTouch\8S.cydsn\codegentemp\LED8_PM.c" value="SOURCE_C;CortexM0;;;;LED8" />
-  <file name="C:\Users\poornima\Documents\GitHub\thingTouch\8S.cydsn\codegentemp\Triac6.c" value="SOURCE_C;CortexM0;;;;Triac6" />
-  <file name="C:\Users\poornima\Documents\GitHub\thingTouch\8S.cydsn\codegentemp\Triac6.h" value="HEADER;;;;;Triac6" />
-  <file name="C:\Users\poornima\Documents\GitHub\thingTouch\8S.cydsn\codegentemp\Triac6_aliases.h" value="HEADER;;;;;Triac6" />
-  <file name="C:\Users\poornima\Documents\GitHub\thingTouch\8S.cydsn\codegentemp\Triac6_PM.c" value="SOURCE_C;CortexM0;;;;Triac6" />
-  <file name="C:\Users\poornima\Documents\GitHub\thingTouch\8S.cydsn\codegentemp\Triac5.c" value="SOURCE_C;CortexM0;;;;Triac5" />
-  <file name="C:\Users\poornima\Documents\GitHub\thingTouch\8S.cydsn\codegentemp\Triac5.h" value="HEADER;;;;;Triac5" />
-  <file name="C:\Users\poornima\Documents\GitHub\thingTouch\8S.cydsn\codegentemp\Triac5_aliases.h" value="HEADER;;;;;Triac5" />
-  <file name="C:\Users\poornima\Documents\GitHub\thingTouch\8S.cydsn\codegentemp\Triac5_PM.c" value="SOURCE_C;CortexM0;;;;Triac5" />
-  <file name="C:\Users\poornima\Documents\GitHub\thingTouch\8S.cydsn\codegentemp\Triac7.c" value="SOURCE_C;CortexM0;;;;Triac7" />
-  <file name="C:\Users\poornima\Documents\GitHub\thingTouch\8S.cydsn\codegentemp\Triac7.h" value="HEADER;;;;;Triac7" />
-  <file name="C:\Users\poornima\Documents\GitHub\thingTouch\8S.cydsn\codegentemp\Triac7_aliases.h" value="HEADER;;;;;Triac7" />
-  <file name="C:\Users\poornima\Documents\GitHub\thingTouch\8S.cydsn\codegentemp\Triac7_PM.c" value="SOURCE_C;CortexM0;;;;Triac7" />
-  <file name="C:\Users\poornima\Documents\GitHub\thingTouch\8S.cydsn\codegentemp\Triac8.c" value="SOURCE_C;CortexM0;;;;Triac8" />
-  <file name="C:\Users\poornima\Documents\GitHub\thingTouch\8S.cydsn\codegentemp\Triac8.h" value="HEADER;;;;;Triac8" />
-  <file name="C:\Users\poornima\Documents\GitHub\thingTouch\8S.cydsn\codegentemp\Triac8_aliases.h" value="HEADER;;;;;Triac8" />
-  <file name="C:\Users\poornima\Documents\GitHub\thingTouch\8S.cydsn\codegentemp\Triac8_PM.c" value="SOURCE_C;CortexM0;;;;Triac8" />
-  <file name="C:\Users\poornima\Documents\GitHub\thingTouch\8S.cydsn\codegentemp\Triac3.c" value="SOURCE_C;CortexM0;;;;Triac3" />
-  <file name="C:\Users\poornima\Documents\GitHub\thingTouch\8S.cydsn\codegentemp\Triac3.h" value="HEADER;;;;;Triac3" />
-  <file name="C:\Users\poornima\Documents\GitHub\thingTouch\8S.cydsn\codegentemp\Triac3_aliases.h" value="HEADER;;;;;Triac3" />
-  <file name="C:\Users\poornima\Documents\GitHub\thingTouch\8S.cydsn\codegentemp\Triac3_PM.c" value="SOURCE_C;CortexM0;;;;Triac3" />
-  <file name="C:\Users\poornima\Documents\GitHub\thingTouch\8S.cydsn\codegentemp\Triac4.c" value="SOURCE_C;CortexM0;;;;Triac4" />
-  <file name="C:\Users\poornima\Documents\GitHub\thingTouch\8S.cydsn\codegentemp\Triac4.h" value="HEADER;;;;;Triac4" />
-  <file name="C:\Users\poornima\Documents\GitHub\thingTouch\8S.cydsn\codegentemp\Triac4_aliases.h" value="HEADER;;;;;Triac4" />
-  <file name="C:\Users\poornima\Documents\GitHub\thingTouch\8S.cydsn\codegentemp\Triac4_PM.c" value="SOURCE_C;CortexM0;;;;Triac4" />
+  <file name="C:\Users\poornima\Documents\GitHub\thingTouch\8S.cydsn\codegentemp\Relay6.c" value="SOURCE_C;CortexM0;;;;Relay6" />
+  <file name="C:\Users\poornima\Documents\GitHub\thingTouch\8S.cydsn\codegentemp\Relay6.h" value="HEADER;;;;;Relay6" />
+  <file name="C:\Users\poornima\Documents\GitHub\thingTouch\8S.cydsn\codegentemp\Relay6_aliases.h" value="HEADER;;;;;Relay6" />
+  <file name="C:\Users\poornima\Documents\GitHub\thingTouch\8S.cydsn\codegentemp\Relay6_PM.c" value="SOURCE_C;CortexM0;;;;Relay6" />
+  <file name="C:\Users\poornima\Documents\GitHub\thingTouch\8S.cydsn\codegentemp\Relay5.c" value="SOURCE_C;CortexM0;;;;Relay5" />
+  <file name="C:\Users\poornima\Documents\GitHub\thingTouch\8S.cydsn\codegentemp\Relay5.h" value="HEADER;;;;;Relay5" />
+  <file name="C:\Users\poornima\Documents\GitHub\thingTouch\8S.cydsn\codegentemp\Relay5_aliases.h" value="HEADER;;;;;Relay5" />
+  <file name="C:\Users\poornima\Documents\GitHub\thingTouch\8S.cydsn\codegentemp\Relay5_PM.c" value="SOURCE_C;CortexM0;;;;Relay5" />
+  <file name="C:\Users\poornima\Documents\GitHub\thingTouch\8S.cydsn\codegentemp\Triac1.c" value="SOURCE_C;CortexM0;;;;Triac1" />
+  <file name="C:\Users\poornima\Documents\GitHub\thingTouch\8S.cydsn\codegentemp\Triac1.h" value="HEADER;;;;;Triac1" />
+  <file name="C:\Users\poornima\Documents\GitHub\thingTouch\8S.cydsn\codegentemp\Triac1_aliases.h" value="HEADER;;;;;Triac1" />
+  <file name="C:\Users\poornima\Documents\GitHub\thingTouch\8S.cydsn\codegentemp\Triac1_PM.c" value="SOURCE_C;CortexM0;;;;Triac1" />
+  <file name="C:\Users\poornima\Documents\GitHub\thingTouch\8S.cydsn\codegentemp\Triac2.c" value="SOURCE_C;CortexM0;;;;Triac2" />
+  <file name="C:\Users\poornima\Documents\GitHub\thingTouch\8S.cydsn\codegentemp\Triac2.h" value="HEADER;;;;;Triac2" />
+  <file name="C:\Users\poornima\Documents\GitHub\thingTouch\8S.cydsn\codegentemp\Triac2_aliases.h" value="HEADER;;;;;Triac2" />
+  <file name="C:\Users\poornima\Documents\GitHub\thingTouch\8S.cydsn\codegentemp\Triac2_PM.c" value="SOURCE_C;CortexM0;;;;Triac2" />
+  <file name="C:\Users\poornima\Documents\GitHub\thingTouch\8S.cydsn\codegentemp\Relay3.c" value="SOURCE_C;CortexM0;;;;Relay3" />
+  <file name="C:\Users\poornima\Documents\GitHub\thingTouch\8S.cydsn\codegentemp\Relay3.h" value="HEADER;;;;;Relay3" />
+  <file name="C:\Users\poornima\Documents\GitHub\thingTouch\8S.cydsn\codegentemp\Relay3_aliases.h" value="HEADER;;;;;Relay3" />
+  <file name="C:\Users\poornima\Documents\GitHub\thingTouch\8S.cydsn\codegentemp\Relay3_PM.c" value="SOURCE_C;CortexM0;;;;Relay3" />
+  <file name="C:\Users\poornima\Documents\GitHub\thingTouch\8S.cydsn\codegentemp\Relay4.c" value="SOURCE_C;CortexM0;;;;Relay4" />
+  <file name="C:\Users\poornima\Documents\GitHub\thingTouch\8S.cydsn\codegentemp\Relay4.h" value="HEADER;;;;;Relay4" />
+  <file name="C:\Users\poornima\Documents\GitHub\thingTouch\8S.cydsn\codegentemp\Relay4_aliases.h" value="HEADER;;;;;Relay4" />
+  <file name="C:\Users\poornima\Documents\GitHub\thingTouch\8S.cydsn\codegentemp\Relay4_PM.c" value="SOURCE_C;CortexM0;;;;Relay4" />
   <file name="C:\Users\poornima\Documents\GitHub\thingTouch\8S.cydsn\codegentemp\WdtIsr.c" value="SOURCE_C;CortexM0;;;;WdtIsr" />
   <file name="C:\Users\poornima\Documents\GitHub\thingTouch\8S.cydsn\codegentemp\WdtIsr.h" value="HEADER;;;;;WdtIsr" />
   <file name="C:\Users\poornima\Documents\GitHub\thingTouch\8S.cydsn\codegentemp\CapSense_SampleClk.c" value="SOURCE_C;CortexM0;;;;CapSense_SampleClk" />

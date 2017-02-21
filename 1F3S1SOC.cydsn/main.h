@@ -41,6 +41,8 @@ void UpdateLedsSocketSwitch(uint16, uint16);
 /***************************************
 *            Constants
 ****************************************/
+#define  FQ_50      1 // in case of 50Hz
+#define  FQ_60      0 // in case of 60Hz
 
 /* Buffer and packet size */
 #define BUFFER_SIZE         (4u)

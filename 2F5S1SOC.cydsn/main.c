@@ -43,10 +43,10 @@ CY_ISR_PROTO(WdtIsrHandler);
 #define CY_TEST_FLASH_ADDR      (CY_TEST_FLASH_ROW * CY_FLASH_SIZEOF_ROW)
 
 /* Defines ID of the array to write */
-#define ARRAY_ID                ((uint8)(CY_TEST_FLASH_ROW / CY_FLASH_SIZEOF_ROW))
+//#define ARRAY_ID                ((uint8)(CY_TEST_FLASH_ROW / CY_FLASH_SIZEOF_ROW))
 
 /* Defines second ROW from the last ROW in the defined array */
-#define ARRAY_ID_ROW_ADDR   ((uint16)(CY_FLASH_SIZEOF_ROW - 2u))
+//#define ARRAY_ID_ROW_ADDR   ((uint16)(CY_FLASH_SIZEOF_ROW - 2u))
 
 uint8 cache[CY_FLASH_SIZEOF_ROW]={0};
 uint8 update[CY_FLASH_SIZEOF_ROW]={0};
@@ -126,7 +126,10 @@ int main()
         /* Write complete: parse command packet */
         if (0u != (I2C_Slave_I2CSlaveStatus() & I2C_Slave_I2C_SSTAT_WR_CMPLT))
         {
-           // UART_UartPutString("inside I2C_Slave_I2CSlaveStatus \n\r");
+           UART_UartPutString("inside I2C_Slave_I2CSlaveStatus \n\r");
+             UART_UartPutChar(i2cWriteBuffer[0] +0x30);
+                UART_UartPutChar(i2cWriteBuffer[1]);
+                UART_UartPutString(" \n\r");
             
             /* Check packet length */
             if (1u <= I2C_Slave_I2CSlaveGetWriteBufSize())
@@ -136,14 +139,11 @@ int main()
                 //UART_UartPutString("String cmp pass \n\r");
                 
                 /*Sendind master a ready ack*/
-                char8 temp = i2cWriteBuffer[0];
-                char8 temp2 = i2cWriteBuffer[1];
-                    UART_UartPutString(&temp);
-                    UART_UartPutString(&temp2);
+               
                 
                 if(i2cWriteBuffer[0]==0x52 && i2cWriteBuffer[1]==0x53 )
                 {   
-                   // UART_UartPutString("reset\r\n");
+                    UART_UartPutString("reset\n\r");
                    /* Setup ISR for interrupts at WDT counter 0 events. */
                     WdtIsr_StartEx(WdtIsrHandler);
 
@@ -173,7 +173,7 @@ int main()
                 
                 if(i2cWriteBuffer[0]==0x52 && i2cWriteBuffer[1]==0x44 )
                 {   
-                    //UART_UartPutString("ready ack sent \n\r");
+                    UART_UartPutString("ready ack sent \n\r");
                     
                     i2cReadBuffer[0] = 0x52;
                     i2cReadBuffer[1] = 0x44;
@@ -185,8 +185,15 @@ int main()
                 }
                 /*Sending data according to master request*/
                 else if( i2cWriteBuffer[1]==0x72)
-                {   i2cReadBuffer[0] = i2cWriteBuffer[0];
-                    switch(i2cWriteBuffer[1])
+                
+                { UART_UartPutString("test \n\r");
+                    i2cReadBuffer[0] = i2cWriteBuffer[0];
+                 for(i=0;i<8;i++){
+                            update[i]=(*((uint8 *) (CY_TEST_FLASH_ADDR + i)));
+                            }
+                 UART_UartPutChar(update[0]+0x30);
+                UART_UartPutString("\n\r");
+                    switch(i2cWriteBuffer[0])
                     {
                         case FAN1: i2cReadBuffer[1]=update[FAN1];
                                     break;
@@ -212,7 +219,7 @@ int main()
                 }
                else
                 {
-                //UART_UartPutString("excecuting the master commands \n\r");
+                UART_UartPutString("excecuting the master commands \n\r");
                 ExecuteCommand(i2cWriteBuffer[0], i2cWriteBuffer[1]);
                 }
             }
@@ -234,7 +241,7 @@ int main()
         /* Check whether the scanning of all enabled widgets is completed. */
         if(0u == CapSense_IsBusy())
        
-        {   // UART_UartPutString("Capsense");
+        {   // UART_UartPutString("Capsense\n\r");
             /* Update all baselines */
             CapSense_UpdateEnabledBaselines();
 
@@ -266,6 +273,10 @@ void CapSense_DisplayState(void)
 {
     /* Find Radial Slider Position */
     curPos1 = CapSense_GetRadialCentroidPos(CapSense_RADIALSLIDER0__RS);
+    
+   // UART_UartPutChar(curPos1);
+    //UART_UartPutString("\n\r");
+    
     curPos2 = CapSense_GetRadialCentroidPos(CapSense_RADIALSLIDER1__RS);
     
     /* Switch 1 - 5 and Socket 1Control Code */
@@ -304,7 +315,7 @@ void CapSense_DisplayState(void)
         InterPin_Write(~InterPin_Read());
             
     }          
-    else if (but1==0)
+    else if (but1==0 )
     {
         temp1=1;   
     }
@@ -372,19 +383,44 @@ void CapSense_DisplayState(void)
    }
         
    /* Switch 4 Control Code */      
-  if(but4==1 && temp4==1)
+/*  if(but4==1 && temp4==1)
+        {
+       
+        LED14_Write(~LED14_Read());
+        i2cReadBuffer[0] = SWITCH4;
+        if(LED14_Read())
+        {
+              i2cReadBuffer[1] =100u;
+              cache[5]=100;
+              CySysFlashWriteRow(CY_TEST_FLASH_ROW, cache); 
+        }
+        else
+        {    cache[5]=0;
+             CySysFlashWriteRow(CY_TEST_FLASH_ROW, cache); 
+             i2cReadBuffer[1] = 0u;
+        }
+         temp4=0;
+        }          
+   else if (but4==0 )
+    {
+      temp4=1;   
+    }
+*/
+   
+  /* Switch 4 Control Code */
+   if(but4==1 && temp4==1)
         {
             if(oldBut4==0)
             {
-               // UART_UartPutString("in CapSense_DisplayState :: Switch 4, value 100 \n\r");
+                UART_UartPutString("in CapSense_DisplayState :: Switch 3, value 100   A\n\r");
                 UpdateSwitchLeds(SWITCH4, 100);
-                i2cReadBuffer[1] = 100u;
+                i2cReadBuffer[1] = 1u;
                 oldBut4=1;
             }
             
             else
             {
-               // UART_UartPutString("in CapSense_DisplayState :: Switch 4, value 0  \n\r");
+                UART_UartPutString("in CapSense_DisplayState :: Switch 3, value 0   A\n\r");
                 UpdateSwitchLeds(SWITCH4, 0);
                 i2cReadBuffer[1] = 0u;
                 oldBut4=0;
@@ -392,32 +428,29 @@ void CapSense_DisplayState(void)
             }
         temp4=0;
         i2cReadBuffer[0] = SWITCH4;
-    
+       
         InterPin_Write(~InterPin_Read());
         CyDelay(50);
         InterPin_Write(~InterPin_Read());
-         
         }          
    else if (but4==0)
-    {
-      temp4=1;   
-    }
-
-    /* Switch 5 Control Code */
-    
-   if(but5==1 && temp5==1)
    {
+    temp4=1;   
+   }
+  /* Switch 5 Control Code */
+   if(but5==1 && temp5==1)
+        {
             if(oldBut5==0)
             {
-               // UART_UartPutString("in CapSense_DisplayState :: Switch 5, value 0  \n\r");
+                UART_UartPutString("in CapSense_DisplayState :: Switch 3, value 100   A\n\r");
                 UpdateSwitchLeds(SWITCH5, 100);
-                i2cReadBuffer[1] = 100u;
+                i2cReadBuffer[1] = 1u;
                 oldBut5=1;
             }
             
             else
             {
-               // UART_UartPutString("in CapSense_DisplayState :: Switch 5, value 0  \n\r");
+                UART_UartPutString("in CapSense_DisplayState :: Switch 3, value 0   A\n\r");
                 UpdateSwitchLeds(SWITCH5, 0);
                 i2cReadBuffer[1] = 0u;
                 oldBut5=0;
@@ -425,22 +458,24 @@ void CapSense_DisplayState(void)
             }
         temp5=0;
         i2cReadBuffer[0] = SWITCH5;
-        
+       
         InterPin_Write(~InterPin_Read());
         CyDelay(50);
         InterPin_Write(~InterPin_Read());
         }          
    else if (but5==0)
    {
-         temp5=1;   
+    temp5=1;   
    }
+ 
+  
 
    /* Socket 1 Control Code */
    if(sock1==1 && temp6==1)
         {
             if(oldSock1==0)
             {
-               // UART_UartPutString("in CapSense_DisplayState :: Switch 5, value 0  \n\r");
+                UART_UartPutString("in CapSense_DisplayState :: Switch 5, value 0  \n\r");
                 UpdateSwitchLeds(SOCKET1, 100);
                 i2cReadBuffer[1] = 100u;
                 oldSock1=1;
@@ -448,7 +483,7 @@ void CapSense_DisplayState(void)
             
             else
             {
-               // UART_UartPutString("in CapSense_DisplayState :: Switch 5, value 0  \n\r");
+               UART_UartPutString("in CapSense_DisplayState :: Switch 5, value 0  \n\r");
                 UpdateSwitchLeds(SOCKET1, 0);
                 i2cReadBuffer[1] = 0u;
                 oldSock1=0;
@@ -582,18 +617,18 @@ uint8 ExecuteCommand(uint32 cmd, uint32 value)
 
 void UpdateSwitchLeds(uint16 res, uint16 curPos)
 
-{  
-    //UART_UartPutString("in UpdateSwitchLeds\n");
+{ // static uint8 flag5=0;
+    //UART_UartPutString("in UpdateSwitchLeds\n\r");
                       
        switch(res)
     {
             case SWITCH1:
-                if(curPos == 100)
+                if(curPos == 100 )
                 {
                     //UART_UartPutString("in UpdateSwitchLeds :: switch1 :: on \n");
                     LED11_Write(1);
                     Triac3_Write(1);
-                                      
+                                 
                     cache[2]=curPos;
                     CySysFlashWriteRow(CY_TEST_FLASH_ROW, cache);
                     
@@ -675,22 +710,22 @@ void UpdateSwitchLeds(uint16 res, uint16 curPos)
                    
                 break;
             case SWITCH5:
-                if(curPos == 100)
+                if(curPos == 100 )
                 {
-                   // UART_UartPutString("in UpdateSwitchLeds :: switch5 :: on \n");
+                  //  UART_UartPutString("in UpdateSwitchLeds :: switch5 :: on \n\r");
                     LED15_Write(1);
                     Triac7_Write(1);
-                                        
+                   // flag5=1;                  
                     cache[6]=curPos;
                     CySysFlashWriteRow(CY_TEST_FLASH_ROW, cache);
                     
                 }
-                else
+                else if (curPos ==0)
                 {
-                    //UART_UartPutString("in UpdateSwitchLeds :: switch5 :: off \n");
+                  //  UART_UartPutString("in UpdateSwitchLeds :: switch5 :: off \n\r");
                     LED15_Write(0);
                     Triac7_Write(0);
-                                       
+                   // flag5=0;                   
                     cache[6]=curPos;
                     CySysFlashWriteRow(CY_TEST_FLASH_ROW, cache);
                     
@@ -746,10 +781,9 @@ void UpdateLedsFan1(uint16 curPos)
     LED9_Write(0);
     LED10_Write(0);
     Triac1_Write(0);
-    cache[0]=0;
-    CySysFlashWriteRow(CY_TEST_FLASH_ROW, cache);
     
-    //UART_UartPutString("in UpdateLedsFan1\n");
+    
+    UART_UartPutString("in UpdateLedsFan1\n\r");
     
     if(curPos<0)
     {

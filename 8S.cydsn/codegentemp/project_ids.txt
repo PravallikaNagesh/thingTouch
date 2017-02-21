@@ -1,7 +1,7 @@
-C:\Users\poornima\Documents\GitHub\thingTouch\2F5S1SOC.cydsn\2F5S1SOC.cyprj|83331d40-4b97-4317-b346-ecde26eb8b42
-C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|bcc235be-0bfd-4510-9bea-6fbe5e88887a
-C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|024a0971-b16b-4285-b006-ac5131cccad4
-C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|3d07be5c-c94f-464f-a1e6-fdc7ba49a96f
-C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|7748cd0a-ef8f-4ba4-af52-60ec6e97d0ca
-C:\Users\poornima\Documents\GitHub\thingTouch\8S.cydsn\8S.cyprj|122f3c88-dde4-4cc5-bac9-e91c34ecf5ee
-C:\Users\poornima\Documents\GitHub\thingTouch\1F3S1SOC.cydsn\1F3S1SOC.cyprj|996b37e5-30b2-4cea-a294-ced3fa0d538b
+C:\Users\poornima\Documents\GitHub\thingTouch\2F5S1SOC.cydsn\2F5S1SOC.cyprj|f8a3a3bb-08ee-43e9-87cc-8b7cf8c2c10a
+C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|353d45ca-d5ec-4518-afe5-c5e0c5352fe6
+C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|316aaa19-fc93-4d48-8042-55740d88d7f8
+C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|7731a9ba-cd36-4a8d-9a20-9cdce6391bdf
+C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|c15ffab3-eeaf-496c-9a35-9bf2e5b1b46c
+C:\Users\poornima\Documents\GitHub\thingTouch\8S.cydsn\8S.cyprj|451a59f6-c73b-468b-add0-b89c23f8bf79
+C:\Users\poornima\Documents\GitHub\thingTouch\1F3S1SOC.cydsn\1F3S1SOC.cyprj|7e14b0fb-3446-4c59-9fdd-aeea45012792

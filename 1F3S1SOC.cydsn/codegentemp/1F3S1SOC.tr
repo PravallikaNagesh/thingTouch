@@ -16,14 +16,12 @@
 ##################################################################### 
                     1::Clock Frequency Summary
 ===================================================================== 
-Number of clocks: 17
+Number of clocks: 15
 Clock: CapSense_SampleClk       | N/A  | Target: 0.09 MHz    | 
 Clock: CapSense_SampleClk(FFB)  | N/A  | Target: 0.09 MHz    | 
 Clock: CapSense_SenseClk        | N/A  | Target: 0.09 MHz    | 
 Clock: CapSense_SenseClk(FFB)   | N/A  | Target: 0.09 MHz    | 
 Clock: ClockBlock/ff_div_5      | N/A  | Target: 100.00 MHz  | 
-Clock: Clock_PWM1               | N/A  | Target: 24.00 MHz   | 
-Clock: Clock_PWM1(FFB)          | N/A  | Target: 24.00 MHz   | 
 Clock: CyHFCLK                  | N/A  | Target: 24.00 MHz   | 
 Clock: CyILO                    | N/A  | Target: 0.03 MHz    | 
 Clock: CyIMO                    | N/A  | Target: 24.00 MHz   | 
@@ -67,13 +65,12 @@ Port Name  Setup to Clk  Clock Name:Phase
 -----------------------3.2::Clock to Out
 ----------------------------------------
 
-Port Name      Clock to Out  Clock Name:Phase   
--------------  ------------  -----------------  
-Triac1(0)_PAD  21489         Clock_PWM1(FFB):R  
+Port Name  Clock to Out  Clock Name:Phase  
+---------  ------------  ----------------  
 
 
-                         3.3::Pad to Pad
-                         ---------------
+-------------------------3.3::Pad to Pad
+----------------------------------------
 
 Port Name (Source)  Port Name (Destination)  Delay  
 ------------------  -----------------------  -----  

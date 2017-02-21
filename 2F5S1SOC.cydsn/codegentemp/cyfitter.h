@@ -1136,7 +1136,7 @@
 #define Triac1__0__MASK 0x04u
 #define Triac1__0__OUT_SEL CYREG_UDB_PA1_CFG10
 #define Triac1__0__OUT_SEL_SHIFT 4u
-#define Triac1__0__OUT_SEL_VAL 2u
+#define Triac1__0__OUT_SEL_VAL 1u
 #define Triac1__0__PA__CFG0 CYREG_UDB_PA1_CFG0
 #define Triac1__0__PA__CFG1 CYREG_UDB_PA1_CFG1
 #define Triac1__0__PA__CFG10 CYREG_UDB_PA1_CFG10
@@ -1202,7 +1202,7 @@
 #define Triac2__0__MASK 0x08u
 #define Triac2__0__OUT_SEL CYREG_UDB_PA1_CFG10
 #define Triac2__0__OUT_SEL_SHIFT 6u
-#define Triac2__0__OUT_SEL_VAL 1u
+#define Triac2__0__OUT_SEL_VAL 2u
 #define Triac2__0__PA__CFG0 CYREG_UDB_PA1_CFG0
 #define Triac2__0__PA__CFG1 CYREG_UDB_PA1_CFG1
 #define Triac2__0__PA__CFG10 CYREG_UDB_PA1_CFG10

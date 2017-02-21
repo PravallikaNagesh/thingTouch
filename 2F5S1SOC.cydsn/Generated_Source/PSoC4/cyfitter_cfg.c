@@ -346,9 +346,9 @@ void cyfitter_cfg(void)
 			0x400F3004u, /* Base address: 0x400F3000 Count: 4 */
 			0x400F3101u, /* Base address: 0x400F3100 Count: 1 */
 			0x400F3303u, /* Base address: 0x400F3300 Count: 3 */
-			0x400F4106u, /* Base address: 0x400F4100 Count: 6 */
+			0x400F4107u, /* Base address: 0x400F4100 Count: 7 */
 			0x400F4203u, /* Base address: 0x400F4200 Count: 3 */
-			0x400F4308u, /* Base address: 0x400F4300 Count: 8 */
+			0x400F4307u, /* Base address: 0x400F4300 Count: 7 */
 		};
 
 		static const cy_cfg_addrvalue_t CYCODE cy_cfg_data_table[] = {
@@ -358,24 +358,24 @@ void cyfitter_cfg(void)
 			{0x5Fu, 0x01u},
 			{0x18u, 0x01u},
 			{0xB4u, 0x01u},
-			{0xE2u, 0x40u},
+			{0xE2u, 0x01u},
 			{0xE6u, 0x02u},
-			{0x57u, 0x80u},
+			{0x55u, 0x08u},
 			{0x58u, 0x10u},
+			{0x81u, 0x08u},
 			{0x84u, 0x10u},
-			{0x8Fu, 0x80u},
 			{0xD4u, 0xC0u},
+			{0xE2u, 0x80u},
 			{0xE6u, 0x40u},
 			{0x6Cu, 0x40u},
 			{0x70u, 0x08u},
 			{0xDCu, 0x03u},
-			{0x1Bu, 0x04u},
-			{0x1Fu, 0x08u},
+			{0x1Bu, 0x08u},
+			{0x1Du, 0x08u},
+			{0x81u, 0x08u},
 			{0x87u, 0x08u},
-			{0x8Fu, 0x04u},
 			{0xB4u, 0x48u},
 			{0xC6u, 0x0Cu},
-			{0xE2u, 0x02u},
 			{0xECu, 0x08u},
 		};
 
@@ -415,7 +415,7 @@ void cyfitter_cfg(void)
 
 		/* UDB_PA_1 Starting address: CYDEV_UDB_PA1_BASE */
 		CY_SET_XTND_REG32((void CYFAR *)(CYDEV_UDB_PA1_BASE), 0x00990000u);
-		CY_SET_XTND_REG32((void CYFAR *)(CYREG_UDB_PA1_CFG8), 0x00600000u);
+		CY_SET_XTND_REG32((void CYFAR *)(CYREG_UDB_PA1_CFG8), 0x00900000u);
 
 		/* UDB_PA_2 Starting address: CYDEV_UDB_PA2_BASE */
 		CY_SET_XTND_REG32((void CYFAR *)(CYDEV_UDB_PA2_BASE), 0x00990000u);

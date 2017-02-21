@@ -1,11 +1,11 @@
 -- Project:   8S
--- Generated: 02/02/2017 12:58:06
+-- Generated: 02/18/2017 12:17:39
 -- PSoC Creator  4.0 Update 1
 
 ENTITY \8S\ IS
     PORT(
-        Triac2(0)_PAD : OUT std_ulogic;
-        Triac1(0)_PAD : OUT std_ulogic;
+        Relay2(0)_PAD : OUT std_ulogic;
+        Relay1(0)_PAD : OUT std_ulogic;
         \I2C_Slave:sda(0)_PAD\ : INOUT std_ulogic;
         \I2C_Slave:scl(0)_PAD\ : INOUT std_ulogic;
         LED1(0)_PAD : OUT std_ulogic;
@@ -19,12 +19,12 @@ ENTITY \8S\ IS
         LED6(0)_PAD : OUT std_ulogic;
         LED7(0)_PAD : OUT std_ulogic;
         LED8(0)_PAD : OUT std_ulogic;
-        Triac6(0)_PAD : OUT std_ulogic;
-        Triac5(0)_PAD : OUT std_ulogic;
-        Triac7(0)_PAD : OUT std_ulogic;
-        Triac8(0)_PAD : OUT std_ulogic;
-        Triac3(0)_PAD : OUT std_ulogic;
-        Triac4(0)_PAD : OUT std_ulogic);
+        Relay6(0)_PAD : OUT std_ulogic;
+        Relay5(0)_PAD : OUT std_ulogic;
+        Triac1(0)_PAD : OUT std_ulogic;
+        Triac2(0)_PAD : OUT std_ulogic;
+        Relay3(0)_PAD : OUT std_ulogic;
+        Relay4(0)_PAD : OUT std_ulogic);
     ATTRIBUTE voltage_VDDIO_A_1 OF __DEFAULT__ : ENTITY IS 3.3e0;
     ATTRIBUTE voltage_VDDA_0 OF __DEFAULT__ : ENTITY IS 3.3e0;
     ATTRIBUTE voltage_VDDA_CTB OF __DEFAULT__ : ENTITY IS 3.3e0;
@@ -62,14 +62,14 @@ ARCHITECTURE __DEFAULT__ OF \8S\ IS
     SIGNAL Net_410 : bit;
     SIGNAL Net_412 : bit;
     SIGNAL Net_413 : bit;
+    SIGNAL Relay1(0)__PA : bit;
+    SIGNAL Relay2(0)__PA : bit;
+    SIGNAL Relay3(0)__PA : bit;
+    SIGNAL Relay4(0)__PA : bit;
+    SIGNAL Relay5(0)__PA : bit;
+    SIGNAL Relay6(0)__PA : bit;
     SIGNAL Triac1(0)__PA : bit;
     SIGNAL Triac2(0)__PA : bit;
-    SIGNAL Triac3(0)__PA : bit;
-    SIGNAL Triac4(0)__PA : bit;
-    SIGNAL Triac5(0)__PA : bit;
-    SIGNAL Triac6(0)__PA : bit;
-    SIGNAL Triac7(0)__PA : bit;
-    SIGNAL Triac8(0)__PA : bit;
     SIGNAL WDT_INT_OUT : bit;
     SIGNAL \\\CapSense:Cmod(0)\\__PA\ : bit;
     SIGNAL \CapSense:Net_248\ : bit;
@@ -145,10 +145,10 @@ ARCHITECTURE __DEFAULT__ OF \8S\ IS
     ATTRIBUTE Location OF \CapSense:Sns(6)\ : LABEL IS "P3[7]";
     ATTRIBUTE lib_model OF \CapSense:Sns(7)\ : LABEL IS "iocell9";
     ATTRIBUTE Location OF \CapSense:Sns(7)\ : LABEL IS "P4[0]";
-    ATTRIBUTE lib_model OF Triac2(0) : LABEL IS "iocell10";
-    ATTRIBUTE Location OF Triac2(0) : LABEL IS "P1[3]";
-    ATTRIBUTE lib_model OF Triac1(0) : LABEL IS "iocell11";
-    ATTRIBUTE Location OF Triac1(0) : LABEL IS "P1[2]";
+    ATTRIBUTE lib_model OF Relay2(0) : LABEL IS "iocell10";
+    ATTRIBUTE Location OF Relay2(0) : LABEL IS "P2[0]";
+    ATTRIBUTE lib_model OF Relay1(0) : LABEL IS "iocell11";
+    ATTRIBUTE Location OF Relay1(0) : LABEL IS "P2[1]";
     ATTRIBUTE lib_model OF \I2C_Slave:sda(0)\ : LABEL IS "iocell12";
     ATTRIBUTE Location OF \I2C_Slave:sda(0)\ : LABEL IS "P1[1]";
     ATTRIBUTE lib_model OF \I2C_Slave:scl(0)\ : LABEL IS "iocell13";
@@ -172,21 +172,21 @@ ARCHITECTURE __DEFAULT__ OF \8S\ IS
     ATTRIBUTE lib_model OF LED6(0) : LABEL IS "iocell22";
     ATTRIBUTE Location OF LED6(0) : LABEL IS "P2[2]";
     ATTRIBUTE lib_model OF LED7(0) : LABEL IS "iocell23";
-    ATTRIBUTE Location OF LED7(0) : LABEL IS "P5[2]";
+    ATTRIBUTE Location OF LED7(0) : LABEL IS "P0[3]";
     ATTRIBUTE lib_model OF LED8(0) : LABEL IS "iocell24";
-    ATTRIBUTE Location OF LED8(0) : LABEL IS "P5[1]";
-    ATTRIBUTE lib_model OF Triac6(0) : LABEL IS "iocell25";
-    ATTRIBUTE Location OF Triac6(0) : LABEL IS "P1[6]";
-    ATTRIBUTE lib_model OF Triac5(0) : LABEL IS "iocell26";
-    ATTRIBUTE Location OF Triac5(0) : LABEL IS "P1[7]";
-    ATTRIBUTE lib_model OF Triac7(0) : LABEL IS "iocell27";
-    ATTRIBUTE Location OF Triac7(0) : LABEL IS "P1[5]";
-    ATTRIBUTE lib_model OF Triac8(0) : LABEL IS "iocell28";
-    ATTRIBUTE Location OF Triac8(0) : LABEL IS "P1[4]";
-    ATTRIBUTE lib_model OF Triac3(0) : LABEL IS "iocell29";
-    ATTRIBUTE Location OF Triac3(0) : LABEL IS "P2[1]";
-    ATTRIBUTE lib_model OF Triac4(0) : LABEL IS "iocell30";
-    ATTRIBUTE Location OF Triac4(0) : LABEL IS "P2[0]";
+    ATTRIBUTE Location OF LED8(0) : LABEL IS "P0[4]";
+    ATTRIBUTE lib_model OF Relay6(0) : LABEL IS "iocell25";
+    ATTRIBUTE Location OF Relay6(0) : LABEL IS "P1[4]";
+    ATTRIBUTE lib_model OF Relay5(0) : LABEL IS "iocell26";
+    ATTRIBUTE Location OF Relay5(0) : LABEL IS "P1[5]";
+    ATTRIBUTE lib_model OF Triac1(0) : LABEL IS "iocell27";
+    ATTRIBUTE Location OF Triac1(0) : LABEL IS "P1[2]";
+    ATTRIBUTE lib_model OF Triac2(0) : LABEL IS "iocell28";
+    ATTRIBUTE Location OF Triac2(0) : LABEL IS "P1[3]";
+    ATTRIBUTE lib_model OF Relay3(0) : LABEL IS "iocell29";
+    ATTRIBUTE Location OF Relay3(0) : LABEL IS "P1[7]";
+    ATTRIBUTE lib_model OF Relay4(0) : LABEL IS "iocell30";
+    ATTRIBUTE Location OF Relay4(0) : LABEL IS "P1[6]";
     ATTRIBUTE Location OF \CapSense:CSD_FFB\ : LABEL IS "F(CSD,0)";
     ATTRIBUTE Location OF \CapSense:ISR\ : LABEL IS "[IntrContainer=(0)][IntrId=(17)]";
     ATTRIBUTE Location OF \CapSense:IDAC2:cy_psoc4_idac\ : LABEL IS "F(CSIDAC7,0)";
@@ -777,7 +777,7 @@ BEGIN
             out_clock_en => '1',
             out_reset => '0');
 
-    Triac2:logicalport
+    Relay2:logicalport
         GENERIC MAP(
             drive_mode => "011",
             ibuf_enabled => "1",
@@ -848,18 +848,18 @@ BEGIN
             out_clock_en => open,
             out_reset => open);
 
-    Triac2(0):iocell
+    Relay2(0):iocell
         GENERIC MAP(
             in_sync_mode => 0,
             out_sync_mode => 0,
             oe_sync_mode => 0,
-            logicalport => "Triac2",
+            logicalport => "Relay2",
             logicalport_pin_id => 0,
             io_capabilities => "0000000000000000000000000000000000000000000000000000000000000001")
         PORT MAP(
-            pa_out => Triac2(0)__PA,
+            pa_out => Relay2(0)__PA,
             oe => open,
-            pad_in => Triac2(0)_PAD,
+            pad_in => Relay2(0)_PAD,
             in_clock => open,
             in_clock_en => '1',
             in_reset => '0',
@@ -867,7 +867,7 @@ BEGIN
             out_clock_en => '1',
             out_reset => '0');
 
-    Triac1:logicalport
+    Relay1:logicalport
         GENERIC MAP(
             drive_mode => "011",
             ibuf_enabled => "1",
@@ -938,18 +938,18 @@ BEGIN
             out_clock_en => open,
             out_reset => open);
 
-    Triac1(0):iocell
+    Relay1(0):iocell
         GENERIC MAP(
             in_sync_mode => 0,
             out_sync_mode => 0,
             oe_sync_mode => 0,
-            logicalport => "Triac1",
+            logicalport => "Relay1",
             logicalport_pin_id => 0,
             io_capabilities => "0000000000000000000000000000000000000000000000000000000000000001")
         PORT MAP(
-            pa_out => Triac1(0)__PA,
+            pa_out => Relay1(0)__PA,
             oe => open,
-            pad_in => Triac1(0)_PAD,
+            pad_in => Relay1(0)_PAD,
             in_clock => open,
             in_clock_en => '1',
             in_reset => '0',
@@ -2134,7 +2134,7 @@ BEGIN
             out_clock_en => '1',
             out_reset => '0');
 
-    Triac6:logicalport
+    Relay6:logicalport
         GENERIC MAP(
             drive_mode => "011",
             ibuf_enabled => "1",
@@ -2205,18 +2205,18 @@ BEGIN
             out_clock_en => open,
             out_reset => open);
 
-    Triac6(0):iocell
+    Relay6(0):iocell
         GENERIC MAP(
             in_sync_mode => 0,
             out_sync_mode => 0,
             oe_sync_mode => 0,
-            logicalport => "Triac6",
+            logicalport => "Relay6",
             logicalport_pin_id => 0,
             io_capabilities => "0000000000000000000000000000000000000000000000000000000000000001")
         PORT MAP(
-            pa_out => Triac6(0)__PA,
+            pa_out => Relay6(0)__PA,
             oe => open,
-            pad_in => Triac6(0)_PAD,
+            pad_in => Relay6(0)_PAD,
             in_clock => open,
             in_clock_en => '1',
             in_reset => '0',
@@ -2224,7 +2224,7 @@ BEGIN
             out_clock_en => '1',
             out_reset => '0');
 
-    Triac5:logicalport
+    Relay5:logicalport
         GENERIC MAP(
             drive_mode => "011",
             ibuf_enabled => "1",
@@ -2295,18 +2295,18 @@ BEGIN
             out_clock_en => open,
             out_reset => open);
 
-    Triac5(0):iocell
+    Relay5(0):iocell
         GENERIC MAP(
             in_sync_mode => 0,
             out_sync_mode => 0,
             oe_sync_mode => 0,
-            logicalport => "Triac5",
+            logicalport => "Relay5",
             logicalport_pin_id => 0,
             io_capabilities => "0000000000000000000000000000000000000000000000000000000000000001")
         PORT MAP(
-            pa_out => Triac5(0)__PA,
+            pa_out => Relay5(0)__PA,
             oe => open,
-            pad_in => Triac5(0)_PAD,
+            pad_in => Relay5(0)_PAD,
             in_clock => open,
             in_clock_en => '1',
             in_reset => '0',
@@ -2314,7 +2314,7 @@ BEGIN
             out_clock_en => '1',
             out_reset => '0');
 
-    Triac7:logicalport
+    Triac1:logicalport
         GENERIC MAP(
             drive_mode => "011",
             ibuf_enabled => "1",
@@ -2385,18 +2385,18 @@ BEGIN
             out_clock_en => open,
             out_reset => open);
 
-    Triac7(0):iocell
+    Triac1(0):iocell
         GENERIC MAP(
             in_sync_mode => 0,
             out_sync_mode => 0,
             oe_sync_mode => 0,
-            logicalport => "Triac7",
+            logicalport => "Triac1",
             logicalport_pin_id => 0,
             io_capabilities => "0000000000000000000000000000000000000000000000000000000000000001")
         PORT MAP(
-            pa_out => Triac7(0)__PA,
+            pa_out => Triac1(0)__PA,
             oe => open,
-            pad_in => Triac7(0)_PAD,
+            pad_in => Triac1(0)_PAD,
             in_clock => open,
             in_clock_en => '1',
             in_reset => '0',
@@ -2404,7 +2404,7 @@ BEGIN
             out_clock_en => '1',
             out_reset => '0');
 
-    Triac8:logicalport
+    Triac2:logicalport
         GENERIC MAP(
             drive_mode => "011",
             ibuf_enabled => "1",
@@ -2475,18 +2475,18 @@ BEGIN
             out_clock_en => open,
             out_reset => open);
 
-    Triac8(0):iocell
+    Triac2(0):iocell
         GENERIC MAP(
             in_sync_mode => 0,
             out_sync_mode => 0,
             oe_sync_mode => 0,
-            logicalport => "Triac8",
+            logicalport => "Triac2",
             logicalport_pin_id => 0,
             io_capabilities => "0000000000000000000000000000000000000000000000000000000000000001")
         PORT MAP(
-            pa_out => Triac8(0)__PA,
+            pa_out => Triac2(0)__PA,
             oe => open,
-            pad_in => Triac8(0)_PAD,
+            pad_in => Triac2(0)_PAD,
             in_clock => open,
             in_clock_en => '1',
             in_reset => '0',
@@ -2494,7 +2494,7 @@ BEGIN
             out_clock_en => '1',
             out_reset => '0');
 
-    Triac3:logicalport
+    Relay3:logicalport
         GENERIC MAP(
             drive_mode => "011",
             ibuf_enabled => "1",
@@ -2565,18 +2565,18 @@ BEGIN
             out_clock_en => open,
             out_reset => open);
 
-    Triac3(0):iocell
+    Relay3(0):iocell
         GENERIC MAP(
             in_sync_mode => 0,
             out_sync_mode => 0,
             oe_sync_mode => 0,
-            logicalport => "Triac3",
+            logicalport => "Relay3",
             logicalport_pin_id => 0,
             io_capabilities => "0000000000000000000000000000000000000000000000000000000000000001")
         PORT MAP(
-            pa_out => Triac3(0)__PA,
+            pa_out => Relay3(0)__PA,
             oe => open,
-            pad_in => Triac3(0)_PAD,
+            pad_in => Relay3(0)_PAD,
             in_clock => open,
             in_clock_en => '1',
             in_reset => '0',
@@ -2584,7 +2584,7 @@ BEGIN
             out_clock_en => '1',
             out_reset => '0');
 
-    Triac4:logicalport
+    Relay4:logicalport
         GENERIC MAP(
             drive_mode => "011",
             ibuf_enabled => "1",
@@ -2655,18 +2655,18 @@ BEGIN
             out_clock_en => open,
             out_reset => open);
 
-    Triac4(0):iocell
+    Relay4(0):iocell
         GENERIC MAP(
             in_sync_mode => 0,
             out_sync_mode => 0,
             oe_sync_mode => 0,
-            logicalport => "Triac4",
+            logicalport => "Relay4",
             logicalport_pin_id => 0,
             io_capabilities => "0000000000000000000000000000000000000000000000000000000000000001")
         PORT MAP(
-            pa_out => Triac4(0)__PA,
+            pa_out => Relay4(0)__PA,
             oe => open,
-            pad_in => Triac4(0)_PAD,
+            pad_in => Relay4(0)_PAD,
             in_clock => open,
             in_clock_en => '1',
             in_reset => '0',

@@ -1136,7 +1136,7 @@
 .set Triac1__0__MASK, 0x04
 .set Triac1__0__OUT_SEL, CYREG_UDB_PA1_CFG10
 .set Triac1__0__OUT_SEL_SHIFT, 4
-.set Triac1__0__OUT_SEL_VAL, 2
+.set Triac1__0__OUT_SEL_VAL, 1
 .set Triac1__0__PA__CFG0, CYREG_UDB_PA1_CFG0
 .set Triac1__0__PA__CFG1, CYREG_UDB_PA1_CFG1
 .set Triac1__0__PA__CFG10, CYREG_UDB_PA1_CFG10
@@ -1202,7 +1202,7 @@
 .set Triac2__0__MASK, 0x08
 .set Triac2__0__OUT_SEL, CYREG_UDB_PA1_CFG10
 .set Triac2__0__OUT_SEL_SHIFT, 6
-.set Triac2__0__OUT_SEL_VAL, 1
+.set Triac2__0__OUT_SEL_VAL, 2
 .set Triac2__0__PA__CFG0, CYREG_UDB_PA1_CFG0
 .set Triac2__0__PA__CFG1, CYREG_UDB_PA1_CFG1
 .set Triac2__0__PA__CFG10, CYREG_UDB_PA1_CFG10

@@ -1,6 +1,6 @@
 // ======================================================================
 // 8S.v generated from TopDesign.cysch
-// 02/02/2017 at 12:57
+// 02/18/2017 at 12:17
 // This file is auto generated. ANY EDITS YOU MAKE MAY BE LOST WHEN THIS FILE IS REGENERATED!!!
 // ======================================================================
 
@@ -1044,7 +1044,6 @@ endmodule
 // top
 module top ;
 
-          wire  Net_414;
           wire  Net_363;
           wire  Net_362;
           wire  Net_361;
@@ -1053,14 +1052,15 @@ module top ;
           wire  Net_412;
           wire  Net_411;
           wire  Net_410;
+          wire  Net_414;
 
     CapSense_CSD_P4_v2_40_2 CapSense ();
 
-	wire [0:0] tmpOE__Triac2_net;
-	wire [0:0] tmpFB_0__Triac2_net;
-	wire [0:0] tmpIO_0__Triac2_net;
-	wire [0:0] tmpINTERRUPT_0__Triac2_net;
-	electrical [0:0] tmpSIOVREF__Triac2_net;
+	wire [0:0] tmpOE__Relay2_net;
+	wire [0:0] tmpFB_0__Relay2_net;
+	wire [0:0] tmpIO_0__Relay2_net;
+	wire [0:0] tmpINTERRUPT_0__Relay2_net;
+	electrical [0:0] tmpSIOVREF__Relay2_net;
 
 	cy_psoc3_pins_v1_10
 		#(.id("05727b33-2349-491f-91dc-304d1886864b"),
@@ -1115,13 +1115,13 @@ module top ;
 		  .ovt_needed(1'b0),
 		  .ovt_slew_control(2'b00),
 		  .input_buffer_sel(2'b00))
-		Triac2
-		 (.oe(tmpOE__Triac2_net),
+		Relay2
+		 (.oe(tmpOE__Relay2_net),
 		  .y({1'b0}),
-		  .fb({tmpFB_0__Triac2_net[0:0]}),
-		  .io({tmpIO_0__Triac2_net[0:0]}),
-		  .siovref(tmpSIOVREF__Triac2_net),
-		  .interrupt({tmpINTERRUPT_0__Triac2_net[0:0]}),
+		  .fb({tmpFB_0__Relay2_net[0:0]}),
+		  .io({tmpIO_0__Relay2_net[0:0]}),
+		  .siovref(tmpSIOVREF__Relay2_net),
+		  .interrupt({tmpINTERRUPT_0__Relay2_net[0:0]}),
 		  .in_clock({1'b0}),
 		  .in_clock_en({1'b1}),
 		  .in_reset({1'b0}),
@@ -1129,13 +1129,13 @@ module top ;
 		  .out_clock_en({1'b1}),
 		  .out_reset({1'b0}));
 
-	assign tmpOE__Triac2_net = (`CYDEV_CHIP_MEMBER_USED == `CYDEV_CHIP_MEMBER_3A && `CYDEV_CHIP_REVISION_USED < `CYDEV_CHIP_REVISION_3A_ES3) ? ~{1'b1} : {1'b1};
+	assign tmpOE__Relay2_net = (`CYDEV_CHIP_MEMBER_USED == `CYDEV_CHIP_MEMBER_3A && `CYDEV_CHIP_REVISION_USED < `CYDEV_CHIP_REVISION_3A_ES3) ? ~{1'b1} : {1'b1};
 
-	wire [0:0] tmpOE__Triac1_net;
-	wire [0:0] tmpFB_0__Triac1_net;
-	wire [0:0] tmpIO_0__Triac1_net;
-	wire [0:0] tmpINTERRUPT_0__Triac1_net;
-	electrical [0:0] tmpSIOVREF__Triac1_net;
+	wire [0:0] tmpOE__Relay1_net;
+	wire [0:0] tmpFB_0__Relay1_net;
+	wire [0:0] tmpIO_0__Relay1_net;
+	wire [0:0] tmpINTERRUPT_0__Relay1_net;
+	electrical [0:0] tmpSIOVREF__Relay1_net;
 
 	cy_psoc3_pins_v1_10
 		#(.id("796c75d6-cc13-4e41-b2f6-2327638b85d7"),
@@ -1190,13 +1190,13 @@ module top ;
 		  .ovt_needed(1'b0),
 		  .ovt_slew_control(2'b00),
 		  .input_buffer_sel(2'b00))
-		Triac1
-		 (.oe(tmpOE__Triac1_net),
+		Relay1
+		 (.oe(tmpOE__Relay1_net),
 		  .y({1'b0}),
-		  .fb({tmpFB_0__Triac1_net[0:0]}),
-		  .io({tmpIO_0__Triac1_net[0:0]}),
-		  .siovref(tmpSIOVREF__Triac1_net),
-		  .interrupt({tmpINTERRUPT_0__Triac1_net[0:0]}),
+		  .fb({tmpFB_0__Relay1_net[0:0]}),
+		  .io({tmpIO_0__Relay1_net[0:0]}),
+		  .siovref(tmpSIOVREF__Relay1_net),
+		  .interrupt({tmpINTERRUPT_0__Relay1_net[0:0]}),
 		  .in_clock({1'b0}),
 		  .in_clock_en({1'b1}),
 		  .in_reset({1'b0}),
@@ -1204,7 +1204,7 @@ module top ;
 		  .out_clock_en({1'b1}),
 		  .out_reset({1'b0}));
 
-	assign tmpOE__Triac1_net = (`CYDEV_CHIP_MEMBER_USED == `CYDEV_CHIP_MEMBER_3A && `CYDEV_CHIP_REVISION_USED < `CYDEV_CHIP_REVISION_3A_ES3) ? ~{1'b1} : {1'b1};
+	assign tmpOE__Relay1_net = (`CYDEV_CHIP_MEMBER_USED == `CYDEV_CHIP_MEMBER_3A && `CYDEV_CHIP_REVISION_USED < `CYDEV_CHIP_REVISION_3A_ES3) ? ~{1'b1} : {1'b1};
 
     SCB_P4_v3_10_3 I2C_Slave (
         .interrupt(Net_410),
@@ -1893,11 +1893,11 @@ module top ;
 
 	assign tmpOE__LED8_net = (`CYDEV_CHIP_MEMBER_USED == `CYDEV_CHIP_MEMBER_3A && `CYDEV_CHIP_REVISION_USED < `CYDEV_CHIP_REVISION_3A_ES3) ? ~{1'b1} : {1'b1};
 
-	wire [0:0] tmpOE__Triac6_net;
-	wire [0:0] tmpFB_0__Triac6_net;
-	wire [0:0] tmpIO_0__Triac6_net;
-	wire [0:0] tmpINTERRUPT_0__Triac6_net;
-	electrical [0:0] tmpSIOVREF__Triac6_net;
+	wire [0:0] tmpOE__Relay6_net;
+	wire [0:0] tmpFB_0__Relay6_net;
+	wire [0:0] tmpIO_0__Relay6_net;
+	wire [0:0] tmpINTERRUPT_0__Relay6_net;
+	electrical [0:0] tmpSIOVREF__Relay6_net;
 
 	cy_psoc3_pins_v1_10
 		#(.id("6710e00f-9840-46c9-9af8-cdca74e7087d"),
@@ -1952,13 +1952,13 @@ module top ;
 		  .ovt_needed(1'b0),
 		  .ovt_slew_control(2'b00),
 		  .input_buffer_sel(2'b00))
-		Triac6
-		 (.oe(tmpOE__Triac6_net),
+		Relay6
+		 (.oe(tmpOE__Relay6_net),
 		  .y({1'b0}),
-		  .fb({tmpFB_0__Triac6_net[0:0]}),
-		  .io({tmpIO_0__Triac6_net[0:0]}),
-		  .siovref(tmpSIOVREF__Triac6_net),
-		  .interrupt({tmpINTERRUPT_0__Triac6_net[0:0]}),
+		  .fb({tmpFB_0__Relay6_net[0:0]}),
+		  .io({tmpIO_0__Relay6_net[0:0]}),
+		  .siovref(tmpSIOVREF__Relay6_net),
+		  .interrupt({tmpINTERRUPT_0__Relay6_net[0:0]}),
 		  .in_clock({1'b0}),
 		  .in_clock_en({1'b1}),
 		  .in_reset({1'b0}),
@@ -1966,13 +1966,13 @@ module top ;
 		  .out_clock_en({1'b1}),
 		  .out_reset({1'b0}));
 
-	assign tmpOE__Triac6_net = (`CYDEV_CHIP_MEMBER_USED == `CYDEV_CHIP_MEMBER_3A && `CYDEV_CHIP_REVISION_USED < `CYDEV_CHIP_REVISION_3A_ES3) ? ~{1'b1} : {1'b1};
+	assign tmpOE__Relay6_net = (`CYDEV_CHIP_MEMBER_USED == `CYDEV_CHIP_MEMBER_3A && `CYDEV_CHIP_REVISION_USED < `CYDEV_CHIP_REVISION_3A_ES3) ? ~{1'b1} : {1'b1};
 
-	wire [0:0] tmpOE__Triac5_net;
-	wire [0:0] tmpFB_0__Triac5_net;
-	wire [0:0] tmpIO_0__Triac5_net;
-	wire [0:0] tmpINTERRUPT_0__Triac5_net;
-	electrical [0:0] tmpSIOVREF__Triac5_net;
+	wire [0:0] tmpOE__Relay5_net;
+	wire [0:0] tmpFB_0__Relay5_net;
+	wire [0:0] tmpIO_0__Relay5_net;
+	wire [0:0] tmpINTERRUPT_0__Relay5_net;
+	electrical [0:0] tmpSIOVREF__Relay5_net;
 
 	cy_psoc3_pins_v1_10
 		#(.id("65526edb-0a7e-4c7d-9967-4ba9b497aa58"),
@@ -2027,13 +2027,13 @@ module top ;
 		  .ovt_needed(1'b0),
 		  .ovt_slew_control(2'b00),
 		  .input_buffer_sel(2'b00))
-		Triac5
-		 (.oe(tmpOE__Triac5_net),
+		Relay5
+		 (.oe(tmpOE__Relay5_net),
 		  .y({1'b0}),
-		  .fb({tmpFB_0__Triac5_net[0:0]}),
-		  .io({tmpIO_0__Triac5_net[0:0]}),
-		  .siovref(tmpSIOVREF__Triac5_net),
-		  .interrupt({tmpINTERRUPT_0__Triac5_net[0:0]}),
+		  .fb({tmpFB_0__Relay5_net[0:0]}),
+		  .io({tmpIO_0__Relay5_net[0:0]}),
+		  .siovref(tmpSIOVREF__Relay5_net),
+		  .interrupt({tmpINTERRUPT_0__Relay5_net[0:0]}),
 		  .in_clock({1'b0}),
 		  .in_clock_en({1'b1}),
 		  .in_reset({1'b0}),
@@ -2041,13 +2041,13 @@ module top ;
 		  .out_clock_en({1'b1}),
 		  .out_reset({1'b0}));
 
-	assign tmpOE__Triac5_net = (`CYDEV_CHIP_MEMBER_USED == `CYDEV_CHIP_MEMBER_3A && `CYDEV_CHIP_REVISION_USED < `CYDEV_CHIP_REVISION_3A_ES3) ? ~{1'b1} : {1'b1};
+	assign tmpOE__Relay5_net = (`CYDEV_CHIP_MEMBER_USED == `CYDEV_CHIP_MEMBER_3A && `CYDEV_CHIP_REVISION_USED < `CYDEV_CHIP_REVISION_3A_ES3) ? ~{1'b1} : {1'b1};
 
-	wire [0:0] tmpOE__Triac7_net;
-	wire [0:0] tmpFB_0__Triac7_net;
-	wire [0:0] tmpIO_0__Triac7_net;
-	wire [0:0] tmpINTERRUPT_0__Triac7_net;
-	electrical [0:0] tmpSIOVREF__Triac7_net;
+	wire [0:0] tmpOE__Triac1_net;
+	wire [0:0] tmpFB_0__Triac1_net;
+	wire [0:0] tmpIO_0__Triac1_net;
+	wire [0:0] tmpINTERRUPT_0__Triac1_net;
+	electrical [0:0] tmpSIOVREF__Triac1_net;
 
 	cy_psoc3_pins_v1_10
 		#(.id("0d4b5aef-ace2-4def-b188-c9a08a3d8def"),
@@ -2102,13 +2102,13 @@ module top ;
 		  .ovt_needed(1'b0),
 		  .ovt_slew_control(2'b00),
 		  .input_buffer_sel(2'b00))
-		Triac7
-		 (.oe(tmpOE__Triac7_net),
+		Triac1
+		 (.oe(tmpOE__Triac1_net),
 		  .y({1'b0}),
-		  .fb({tmpFB_0__Triac7_net[0:0]}),
-		  .io({tmpIO_0__Triac7_net[0:0]}),
-		  .siovref(tmpSIOVREF__Triac7_net),
-		  .interrupt({tmpINTERRUPT_0__Triac7_net[0:0]}),
+		  .fb({tmpFB_0__Triac1_net[0:0]}),
+		  .io({tmpIO_0__Triac1_net[0:0]}),
+		  .siovref(tmpSIOVREF__Triac1_net),
+		  .interrupt({tmpINTERRUPT_0__Triac1_net[0:0]}),
 		  .in_clock({1'b0}),
 		  .in_clock_en({1'b1}),
 		  .in_reset({1'b0}),
@@ -2116,13 +2116,13 @@ module top ;
 		  .out_clock_en({1'b1}),
 		  .out_reset({1'b0}));
 
-	assign tmpOE__Triac7_net = (`CYDEV_CHIP_MEMBER_USED == `CYDEV_CHIP_MEMBER_3A && `CYDEV_CHIP_REVISION_USED < `CYDEV_CHIP_REVISION_3A_ES3) ? ~{1'b1} : {1'b1};
+	assign tmpOE__Triac1_net = (`CYDEV_CHIP_MEMBER_USED == `CYDEV_CHIP_MEMBER_3A && `CYDEV_CHIP_REVISION_USED < `CYDEV_CHIP_REVISION_3A_ES3) ? ~{1'b1} : {1'b1};
 
-	wire [0:0] tmpOE__Triac8_net;
-	wire [0:0] tmpFB_0__Triac8_net;
-	wire [0:0] tmpIO_0__Triac8_net;
-	wire [0:0] tmpINTERRUPT_0__Triac8_net;
-	electrical [0:0] tmpSIOVREF__Triac8_net;
+	wire [0:0] tmpOE__Triac2_net;
+	wire [0:0] tmpFB_0__Triac2_net;
+	wire [0:0] tmpIO_0__Triac2_net;
+	wire [0:0] tmpINTERRUPT_0__Triac2_net;
+	electrical [0:0] tmpSIOVREF__Triac2_net;
 
 	cy_psoc3_pins_v1_10
 		#(.id("18270768-c609-4c82-b77e-8fda45ec8260"),
@@ -2177,13 +2177,13 @@ module top ;
 		  .ovt_needed(1'b0),
 		  .ovt_slew_control(2'b00),
 		  .input_buffer_sel(2'b00))
-		Triac8
-		 (.oe(tmpOE__Triac8_net),
+		Triac2
+		 (.oe(tmpOE__Triac2_net),
 		  .y({1'b0}),
-		  .fb({tmpFB_0__Triac8_net[0:0]}),
-		  .io({tmpIO_0__Triac8_net[0:0]}),
-		  .siovref(tmpSIOVREF__Triac8_net),
-		  .interrupt({tmpINTERRUPT_0__Triac8_net[0:0]}),
+		  .fb({tmpFB_0__Triac2_net[0:0]}),
+		  .io({tmpIO_0__Triac2_net[0:0]}),
+		  .siovref(tmpSIOVREF__Triac2_net),
+		  .interrupt({tmpINTERRUPT_0__Triac2_net[0:0]}),
 		  .in_clock({1'b0}),
 		  .in_clock_en({1'b1}),
 		  .in_reset({1'b0}),
@@ -2191,13 +2191,13 @@ module top ;
 		  .out_clock_en({1'b1}),
 		  .out_reset({1'b0}));
 
-	assign tmpOE__Triac8_net = (`CYDEV_CHIP_MEMBER_USED == `CYDEV_CHIP_MEMBER_3A && `CYDEV_CHIP_REVISION_USED < `CYDEV_CHIP_REVISION_3A_ES3) ? ~{1'b1} : {1'b1};
+	assign tmpOE__Triac2_net = (`CYDEV_CHIP_MEMBER_USED == `CYDEV_CHIP_MEMBER_3A && `CYDEV_CHIP_REVISION_USED < `CYDEV_CHIP_REVISION_3A_ES3) ? ~{1'b1} : {1'b1};
 
-	wire [0:0] tmpOE__Triac3_net;
-	wire [0:0] tmpFB_0__Triac3_net;
-	wire [0:0] tmpIO_0__Triac3_net;
-	wire [0:0] tmpINTERRUPT_0__Triac3_net;
-	electrical [0:0] tmpSIOVREF__Triac3_net;
+	wire [0:0] tmpOE__Relay3_net;
+	wire [0:0] tmpFB_0__Relay3_net;
+	wire [0:0] tmpIO_0__Relay3_net;
+	wire [0:0] tmpINTERRUPT_0__Relay3_net;
+	electrical [0:0] tmpSIOVREF__Relay3_net;
 
 	cy_psoc3_pins_v1_10
 		#(.id("f01d7502-5380-4d60-ab8a-58b7a8537ae6"),
@@ -2252,13 +2252,13 @@ module top ;
 		  .ovt_needed(1'b0),
 		  .ovt_slew_control(2'b00),
 		  .input_buffer_sel(2'b00))
-		Triac3
-		 (.oe(tmpOE__Triac3_net),
+		Relay3
+		 (.oe(tmpOE__Relay3_net),
 		  .y({1'b0}),
-		  .fb({tmpFB_0__Triac3_net[0:0]}),
-		  .io({tmpIO_0__Triac3_net[0:0]}),
-		  .siovref(tmpSIOVREF__Triac3_net),
-		  .interrupt({tmpINTERRUPT_0__Triac3_net[0:0]}),
+		  .fb({tmpFB_0__Relay3_net[0:0]}),
+		  .io({tmpIO_0__Relay3_net[0:0]}),
+		  .siovref(tmpSIOVREF__Relay3_net),
+		  .interrupt({tmpINTERRUPT_0__Relay3_net[0:0]}),
 		  .in_clock({1'b0}),
 		  .in_clock_en({1'b1}),
 		  .in_reset({1'b0}),
@@ -2266,13 +2266,13 @@ module top ;
 		  .out_clock_en({1'b1}),
 		  .out_reset({1'b0}));
 
-	assign tmpOE__Triac3_net = (`CYDEV_CHIP_MEMBER_USED == `CYDEV_CHIP_MEMBER_3A && `CYDEV_CHIP_REVISION_USED < `CYDEV_CHIP_REVISION_3A_ES3) ? ~{1'b1} : {1'b1};
+	assign tmpOE__Relay3_net = (`CYDEV_CHIP_MEMBER_USED == `CYDEV_CHIP_MEMBER_3A && `CYDEV_CHIP_REVISION_USED < `CYDEV_CHIP_REVISION_3A_ES3) ? ~{1'b1} : {1'b1};
 
-	wire [0:0] tmpOE__Triac4_net;
-	wire [0:0] tmpFB_0__Triac4_net;
-	wire [0:0] tmpIO_0__Triac4_net;
-	wire [0:0] tmpINTERRUPT_0__Triac4_net;
-	electrical [0:0] tmpSIOVREF__Triac4_net;
+	wire [0:0] tmpOE__Relay4_net;
+	wire [0:0] tmpFB_0__Relay4_net;
+	wire [0:0] tmpIO_0__Relay4_net;
+	wire [0:0] tmpINTERRUPT_0__Relay4_net;
+	electrical [0:0] tmpSIOVREF__Relay4_net;
 
 	cy_psoc3_pins_v1_10
 		#(.id("026b6972-1177-429f-baa6-89b398d027d6"),
@@ -2327,13 +2327,13 @@ module top ;
 		  .ovt_needed(1'b0),
 		  .ovt_slew_control(2'b00),
 		  .input_buffer_sel(2'b00))
-		Triac4
-		 (.oe(tmpOE__Triac4_net),
+		Relay4
+		 (.oe(tmpOE__Relay4_net),
 		  .y({1'b0}),
-		  .fb({tmpFB_0__Triac4_net[0:0]}),
-		  .io({tmpIO_0__Triac4_net[0:0]}),
-		  .siovref(tmpSIOVREF__Triac4_net),
-		  .interrupt({tmpINTERRUPT_0__Triac4_net[0:0]}),
+		  .fb({tmpFB_0__Relay4_net[0:0]}),
+		  .io({tmpIO_0__Relay4_net[0:0]}),
+		  .siovref(tmpSIOVREF__Relay4_net),
+		  .interrupt({tmpINTERRUPT_0__Relay4_net[0:0]}),
 		  .in_clock({1'b0}),
 		  .in_clock_en({1'b1}),
 		  .in_reset({1'b0}),
@@ -2341,7 +2341,7 @@ module top ;
 		  .out_clock_en({1'b1}),
 		  .out_reset({1'b0}));
 
-	assign tmpOE__Triac4_net = (`CYDEV_CHIP_MEMBER_USED == `CYDEV_CHIP_MEMBER_3A && `CYDEV_CHIP_REVISION_USED < `CYDEV_CHIP_REVISION_3A_ES3) ? ~{1'b1} : {1'b1};
+	assign tmpOE__Relay4_net = (`CYDEV_CHIP_MEMBER_USED == `CYDEV_CHIP_MEMBER_3A && `CYDEV_CHIP_REVISION_USED < `CYDEV_CHIP_REVISION_3A_ES3) ? ~{1'b1} : {1'b1};
 
 
 	cy_gsref_v1_0

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <blockRegMap version="1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://cypress.com/xsd/cyblockregmap cyblockregmap.xsd" xmlns="http://cypress.com/xsd/cyblockregmap">
-  <block name="Triac7" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="Triac8" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="Triac3" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="Triac1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="Triac2" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="Relay3" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="LED8" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="Triac6" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="Triac5" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="Relay6" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="Relay5" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="cy_boot" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="DMAC" BASE="0x0" SIZE="0x0" desc="DMAC Registers" visible="true" hidden="false">
     <register name="DMAC_CH_CTL17" address="0x40000000" bitWidth="32" desc="DMA channel 17 control register" hidden="true">
@@ -1387,7 +1387,7 @@
     </register>
   </block>
   <block name="cy_lfclk" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="Triac4" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="Relay4" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="GlobalSignal" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="WdtIsr" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="LED7" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
@@ -1777,8 +1777,8 @@
     </block>
     <block name="ISR" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   </block>
-  <block name="Triac2" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="Triac1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="Relay2" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="Relay1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="InterPin" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="UART" BASE="0x0" SIZE="0x0" desc="Serial Communication Block" visible="true" hidden="false">
     <block name="rx_wake_VM" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
